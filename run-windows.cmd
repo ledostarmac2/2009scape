@@ -103,7 +103,7 @@ echo:
 cd "%home%"
 start /min "Management Server" java -Xms1024m -Xmx1024m -jar jars/ms.jar
 ping localhost -n 3 > nul
-start /min "Server - CTRL+C to close" java -Xms1024m -Xmx1024m -cp jars/server.jar rs09.Server "worldprops\default.json"
+start /min "Server - CTRL+C to close" java -Xms1024m -Xmx1024m -cp jars/server.jar rs09.Server "worldprops\default.conf"
 ping localhost -n 10 > nul
 start /min "" java -Xms1024m -Xmx1024m -jar jars/client.jar
 echo:
