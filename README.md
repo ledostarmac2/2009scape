@@ -1,15 +1,12 @@
-# NOTE: Windows Singleplayer is Maintained by Volunteers.
-This subproject is maintained exclusively by volunteers, and will not receive official support from the core 2009scape team. If you do have issues, however, feel free to make an issue in this repository and hopefully a volunteer will be able to help you out :). 
+### Windows release of the single-player 2009scape experience
 
+#### How to use this release
+1. Find the big blue button that says "Clone".
+2. Click the one to its left.
+3. Select ZIP release.
+4. Download & extract the ZIP to a directory of your liking - preferably desktop or something like that. Program Files likely won't work.
+5. Execute `launch.bat`. Enjoy the game.
 
-# Getting Started: Windows
-
-* 1: Download or clone this repository.
-* 2: After you unpack the .zip (if you just downloaded it) or it finishes cloning (if you cloned it), open up the folder that it created.
-* 3: In this folder there will be a **run-windows.cmd**, execute this to start everything up.
-* 4: You can simply run the game with option 1.
-* 5: When you're done, make sure to use the "exit" option in the menu to properly shut everything down.
-
-# Getting Started: Linux
-
-See https://github.com/2009scape/Singleplayer-Edition
+Notes:
+- First launch will take a bit longer because the database will have to be properly configured.
+- If you change internal server configuration and things suddenly start to be wonky - that's on you. The release is meant to be enjoyed as-is and any modifications to the server configuration files are your own.
