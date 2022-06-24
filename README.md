@@ -17,3 +17,5 @@ Notes:
 Here's an LZMA-compressed copy of singleplayer as it was on 23/6/2022:
 
 https://mega.nz/file/nIpHDAbY#zLH1SyzNTU5y0elAJqU9rEGL1nVoAoFLxpyACod8QFI
+
+You should be able to extract this with something like 7zip on Windows. (It'll probably require two steps - tar.xz decompresses into .tar, then you extract the tar, both steps with 7z.)
