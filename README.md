@@ -15,4 +15,5 @@ Notes:
 **Note: This link is not guaranteed to be updated to the latest singleplayer, it is included as a courtesy.**
 
 Here's an LZMA-compressed copy of singleplayer as it was on 23/6/2022:
+
 https://mega.nz/file/nIpHDAbY#zLH1SyzNTU5y0elAJqU9rEGL1nVoAoFLxpyACod8QFI
