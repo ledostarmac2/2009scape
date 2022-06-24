@@ -10,3 +10,9 @@
 Notes:
 - First launch will take a bit longer because the database will have to be properly configured.
 - If you change internal server configuration and things suddenly start to be wonky - that's on you. The release is meant to be enjoyed as-is and any modifications to the server configuration files are your own.
+
+#### My internet is very slow and the gitlab download does not work
+**Note: This link is not guaranteed to be updated to the latest singleplayer, it is included as a courtesy.**
+
+Here's an LZMA-compressed copy of singleplayer as it was on 23/6/2022:
+https://mega.nz/file/nIpHDAbY#zLH1SyzNTU5y0elAJqU9rEGL1nVoAoFLxpyACod8QFI
