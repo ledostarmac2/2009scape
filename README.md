@@ -22,15 +22,15 @@ You should be able to extract this with something like 7zip on Windows. (It'll p
 
 #### Troubleshooting
 
-##### My character's stats are decreasing after each login**  
+##### My character's stats are decreasing after each login
 You changed your profile's XP rate to way higher than what is supported. Maximum supported XP rate is `5.0` for normal players and `10.0` for Ultimate Ironman players. There are no plans to change the maximum supported XP rates in the future. *Requests to change it will be ignored.*
 
-##### The console log keeps repeating `Still waiting for the server to start...`**  
+##### The console log keeps repeating `Still waiting for the server to start...`
 There are two known things that can cause this:
  - You have extracted the files to a path containing spaces, e.g.: `C:\Users\My Name\Documents\2009scape`. Move the directory someplace else where there's no spaces in the path.
  - The MySQL server has failed to start. Make sure there is no `mysqld.exe` in the Task Manager and that there are no other database systems running in the background.
  
-##### The MySQL server says `bin\mysqld.exe: Can't change dir to '<path>' (Errcode: 2  "No such file or directory")`**  
+##### The MySQL server says `bin\mysqld.exe: Can't change dir to '<path>' (Errcode: 2  "No such file or directory")`
 You have moved the game directory after launching the game for the first time. To fix this:
 1. Close the console log to shut down the server software.
 2. Locate `db/data` directory.
