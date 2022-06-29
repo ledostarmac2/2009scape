@@ -23,7 +23,7 @@ You should be able to extract this with something like 7zip on Windows. (It'll p
 #### Troubleshooting
 
 ##### My character's stats are decreasing after each login
-You changed your profile's XP rate to way higher than what is supported. Maximum supported XP rate is `5.0` for normal players and `10.0` for Ultimate Ironman players. There are no plans to change the maximum supported XP rates in the future. *Requests to change it will be ignored.*
+You changed your profile's XP rate to way higher than what is supported. Maximum supported XP rate is `5.0` for normal players and `10.0` for Hardcore Ironman players. There are no plans to change the maximum supported XP rates in the future. *Requests to change it will be ignored.*
 
 ##### The console log keeps repeating `Still waiting for the server to start...`
 There are two known things that can cause this:
