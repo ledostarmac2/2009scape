@@ -6816,12 +6816,6 @@
       },
       {
         "minAmount": "1",
-        "weight": "25.0",
-        "id": "4206",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
         "weight": "5.0",
         "id": "5298",
         "maxAmount": "1"
@@ -63627,6 +63621,72 @@
         "minAmount": "1",
         "weight": "20.0",
         "id": "2347",
+        "maxAmount": "1"
+      }
+    ]
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "2892",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "1480",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "4910",
+    "description": "Earth Elemental",
+    "main": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "0",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "0",
+        "maxAmount": "1"
+      }
+    ]
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "2892",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "1480",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "4911",
+    "description": "Elemental Rock",
+    "main": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "0",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "0",
         "maxAmount": "1"
       }
     ]

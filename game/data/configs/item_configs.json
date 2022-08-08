@@ -15765,7 +15765,7 @@
     "ge_buy_limit": "100",
     "turn90cw_anim": "1207",
     "examine": "A Magical staff.",
-    "walk_anim": "1146",
+    "walk_anim": "1205",
     "low_alchemy": "600",
     "turn90ccw_anim": "1208",
     "attack_speed": "5",
@@ -15774,7 +15774,7 @@
     "equipment_slot": "3",
     "attack_anims": "419,419,419,419",
     "grand_exchange_price": "1330",
-    "stand_anim": "809",
+    "stand_anim": "813",
     "tradeable": "true",
     "run_anim": "1210",
     "archery_ticket_price": "0",
@@ -15787,7 +15787,7 @@
     "weight": "2.2",
     "weapon_interface": "1",
     "equip_audio": "2230",
-    "render_anim": "1426",
+    "render_anim": "28",
     "attack_audios": "2555,0,0,0",
     "name": "Staff of fire"
   },
@@ -41741,7 +41741,7 @@
     "id": "4254"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41749,7 +41749,7 @@
     "id": "4255"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41757,7 +41757,7 @@
     "id": "4256"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed wolf bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41765,7 +41765,7 @@
     "id": "4257"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed burnt bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41773,7 +41773,7 @@
     "id": "4258"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41781,7 +41781,7 @@
     "id": "4259"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41789,7 +41789,7 @@
     "id": "4260"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed bat bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41797,7 +41797,7 @@
     "id": "4261"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed big bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41805,7 +41805,7 @@
     "id": "4262"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed jogre bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41813,7 +41813,7 @@
     "id": "4263"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed zogre bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41821,7 +41821,7 @@
     "id": "4264"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed shaikahan bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41829,7 +41829,7 @@
     "id": "4265"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed baby dragon bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41837,7 +41837,7 @@
     "id": "4266"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed wyvern bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41845,7 +41845,7 @@
     "id": "4267"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed dragon bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -47160,7 +47160,7 @@
     "id": "4851"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed fayrg bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -47168,7 +47168,7 @@
     "id": "4852"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed raurg bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -47176,7 +47176,7 @@
     "id": "4853"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed ourg bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -51254,7 +51254,7 @@
   {
     "shop_price": "1",
     "ge_buy_limit": "100",
-    "examine": "A plant pot filled with soil.",
+    "examine": "An empty plant pot.",
     "grand_exchange_price": "20",
     "durability": null,
     "name": "Plant pot",
@@ -127777,7 +127777,7 @@
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
   },
   {
-    "requirements": "{1,70}",
+    "requirements": "{1,40}-{5,55}",
     "shop_price": "70000",
     "examine": "An ethereal shield.",
     "rare_item": "true",
@@ -139685,5 +139685,21 @@
     "examine": "Item container for C. Ele Minor Drop Table. You should not be able to obtain this item.",
     "name": "C. Ele Minor Drop Table",
     "id": "799"
+  },
+  {
+    "examine": "This will unlock something. (Waterfall Quest)",
+    "name": "A key",
+    "tradeable": "false",
+    "weight": "0.01",
+    "archery_ticket_price": "0",
+    "id": "293"
+  },
+  {
+    "examine": "This will unlock something. (Waterfall dungeon)",
+    "name": "A key",
+    "tradeable": "false",
+    "archery_ticket_price": "0",
+    "weight": "0.01",
+    "id": "298"
   }
 ]

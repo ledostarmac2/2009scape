@@ -10,15 +10,6 @@ if %ERRORLEVEL% equ 0 (
   exit
 )
 
-pushd %~dp0\db
-  if not exist data (
-    call init_db.bat
-  )
-  
-  timeout 3 > NUL
-  start /b bin\mysqld.exe --console
-popd
-
 pushd %~dp0\game
   start /b %~dp0\jre\bin\java.exe -Xmx2G -Xms2G -jar server.jar
 
@@ -33,5 +24,4 @@ pushd %~dp0\game
   start /b /w %~dp0\jre\bin\java.exe -Xmx1G -Xms1G -jar client.jar
 popd
 
-taskkill /im "mysqld.exe" /f
 taskkill /im "java.exe" /f
