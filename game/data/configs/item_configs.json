@@ -42022,14 +42022,16 @@
     "shop_price": "1",
     "examine": "A handy little club made out of oak.",
     "durability": null,
-    "name": "Oak-blackjack",
     "weight": "1.8",
-    "archery_ticket_price": "0",
     "attack_speed": "4",
-    "id": "4599",
     "weapon_interface": "10",
-    "bonuses": "0,0,0,0,0,0,0,0,0,0,0,2,0,0,0",
-    "equipment_slot": "3"
+    "defence_anim": "425",
+    "equipment_slot": "3",
+    "attack_anims": "395,395,395,395",
+    "name": "Oak-blackjack",
+    "archery_ticket_price": "0",
+    "id": "4599",
+    "bonuses": "0,0,0,0,0,0,0,0,0,0,0,2,0,0,0"
   },
   {
     "shop_price": "600",
@@ -42039,7 +42041,9 @@
     "weight": "1",
     "attack_speed": "4",
     "weapon_interface": "10",
+    "defence_anim": "425",
     "equipment_slot": "3",
+    "attack_anims": "395,395,395,395",
     "grand_exchange_price": "321",
     "name": "Willow-blackjack",
     "tradeable": "true",
@@ -58387,7 +58391,9 @@
     "weight": "1.8",
     "attack_speed": "4",
     "weapon_interface": "10",
+    "defence_anim": "425",
     "equipment_slot": "3",
+    "attack_anims": "395,395,395,395",
     "grand_exchange_price": "1432",
     "name": "Maple blackjack",
     "tradeable": "true",
@@ -59239,7 +59245,9 @@
     "turn90ccw_anim": "1208",
     "attack_speed": "5",
     "turn180_anim": "1206",
+    "defence_anim": "420",
     "equipment_slot": "3",
+    "attack_anims": "419,419,419,419",
     "grand_exchange_price": "368700",
     "stand_anim": "813",
     "tradeable": "true",
@@ -61111,7 +61119,7 @@
     "id": "6738"
   },
   {
-    "requirements": "{0,60}-{8,61}",
+    "requirements": "{0,60}",
     "ge_buy_limit": "10",
     "examine": "A very powerful axe.",
     "has_special": "true",
@@ -66230,6 +66238,7 @@
     "bonuses": "0,0,0,-8,-2,44,48,46,-1,46,40,0,0,0,0"
   },
   {
+    "requirements": "",
     "ge_buy_limit": "2",
     "grand_exchange_price": "32400",
     "durability": null,
@@ -75762,18 +75771,20 @@
   },
   {
     "remove_sleeves": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "250",
     "examine": "Torso armour from the order of the Void Knights.",
     "durability": null,
     "name": "Void knight top",
     "tradeable": "false",
-    "weight": "6.8",
+    "weight": "6.5",
     "archery_ticket_price": "0",
     "id": "8839",
     "bonuses": "0,0,0,0,0,45,45,45,45,45,45,0,0,0,0",
     "equipment_slot": "4"
   },
   {
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "250",
     "examine": "Leg armour of the order of the Void Knights.",
     "durability": null,
@@ -75786,6 +75797,7 @@
     "equipment_slot": "7"
   },
   {
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "250",
     "examine": "A mace used by the order of the Void Knights.",
     "durability": null,
@@ -75794,6 +75806,7 @@
     "weapon_interface": "1",
     "render_anim": "2553",
     "equipment_slot": "3",
+    "attack_anims": "401,401,401,401",
     "name": "Void knight mace",
     "tradeable": "false",
     "archery_ticket_price": "0",
@@ -75801,6 +75814,7 @@
     "bonuses": "22,0,41,8,0,2,2,2,2,2,0,38,6,0,0"
   },
   {
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "150",
     "examine": "Gloves as used by the order of the Void Knights.",
     "durability": null,
@@ -81807,6 +81821,7 @@
     "id": "9746"
   },
   {
+    "requirements": "{0,99}",
     "shop_price": "99000",
     "examine": "The cape worn by masters of attack.",
     "durability": null,
@@ -81819,6 +81834,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{0,99}",
     "durability": null,
     "name": "Attack cape(t)",
     "tradeable": "false",
@@ -81829,6 +81845,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{0,99}",
     "shop_price": "99000",
     "examine": "Attack skillcape hood.",
     "durability": null,
@@ -81840,6 +81857,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{2,99}",
     "shop_price": "99000",
     "examine": "The cape only worn by the strongest people.",
     "durability": null,
@@ -81852,6 +81870,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{2,99}",
     "durability": null,
     "name": "Strength cape(t)",
     "tradeable": "false",
@@ -81862,6 +81881,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{2,99}",
     "shop_price": "99000",
     "examine": "Strength skillcape hood.",
     "durability": null,
@@ -81873,6 +81893,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{1,99}",
     "shop_price": "99000",
     "examine": "The cape worn by masters of the art of Defence.",
     "durability": null,
@@ -81885,6 +81906,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{1,99}",
     "durability": null,
     "name": "Defence cape(t)",
     "tradeable": "false",
@@ -81895,6 +81917,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,99}",
     "shop_price": "99000",
     "examine": "Defence skillcape hood.",
     "durability": null,
@@ -81906,6 +81929,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{4,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master archers.",
     "durability": null,
@@ -81918,6 +81942,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{4,99}",
     "durability": null,
     "name": "Ranging cape(t)",
     "tradeable": "false",
@@ -81928,6 +81953,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{4,99}",
     "shop_price": "99000",
     "examine": "Range skillcape hood.",
     "durability": null,
@@ -81939,6 +81965,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{5,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most pious of heroes.",
     "durability": null,
@@ -81951,6 +81978,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{5,99}",
     "durability": null,
     "name": "Prayer cape(t)",
     "tradeable": "false",
@@ -81961,6 +81989,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{5,99}",
     "shop_price": "99000",
     "examine": "Prayer skillcape hood.",
     "durability": null,
@@ -81972,6 +82001,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{6,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most powerful mages.",
     "durability": null,
@@ -81984,6 +82014,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{6,99}",
     "durability": null,
     "name": "Magic cape(t)",
     "tradeable": "false",
@@ -81994,6 +82025,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{6,99}",
     "shop_price": "99000",
     "examine": "Magic skillcape hood.",
     "durability": null,
@@ -82005,6 +82037,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{20,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master runecrafters.",
     "durability": null,
@@ -82017,6 +82050,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{20,99}",
     "durability": null,
     "name": "Runecraft cape(t)",
     "tradeable": "false",
@@ -82027,6 +82061,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{20,99}",
     "shop_price": "99000",
     "examine": "Runecrafting skillcape hood.",
     "durability": null,
@@ -82038,6 +82073,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{3,99}",
     "shop_price": "99000",
     "examine": "The cape worn by well-constituted adventurers.",
     "durability": null,
@@ -82050,6 +82086,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{3,99}",
     "durability": null,
     "name": "Hitpoints cape(t)",
     "tradeable": "false",
@@ -82060,6 +82097,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{3,99}",
     "shop_price": "99000",
     "examine": "Constitution skillcape hood.",
     "durability": null,
@@ -82071,6 +82109,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{16,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most agile of heroes.",
     "durability": null,
@@ -82083,6 +82122,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{16,99}",
     "durability": null,
     "name": "Agility cape(t)",
     "tradeable": "false",
@@ -82093,6 +82133,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{16,99}",
     "shop_price": "99000",
     "examine": "Agility skillcape hood.",
     "durability": null,
@@ -82104,6 +82145,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{15,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most skilled at the art of herblore.",
     "durability": null,
@@ -82116,6 +82158,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{15,99}",
     "durability": null,
     "name": "Herblore cape(t)",
     "tradeable": "false",
@@ -82126,6 +82169,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{15,99}",
     "shop_price": "99000",
     "examine": "Herblore skillcape hood.",
     "durability": null,
@@ -82137,6 +82181,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{17,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master thieves.",
     "durability": null,
@@ -82149,6 +82194,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{17,99}",
     "durability": null,
     "name": "Thieving cape(t)",
     "tradeable": "false",
@@ -82159,6 +82205,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{17,99}",
     "shop_price": "99000",
     "examine": "Thieving skillcape hood.",
     "durability": null,
@@ -82170,6 +82217,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{12,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master craftworkers.",
     "durability": null,
@@ -82182,6 +82230,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{12,99}",
     "durability": null,
     "name": "Crafting cape(t)",
     "tradeable": "false",
@@ -82192,6 +82241,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{12,99}",
     "shop_price": "99000",
     "examine": "Crafting skillcape hood.",
     "durability": null,
@@ -82203,6 +82253,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{9,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the best of fletchers.",
     "durability": null,
@@ -82215,6 +82266,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{9,99}",
     "durability": null,
     "name": "Fletching cape(t)",
     "tradeable": "false",
@@ -82225,6 +82277,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{9,99}",
     "shop_price": "99000",
     "examine": "Fletching skillcape hood.",
     "durability": null,
@@ -82236,6 +82289,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{18,99}",
     "shop_price": "99000",
     "examine": "The cape worn by slayer masters.",
     "durability": null,
@@ -82248,6 +82302,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{18,99}",
     "durability": null,
     "name": "Slayer cape(t)",
     "tradeable": "false",
@@ -82258,6 +82313,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{18,99}",
     "shop_price": "99000",
     "examine": "Slayer skillcape hood.",
     "durability": null,
@@ -82269,6 +82325,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{22,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master builders.",
     "durability": null,
@@ -82281,6 +82338,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{22,99}",
     "durability": null,
     "name": "Construct. cape(t)",
     "tradeable": "false",
@@ -82291,6 +82349,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{22,99}",
     "shop_price": "99000",
     "examine": "Construction skillcape hood.",
     "durability": null,
@@ -82302,6 +82361,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{14,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most skilled miners.",
     "durability": null,
@@ -82314,6 +82374,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{14,99}",
     "durability": null,
     "name": "Mining cape(t)",
     "tradeable": "false",
@@ -82324,6 +82385,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{14,99}",
     "shop_price": "99000",
     "examine": "Mining skillcape hood.",
     "durability": null,
@@ -82335,6 +82397,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{13,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master smiths.",
     "durability": null,
@@ -82347,6 +82410,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{13,99}",
     "durability": null,
     "name": "Smithing cape(t)",
     "tradeable": "false",
@@ -82357,6 +82421,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{13,99}",
     "shop_price": "99000",
     "examine": "Smithing skillcape hood.",
     "durability": null,
@@ -82368,6 +82433,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{10,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the best fishermen.",
     "durability": null,
@@ -82380,6 +82446,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{10,99}",
     "durability": null,
     "name": "Fishing cape(t)",
     "tradeable": "false",
@@ -82390,6 +82457,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{10,99}",
     "shop_price": "99000",
     "examine": "Fishing skillcape hood.",
     "durability": null,
@@ -82401,6 +82469,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{7,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the world's best chefs.",
     "durability": null,
@@ -82413,6 +82482,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{7,99}",
     "durability": null,
     "name": "Cooking cape(t)",
     "tradeable": "false",
@@ -82423,6 +82493,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{7,99}",
     "shop_price": "99000",
     "examine": "Cooking skillcape hood.",
     "durability": null,
@@ -82434,6 +82505,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{11,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master firelighters.",
     "durability": null,
@@ -82446,6 +82518,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{11,99}",
     "durability": null,
     "name": "Firemaking cape(t)",
     "tradeable": "false",
@@ -82456,6 +82529,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{11,99}",
     "shop_price": "99000",
     "examine": "Firemaking skillcape hood.",
     "durability": null,
@@ -82467,6 +82541,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{8,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master woodcutters (Obtaining level 99 skill)",
     "durability": null,
@@ -82479,6 +82554,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{8,99}",
     "durability": null,
     "name": "Woodcut. cape(t)",
     "tradeable": "false",
@@ -82489,6 +82565,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{8,99}",
     "shop_price": "99000",
     "examine": "Woodcutting skillcape hood.",
     "durability": null,
@@ -82500,6 +82577,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{19,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master farmers.",
     "durability": null,
@@ -82512,6 +82590,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{19,99}",
     "durability": null,
     "name": "Farming cape(t)",
     "tradeable": "false",
@@ -82522,6 +82601,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{19,99}",
     "shop_price": "99000",
     "examine": "Farming skillcape hood.",
     "durability": null,
@@ -83564,6 +83644,7 @@
     "id": "9947"
   },
   {
+    "requirements": "{21,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master hunters.",
     "durability": null,
@@ -83575,6 +83656,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{21,99}",
     "durability": null,
     "name": "Hunter cape(t)",
     "archery_ticket_price": "0",
@@ -83584,6 +83666,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{21,99}",
     "shop_price": "99000",
     "examine": "Hunter skillcape hood.",
     "durability": null,
@@ -84005,7 +84088,7 @@
     "id": "10009"
   },
   {
-    "requirements": "{15,21}",
+    "requirements": "{21,15}",
     "shop_price": "24",
     "ge_buy_limit": "100",
     "turn90cw_anim": "1207",
@@ -84038,7 +84121,7 @@
     "id": "10011"
   },
   {
-    "requirements": "{15,21}",
+    "requirements": "{21,15}",
     "shop_price": "1",
     "ge_buy_limit": "100",
     "examine": "It's got little holes at the top.",
@@ -87909,7 +87992,7 @@
     "id": "10375"
   },
   {
-    "requirements": "{1,70}-{4,40}",
+    "requirements": "{1,40}-{4,70}",
     "ge_buy_limit": "2",
     "examine": "Guthix blessed dragonhide vambraces.",
     "grand_exchange_price": "3181",
@@ -90252,12 +90335,13 @@
   },
   {
     "remove_sleeves": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "250",
     "examine": "Torso armour from the order of the Void Knights.",
     "durability": null,
     "name": "Void knight top",
     "tradeable": "false",
-    "weight": "6.8",
+    "weight": "6.5",
     "archery_ticket_price": "0",
     "id": "10611",
     "bonuses": "0,0,0,0,0,40,40,40,40,40,0,0,0,0,0",
@@ -90592,6 +90676,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{0,99}",
     "shop_price": "99000",
     "examine": "The cape worn by masters of attack.",
     "durability": null,
@@ -90603,6 +90688,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{2,99}",
     "shop_price": "99000",
     "examine": "The cape only worn by the strongest people.",
     "durability": null,
@@ -90614,6 +90700,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{1,99}",
     "shop_price": "99000",
     "examine": "The cape worn by masters of the art of Defence.",
     "durability": null,
@@ -90625,6 +90712,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{4,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master archers.",
     "durability": null,
@@ -90636,6 +90724,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{5,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most pious of heroes.",
     "durability": null,
@@ -90647,6 +90736,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{6,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most powerful mages.",
     "durability": null,
@@ -90658,6 +90748,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{20,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master runecrafters.",
     "durability": null,
@@ -90669,6 +90760,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{21,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master hunters.",
     "durability": null,
@@ -90680,6 +90772,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{3,99}",
     "shop_price": "99000",
     "examine": "The cape worn by well-constituted adventurers.",
     "durability": null,
@@ -90691,6 +90784,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{16,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most agile of heroes.",
     "durability": null,
@@ -90702,6 +90796,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{15,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most skilled at the art of herblore.",
     "durability": null,
@@ -90713,6 +90808,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{17,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master thieves.",
     "durability": null,
@@ -90724,6 +90820,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{12,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master craftworkers.",
     "durability": null,
@@ -90735,6 +90832,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{9,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the best of fletchers.",
     "durability": null,
@@ -90746,6 +90844,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{18,99}",
     "shop_price": "99000",
     "examine": "The cape worn by slayer masters.",
     "durability": null,
@@ -90757,6 +90856,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{22,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master builders.",
     "durability": null,
@@ -90768,6 +90868,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{14,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the most skilled miners.",
     "durability": null,
@@ -90779,6 +90880,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{13,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master smiths.",
     "durability": null,
@@ -90790,6 +90892,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{10,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the best fishermen.",
     "durability": null,
@@ -90801,6 +90904,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{7,99}",
     "shop_price": "99000",
     "examine": "The cape worn by the world's best chefs.",
     "durability": null,
@@ -90812,6 +90916,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{11,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master firelighters.",
     "durability": null,
@@ -90823,6 +90928,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{8,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master woodcutters (Obtaining level 99 skill)",
     "durability": null,
@@ -90834,6 +90940,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{19,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master farmers.",
     "durability": null,
@@ -90906,6 +91013,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,40}",
     "examine": "A rune kiteshield with a heraldic design.",
     "grand_exchange_price": "35300",
     "durability": null,
@@ -90945,6 +91053,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,40}",
     "examine": "A rune kiteshield with a heraldic design.",
     "grand_exchange_price": "31903",
     "durability": null,
@@ -90984,6 +91093,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,40}",
     "examine": "A rune kiteshield with a heraldic design.",
     "grand_exchange_price": "32082",
     "durability": null,
@@ -91023,6 +91133,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,40}",
     "examine": "A rune kiteshield with a heraldic design.",
     "grand_exchange_price": "32351",
     "durability": null,
@@ -91062,6 +91173,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,40}",
     "examine": "A rune kiteshield with a heraldic design.",
     "grand_exchange_price": "35200",
     "durability": null,
@@ -95964,6 +96076,7 @@
     "id": "11258"
   },
   {
+    "requirements": "{21,17}",
     "shop_price": "3",
     "turn90cw_anim": "6610",
     "examine": "For catching butterflies.",
@@ -95973,7 +96086,7 @@
     "weight": "0.2",
     "turn90ccw_anim": "6609",
     "attack_speed": "4",
-    "two_handed": "true",
+    "two_handed": "",
     "weapon_interface": "14",
     "turn180_anim": "6608",
     "render_anim": "1426",
@@ -98634,6 +98747,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "200",
     "examine": "A mage helm from the order of the Void Knights.",
     "durability": null,
@@ -98647,6 +98761,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "200",
     "examine": "A ranger helm from the order of the Void Knights",
     "durability": null,
@@ -98660,12 +98775,13 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "200",
     "examine": "A melee helm from the order of the Void Knights.",
     "durability": null,
     "name": "Void melee helm",
     "tradeable": "false",
-    "weight": "0.4",
+    "weight": "1",
     "archery_ticket_price": "0",
     "id": "11665",
     "bonuses": "0,0,0,0,0,6,6,6,6,6,6,0,0,0,0",
@@ -98745,6 +98861,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "200",
     "examine": "A mage helm from the order of the Void Knights.",
     "durability": null,
@@ -98758,6 +98875,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "200",
     "examine": "A ranger helm from the order of the Void Knights",
     "durability": null,
@@ -98771,12 +98889,13 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{0,42}-{1,42}-{2,42}-{3,42}-{4,42}-{5,22}-{6,42}",
     "shop_price": "200",
     "examine": "A melee helm from the order of the Void Knights.",
     "durability": null,
     "name": "Void melee helm",
     "tradeable": "false",
-    "weight": "0.4",
+    "weight": "1",
     "archery_ticket_price": "0",
     "id": "11676",
     "bonuses": "0,0,0,0,0,6,6,6,6,6,0,0,0,0,0",
@@ -99512,7 +99631,9 @@
     "turn90ccw_anim": "1208",
     "attack_speed": "5",
     "turn180_anim": "1206",
+    "defence_anim": "420",
     "equipment_slot": "3",
+    "attack_anims": "419,419,419,419",
     "grand_exchange_price": "231300",
     "stand_anim": "813",
     "tradeable": "true",
@@ -99540,29 +99661,31 @@
     "id": "11737"
   },
   {
-    "requirements": "{0,40}-{6,40}",
     "ge_buy_limit": "10",
     "turn90cw_anim": "1207",
     "examine": "It's a slightly magical stick.",
     "walk_anim": "1205",
-    "durability": null,
-    "weight": "2",
     "turn90ccw_anim": "1208",
     "attack_speed": "5",
-    "weapon_interface": "1",
     "turn180_anim": "1206",
-    "render_anim": "28",
+    "defence_anim": "420",
     "equipment_slot": "3",
+    "attack_anims": "419,419,419,419",
     "grand_exchange_price": "267600",
     "stand_anim": "813",
-    "attack_audios": "2555,0,0,0",
     "tradeable": "true",
-    "name": "Mystic steam staff",
     "run_anim": "1210",
     "archery_ticket_price": "0",
     "id": "11738",
     "stand_turn_anim": "1209",
-    "bonuses": "10,-1,40,14,0,2,3,1,14,0,0,50,0,0,0"
+    "bonuses": "10,-1,40,14,0,2,3,1,14,0,0,50,0,0,0",
+    "requirements": "{0,40}-{6,40}",
+    "durability": null,
+    "weight": "2",
+    "weapon_interface": "1",
+    "render_anim": "28",
+    "attack_audios": "2555,0,0,0",
+    "name": "Mystic steam staff"
   },
   {
     "ge_buy_limit": "10",
@@ -103830,6 +103953,7 @@
     "id": "12168"
   },
   {
+    "requirements": "{23,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master summoners.",
     "durability": null,
@@ -103841,6 +103965,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{23,99}",
     "durability": null,
     "name": "Summoning cape(t)",
     "archery_ticket_price": "0",
@@ -103850,6 +103975,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{23,99}",
     "shop_price": "99000",
     "examine": "Summoning skillcape hood.",
     "durability": null,
@@ -105643,6 +105769,7 @@
     "id": "12523"
   },
   {
+    "requirements": "{23,99}",
     "shop_price": "99000",
     "examine": "The cape worn by master summoners.",
     "durability": null,
@@ -105976,7 +106103,9 @@
     "weapon_interface": "10",
     "turn180_anim": "8684",
     "render_anim": "1157",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,401,401",
     "grand_exchange_price": "77",
     "stand_anim": "8683",
     "name": "Ogre club",
@@ -130578,5 +130707,30 @@
     "archery_ticket_price": "0",
     "weight": "0.01",
     "id": "298"
+  },
+  {
+    "examine": "You should not have this.",
+    "name": "USDT Slot",
+    "id": "14422"
+  },
+  {
+    "examine": "You should not have this.",
+    "name": "HDT Slot",
+    "id": "14424"
+  },
+  {
+    "examine": "You should not have this.",
+    "name": "GDT Slot",
+    "id": "14426"
+  },
+  {
+    "examine": "You should not have this.",
+    "name": "RSDT Slot",
+    "id": "14428"
+  },
+  {
+    "examine": "You should not have this.",
+    "name": "ASDT Slot",
+    "id": "14430"
   }
 ]
