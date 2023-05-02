@@ -702,29 +702,33 @@
   },
   {
     "remove_head": "true",
-    "destroy_message": "I can borrow another from the armoury near the Fight Arena.",
     "shop_price": "10",
     "examine": "A helmet, as worn by the minions of General Khazard.",
     "durability": null,
-    "name": "Khazard helmet",
     "weight": "2.7",
+    "destroy": "true",
+    "equipment_slot": "0",
+    "destroy_message": "I can borrow another from the armoury near the Fight Arena.",
+    "name": "Khazard helmet",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "74",
-    "bonuses": "0,0,0,0,0,4,5,3,0,0,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,0,0,4,5,3,0,0,0,0,0,0,0"
   },
   {
-    "destroy_message": "I can borrow another from the armoury near the Fight Arena.",
-    "remove_sleeves": "true",
     "shop_price": "12",
     "examine": "Armour, as worn by the minions of General Khazard.",
     "durability": null,
-    "name": "Khazard armour",
     "weight": "0.5",
+    "destroy": "true",
+    "equipment_slot": "4",
+    "destroy_message": "I can borrow another from the armoury near the Fight Arena.",
+    "remove_sleeves": "true",
+    "name": "Khazard armour",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "75",
-    "bonuses": "0,0,0,0,0,9,11,10,0,0,0,0,0,0,0",
-    "equipment_slot": "4"
+    "bonuses": "0,0,0,0,0,9,11,10,0,0,0,0,0,0,0"
   },
   {
     "destroy_message": "The lazy guard probably has a spare set...",
@@ -14113,6 +14117,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "8",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Iron axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14141,6 +14146,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "44",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Bronze axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14170,6 +14176,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "36",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Steel axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14199,6 +14206,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "141",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Mithril axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14228,6 +14236,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "592",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Adamant axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14254,6 +14263,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "7495",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Rune axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14282,6 +14292,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "335",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Black axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14310,6 +14321,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "21",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Iron battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14339,6 +14351,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "208",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Steel battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14368,6 +14381,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "556",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Black battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14397,6 +14411,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "809",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Mithril battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14426,6 +14441,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "2311",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Adamant battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14455,6 +14471,7 @@
     "attack_anims": "395,395,401,395",
     "lendable": "true",
     "grand_exchange_price": "24800",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Rune battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14483,6 +14500,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,401,395",
     "grand_exchange_price": "15",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Bronze battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -14514,6 +14532,7 @@
     "attack_anims": "395,395,401,395",
     "lendable": "true",
     "grand_exchange_price": "123200",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Dragon battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -34888,7 +34907,7 @@
     "equipment_slot": "3"
   },
   {
-    "examine": "This will teleport me to Rellekka when I play it.  A musical intrument that I can magically play.",
+    "examine": "A musical intrument that I can magically play.",
     "durability": null,
     "name": "Lyre",
     "weight": "1.8",
@@ -34897,7 +34916,7 @@
     "equipment_slot": "3"
   },
   {
-    "examine": "This will teleport me to Rellekka when I play it.  A musical intrument that I can magically play.",
+    "examine": "This will teleport me to Rellekka when I play it.",
     "durability": null,
     "name": "Enchanted lyre",
     "weight": "1.8",
@@ -34906,7 +34925,7 @@
     "equipment_slot": "3"
   },
   {
-    "examine": "This will teleport me to Rellekka when I play it.  A musical intrument that I can magically play.",
+    "examine": "This will teleport me to Rellekka when I play it.",
     "durability": null,
     "name": "Enchanted lyre(1)",
     "weight": "1.8",
@@ -36878,7 +36897,8 @@
     "archery_ticket_price": "0",
     "id": "4068",
     "stand_turn_anim": "823",
-    "bonuses": "13,18,-2,0,0,0,3,2,0,0,0,16,0,0,0"
+    "bonuses": "13,18,-2,0,0,0,3,2,0,0,0,16,0,0,0",
+    "castle_wars_ticket_price": "5"
   },
   {
     "remove_sleeves": "true",
@@ -36888,7 +36908,8 @@
     "archery_ticket_price": "0",
     "id": "4069",
     "bonuses": "0,0,0,-30,-10,32,31,24,-6,31,5,0,0,0,0",
-    "equipment_slot": "4"
+    "equipment_slot": "4",
+    "castle_wars_ticket_price": "8"
   },
   {
     "requirements": "{1,5}",
@@ -36897,7 +36918,8 @@
     "archery_ticket_price": "0",
     "id": "4070",
     "bonuses": "0,0,0,-21,-7,17,16,15,-4,16,2,0,0,0,0",
-    "equipment_slot": "7"
+    "equipment_slot": "7",
+    "castle_wars_ticket_price": "6"
   },
   {
     "remove_head": "true",
@@ -36910,7 +36932,8 @@
     "archery_ticket_price": "0",
     "id": "4071",
     "bonuses": "0,0,0,-3,-1,7,8,6,-1,7,3,0,0,0,0",
-    "equipment_slot": "0"
+    "equipment_slot": "0",
+    "castle_wars_ticket_price": "4"
   },
   {
     "requirements": "{1,5}",
@@ -36921,7 +36944,8 @@
     "archery_ticket_price": "0",
     "id": "4072",
     "bonuses": "0,0,0,-8,-2,13,15,14,-1,14,5,0,0,0,0",
-    "equipment_slot": "5"
+    "equipment_slot": "5",
+    "castle_wars_ticket_price": "6"
   },
   {
     "examine": "Not so useful for lighting a fire.",
@@ -41170,7 +41194,8 @@
     "archery_ticket_price": "0",
     "id": "4503",
     "stand_turn_anim": "823",
-    "bonuses": "15,20,-2,0,0,0,3,2,0,0,0,22,0,0,0"
+    "bonuses": "15,20,-2,0,0,0,3,2,0,0,0,22,0,0,0",
+    "castle_wars_ticket_price": "50"
   },
   {
     "remove_sleeves": "true",
@@ -41180,7 +41205,8 @@
     "archery_ticket_price": "0",
     "id": "4504",
     "bonuses": "0,0,0,-30,-10,46,44,38,-6,44,20,0,0,0,0",
-    "equipment_slot": "4"
+    "equipment_slot": "4",
+    "castle_wars_ticket_price": "80"
   },
   {
     "requirements": "{1,20}",
@@ -41189,7 +41215,8 @@
     "archery_ticket_price": "0",
     "id": "4505",
     "bonuses": "0,0,0,-21,-7,24,22,20,-4,22,5,0,0,0,0",
-    "equipment_slot": "7"
+    "equipment_slot": "7",
+    "castle_wars_ticket_price": "60"
   },
   {
     "remove_head": "true",
@@ -41202,7 +41229,8 @@
     "archery_ticket_price": "0",
     "id": "4506",
     "bonuses": "0,0,0,-3,-1,10,11,9,-1,10,5,0,0,0,0",
-    "equipment_slot": "0"
+    "equipment_slot": "0",
+    "castle_wars_ticket_price": "40"
   },
   {
     "requirements": "{1,20}",
@@ -41213,7 +41241,8 @@
     "archery_ticket_price": "0",
     "id": "4507",
     "bonuses": "0,0,0,-8,-2,18,22,20,-1,20,20,0,0,0,0",
-    "equipment_slot": "5"
+    "equipment_slot": "5",
+    "castle_wars_ticket_price": "60"
   },
   {
     "requirements": "{0,30}",
@@ -41236,7 +41265,8 @@
     "archery_ticket_price": "0",
     "id": "4508",
     "stand_turn_anim": "823",
-    "bonuses": "20,29,-2,0,0,0,3,2,0,0,0,31,0,0,0"
+    "bonuses": "20,29,-2,0,0,0,3,2,0,0,0,31,0,0,0",
+    "castle_wars_ticket_price": "500"
   },
   {
     "remove_sleeves": "true",
@@ -41246,7 +41276,8 @@
     "archery_ticket_price": "0",
     "id": "4509",
     "bonuses": "0,0,0,-30,-10,65,63,55,-6,63,30,0,0,0,0",
-    "equipment_slot": "4"
+    "equipment_slot": "4",
+    "castle_wars_ticket_price": "800"
   },
   {
     "requirements": "{1,30}",
@@ -41255,7 +41286,8 @@
     "archery_ticket_price": "0",
     "id": "4510",
     "bonuses": "0,0,0,-21,-7,33,31,29,-4,31,10,0,0,0,0",
-    "equipment_slot": "7"
+    "equipment_slot": "7",
+    "castle_wars_ticket_price": "600"
   },
   {
     "remove_head": "true",
@@ -41268,7 +41300,8 @@
     "archery_ticket_price": "0",
     "id": "4511",
     "bonuses": "0,0,0,-3,-1,14,15,13,-1,14,6,0,0,0,0",
-    "equipment_slot": "0"
+    "equipment_slot": "0",
+    "castle_wars_ticket_price": "400"
   },
   {
     "requirements": "{1,30}",
@@ -41279,7 +41312,8 @@
     "archery_ticket_price": "0",
     "id": "4512",
     "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,30,0,0,0,0",
-    "equipment_slot": "5"
+    "equipment_slot": "5",
+    "castle_wars_ticket_price": "600"
   },
   {
     "remove_head": "true",
@@ -41288,7 +41322,8 @@
     "archery_ticket_price": "0",
     "id": "4513",
     "bonuses": "0,0,0,0,0,0,1,2,0,1,0,0,0,0,0",
-    "equipment_slot": "0"
+    "equipment_slot": "0",
+    "castle_wars_ticket_price": "10"
   },
   {
     "durability": null,
@@ -41296,7 +41331,8 @@
     "archery_ticket_price": "0",
     "id": "4514",
     "bonuses": "0,0,0,0,0,0,1,1,0,2,0,0,0,0,0",
-    "equipment_slot": "1"
+    "equipment_slot": "1",
+    "castle_wars_ticket_price": "10"
   },
   {
     "remove_head": "true",
@@ -41305,7 +41341,8 @@
     "archery_ticket_price": "0",
     "id": "4515",
     "bonuses": "0,0,0,0,0,0,1,2,0,1,0,0,0,0,0",
-    "equipment_slot": "0"
+    "equipment_slot": "0",
+    "castle_wars_ticket_price": "10"
   },
   {
     "durability": null,
@@ -41313,7 +41350,8 @@
     "archery_ticket_price": "0",
     "id": "4516",
     "bonuses": "0,0,0,0,0,0,1,1,0,2,0,0,0,0,0",
-    "equipment_slot": "1"
+    "equipment_slot": "1",
+    "castle_wars_ticket_price": "10"
   },
   {
     "ge_buy_limit": "1000",
@@ -55462,7 +55500,7 @@
     "id": "6124"
   },
   {
-    "examine": "This will teleport me to Rellekka when I play it.  A musical intrument that I can magically play.",
+    "examine": "This will teleport me to Rellekka when I play it.",
     "durability": null,
     "name": "Enchanted lyre(2)",
     "weight": "1.8",
@@ -55471,7 +55509,7 @@
     "equipment_slot": "3"
   },
   {
-    "examine": "This will teleport me to Rellekka when I play it.  A musical intrument that I can magically play.",
+    "examine": "This will teleport me to Rellekka when I play it.",
     "durability": null,
     "name": "Enchanted lyre(3)",
     "weight": "1.8",
@@ -55480,7 +55518,7 @@
     "equipment_slot": "3"
   },
   {
-    "examine": "This will teleport me to Rellekka when I play it.  A musical intrument that I can magically play.",
+    "examine": "This will teleport me to Rellekka when I play it.",
     "durability": null,
     "name": "Enchanted lyre(4)",
     "weight": "1.8",
@@ -59554,8 +59592,9 @@
     "render_anim": "2586",
     "defence_anim": "397",
     "equipment_slot": "3",
-    "attack_anims": "395,395,395,395",
+    "attack_anims": "395,395,401,395",
     "grand_exchange_price": "1459",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "White battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -61131,6 +61170,7 @@
     "equipment_slot": "3",
     "attack_anims": "395,395,395,395",
     "grand_exchange_price": "813100",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Dragon axe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -66679,7 +66719,7 @@
     "bonuses": "0,0,0,15,0,0,0,0,15,0,15,0,0,0,0"
   },
   {
-    "requirements": "{1,40}-{6,20}",
+    "requirements": "{1,20}-{6,40}",
     "ge_buy_limit": "2",
     "examine": "Enchanted Wizards robes.",
     "durability": null,
@@ -70342,9 +70382,10 @@
     "equipment_slot": "3"
   },
   {
-    "attack_anims": "395,395,395,395",
+    "attack_anims": "395,395,401,395",
     "examine": "A heavy duty axe.",
     "durability": null,
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Anger battleaxe",
     "archery_ticket_price": "0",
     "id": "7807",
@@ -81503,6 +81544,7 @@
     "defence_anim": "397",
     "equipment_slot": "3",
     "attack_anims": "381,390,390,390",
+    "attack_audios": "2500,2500,2517,2500",
     "name": "Training sword",
     "archery_ticket_price": "0",
     "id": "9703",
@@ -85597,7 +85639,9 @@
     "destroy": "true",
     "weight": "4",
     "weapon_interface": "21",
+    "equip_audio": "732",
     "render_anim": "1277",
+    "attack_audios": "740,735,736,0",
     "name": "Orange salamander"
   },
   {
@@ -85624,60 +85668,66 @@
     "destroy": "true",
     "weight": "4",
     "weapon_interface": "21",
+    "equip_audio": "732",
     "render_anim": "1277",
+    "attack_audios": "740,735,736,0",
     "name": "Red salamander"
   },
   {
-    "requirements": "{0,70}-{4,70}-{6,70}",
     "ge_buy_limit": "1000",
     "turn90cw_anim": "5245",
     "examine": "Slightly slimy and somewhat menacing.",
     "walk_anim": "5245",
-    "durability": null,
-    "destroy": "true",
-    "weight": "4",
     "turn90ccw_anim": "5245",
     "attack_speed": "5",
     "two_handed": "true",
-    "weapon_interface": "21",
     "turn180_anim": "5245",
-    "render_anim": "1277",
     "equipment_slot": "3",
     "grand_exchange_price": "124",
     "stand_anim": "5246",
     "tradeable": "true",
-    "name": "Black salamander",
     "run_anim": "824",
     "archery_ticket_price": "0",
     "id": "10148",
     "stand_turn_anim": "823",
-    "bonuses": "0,59,0,0,69,0,0,0,0,0,0,71,0,0,0"
+    "bonuses": "0,59,0,0,69,0,0,0,0,0,0,71,0,0,0",
+    "requirements": "{0,70}-{4,70}-{6,70}",
+    "durability": null,
+    "destroy": "true",
+    "weight": "4",
+    "weapon_interface": "21",
+    "equip_audio": "732",
+    "render_anim": "1277",
+    "attack_audios": "740,735,736,0",
+    "name": "Black salamander"
   },
   {
-    "requirements": "{0,30}-{4,30}-{6,30}",
     "ge_buy_limit": "2000",
     "turn90cw_anim": "5245",
     "examine": "A very slimy and generally disgusting green lizard.",
     "walk_anim": "5245",
-    "durability": null,
-    "destroy": "true",
-    "weight": "4",
     "turn90ccw_anim": "5245",
     "attack_speed": "5",
     "two_handed": "true",
-    "weapon_interface": "21",
     "turn180_anim": "5245",
-    "render_anim": "1277",
     "equipment_slot": "3",
     "grand_exchange_price": "1802",
     "stand_anim": "5246",
     "tradeable": "true",
-    "name": "Swamp lizard",
     "run_anim": "824",
     "archery_ticket_price": "0",
     "id": "10149",
     "stand_turn_anim": "823",
-    "bonuses": "0,10,0,0,20,0,0,0,0,0,0,22,0,0,0"
+    "bonuses": "0,10,0,0,20,0,0,0,0,0,0,22,0,0,0",
+    "requirements": "{0,30}-{4,30}-{6,30}",
+    "durability": null,
+    "destroy": "true",
+    "weight": "4",
+    "weapon_interface": "21",
+    "equip_audio": "732",
+    "render_anim": "1277",
+    "attack_audios": "740,735,736,0",
+    "name": "Swamp lizard"
   },
   {
     "shop_price": "4",
@@ -88707,28 +88757,31 @@
     "id": "10439"
   },
   {
-    "requirements": "{5,60}",
     "ge_buy_limit": "2",
     "turn90cw_anim": "1207",
     "examine": "A Saradomin crozier.",
     "walk_anim": "1205",
-    "durability": null,
-    "weight": "2",
     "turn90ccw_anim": "1208",
     "attack_speed": "5",
-    "weapon_interface": "1",
     "turn180_anim": "1206",
-    "render_anim": "28",
+    "defence_anim": "420",
     "equipment_slot": "3",
+    "attack_anims": "419,419,419,419",
     "grand_exchange_price": "8611",
     "stand_anim": "813",
-    "name": "Saradomin crozier",
     "tradeable": "true",
     "run_anim": "1210",
     "archery_ticket_price": "0",
     "id": "10440",
     "stand_turn_anim": "1209",
-    "bonuses": "7,-1,25,10,0,2,3,1,10,0,0,32,6,0,0"
+    "bonuses": "7,-1,25,10,0,2,3,1,10,0,0,32,6,0,0",
+    "requirements": "{5,60}",
+    "durability": null,
+    "weight": "2",
+    "weapon_interface": "1",
+    "render_anim": "28",
+    "attack_audios": "2555,0,0,0",
+    "name": "Saradomin crozier"
   },
   {
     "ge_buy_limit": "2",
@@ -88740,28 +88793,31 @@
     "id": "10441"
   },
   {
-    "requirements": "{5,60}",
     "ge_buy_limit": "2",
     "turn90cw_anim": "1207",
     "examine": "A Guthix crozier.",
     "walk_anim": "1205",
-    "durability": null,
-    "weight": "2",
     "turn90ccw_anim": "1208",
     "attack_speed": "5",
-    "weapon_interface": "1",
     "turn180_anim": "1206",
-    "render_anim": "28",
+    "defence_anim": "420",
     "equipment_slot": "3",
+    "attack_anims": "419,419,419,419",
     "grand_exchange_price": "2925",
     "stand_anim": "813",
-    "name": "Guthix crozier",
     "tradeable": "true",
     "run_anim": "1210",
     "archery_ticket_price": "0",
     "id": "10442",
     "stand_turn_anim": "1209",
-    "bonuses": "7,-1,25,10,0,2,3,1,10,0,0,32,6,0,0"
+    "bonuses": "7,-1,25,10,0,2,3,1,10,0,0,32,6,0,0",
+    "requirements": "{5,60}",
+    "durability": null,
+    "weight": "2",
+    "weapon_interface": "1",
+    "render_anim": "28",
+    "attack_audios": "2555,0,0,0",
+    "name": "Guthix crozier"
   },
   {
     "ge_buy_limit": "2",
@@ -88773,30 +88829,34 @@
     "id": "10443"
   },
   {
-    "requirements": "{5,60}",
     "ge_buy_limit": "2",
     "turn90cw_anim": "1207",
     "examine": "A Zamorak crozier.",
     "walk_anim": "1205",
-    "durability": null,
-    "weight": "2",
     "turn90ccw_anim": "1208",
     "attack_speed": "5",
-    "weapon_interface": "1",
     "turn180_anim": "1206",
-    "render_anim": "28",
+    "defence_anim": "420",
     "equipment_slot": "3",
+    "attack_anims": "419,419,419,419",
     "grand_exchange_price": "2794",
     "stand_anim": "813",
-    "name": "Zamorak crozier",
     "tradeable": "true",
     "run_anim": "1210",
     "archery_ticket_price": "0",
     "id": "10444",
     "stand_turn_anim": "1209",
-    "bonuses": "7,-1,25,10,0,2,3,1,10,0,0,32,6,0,0"
+    "bonuses": "7,-1,25,10,0,2,3,1,10,0,0,32,6,0,0",
+    "requirements": "{5,60}",
+    "durability": null,
+    "weight": "2",
+    "weapon_interface": "1",
+    "render_anim": "28",
+    "attack_audios": "2555,0,0,0",
+    "name": "Zamorak crozier"
   },
   {
+    "attack_anims": "",
     "ge_buy_limit": "2",
     "grand_exchange_price": "2794",
     "durability": null,
@@ -90987,6 +91047,7 @@
     "equipment_slot": "1"
   },
   {
+    "requirements": "{1,10}",
     "examine": "A black kitesheild with a heraldic design.",
     "grand_exchange_price": "15249",
     "durability": null,
@@ -91000,17 +91061,19 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "A shield with a heraldic design.",
-    "grand_exchange_price": "16339",
     "durability": null,
+    "weight": "5",
+    "absorb": "3,0,6",
+    "equipment_slot": "5",
+    "grand_exchange_price": "16339",
     "name": "Adamant shield(h1)",
     "tradeable": "true",
-    "weight": "5",
     "archery_ticket_price": "0",
     "id": "10666",
-    "absorb": "3,0,6",
-    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0",
-    "equipment_slot": "5"
+    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0"
   },
   {
     "requirements": "{1,40}",
@@ -91027,6 +91090,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,10}",
     "examine": "A black kiteshield with a heraldic design.",
     "grand_exchange_price": "9751",
     "durability": null,
@@ -91040,17 +91104,19 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "A shield with a heraldic design.",
-    "grand_exchange_price": "3353",
     "durability": null,
+    "weight": "5",
+    "absorb": "3,0,6",
+    "equipment_slot": "5",
+    "grand_exchange_price": "3353",
     "name": "Adamant shield(h2)",
     "tradeable": "true",
-    "weight": "5",
     "archery_ticket_price": "0",
     "id": "10669",
-    "absorb": "3,0,6",
-    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0",
-    "equipment_slot": "5"
+    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0"
   },
   {
     "requirements": "{1,40}",
@@ -91067,6 +91133,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,10}",
     "examine": "A black shield with a heraldic design.",
     "grand_exchange_price": "6791",
     "durability": null,
@@ -91080,17 +91147,19 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "A shield with a heraldic design.",
-    "grand_exchange_price": "5566",
     "durability": null,
+    "weight": "5",
+    "absorb": "3,0,6",
+    "equipment_slot": "5",
+    "grand_exchange_price": "5566",
     "name": "Adamant shield(h3)",
     "tradeable": "true",
-    "weight": "5",
     "archery_ticket_price": "0",
     "id": "10672",
-    "absorb": "3,0,6",
-    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0",
-    "equipment_slot": "5"
+    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0"
   },
   {
     "requirements": "{1,40}",
@@ -91107,6 +91176,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,10}",
     "examine": "A black shield with a heraldic design.",
     "grand_exchange_price": "5159",
     "durability": null,
@@ -91120,17 +91190,19 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "A shield with a heraldic design.",
-    "grand_exchange_price": "3219",
     "durability": null,
+    "weight": "5",
+    "absorb": "3,0,6",
+    "equipment_slot": "5",
+    "grand_exchange_price": "3219",
     "name": "Adamant shield(h4)",
     "tradeable": "true",
-    "weight": "5",
     "archery_ticket_price": "0",
     "id": "10675",
-    "absorb": "3,0,6",
-    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0",
-    "equipment_slot": "5"
+    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0"
   },
   {
     "requirements": "{1,40}",
@@ -91147,6 +91219,7 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,10}",
     "examine": "A black shield with a heraldic design.",
     "grand_exchange_price": "8451",
     "durability": null,
@@ -91160,17 +91233,19 @@
     "equipment_slot": "5"
   },
   {
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "A shield with a heraldic design.",
-    "grand_exchange_price": "5905",
     "durability": null,
+    "weight": "5",
+    "absorb": "3,0,6",
+    "equipment_slot": "5",
+    "grand_exchange_price": "5905",
     "name": "Adamant shield(h5)",
     "tradeable": "true",
-    "weight": "5",
     "archery_ticket_price": "0",
     "id": "10678",
-    "absorb": "3,0,6",
-    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0",
-    "equipment_slot": "5"
+    "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,0,0,0,0,0"
   },
   {
     "requirements": "{1,40}",
@@ -91269,18 +91344,19 @@
     "equipment_slot": "4"
   },
   {
-    "remove_sleeves": "true",
+    "requirements": "{1,20}-{6,40}",
     "examine": "Enchanted Wizards robes.",
-    "grand_exchange_price": "72800",
     "durability": null,
+    "weight": "1",
+    "absorb": "3,1,0",
+    "equipment_slot": "4",
+    "remove_sleeves": "true",
+    "grand_exchange_price": "72800",
     "name": "Enchanted top",
     "tradeable": "true",
-    "weight": "1",
     "archery_ticket_price": "0",
     "id": "10688",
-    "absorb": "3,1,0",
-    "bonuses": "0,0,0,20,0,0,0,0,20,0,0,0,0,0,0",
-    "equipment_slot": "4"
+    "bonuses": "0,0,0,20,0,0,0,0,20,0,20,0,0,0,0"
   },
   {
     "lendable": "true",
@@ -91296,32 +91372,34 @@
     "equipment_slot": "10"
   },
   {
-    "remove_sleeves": "true",
+    "requirements": "{1,10}",
     "examine": "Black platebody with trim.",
-    "grand_exchange_price": "90744",
     "durability": null,
+    "weight": "9.07",
+    "absorb": "1,0,2",
+    "equipment_slot": "4",
+    "remove_sleeves": "true",
+    "grand_exchange_price": "90744",
     "name": "Black platebody (t)",
     "tradeable": "true",
-    "weight": "9.07",
     "archery_ticket_price": "0",
     "id": "10690",
-    "absorb": "1,0,2",
-    "bonuses": "0,0,0,-30,-10,41,40,30,-6,40,0,0,0,0,0",
-    "equipment_slot": "4"
+    "bonuses": "0,0,0,-30,-10,41,40,30,-6,40,0,0,0,0,0"
   },
   {
-    "remove_sleeves": "true",
+    "requirements": "{1,10}",
     "examine": "Black platebody with gold trim.",
-    "grand_exchange_price": "230800",
     "durability": null,
+    "weight": "9.07",
+    "absorb": "1,0,2",
+    "equipment_slot": "4",
+    "remove_sleeves": "true",
+    "grand_exchange_price": "230800",
     "name": "Black platebody (g)",
     "tradeable": "true",
-    "weight": "9.07",
     "archery_ticket_price": "0",
     "id": "10691",
-    "absorb": "1,0,2",
-    "bonuses": "0,0,0,-30,-10,41,40,30,-6,40,0,0,0,0,0",
-    "equipment_slot": "4"
+    "bonuses": "0,0,0,-30,-10,41,40,30,-6,40,0,0,0,0,0"
   },
   {
     "lendable": "true",
@@ -91384,35 +91462,40 @@
     "equipment_slot": "10"
   },
   {
-    "remove_sleeves": "true",
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "Adamant platebody with trim.",
-    "grand_exchange_price": "79300",
     "durability": null,
+    "weight": "9.07",
+    "absorb": "2,0,4",
+    "equipment_slot": "4",
+    "remove_sleeves": "true",
+    "grand_exchange_price": "79300",
     "name": "Adam platebody (t)",
     "tradeable": "true",
-    "weight": "9.07",
     "archery_ticket_price": "0",
     "id": "10697",
-    "absorb": "2,0,4",
-    "bonuses": "0,0,0,-30,-10,65,63,55,-6,63,0,0,0,0,0",
-    "equipment_slot": "4"
+    "bonuses": "0,0,0,-30,-10,65,63,55,-6,63,0,0,0,0,0"
   },
   {
-    "remove_sleeves": "true",
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "Adamant platebody with gold trim.",
-    "grand_exchange_price": "207912",
     "durability": null,
+    "weight": "9.07",
+    "absorb": "2,0,4",
+    "equipment_slot": "4",
+    "remove_sleeves": "true",
+    "grand_exchange_price": "207912",
     "name": "Adam platebody (g)",
     "tradeable": "true",
-    "weight": "9.07",
     "archery_ticket_price": "0",
     "id": "10698",
-    "absorb": "2,0,4",
-    "bonuses": "0,0,0,-30,-10,65,63,55,-6,63,0,0,0,0,0",
-    "equipment_slot": "4"
+    "bonuses": "0,0,0,-30,-10,65,63,55,-6,63,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,10}",
     "examine": "A black helmet with a heraldic design.",
     "grand_exchange_price": "22022",
     "durability": null,
@@ -91426,6 +91509,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,10}",
     "examine": "A black helmet with a heraldic design.",
     "grand_exchange_price": "11700",
     "durability": null,
@@ -91439,6 +91523,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,10}",
     "examine": "A black helmet with a heraldic design.",
     "grand_exchange_price": "10424",
     "durability": null,
@@ -91452,6 +91537,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,10}",
     "examine": "A black helmet with a heraldic design.",
     "grand_exchange_price": "12717",
     "durability": null,
@@ -91465,6 +91551,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,10}",
     "examine": "A black helmet with a heraldic design.",
     "grand_exchange_price": "17852",
     "durability": null,
@@ -91547,73 +91634,83 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "An adamant helmet with a heraldic design.",
-    "grand_exchange_price": "28407",
     "durability": null,
+    "weight": "3",
+    "absorb": "1,0,2",
+    "equipment_slot": "0",
+    "grand_exchange_price": "28407",
     "name": "Adamant helm (h1)",
     "tradeable": "true",
-    "weight": "3",
     "archery_ticket_price": "0",
     "id": "10709",
-    "absorb": "1,0,2",
-    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "An adamant helmet with a heraldic design.",
-    "grand_exchange_price": "9839",
     "durability": null,
+    "weight": "3",
+    "absorb": "1,0,2",
+    "equipment_slot": "0",
+    "grand_exchange_price": "9839",
     "name": "Adamant helm (h2)",
     "tradeable": "true",
-    "weight": "3",
     "archery_ticket_price": "0",
     "id": "10710",
-    "absorb": "1,0,2",
-    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "An adamant helmet with a heraldic design.",
-    "grand_exchange_price": "8485",
     "durability": null,
+    "weight": "3",
+    "absorb": "1,0,2",
+    "equipment_slot": "0",
+    "grand_exchange_price": "8485",
     "name": "Adamant helm (h3)",
     "tradeable": "true",
-    "weight": "3",
     "archery_ticket_price": "0",
     "id": "10711",
-    "absorb": "1,0,2",
-    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "An Adamant helmet with a heraldic design.",
-    "grand_exchange_price": "10774",
     "durability": null,
+    "weight": "3",
+    "absorb": "1,0,2",
+    "equipment_slot": "0",
+    "grand_exchange_price": "10774",
     "name": "Adamant helm (h4)",
     "tradeable": "true",
-    "weight": "3",
     "archery_ticket_price": "0",
     "id": "10712",
-    "absorb": "1,0,2",
-    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,30}",
+    "ge_buy_limit": "2",
     "examine": "An adamant helmet with a heraldic design.",
-    "grand_exchange_price": "17390",
     "durability": null,
+    "weight": "3",
+    "absorb": "1,0,2",
+    "equipment_slot": "0",
+    "grand_exchange_price": "17390",
     "name": "Adamant helm (h5)",
     "tradeable": "true",
-    "weight": "3",
     "archery_ticket_price": "0",
     "id": "10713",
-    "absorb": "1,0,2",
-    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,0,0,0,0,0"
   },
   {
     "remove_sleeves": "true",
@@ -108828,108 +108925,128 @@
     "id": "12855"
   },
   {
+    "requirements": "{15,50}",
     "destroy_message": "You can reclaim this item from the place you found it.",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Irit gloves",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "12856",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{15,60}",
     "destroy_message": "You can reclaim this item from the place you found it.",
     "shop_price": "100",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Avantoe gloves",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "12857",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{15,70}",
     "destroy_message": "You can reclaim this item from the place you found it.",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Kwuarm gloves",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "12858",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{15,80}",
     "destroy_message": "You can reclaim this item from the place you found it.",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Cadantine gloves",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "12859",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{10,65}",
     "destroy_message": "You can reclaim this item from the place you found it.",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Swordfish gloves",
-    "weight": "0.2",
+    "tradeable": "false",
+    "weight": "1",
     "archery_ticket_price": "0",
     "id": "12860",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{10,90}",
     "destroy_message": "You can reclaim this item from the place you found it.",
     "shop_price": "200",
     "examine": "A pair of mystical gloves",
     "durability": null,
     "name": "Shark gloves",
+    "tradeable": "false",
     "weight": "1",
     "archery_ticket_price": "0",
     "id": "12861",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{18,70}",
     "destroy_message": "You can reclaim this item from the place you found it.",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Dragon slayer gloves",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "12862",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{20,10}",
     "destroy_message": "You can buy a new pair from the druids at the Fist of Guthix activity.",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Air runecrafting gloves",
     "tradeable": "false",
+    "weight": "1",
     "destroy": "true",
     "archery_ticket_price": "0",
     "id": "12863",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{20,20}",
     "destroy_message": "You can buy a new pair from the druids at the Fist of Guthix activity.",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Water runecrafting gloves",
     "tradeable": "false",
+    "weight": "1",
     "destroy": "true",
     "archery_ticket_price": "0",
     "id": "12864",
     "equipment_slot": "9"
   },
   {
+    "requirements": "{20,30}",
     "destroy_message": "You can buy a new pair from the druids at the Fist of Guthix minigame.",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
     "name": "Earth runecrafting gloves",
     "tradeable": "false",
+    "weight": "1",
     "destroy": "true",
     "archery_ticket_price": "0",
     "id": "12865",
@@ -115828,8 +115945,8 @@
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
   },
   {
-    "destroy_message": "You can get another of these from Doric.",
-    "examine": "Doric's instructions for the task he gave you.",
+    "destroy_message": "You can get another by talking about jobs with citizens and tutors around Lumbridge.",
+    "examine": "This reminds me of my current job and who set me to the task.",
     "durability": null,
     "name": "Task list",
     "tradeable": "false",
@@ -115968,10 +116085,11 @@
     "absorb": "0,0,0",
     "render_anim": "2586",
     "defence_anim": "397",
-    "attack_anims": "395,395,395,395",
+    "attack_anims": "395,395,401,395",
     "lendable": "true",
     "destroy_message": "Drop",
     "grand_exchange_price": "123019",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Dragon battleaxe",
     "archery_ticket_price": "0",
     "id": "13472",
@@ -123114,9 +123232,10 @@
     "render_anim": "2586",
     "defence_anim": "397",
     "equipment_slot": "3",
-    "attack_anims": "395,395,395,395",
+    "attack_anims": "395,395,401,395",
     "destroy_message": "Drop",
     "grand_exchange_price": "332229",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Corrupt dragon battleaxe",
     "archery_ticket_price": "0",
     "id": "13973",
@@ -123132,9 +123251,10 @@
     "attack_speed": "4",
     "render_anim": "2586",
     "defence_anim": "397",
-    "attack_anims": "395,395,395,395",
+    "attack_anims": "395,395,401,395",
     "destroy_message": "Drop",
     "grand_exchange_price": "332229",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "Corrupt dragon battleaxe",
     "tradeable": "true",
     "archery_ticket_price": "0",
@@ -123154,9 +123274,10 @@
     "render_anim": "2586",
     "defence_anim": "397",
     "equipment_slot": "3",
-    "attack_anims": "395,395,395,395",
+    "attack_anims": "395,395,401,395",
     "destroy_message": "Drop",
     "grand_exchange_price": "332229",
+    "attack_audios": "2498,2498,2497,2498",
     "name": "C. dragon battleaxe (deg)",
     "archery_ticket_price": "0",
     "id": "13975",
@@ -129864,7 +129985,7 @@
   {
     "destroy_message": "Drop",
     "shop_price": "1000",
-    "examine": "This will teleport me to Rellekka when I play it. ",
+    "examine": "This will teleport me to Rellekka when I play it.",
     "durability": null,
     "name": "Enchanted lyre(5)",
     "destroy": "true",
@@ -129878,7 +129999,7 @@
   {
     "destroy_message": "Drop",
     "shop_price": "1000",
-    "examine": "This will teleport me to Rellekka when I play it. ",
+    "examine": "This will teleport me to Rellekka when I play it.",
     "durability": null,
     "name": "Enchanted lyre(6)",
     "destroy": "true",

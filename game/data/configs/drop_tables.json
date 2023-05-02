@@ -1759,50 +1759,7 @@
     "charm": [],
     "ids": "21",
     "description": "",
-    "main": [
-      {
-        "minAmount": "200",
-        "weight": "105.0",
-        "id": "995",
-        "maxAmount": "300"
-      },
-      {
-        "minAmount": "2",
-        "weight": "8.0",
-        "id": "560",
-        "maxAmount": "2"
-      },
-      {
-        "minAmount": "1",
-        "weight": "6.0",
-        "id": "565",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "5.0",
-        "id": "1993",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "2.0",
-        "id": "569",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "1.0",
-        "id": "1601",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "1.0",
-        "id": "444",
-        "maxAmount": "1"
-      }
-    ]
+    "main": []
   },
   {
     "default": [
@@ -3291,7 +3248,7 @@
       }
     ],
     "charm": [],
-    "ids": "73,74,75,76,419,420,421,422,423,424,1826,2714,2863,2866,2869,2878,3622,4392,4393,4394,5293,5294,5295,5296,5297,5298,5299,5300,5301,5302,5303,5304,5305,5306,5307,5308,5309,5310,5311,5312,5313,5314,5315,5316,5317,5318,5319,5320,5321,5322,5323,5324,5325,5326,5327,5328,5329,5330,5331,5375,5376,5377,5378,5379,5380,5393,5394,5395,5396,5397,5398,5399,5400,5401,5402,5403,5404,5405,5406,5407,5408,5409,5410,6099,6100,6131",
+    "ids": "73,74,75,419,420,421,422,423,424,1826,2714,2863,2866,2869,2878,3622,4392,4393,4394,5293,5294,5295,5296,5297,5298,5299,5300,5301,5302,5303,5304,5305,5306,5307,5308,5309,5310,5311,5312,5313,5314,5315,5316,5317,5318,5319,5320,5321,5322,5323,5324,5325,5326,5327,5328,5329,5330,5331,5375,5376,5377,5378,5379,5380,5393,5394,5395,5396,5397,5398,5399,5400,5401,5402,5403,5404,5405,5406,5407,5408,5409,5410,6099,6100,6131",
     "description": "",
     "main": [
       {
@@ -22812,7 +22769,7 @@
       {
         "minAmount": "1",
         "weight": "2.0",
-        "id": "4150",
+        "id": "4160",
         "maxAmount": "10"
       },
       {
@@ -27939,7 +27896,7 @@
         "maxAmount": "1"
       }
     ],
-    "ids": "1832,5750",
+    "ids": "5750",
     "description": "",
     "main": [
       {
@@ -38439,7 +38396,7 @@
       {
         "minAmount": "4",
         "weight": "25.0",
-        "id": "4150",
+        "id": "4160",
         "maxAmount": "5"
       },
       {
@@ -59901,5 +59858,350 @@
     "ids": "1235",
     "description": "Pointed",
     "main": []
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "1019",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "180",
+    "description": "Old-Highwayman",
+    "main": []
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "837",
+    "description": "Shantay Guard",
+    "main": []
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "1019",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "2677",
+    "description": "New-Highwayman",
+    "main": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "995",
+        "maxAmount": "25"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "9141",
+        "maxAmount": "15"
+      },
+      {
+        "minAmount": "1",
+        "weight": "23.0",
+        "id": "0",
+        "maxAmount": "1"
+      }
+    ]
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "447,448,449,917",
+    "description": "Jail Guard",
+    "main": []
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "2337",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "48",
+    "description": "",
+    "main": []
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "76",
+    "description": "Entrana Zombie",
+    "main": [
+      {
+        "minAmount": "1",
+        "weight": "4.0",
+        "id": "1139",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "1291",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "50.0",
+        "id": "1351",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "1349",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "4.0",
+        "id": "556",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "4.0",
+        "id": "882",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "561",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "14424",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "5",
+        "weight": "50.0",
+        "id": "313",
+        "maxAmount": "5"
+      },
+      {
+        "minAmount": "18",
+        "weight": "3.0",
+        "id": "995",
+        "maxAmount": "18"
+      },
+      {
+        "minAmount": "28",
+        "weight": "2.0",
+        "id": "995",
+        "maxAmount": "28"
+      },
+      {
+        "minAmount": "1",
+        "weight": "7.0",
+        "id": "0",
+        "maxAmount": "1"
+      }
+    ]
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "1993",
+    "description": "",
+    "main": []
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "532",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "6779",
+    "description": "",
+    "main": [
+      {
+        "minAmount": "1",
+        "weight": "0.25",
+        "id": "10976",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "0.02",
+        "id": "10977",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "99.73",
+        "id": "0",
+        "maxAmount": "1"
+      }
+    ]
+  },
+  {
+    "default": [],
+    "charm": [],
+    "ids": "1832",
+    "description": "Cave Bug (Level 6)",
+    "main": [
+      {
+        "minAmount": "8",
+        "weight": "5.0",
+        "id": "555",
+        "maxAmount": "8"
+      },
+      {
+        "minAmount": "1",
+        "weight": "5.0",
+        "id": "561",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "6",
+        "weight": "2.0",
+        "id": "557",
+        "maxAmount": "6"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "561",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "23.0",
+        "id": "14424",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "2.0",
+        "id": "235",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "2.0",
+        "id": "221",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "2.0",
+        "id": "223",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "225",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "231",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "3",
+        "weight": "8.0",
+        "id": "995",
+        "maxAmount": "3"
+      },
+      {
+        "minAmount": "1",
+        "weight": "64.0",
+        "id": "0",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "8",
+        "weight": "3.0",
+        "id": "995",
+        "maxAmount": "8"
+      },
+      {
+        "minAmount": "1",
+        "weight": "5.0",
+        "id": "36",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "3.0",
+        "id": "590",
+        "maxAmount": "1"
+      },
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "4527",
+        "maxAmount": "1"
+      }
+    ]
   }
 ]
