@@ -1,4 +1,5 @@
 ### Cross-platform release of the single-player 2009scape experience
+### For the MMO version please go to 2009scape.org and press Click Here To Play.
 
 #### How to use this release
 1. Find the big blue button that says "Clone".
