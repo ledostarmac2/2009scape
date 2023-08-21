@@ -24334,6 +24334,13 @@
     "bonuses": "-1,-1,6,6,0,2,3,1,6,0,0,2,0,0,0"
   },
   {
+    "examine": "A heavy key made of bronze. (Prince Ali Rescue).",
+    "durability": null,
+    "name": "Bronze key",
+    "archery_ticket_price": "0",
+    "id": "2418"
+  },
+  {
     "examine": "A grey woollen wig.",
     "durability": null,
     "name": "Wig",
@@ -35386,9 +35393,9 @@
     "durability": null,
     "name": "Sticky red goop",
     "tradeable": "true",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
-    "id": "3747"
+    "id": "3747",
+    "alchemizable": "true"
   },
   {
     "remove_head": "true",
@@ -35396,11 +35403,11 @@
     "durability": null,
     "name": "Fremennik helm",
     "weight": "2.7",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
     "id": "3748",
     "absorb": "1,0,2",
     "bonuses": "0,0,0,-6,-2,19,21,16,-1,19,6,0,0,0,0",
+    "alchemizable": "true",
     "equipment_slot": "0"
   },
   {
@@ -35516,19 +35523,19 @@
     "id": "3756"
   },
   {
-    "attack_anims": "390,390,381,390",
     "examine": "A sword used only by Fremennik warriors.",
     "durability": null,
-    "name": "Fremennik blade",
     "weight": "1.8",
-    "alchemizable": "true",
-    "archery_ticket_price": "0",
     "attack_speed": "4",
     "weapon_interface": "6",
-    "id": "3757",
-    "bonuses": "6,29,-2,0,0,0,1,0,0,0,0,28,0,0,0",
+    "alchemizable": "true",
     "defence_anim": "397",
-    "equipment_slot": "3"
+    "equipment_slot": "3",
+    "attack_anims": "390,390,381,390",
+    "name": "Fremennik blade",
+    "archery_ticket_price": "0",
+    "id": "3757",
+    "bonuses": "6,29,-2,0,0,0,1,0,0,0,0,28,0,0,0"
   },
   {
     "examine": "A shield worn by Fremennik warriors.",
@@ -35536,10 +35543,10 @@
     "name": "Fremennik shield",
     "destroy": "true",
     "weight": "2.2",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
     "id": "3758",
     "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,30,0,0,0,0",
+    "alchemizable": "true",
     "equipment_slot": "5"
   },
   {
@@ -36902,6 +36909,7 @@
     "weapon_interface": "6",
     "turn180_anim": "820",
     "render_anim": "1",
+    "castle_wars_ticket_price": "5",
     "equipment_slot": "3",
     "stand_anim": "808",
     "name": "Decorative sword",
@@ -36909,8 +36917,7 @@
     "archery_ticket_price": "0",
     "id": "4068",
     "stand_turn_anim": "823",
-    "bonuses": "13,18,-2,0,0,0,3,2,0,0,0,16,0,0,0",
-    "castle_wars_ticket_price": "5"
+    "bonuses": "13,18,-2,0,0,0,3,2,0,0,0,16,0,0,0"
   },
   {
     "remove_sleeves": "true",
@@ -36920,8 +36927,8 @@
     "archery_ticket_price": "0",
     "id": "4069",
     "bonuses": "0,0,0,-30,-10,32,31,24,-6,31,5,0,0,0,0",
-    "equipment_slot": "4",
-    "castle_wars_ticket_price": "8"
+    "castle_wars_ticket_price": "8",
+    "equipment_slot": "4"
   },
   {
     "requirements": "{1,5}",
@@ -36930,8 +36937,8 @@
     "archery_ticket_price": "0",
     "id": "4070",
     "bonuses": "0,0,0,-21,-7,17,16,15,-4,16,2,0,0,0,0",
-    "equipment_slot": "7",
-    "castle_wars_ticket_price": "6"
+    "castle_wars_ticket_price": "6",
+    "equipment_slot": "7"
   },
   {
     "remove_head": "true",
@@ -36944,8 +36951,8 @@
     "archery_ticket_price": "0",
     "id": "4071",
     "bonuses": "0,0,0,-3,-1,7,8,6,-1,7,3,0,0,0,0",
-    "equipment_slot": "0",
-    "castle_wars_ticket_price": "4"
+    "castle_wars_ticket_price": "4",
+    "equipment_slot": "0"
   },
   {
     "requirements": "{1,5}",
@@ -36956,8 +36963,8 @@
     "archery_ticket_price": "0",
     "id": "4072",
     "bonuses": "0,0,0,-8,-2,13,15,14,-1,14,5,0,0,0,0",
-    "equipment_slot": "5",
-    "castle_wars_ticket_price": "6"
+    "castle_wars_ticket_price": "6",
+    "equipment_slot": "5"
   },
   {
     "examine": "Not so useful for lighting a fire.",
@@ -38248,44 +38255,44 @@
     "durability": null,
     "name": "Arms",
     "weight": "2",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
-    "id": "4195"
+    "id": "4195",
+    "alchemizable": "true"
   },
   {
     "examine": "A pair of lifeless, rotting legs.",
     "durability": null,
     "name": "Legs",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
-    "id": "4196"
+    "id": "4196",
+    "alchemizable": "true"
   },
   {
     "examine": "No brain: A gruesome, decapitated head, whose brain has rotted away. Brain: A gruesome, decapitated head - its eyes stare lifelessly at nothing.",
     "durability": null,
     "name": "Decapitated head",
     "weight": "3",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
-    "id": "4197"
+    "id": "4197",
+    "alchemizable": "true"
   },
   {
     "examine": "No brain: A gruesome, decapitated head, whose brain has rotted away. Brain: A gruesome, decapitated head - its eyes stare lifelessly at nothing.",
     "durability": null,
     "name": "Decapitated head",
     "weight": "3",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
-    "id": "4198"
+    "id": "4198",
+    "alchemizable": "true"
   },
   {
     "shop_price": "50",
     "examine": "A pickled brain, submerged inside a jar of vinegar.",
     "durability": null,
     "name": "Pickled brain",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
-    "id": "4199"
+    "id": "4199",
+    "alchemizable": "true"
   },
   {
     "examine": "A mould for making silver lightning conductors.",
@@ -41203,6 +41210,7 @@
     "turn180_anim": "820",
     "render_anim": "1",
     "defence_anim": "397",
+    "castle_wars_ticket_price": "50",
     "equipment_slot": "3",
     "attack_anims": "390,390,381,390",
     "stand_anim": "808",
@@ -41211,8 +41219,7 @@
     "archery_ticket_price": "0",
     "id": "4503",
     "stand_turn_anim": "823",
-    "bonuses": "15,20,-2,0,0,0,3,2,0,0,0,22,0,0,0",
-    "castle_wars_ticket_price": "50"
+    "bonuses": "15,20,-2,0,0,0,3,2,0,0,0,22,0,0,0"
   },
   {
     "remove_sleeves": "true",
@@ -41222,8 +41229,8 @@
     "archery_ticket_price": "0",
     "id": "4504",
     "bonuses": "0,0,0,-30,-10,46,44,38,-6,44,20,0,0,0,0",
-    "equipment_slot": "4",
-    "castle_wars_ticket_price": "80"
+    "castle_wars_ticket_price": "80",
+    "equipment_slot": "4"
   },
   {
     "requirements": "{1,20}",
@@ -41232,8 +41239,8 @@
     "archery_ticket_price": "0",
     "id": "4505",
     "bonuses": "0,0,0,-21,-7,24,22,20,-4,22,5,0,0,0,0",
-    "equipment_slot": "7",
-    "castle_wars_ticket_price": "60"
+    "castle_wars_ticket_price": "60",
+    "equipment_slot": "7"
   },
   {
     "remove_head": "true",
@@ -41246,8 +41253,8 @@
     "archery_ticket_price": "0",
     "id": "4506",
     "bonuses": "0,0,0,-3,-1,10,11,9,-1,10,5,0,0,0,0",
-    "equipment_slot": "0",
-    "castle_wars_ticket_price": "40"
+    "castle_wars_ticket_price": "40",
+    "equipment_slot": "0"
   },
   {
     "requirements": "{1,20}",
@@ -41258,8 +41265,8 @@
     "archery_ticket_price": "0",
     "id": "4507",
     "bonuses": "0,0,0,-8,-2,18,22,20,-1,20,20,0,0,0,0",
-    "equipment_slot": "5",
-    "castle_wars_ticket_price": "60"
+    "castle_wars_ticket_price": "60",
+    "equipment_slot": "5"
   },
   {
     "requirements": "{0,30}",
@@ -41274,6 +41281,7 @@
     "turn180_anim": "820",
     "render_anim": "1",
     "defence_anim": "397",
+    "castle_wars_ticket_price": "500",
     "equipment_slot": "3",
     "attack_anims": "390,390,381,390",
     "stand_anim": "808",
@@ -41282,8 +41290,7 @@
     "archery_ticket_price": "0",
     "id": "4508",
     "stand_turn_anim": "823",
-    "bonuses": "20,29,-2,0,0,0,3,2,0,0,0,31,0,0,0",
-    "castle_wars_ticket_price": "500"
+    "bonuses": "20,29,-2,0,0,0,3,2,0,0,0,31,0,0,0"
   },
   {
     "remove_sleeves": "true",
@@ -41293,8 +41300,8 @@
     "archery_ticket_price": "0",
     "id": "4509",
     "bonuses": "0,0,0,-30,-10,65,63,55,-6,63,30,0,0,0,0",
-    "equipment_slot": "4",
-    "castle_wars_ticket_price": "800"
+    "castle_wars_ticket_price": "800",
+    "equipment_slot": "4"
   },
   {
     "requirements": "{1,30}",
@@ -41303,8 +41310,8 @@
     "archery_ticket_price": "0",
     "id": "4510",
     "bonuses": "0,0,0,-21,-7,33,31,29,-4,31,10,0,0,0,0",
-    "equipment_slot": "7",
-    "castle_wars_ticket_price": "600"
+    "castle_wars_ticket_price": "600",
+    "equipment_slot": "7"
   },
   {
     "remove_head": "true",
@@ -41317,8 +41324,8 @@
     "archery_ticket_price": "0",
     "id": "4511",
     "bonuses": "0,0,0,-3,-1,14,15,13,-1,14,6,0,0,0,0",
-    "equipment_slot": "0",
-    "castle_wars_ticket_price": "400"
+    "castle_wars_ticket_price": "400",
+    "equipment_slot": "0"
   },
   {
     "requirements": "{1,30}",
@@ -41329,8 +41336,8 @@
     "archery_ticket_price": "0",
     "id": "4512",
     "bonuses": "0,0,0,-8,-2,27,31,29,-1,29,30,0,0,0,0",
-    "equipment_slot": "5",
-    "castle_wars_ticket_price": "600"
+    "castle_wars_ticket_price": "600",
+    "equipment_slot": "5"
   },
   {
     "remove_head": "true",
@@ -41339,8 +41346,8 @@
     "archery_ticket_price": "0",
     "id": "4513",
     "bonuses": "0,0,0,0,0,0,1,2,0,1,0,0,0,0,0",
-    "equipment_slot": "0",
-    "castle_wars_ticket_price": "10"
+    "castle_wars_ticket_price": "10",
+    "equipment_slot": "0"
   },
   {
     "durability": null,
@@ -41348,8 +41355,8 @@
     "archery_ticket_price": "0",
     "id": "4514",
     "bonuses": "0,0,0,0,0,0,1,1,0,2,0,0,0,0,0",
-    "equipment_slot": "1",
-    "castle_wars_ticket_price": "10"
+    "castle_wars_ticket_price": "10",
+    "equipment_slot": "1"
   },
   {
     "remove_head": "true",
@@ -41358,8 +41365,8 @@
     "archery_ticket_price": "0",
     "id": "4515",
     "bonuses": "0,0,0,0,0,0,1,2,0,1,0,0,0,0,0",
-    "equipment_slot": "0",
-    "castle_wars_ticket_price": "10"
+    "castle_wars_ticket_price": "10",
+    "equipment_slot": "0"
   },
   {
     "durability": null,
@@ -41367,8 +41374,8 @@
     "archery_ticket_price": "0",
     "id": "4516",
     "bonuses": "0,0,0,0,0,0,1,1,0,2,0,0,0,0,0",
-    "equipment_slot": "1",
-    "castle_wars_ticket_price": "10"
+    "castle_wars_ticket_price": "10",
+    "equipment_slot": "1"
   },
   {
     "ge_buy_limit": "1000",
@@ -41695,7 +41702,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,5}-{18,35}",
+    "requirements": "{1,5}",
     "shop_price": "650",
     "ge_buy_limit": "100",
     "examine": "You don't want to wear it inside-out.",
@@ -66447,7 +66454,7 @@
     "id": "7373"
   },
   {
-    "requirements": "{1,50}-{4,40}",
+    "requirements": "{1,40}-{4,50}",
     "ge_buy_limit": "2",
     "examine": "Made from 100% real dragonhide, with colourful trim!",
     "grand_exchange_price": "6883",
@@ -66470,7 +66477,7 @@
     "id": "7375"
   },
   {
-    "requirements": "{1,50}-{4,40}",
+    "requirements": "{1,40}-{4,50}",
     "ge_buy_limit": "2",
     "examine": "Made from 100% real dragonhide, with colourful trim!",
     "grand_exchange_price": "5268",
@@ -66721,7 +66728,7 @@
     "id": "7397"
   },
   {
-    "requirements": "{1,40}-{6,20}",
+    "requirements": "{1,20}-{6,40}",
     "ge_buy_limit": "2",
     "examine": "Enchanted Wizards robes.",
     "durability": null,
@@ -66753,7 +66760,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,40}-{6,20}",
+    "requirements": "{1,20}-{6,40}",
     "ge_buy_limit": "2",
     "examine": "A three pointed hat of magic.",
     "grand_exchange_price": "8845",
@@ -73251,6 +73258,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73263,6 +73271,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73275,6 +73284,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73287,6 +73297,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73299,6 +73310,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73311,6 +73323,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73323,6 +73336,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73335,6 +73349,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73347,6 +73362,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73359,6 +73375,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73371,6 +73388,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73383,6 +73401,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73395,6 +73414,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73407,6 +73427,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73419,6 +73440,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -73431,6 +73453,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Rune heraldic helm",
@@ -74990,6 +75013,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75002,6 +75026,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75014,6 +75039,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75026,6 +75052,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75038,6 +75065,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75050,6 +75078,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75062,6 +75091,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75074,6 +75104,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75086,6 +75117,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75098,6 +75130,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75110,6 +75143,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75122,6 +75156,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75134,6 +75169,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75146,6 +75182,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75158,6 +75195,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -75170,6 +75208,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,5}",
     "examine": "The colours represent crest.",
     "durability": null,
     "name": "Steel heraldic helm",
@@ -88011,7 +88050,7 @@
     "id": "10371"
   },
   {
-    "requirements": "{4,70}",
+    "requirements": "{1,40}-{4,70}",
     "ge_buy_limit": "2",
     "examine": "Zamorak blessed dragonhide chaps.",
     "durability": null,
@@ -88108,7 +88147,7 @@
     "id": "10379"
   },
   {
-    "requirements": "{4,70}",
+    "requirements": "{1,40}-{4,70}",
     "ge_buy_limit": "2",
     "examine": "Guthix blessed dragonhide chaps.",
     "durability": null,
@@ -88207,7 +88246,7 @@
     "id": "10387"
   },
   {
-    "requirements": "{4,70}",
+    "requirements": "{1,40}-{4,70}",
     "ge_buy_limit": "2",
     "examine": "Saradomin blessed dragonhide chaps.",
     "grand_exchange_price": "36600",
@@ -90438,6 +90477,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "Protective headwear made from crabs. Better than it sounds.",
     "durability": null,
     "weight": "2.7",
@@ -90453,6 +90493,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}-{4,40}",
     "examine": "A helm fit for any Fremennik ranger.",
     "durability": null,
     "weight": "1",
@@ -91582,6 +91623,7 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "A rune helmet with a heraldic design.",
     "grand_exchange_price": "30298",
     "durability": null,
@@ -91595,59 +91637,63 @@
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "A rune helmet with a heraldic design.",
-    "grand_exchange_price": "26127",
     "durability": null,
+    "weight": "3",
+    "absorb": "1,0,3",
+    "equipment_slot": "0",
+    "grand_exchange_price": "26127",
     "name": "Rune helm (h2)",
     "tradeable": "true",
-    "weight": "3",
     "archery_ticket_price": "0",
     "id": "10705",
-    "absorb": "1,0,3",
-    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "A rune helmet with a heraldic design.",
-    "grand_exchange_price": "37333",
     "durability": null,
+    "weight": "4",
+    "absorb": "1,0,3",
+    "equipment_slot": "0",
+    "grand_exchange_price": "37333",
     "name": "Rune helm (h3)",
     "tradeable": "true",
-    "weight": "4",
     "archery_ticket_price": "0",
     "id": "10706",
-    "absorb": "1,0,3",
-    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "A rune helmet with a heraldic design.",
-    "grand_exchange_price": "29600",
     "durability": null,
+    "weight": "2",
+    "absorb": "1,0,3",
+    "equipment_slot": "0",
+    "grand_exchange_price": "29600",
     "name": "Rune helm (h4)",
     "tradeable": "true",
-    "weight": "2",
     "archery_ticket_price": "0",
     "id": "10707",
-    "absorb": "1,0,3",
-    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0"
   },
   {
     "remove_head": "true",
+    "requirements": "{1,40}",
     "examine": "A rune helmet with a heraldic design.",
-    "grand_exchange_price": "41325",
     "durability": null,
+    "weight": "2",
+    "absorb": "1,0,3",
+    "equipment_slot": "0",
+    "grand_exchange_price": "41325",
     "name": "Rune helm (h5)",
     "tradeable": "true",
-    "weight": "2",
     "archery_ticket_price": "0",
     "id": "10708",
-    "absorb": "1,0,3",
-    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0",
-    "equipment_slot": "0"
+    "bonuses": "0,0,0,-6,-2,30,32,27,-1,30,0,0,0,0,0"
   },
   {
     "remove_head": "true",
@@ -92199,6 +92245,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{1,40}",
     "examine": "Rune platebody in the colours of Zamorak.",
     "durability": null,
     "weight": "9",
@@ -92214,6 +92261,7 @@
     "bonuses": "0,0,0,-30,-10,82,80,72,-6,80,0,0,0,0,0"
   },
   {
+    "requirements": "{1,40}",
     "examine": "Rune platebody in the colours of Saradomin.",
     "durability": null,
     "weight": "9.07",
@@ -92229,6 +92277,7 @@
     "bonuses": "0,0,0,-30,-10,82,80,72,-6,80,0,0,0,0,0"
   },
   {
+    "requirements": "{1,40}",
     "examine": "Rune platebody in the colours of Guthix.",
     "durability": null,
     "weight": "9.07",
@@ -92244,6 +92293,7 @@
     "bonuses": "0,0,0,-30,-10,82,80,72,-6,80,0,0,0,0,0"
   },
   {
+    "requirements": "{1,40}",
     "examine": "Rune platebody with complete gold trim &amp; plating.",
     "durability": null,
     "weight": "10",
@@ -92259,6 +92309,7 @@
     "bonuses": "0,0,0,-30,-10,82,80,72,-6,80,0,0,0,0,0"
   },
   {
+    "requirements": "{5,20}",
     "remove_sleeves": "true",
     "examine": "Blessed vestments of Saradomin.",
     "grand_exchange_price": "106389",
@@ -92271,6 +92322,7 @@
     "equipment_slot": "4"
   },
   {
+    "requirements": "{5,20}",
     "remove_sleeves": "true",
     "examine": "Zamorak Vestments.",
     "grand_exchange_price": "151000",
@@ -92284,6 +92336,7 @@
     "equipment_slot": "4"
   },
   {
+    "requirements": "{5,20}",
     "remove_sleeves": "true",
     "examine": "Blessed vestments of Guthix.",
     "grand_exchange_price": "80181",
@@ -92297,20 +92350,22 @@
     "equipment_slot": "4"
   },
   {
-    "remove_sleeves": "true",
+    "requirements": "{1,40}-{4,70}",
     "examine": "Zamorak blessed dragonhide body armour.",
-    "grand_exchange_price": "84966",
     "durability": null,
+    "weight": "6",
+    "absorb": "0,6,3",
+    "equipment_slot": "4",
+    "remove_sleeves": "true",
+    "grand_exchange_price": "84966",
     "name": "Zamorak d'hide",
     "tradeable": "true",
-    "weight": "6",
     "archery_ticket_price": "0",
     "id": "10790",
-    "absorb": "0,6,3",
-    "bonuses": "0,0,0,-15,30,55,47,60,50,55,0,0,0,0,0",
-    "equipment_slot": "4"
+    "bonuses": "0,0,0,-15,30,55,47,60,50,55,0,0,0,0,0"
   },
   {
+    "requirements": "{1,40}-{4,70}",
     "shop_price": "13000",
     "examine": "Saradomin blessed dragonhide body armour.",
     "durability": null,
@@ -92327,6 +92382,7 @@
     "bonuses": "0,0,0,-15,30,55,47,60,50,55,0,0,0,0,0"
   },
   {
+    "requirements": "{1,40}-{4,70}",
     "shop_price": "13",
     "examine": "Guthix blessed dragonhide body armour.",
     "durability": null,
@@ -92343,6 +92399,7 @@
   },
   {
     "lendable": "true",
+    "requirements": "{4,40}",
     "examine": "Endorsed by Robin Hood.",
     "grand_exchange_price": "3070557",
     "durability": null,
@@ -92355,6 +92412,7 @@
     "equipment_slot": "0"
   },
   {
+    "requirements": "{1,40}",
     "examine": "Rune platebody with gold trim.",
     "durability": null,
     "weight": "9.07",
@@ -92370,6 +92428,7 @@
     "bonuses": "0,0,0,-30,-10,82,80,72,-6,80,0,0,0,0,0"
   },
   {
+    "requirements": "{1,40}",
     "examine": "Rune platebody with trim.",
     "durability": null,
     "weight": "9.07",
@@ -92724,10 +92783,10 @@
   {
     "durability": null,
     "name": "A jester stick",
-    "alchemizable": "true",
     "archery_ticket_price": "0",
     "id": "10840",
     "bonuses": "0,0,0,0,0,0,0,0,5,-5,0,0,0,0,0",
+    "alchemizable": "true",
     "equipment_slot": "3"
   },
   {
@@ -108943,8 +109002,8 @@
     "id": "12855"
   },
   {
-    "requirements": "{15,50}",
     "destroy_message": "You can reclaim this item from the place you found it.",
+    "requirements": "{15,50}",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -108955,8 +109014,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{15,60}",
     "destroy_message": "You can reclaim this item from the place you found it.",
+    "requirements": "{15,60}",
     "shop_price": "100",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -108967,8 +109026,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{15,70}",
     "destroy_message": "You can reclaim this item from the place you found it.",
+    "requirements": "{15,70}",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -108979,8 +109038,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{15,80}",
     "destroy_message": "You can reclaim this item from the place you found it.",
+    "requirements": "{15,80}",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -108991,8 +109050,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{10,65}",
     "destroy_message": "You can reclaim this item from the place you found it.",
+    "requirements": "{10,65}",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -109004,8 +109063,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{10,90}",
     "destroy_message": "You can reclaim this item from the place you found it.",
+    "requirements": "{10,90}",
     "shop_price": "200",
     "examine": "A pair of mystical gloves",
     "durability": null,
@@ -109017,8 +109076,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{18,70}",
     "destroy_message": "You can reclaim this item from the place you found it.",
+    "requirements": "{18,70}",
     "shop_price": "200",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -109029,8 +109088,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{20,10}",
     "destroy_message": "You can buy a new pair from the druids at the Fist of Guthix activity.",
+    "requirements": "{20,10}",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -109043,8 +109102,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{20,20}",
     "destroy_message": "You can buy a new pair from the druids at the Fist of Guthix activity.",
+    "requirements": "{20,20}",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -109057,8 +109116,8 @@
     "equipment_slot": "9"
   },
   {
-    "requirements": "{20,30}",
     "destroy_message": "You can buy a new pair from the druids at the Fist of Guthix minigame.",
+    "requirements": "{20,30}",
     "shop_price": "75",
     "examine": "A pair of mystical gloves.",
     "durability": null,
@@ -109072,7 +109131,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,60}-{6,50}",
+    "requirements": "{1,50}-{6,60}",
     "shop_price": "250",
     "examine": "Its arcane power is waning.",
     "durability": null,
@@ -109087,7 +109146,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,60}-{6,50}",
+    "requirements": "{1,50}-{6,60}",
     "shop_price": "250",
     "examine": "Its arcane power is waning.",
     "durability": null,
@@ -109102,7 +109161,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,60}-{6,50}",
+    "requirements": "{1,50}-{6,60}",
     "shop_price": "250",
     "examine": "Its arcane power is waning.",
     "durability": null,
@@ -109117,7 +109176,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,60}-{6,50}",
+    "requirements": "{1,50}-{6,60}",
     "shop_price": "250",
     "examine": "Its arcane power is waning.",
     "durability": null,
@@ -109132,7 +109191,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,60}-{6,50}",
+    "requirements": "{1,50}-{6,60}",
     "shop_price": "250",
     "examine": "Its arcane power is waning.",
     "durability": null,
@@ -109147,7 +109206,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,60}-{6,50}",
+    "requirements": "{1,50}-{6,60}",
     "shop_price": "250",
     "ge_buy_limit": "10",
     "examine": "Its arcane power is waning.",
@@ -109380,7 +109439,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A worn-out hood, formerly worn by the followers of Guthix.",
     "durability": null,
@@ -109395,7 +109454,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A worn-out hood, formerly worn by the followers of Guthix.",
     "durability": null,
@@ -109410,7 +109469,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A worn-out hood, formerly worn by the followers of Guthix.",
     "durability": null,
@@ -109425,7 +109484,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A worn-out hood, formerly worn by the followers of Guthix.",
     "durability": null,
@@ -109440,7 +109499,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A worn-out hood, formerly worn by the followers of Guthix.",
     "durability": null,
@@ -109455,7 +109514,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "ge_buy_limit": "10",
     "examine": "A worn-out hood, formerly worn by the followers of Guthix.",
@@ -109479,7 +109538,7 @@
     "id": "12893"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "300",
     "examine": "A magical robe top worn by followers of Guthix.",
     "durability": null,
@@ -109495,7 +109554,7 @@
     "bonuses": "0,0,0,7,0,0,0,0,7,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "300",
     "examine": "A magical robe top worn by followers of Guthix.",
     "durability": null,
@@ -109511,7 +109570,7 @@
     "bonuses": "0,0,0,7,0,0,0,0,7,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "300",
     "examine": "A magical robe top worn by followers of Guthix.",
     "durability": null,
@@ -109527,7 +109586,7 @@
     "bonuses": "0,0,0,7,0,0,0,0,7,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "300",
     "examine": "A magical robe top worn by followers of Guthix.",
     "durability": null,
@@ -109543,7 +109602,7 @@
     "bonuses": "0,0,0,7,0,0,0,0,7,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "300",
     "examine": "A magical robe top worn by followers of Guthix.",
     "durability": null,
@@ -109559,7 +109618,7 @@
     "bonuses": "0,0,0,7,0,0,0,0,7,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "300",
     "ge_buy_limit": "10",
     "examine": "A magical robe top worn by followers of Guthix.",
@@ -109585,7 +109644,7 @@
     "id": "12900"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "200",
     "examine": "A magical robe bottom worn by a person who follows Guthix.",
     "durability": null,
@@ -109600,7 +109659,7 @@
     "bonuses": "0,0,0,6,0,0,0,0,6,0,6,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "200",
     "examine": "A magical robe bottom worn by a person who follows Guthix.",
     "durability": null,
@@ -109615,7 +109674,7 @@
     "bonuses": "0,0,0,6,0,0,0,0,6,0,6,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "200",
     "examine": "A magical robe bottom worn by a person who follows Guthix.",
     "durability": null,
@@ -109630,7 +109689,7 @@
     "bonuses": "0,0,0,6,0,0,0,0,6,0,6,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "200",
     "examine": "A magical robe bottom worn by a person who follows Guthix.",
     "durability": null,
@@ -109645,7 +109704,7 @@
     "bonuses": "0,0,0,6,0,0,0,0,6,0,6,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "200",
     "examine": "A magical robe bottom worn by a person who follows Guthix.",
     "durability": null,
@@ -109660,7 +109719,7 @@
     "bonuses": "0,0,0,6,0,0,0,0,6,0,6,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "200",
     "ge_buy_limit": "10",
     "examine": "A magical robe bottom worn by a person who follows Guthix.",
@@ -110520,7 +110579,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "50",
     "examine": "A magical hood, especially created for combat spells.",
     "durability": null,
@@ -110535,7 +110594,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "50",
     "examine": "A magical hood, especially created for combat spells.",
     "durability": null,
@@ -110550,7 +110609,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "50",
     "examine": "A magical hood, especially created for combat spells.",
     "durability": null,
@@ -110565,7 +110624,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "50",
     "examine": "A magical hood, especially created for combat spells.",
     "durability": null,
@@ -110580,7 +110639,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "50",
     "examine": "A magical hood, especially created for combat spells.",
     "durability": null,
@@ -110595,7 +110654,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "50",
     "ge_buy_limit": "10",
     "examine": "A magical hood, especially created for combat spells.",
@@ -110619,7 +110678,7 @@
     "id": "12970"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "150",
     "examine": "A magical robe top, especially made for combat spells.",
     "durability": null,
@@ -110635,7 +110694,7 @@
     "bonuses": "0,0,0,7,0,1,1,1,7,0,8,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "150",
     "examine": "A magical robe top, especially made for combat spells.",
     "durability": null,
@@ -110651,7 +110710,7 @@
     "bonuses": "0,0,0,7,0,1,1,1,7,0,8,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "150",
     "examine": "A magical robe top, especially made for combat spells.",
     "durability": null,
@@ -110667,7 +110726,7 @@
     "bonuses": "0,0,0,7,0,1,1,1,7,0,8,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "150",
     "examine": "A magical robe top, especially made for combat spells.",
     "durability": null,
@@ -110683,7 +110742,7 @@
     "bonuses": "0,0,0,7,0,1,1,1,7,0,8,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "150",
     "examine": "A magical robe top, especially made for combat spells.",
     "durability": null,
@@ -110699,7 +110758,7 @@
     "bonuses": "0,0,0,7,0,1,1,1,7,0,8,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "150",
     "ge_buy_limit": "10",
     "examine": "A magical robe top, especially made for combat spells.",
@@ -110725,7 +110784,7 @@
     "id": "12977"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A magical robe bottom, especially created for combat spells.",
     "durability": null,
@@ -110740,7 +110799,7 @@
     "bonuses": "0,0,0,6,0,1,1,1,6,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A magical robe bottom, especially created for combat spells.",
     "durability": null,
@@ -110755,7 +110814,7 @@
     "bonuses": "0,0,0,6,0,1,1,1,6,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A magical robe bottom, especially created for combat spells.",
     "durability": null,
@@ -110770,7 +110829,7 @@
     "bonuses": "0,0,0,6,0,1,1,1,6,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A magical robe bottom, especially created for combat spells.",
     "durability": null,
@@ -110785,7 +110844,7 @@
     "bonuses": "0,0,0,6,0,1,1,1,6,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "examine": "A magical robe bottom, especially created for combat spells.",
     "durability": null,
@@ -110800,7 +110859,7 @@
     "bonuses": "0,0,0,6,0,1,1,1,6,0,7,0,0,0,0"
   },
   {
-    "requirements": "{1,20}-{6,10}",
+    "requirements": "{1,10}-{6,20}",
     "shop_price": "100",
     "ge_buy_limit": "10",
     "examine": "A magical robe bottom, especially created for combat spells.",
@@ -121436,7 +121495,7 @@
     "id": "13867",
     "stand_turn_anim": "1209",
     "bonuses": "13,-1,65,18,0,5,7,4,18,0,0,72,0,0,10",
-    "requirements": "{6,78}",
+    "requirements": "{0,78}-{6,78}",
     "shop_price": "300000",
     "durability": null,
     "destroy": "false",
@@ -121447,7 +121506,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{6,78}",
+    "requirements": "{0,78}-{6,78}",
     "shop_price": "300000",
     "examine": "This item degrades in combat, and will turn to dust.",
     "grand_exchange_price": "2116989",
@@ -121479,6 +121538,7 @@
     "id": "13869",
     "stand_turn_anim": "1209",
     "bonuses": "13,-1,65,18,0,5,7,4,18,0,0,72,0,0,10",
+    "requirements": "{0,78}-{6,78}",
     "shop_price": "300000",
     "durability": null,
     "destroy": "true",
@@ -122165,19 +122225,19 @@
     "requirements": "{0,78}",
     "shop_price": "180000",
     "examine": "This item degrades in combat, and will turn to dust.",
+    "walk_anim": "1205",
     "has_special": "true",
     "durability": null,
     "destroy": "true",
     "attack_speed": "5",
     "two_handed": "true",
+    "turn90ccw_anim": "1208",
     "weapon_interface": "14",
     "absorb": "0,0,0",
-    "turn90ccw_anim": "1208",
-    "walk_anim": "1205",
     "defence_anim": "2079",
-    "attack_anims": "2080,2081,2082,2080",
     "render_anim": "28",
     "equipment_slot": "3",
+    "attack_anims": "2080,2081,2082,2080",
     "destroy_message": "Drop",
     "grand_exchange_price": "5264612",
     "name": "Vesta's spear (deg)",

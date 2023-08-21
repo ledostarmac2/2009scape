@@ -16,7 +16,7 @@
       }
     ],
     "charm": [],
-    "ids": "1,2,3,16,24,170,351,359,663,726,727,728,729,730,1086,2675,3223,3224,3225,3915,5923",
+    "ids": "1,2,3,16,24,170,351,359,663,726,727,728,729,730,1081,1084,1085,1086,1087,1088,1089,2675,3223,3224,3225,3915,5923",
     "description": "",
     "main": [
       {
@@ -1757,7 +1757,7 @@
       }
     ],
     "charm": [],
-    "ids": "21",
+    "ids": "21,1072",
     "description": "",
     "main": []
   },
@@ -2438,7 +2438,7 @@
         "minAmount": "75",
         "weight": "1.0",
         "id": "556",
-        "maxAmount": "5"
+        "maxAmount": "75"
       },
       {
         "minAmount": "10",
@@ -4380,12 +4380,6 @@
     "ids": "94,3844,3850,3851",
     "description": "",
     "main": [
-      {
-        "minAmount": "1",
-        "weight": "50.0",
-        "id": "1391",
-        "maxAmount": "1"
-      },
       {
         "minAmount": "1",
         "weight": "50.0",
@@ -12183,12 +12177,6 @@
       {
         "minAmount": "1",
         "weight": "5.0",
-        "id": "6808",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "5.0",
         "id": "31",
         "maxAmount": "1"
       },
@@ -16161,135 +16149,6 @@
       {
         "minAmount": "1",
         "weight": "100.0",
-        "id": "526",
-        "maxAmount": "1"
-      }
-    ],
-    "charm": [],
-    "ids": "1087",
-    "description": "",
-    "main": [
-      {
-        "minAmount": "2",
-        "weight": "25.0",
-        "id": "562",
-        "maxAmount": "9"
-      },
-      {
-        "minAmount": "6",
-        "weight": "25.0",
-        "id": "554",
-        "maxAmount": "6"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "199",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "201",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "205",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "203",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "207",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "209",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "211",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "215",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "217",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "3",
-        "weight": "25.0",
-        "id": "877",
-        "maxAmount": "12"
-      },
-      {
-        "minAmount": "7",
-        "weight": "25.0",
-        "id": "882",
-        "maxAmount": "7"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "1203",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "3",
-        "weight": "50.0",
-        "id": "995",
-        "maxAmount": "25"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "1965",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "436",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "313",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "7767",
-        "maxAmount": "1"
-      }
-    ]
-  },
-  {
-    "default": [
-      {
-        "minAmount": "1",
-        "weight": "100.0",
         "id": "532",
         "maxAmount": "1"
       }
@@ -19687,10 +19546,10 @@
         "maxAmount": "1"
       },
       {
-        "minAmount": "110",
+        "minAmount": "30",
         "weight": "5.0",
         "id": "313",
-        "maxAmount": "30"
+        "maxAmount": "110"
       },
       {
         "minAmount": "1",
@@ -19852,10 +19711,10 @@
         "maxAmount": "1"
       },
       {
-        "minAmount": "110",
+        "minAmount": "30",
         "weight": "5.0",
         "id": "313",
-        "maxAmount": "30"
+        "maxAmount": "110"
       },
       {
         "minAmount": "1",
@@ -28627,12 +28486,6 @@
         "minAmount": "1",
         "weight": "5.0",
         "id": "5733",
-        "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "5.0",
-        "id": "6808",
         "maxAmount": "1"
       },
       {
@@ -46734,7 +46587,7 @@
       {
         "minAmount": "1",
         "weight": "5.0",
-        "id": "5733",
+        "id": "12070",
         "maxAmount": "1"
       },
       {
@@ -46850,7 +46703,7 @@
       {
         "minAmount": "1",
         "weight": "5.0",
-        "id": "1",
+        "id": "12070",
         "maxAmount": "1"
       }
     ]
@@ -48495,10 +48348,10 @@
         "maxAmount": "2"
       },
       {
-        "minAmount": "3",
+        "minAmount": "1",
         "weight": "500.0",
         "id": "7054",
-        "maxAmount": "1"
+        "maxAmount": "3"
       },
       {
         "minAmount": "1",
@@ -59066,7 +58919,7 @@
       }
     ],
     "charm": [],
-    "ids": "1904,6368,6367,912,913,914,255,256,27,34,35,689,690,691,3814,3816,4402,4403",
+    "ids": "1904,6368,6367,912,913,914,253,254,255,256,258,27,34,35,689,690,691,3814,3816,4402,4403",
     "description": "",
     "main": [
       {
@@ -60206,6 +60059,34 @@
         "minAmount": "1",
         "weight": "1.0",
         "id": "4527",
+        "maxAmount": "1"
+      }
+    ]
+  },
+  {
+    "default": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "526",
+        "maxAmount": "1"
+      }
+    ],
+    "charm": [],
+    "ids": "3057,3059,3058,3060,3061,3062,3063,3064,3065,3066",
+    "description": "Champion's Challenge NPC - activity",
+    "main": []
+  },
+  {
+    "default": [],
+    "charm": [],
+    "ids": "2459,2460,2461,2462",
+    "description": "Pheasant NPC (level 4) - Freaky Forester - Random event",
+    "main": [
+      {
+        "minAmount": "1",
+        "weight": "1.0",
+        "id": "6178",
         "maxAmount": "1"
       }
     ]
