@@ -19311,6 +19311,14 @@
     "id": "1866"
   },
   {
+    "examine": "It's all burnt.",
+    "durability": null,
+    "name": "Burnt pitta bread",
+    "tradeable": "true",
+    "archery_ticket_price": "0",
+    "id": "1867"
+  },
+  {
     "durability": null,
     "name": "Burnt pitta bread",
     "tradeable": "true",
@@ -20723,6 +20731,14 @@
     "tradeable": "true",
     "archery_ticket_price": "0",
     "id": "2012"
+  },
+  {
+    "examine": "Eew, it's horribly burnt.",
+    "durability": null,
+    "name": "Burnt curry",
+    "tradeable": "true",
+    "archery_ticket_price":"0",
+    "id":"2013"
   },
   {
     "durability": null,
@@ -99642,7 +99658,7 @@
   {
     "requirements": "{1,70}-{4,70}",
     "ge_buy_limit": "2",
-    "examine": "A rune plateskirt in the colours of Armadyl.",
+    "examine": "A plateskirt of great craftsmanship.",
     "rare_item": "true",
     "durability": null,
     "weight": "8",
