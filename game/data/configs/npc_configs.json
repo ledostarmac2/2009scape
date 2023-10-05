@@ -6733,18 +6733,35 @@
     "attack_level": "1"
   },
   {
-    "examine": "Like a grave keeper",
+    "examine": "He clearly takes pride in his appearance.",
     "range_animation": "0",
     "magic_level": "60",
     "defence_animation": "0",
     "weakness": "10",
     "magic_animation": "0",
-    "name": "Shopkeeper",
+    "name": "Shopkeeper Kofi",
     "defence_level": "60",
     "safespot": null,
     "lifepoints": "285",
     "strength_level": "60",
     "id": "532",
+    "aggressive": "true",
+    "range_level": "60",
+    "attack_level": "60"
+  },
+  {
+    "examine": "Needs a haircut.",
+    "range_animation": "0",
+    "magic_level": "60",
+    "defence_animation": "0",
+    "weakness": "10",
+    "magic_animation": "0",
+    "name": "Shop assistant",
+    "defence_level": "60",
+    "safespot": null,
+    "lifepoints": "285",
+    "strength_level": "60",
+    "id": "533",
     "aggressive": "true",
     "range_level": "60",
     "attack_level": "60"
@@ -19432,7 +19449,8 @@
     "slayer_task": "15",
     "melee_animation": "6079",
     "range_animation": "0",
-    "attack_speed": "5",
+    "attack_speed": "4",
+    "magic_level": "1",
     "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "2",
@@ -19442,11 +19460,12 @@
     "name": "Cave bug",
     "defence_level": "6",
     "safespot": null,
-    "lifepoints": "8",
-    "strength_level": "1",
+    "lifepoints": "5",
+    "strength_level": "5",
     "id": "1832",
-    "range_level": "6",
-    "attack_level": "1"
+    "bonuses": "0,0,0,0,0,10,10,5,5,10,0,0,0,0,0",
+    "range_level": "1",
+    "attack_level": "6"
   },
   {
     "examine": "A little",
@@ -19957,6 +19976,7 @@
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "703,705,704",
+    "attack_speed": "4",
     "defence_animation": "0",
     "magic_animation": "0",
     "death_animation": "0",
@@ -19966,8 +19986,9 @@
     "lifepoints": "10",
     "strength_level": "1",
     "id": "1902",
+    "bonuses": "0,0,0,0,0,10,10,5,5,10,0,0,0,0,0",
     "range_level": "1",
-    "attack_level": "1"
+    "attack_level": "6"
   },
   {
     "examine": "Menaphite thug.",
@@ -28438,6 +28459,7 @@
     "examine": "A not-so friendly, not-so little cat.",
     "melee_animation": "0",
     "range_animation": "0",
+    "attack_speed": "4",
     "defence_animation": "0",
     "magic_animation": "0",
     "death_animation": "0",
@@ -28449,7 +28471,7 @@
     "id": "2986",
     "aggressive": "true",
     "range_level": "1",
-    "attack_level": "1"
+    "attack_level": "10"
   },
   {
     "examine": "A fully grown feline.",
@@ -49136,21 +49158,23 @@
     "slayer_task": "15",
     "melee_animation": "6079",
     "range_animation": "0",
-    "attack_speed": "5",
-    "respawn_delay": "60",
+    "attack_speed": "4",
+    "magic_level": "1",
+    "respawn_degitlay": "60",
     "defence_animation": "0",
     "weakness": "2",
     "slayer_exp": "93",
     "magic_animation": "0",
     "death_animation": "6081",
     "name": "Cave bug",
-    "defence_level": "9",
+    "defence_level": "84",
     "safespot": null,
     "lifepoints": "93",
-    "strength_level": "1",
+    "strength_level": "80",
     "id": "5750",
-    "range_level": "9",
-    "attack_level": "1"
+    "bonuses": "0,0,0,0,0,72,59,35,25,95,0,0,0,0,0",
+    "range_level": "1",
+    "attack_level": "82"
   },
   {
     "examine": "A strange mole-like being.",
@@ -71334,6 +71358,21 @@
     "id": "2335"
   },
   {
+    "examine": "Founder and Director of the Piscatoris Fishing Colony.",
+    "name": "Herman Caranos",
+    "id": "3822"
+  },
+  {
+    "examine": "Engineer for the Piscatoris Fishing Colony.",
+    "name": "Franklin Caranos",
+    "id": "3823"
+  },
+  {
+    "examine": "Secretary and Storemaster for the Piscatoris Fishing Colony.",
+    "name": "Arnold Lydspor",
+    "id": "3824"
+  },
+  {
     "examine": "Perhaps this gardener might look after your crops for you.",
     "name": "Frizzy Skernip",
     "id": "4560"
@@ -72276,5 +72315,24 @@
     "examine": "He looks dangerous!",
     "name": "Turael",
     "id": "8273"
+  },
+  {
+    "examine": "Doesn't seem to want to go away.",
+    "combat_style": "2",
+    "melee_animation": "811",
+    "range_animation": "811",
+    "attack_speed": "4",
+    "magic_level": "100",
+    "defence_animation": "0",
+    "magic_animation": "811",
+    "death_animation": "836",
+    "name": "Skeleton Mage",
+    "defence_level": "60",
+    "lifepoints": "80",
+    "strength_level": "10",
+    "id": "3851",
+    "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+    "range_level": "1",
+    "attack_level": "10"
   }
 ]
