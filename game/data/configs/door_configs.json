@@ -73,7 +73,7 @@
   },
   {
     "id": "92",
-    "replaceId": "17317",
+    "replaceId": "91",
     "fence": "false",
     "metal": "false"
   },
@@ -2188,18 +2188,6 @@
     "metal": "false"
   },
   {
-    "id": "24560",
-    "replaceId": "15515",
-    "fence": "true",
-    "metal": "false"
-  },
-  {
-    "id": "24561",
-    "replaceId": "15517",
-    "fence": "true",
-    "metal": "false"
-  },
-  {
     "id": "24565",
     "replaceId": "36316",
     "fence": "false",
@@ -2689,7 +2677,7 @@
   },
   {
     "id": "31815",
-    "replaceId": "31816",
+    "replaceId": "31817",
     "fence": "false",
     "metal": "false"
   },

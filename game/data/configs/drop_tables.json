@@ -11511,19 +11511,13 @@
         "weight": "100.0",
         "id": "530",
         "maxAmount": "1"
-      },
-      {
-        "minAmount": "1",
-        "weight": "25.0",
-        "id": "7833",
-        "maxAmount": "1"
       }
     ]
   },
   {
     "default": [],
     "charm": [],
-    "ids": "438,439,440,441,442,443,655,4470",
+    "ids": "438,439,440,441,442,443,4470",
     "description": "Tree Spirit (Hostile Woodcutting Random Event/Enchanted Valley)",
     "main": [
       {
@@ -12002,7 +11996,7 @@
       {
         "minAmount": "1",
         "weight": "100.0",
-        "id": "526",
+        "id": "592",
         "maxAmount": "1"
       },
       {

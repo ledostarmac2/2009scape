@@ -766,6 +766,13 @@
     "equipment_slot": "13"
   },
   {
+    "examine": "A lever to open something perhaps?",
+    "durability": null,
+    "name": "Lever",
+    "archery_ticket_price": "0",
+    "id": "83"
+  },
+  {
     "destroy_message": "You can reclaim this item from the place you found it.",
     "examine": "The power in this staff causes it to vibrate gently.",
     "durability": null,
@@ -2763,7 +2770,7 @@
     "id": "291"
   },
   {
-    "examine": "A book on elven history in northern RuneScape.",
+    "examine": "A book on elven history in northern 2009Scape.",
     "durability": null,
     "name": "Book on baxtorian",
     "archery_ticket_price": "0",
@@ -4911,7 +4918,7 @@
   },
   {
     "ge_buy_limit": "10000",
-    "examine": "These would feed a dog for months.",
+    "examine": "These would feed a dog for months!",
     "grand_exchange_price": "1300",
     "durability": null,
     "name": "Dragon bones",
@@ -5037,7 +5044,7 @@
   {
     "shop_price": "1",
     "ge_buy_limit": "100",
-    "examine": "Issued by RuneScape Council to all new citizens.",
+    "examine": "Issued by 2009Scape Council to all new citizens.",
     "grand_exchange_price": "123",
     "durability": null,
     "name": "Newcomer map",
@@ -5540,7 +5547,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "A book on the history of astronomy in RuneScape.",
+    "examine": "A book on the history of astronomy in 2009Scape.",
     "grand_exchange_price": "658",
     "durability": null,
     "name": "Astronomy book",
@@ -6533,10 +6540,28 @@
     "id": "704"
   },
   {
+    "shop_price": "1",
+    "examine": "A mixture of strong chemicals.",
+    "durability": null,
+    "name": "Mixed chemicals",
+    "weight": "0.03",
+    "archery_ticket_price": "0",
+    "id": "705"
+  },
+  {
+    "shop_price": "1",
+    "examine": "A mixture of strong chemicals.",
+    "durability": null,
+    "name": "Mixed chemicals",
+    "weight": "0.035",
+    "archery_ticket_price": "0",
+    "id": "706"
+  },
+  {
     "examine": "A mixture of strong chemicals.",
     "durability": null,
     "name": "Chemical compound",
-    "weight": "2",
+    "weight": "0.035",
     "archery_ticket_price": "0",
     "id": "707"
   },
@@ -19920,7 +19945,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "Common bucket: It's a bucket of water.2008 Easter event: It's a bucket of water from the Easter Bunny's warren. Regular bucket filled from Braindeath Island: It's a bucket of... water?",
+    "examine": "It's a bucket of water.",
     "grand_exchange_price": "72",
     "durability": null,
     "name": "Bucket of water",
@@ -20737,8 +20762,8 @@
     "durability": null,
     "name": "Burnt curry",
     "tradeable": "true",
-    "archery_ticket_price":"0",
-    "id":"2013"
+    "archery_ticket_price": "0",
+    "id": "2013"
   },
   {
     "durability": null,
@@ -25486,6 +25511,7 @@
   {
     "shop_price": "140",
     "grand_exchange_price": "140",
+    "examine": "Bones are for burying!",
     "durability": null,
     "name": "Bones",
     "tradeable": "true",
@@ -25856,7 +25882,7 @@
     "id": "2573"
   },
   {
-    "examine": "Used by navigators to find their position in RuneScape.",
+    "examine": "Used by navigators to find their position in 2009Scape.",
     "durability": null,
     "name": "Sextant",
     "weight": "0.2",
@@ -25872,7 +25898,7 @@
     "id": "2575"
   },
   {
-    "examine": "A navigator's chart of RuneScape.",
+    "examine": "A navigator's chart of 2009Scape.",
     "durability": null,
     "name": "Chart",
     "archery_ticket_price": "0",
@@ -30798,55 +30824,62 @@
     "examine": "These blackened Jogre bones have been somehow burnt.",
     "durability": null,
     "name": "Burnt jogre bones",
+    "tradeable": "false",
     "weight": "0.8",
     "archery_ticket_price": "0",
     "id": "3127"
   },
   {
-    "examine": "See article",
+    "examine": "Burnt Jogre bones smothered with raw Karambwanji Paste.",
     "durability": null,
     "name": "Pasty jogre bones",
-    "weight": "1",
+    "tradeable": "false",
+    "weight": "0.8",
     "archery_ticket_price": "0",
     "id": "3128"
   },
   {
-    "examine": "See article",
+    "examine": "Burnt Jogre bones smothered with cooked Karambwanji paste.",
     "durability": null,
     "name": "Pasty jogre bones",
-    "weight": "1",
+    "tradeable": "false",
+    "weight": "0.8",
     "archery_ticket_price": "0",
     "id": "3129"
   },
   {
-    "examine": "Burnt Jogre bones marinated in lovely Karambwanji sauce. Perfect./Burnt Jogre bones marinated in lovely Karabwanji sauce. Not quite right.",
+    "examine": "Burnt Jogre bones marinated in a lovely Karambwanji sauce. Perfect.",
     "durability": null,
     "name": "Marinated j' bones",
-    "weight": "1",
+    "tradeable": "false",
+    "weight": "0.8",
     "archery_ticket_price": "0",
     "id": "3130"
   },
   {
-    "examine": "See article",
+    "examine": "Jogre bones smothered with raw Karambwanji paste.",
     "durability": null,
     "name": "Pasty jogre bones",
-    "weight": "1",
+    "tradeable": "false",
+    "weight": "0.8",
     "archery_ticket_price": "0",
     "id": "3131"
   },
   {
-    "examine": "See article",
+    "examine": "Jogre bones smothered with cooked Karambwanji paste.",
     "durability": null,
     "name": "Pasty jogre bones",
-    "weight": "1",
+    "tradeable": "false",
+    "weight": "0.8",
     "archery_ticket_price": "0",
     "id": "3132"
   },
   {
-    "examine": "Burnt Jogre bones marinated in lovely Karambwanji sauce. Perfect./Burnt Jogre bones marinated in lovely Karabwanji sauce. Not quite right.",
+    "examine": "Jogre Bones marinated in Karambwanji sauce. Not quite right.",
     "durability": null,
     "name": "Marinated j' bones",
-    "weight": "1",
+    "tradeable": "false",
+    "weight": "0.8",
     "archery_ticket_price": "0",
     "id": "3133"
   },
@@ -31345,7 +31378,7 @@
     "id": "3178"
   },
   {
-    "examine": "These are small/medium sized monkey bones.",
+    "examine": "These are smallish monkey bones.",
     "grand_exchange_price": "383",
     "durability": null,
     "name": "Monkey bones",
@@ -31355,7 +31388,7 @@
     "id": "3179"
   },
   {
-    "examine": "These are small/medium sized monkey bones.",
+    "examine": "These are medium sized monkey bones.",
     "grand_exchange_price": "383",
     "durability": null,
     "name": "Monkey bones",
@@ -31365,7 +31398,7 @@
     "id": "3180"
   },
   {
-    "examine": "These are small/medium sized monkey bones.",
+    "examine": "These are quite large monkey bones.",
     "grand_exchange_price": "383",
     "durability": null,
     "name": "Monkey bones",
@@ -31375,7 +31408,7 @@
     "id": "3181"
   },
   {
-    "examine": "These are small/medium sized monkey bones.",
+    "examine": "These are quite large monkey bones.",
     "grand_exchange_price": "383",
     "durability": null,
     "name": "Monkey bones",
@@ -31386,7 +31419,7 @@
   },
   {
     "ge_buy_limit": "10000",
-    "examine": "These are small/medium sized monkey bones.",
+    "examine": "These are small monkey bones.",
     "grand_exchange_price": "588",
     "durability": null,
     "name": "Monkey bones",
@@ -31405,7 +31438,7 @@
     "id": "3184"
   },
   {
-    "examine": "These are small/medium sized monkey bones.",
+    "examine": "These are smallish monkey bones. They smell extremely nauseating.",
     "grand_exchange_price": "383",
     "durability": null,
     "name": "Monkey bones",
@@ -31415,7 +31448,7 @@
     "id": "3185"
   },
   {
-    "examine": "These are small/medium sized monkey bones.",
+    "examine": "These are small monkey bones. They smell extremely nauseating.",
     "grand_exchange_price": "383",
     "durability": null,
     "name": "Monkey bones",
@@ -32002,7 +32035,7 @@
     "id": "3240"
   },
   {
-    "examine": "One of RuneScape's many citizens. In Karamja or South of Falador: One of RuneScape's many citizens, apparently trying to be an explorer. In Lumbridge: One of Lumbridge's many citizens. In a Falador home: One of RuneScape's many citizens. He looks worried ",
+    "examine": "One of 2009Scape's many citizens.",
     "durability": null,
     "name": "Man",
     "archery_ticket_price": "0",
@@ -34994,7 +35027,9 @@
     "examine": "The lowest maintenance pet you will ever have.",
     "walk_anim": "6658",
     "durability": null,
+    "weight": "1",
     "turn90ccw_anim": "6663",
+    "two_handed": "true",
     "turn180_anim": "6659",
     "render_anim": "792",
     "equipment_slot": "3",
@@ -38941,7 +38976,7 @@
     "id": "4255"
   },
   {
-    "examine": "A pot of crushed bones.",
+    "examine": "A pot of crushed small ninja monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -38965,7 +39000,7 @@
     "id": "4258"
   },
   {
-    "examine": "A pot of crushed monkey bones.",
+    "examine": "A pot of crushed burnt jogre bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -39053,7 +39088,7 @@
     "id": "4269"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed medium ninja monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -39061,7 +39096,7 @@
     "id": "4270"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed Dagannoth-king bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -41815,7 +41850,7 @@
     "stand_turn_anim": "823"
   },
   {
-    "examine": "Perhaps not the most powerful weapon in RuneScape.",
+    "examine": "Perhaps not the most powerful weapon in 2009Scape.",
     "durability": null,
     "weight": "0.4",
     "attack_speed": "4",
@@ -44027,7 +44062,7 @@
     "id": "4854"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed gorilla monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -49283,7 +49318,7 @@
     "id": "5517"
   },
   {
-    "examine": "When empty:",
+    "examine": "This contains mystical teleport information...",
     "durability": null,
     "name": "Scrying orb",
     "weight": "1",
@@ -49291,7 +49326,7 @@
     "id": "5518"
   },
   {
-    "examine": "When empty:",
+    "examine": "This orb apparently contains a cypher spell.",
     "durability": null,
     "name": "Scrying orb",
     "weight": "1",
@@ -50106,7 +50141,7 @@
     "stand_turn_anim": "330"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed bearded gorilla monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -61078,7 +61113,7 @@
     "id": "6727"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed small zombie monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -61838,7 +61873,7 @@
     "bonuses": "0,0,0,-31,-18,43,45,41,-4,68,20,0,0,0,0"
   },
   {
-    "examine": "A pot of crushed [type of bones].",
+    "examine": "A pot of crushed large zombie monkey bones.",
     "durability": null,
     "name": "Bonemeal",
     "weight": "1",
@@ -92017,7 +92052,7 @@
   },
   {
     "turn90cw_anim": "821",
-    "examine": "Perhaps not the most powerful weapon in RuneScape.",
+    "examine": "Perhaps not the most powerful weapon in 2009Scape.",
     "walk_anim": "1830",
     "durability": null,
     "weight": "0.4",
@@ -117682,9 +117717,9 @@
   },
   {
     "destroy_message": "Hopefully, the family has more papyrus and charcoal.",
-    "examine": "Your best impression of a map of RuneScape.",
+    "examine": "Your best impression of a map of 2009Scape.",
     "durability": null,
-    "name": "Map of runescape",
+    "name": "Map of 2009Scape",
     "destroy": "true",
     "archery_ticket_price": "0",
     "attack_speed": "4",
@@ -123686,7 +123721,7 @@
     "bonuses": "55,55,55,0,0,5,5,5,5,5,0,60,0,0,0"
   },
   {
-    "destroy_message": "You can get another copy by searching bookshelves around RuneScape.",
+    "destroy_message": "You can get another copy by searching bookshelves around 2009Scape.",
     "shop_price": "5",
     "examine": "A book about the Wilderness.",
     "durability": null,

@@ -4292,12 +4292,55 @@
     "attack_level": "27"
   },
   {
+    "examine": "He walks with a slight limp.",
+    "melee_animation": "401",
+    "range_animation": "0",
+    "combat_audio": "511,513,512",
+    "magic_level": "1",
+    "respawn_delay": "30",
+    "defence_animation": "404",
+    "weakness": "",
+    "magic_animation": "0",
+    "death_animation": "836",
+    "name": "Lucien",
+    "defence_level": "10",
+    "safespot": null,
+    "lifepoints": "17",
+    "strength_level": "11",
+    "id": "272",
+    "aggressive": "",
+    "range_level": "1",
+    "attack_level": "12"
+  },
+  {
+    "examine": "He walks with a slight limp.",
+    "melee_animation": "",
+    "range_animation": "",
+    "combat_audio": "",
+    "defence_animation": "404",
+    "weakness": "",
+    "magic_animation": "",
+    "death_animation": "836",
+    "name": "Lucien",
+    "defence_level": "",
+    "safespot": null,
+    "lifepoints": "",
+    "strength_level": "",
+    "id": "273",
+    "aggressive": "",
+    "range_level": "",
+    "attack_level": "12"
+  },
+  {
     "examine": "A guard who has devoted their life to Armadyl.",
     "range_animation": "0",
+    "melee_animation": "401",
+    "combat_audio": "511,513,512",
     "respawn_delay": "60",
-    "defence_animation": "0",
+    "defence_animation": "404",
     "weakness": "8",
     "magic_animation": "0",
+    "death_animation": "836",
     "name": "Guardian of Armadyl",
     "defence_level": "30",
     "safespot": null,
@@ -4310,9 +4353,13 @@
   {
     "examine": "A guard who has devoted their life to Armadyl.",
     "range_animation": "0",
-    "defence_animation": "0",
+    "melee_animation": "401",
+    "combat_audio": "511,513,512",
+    "respawn_delay": "60",
+    "defence_animation": "404",
     "weakness": "8",
     "magic_animation": "0",
+    "death_animation": "836",
     "name": "Guardian of Armadyl",
     "defence_level": "30",
     "safespot": null,
@@ -4324,21 +4371,28 @@
   },
   {
     "examine": "Intimidating!",
+    "start_gfx": "99",
     "combat_style": "2",
+    "start_height": "96",
     "melee_animation": "0",
     "range_animation": "0",
+    "combat_audio": "511,513,512",
+    "attack_speed": "8",
+    "magic_level": "62",
+    "end_gfx": "101",
     "respawn_delay": "60",
-    "defence_animation": "0",
+    "defence_animation": "425",
     "weakness": "3",
-    "magic_animation": "0",
+    "magic_animation": "711",
     "death_animation": "836",
     "name": "Fire Warrior of Lesarkus",
-    "defence_level": "55",
+    "defence_level": "78",
     "safespot": null,
-    "lifepoints": "78",
-    "strength_level": "55",
+    "lifepoints": "59",
+    "strength_level": "78",
     "id": "277",
     "range_level": "1",
+    "projectile": "127",
     "attack_level": "55"
   },
   {
@@ -6944,6 +6998,16 @@
     "attack_level": "1"
   },
   {
+    "examine": "A being from a mysterious realm.",
+    "name": "Jukat",
+    "id": "564"
+  },
+  {
+    "examine": "Is he invisible, or just floating clothing?",
+    "name": "Irksol",
+    "id": "566"
+  },
+  {
     "examine": "Looks strange and mysterious.",
     "melee_animation": "0",
     "range_animation": "0",
@@ -7246,6 +7310,38 @@
     "lifepoints": "10",
     "strength_level": "1",
     "id": "614",
+    "range_level": "1",
+    "attack_level": "1"
+  },
+  {
+    "examine": "A student busy studying the digsite.",
+    "melee_animation": "0",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "magic_animation": "0",
+    "death_animation": "0",
+    "name": "Student",
+    "defence_level": "1",
+    "safespot": null,
+    "lifepoints": "10",
+    "strength_level": "1",
+    "id": "615",
+    "range_level": "1",
+    "attack_level": "1"
+  },
+  {
+    "examine": "A student busy studying the digsite.",
+    "melee_animation": "0",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "magic_animation": "0",
+    "death_animation": "0",
+    "name": "Student",
+    "defence_level": "1",
+    "safespot": null,
+    "lifepoints": "10",
+    "strength_level": "1",
+    "id": "616",
     "range_level": "1",
     "attack_level": "1"
   },
@@ -16520,6 +16616,11 @@
     "bonuses": "10,15,5,10,30,5,30,30,30,10,30,5,40,5,5",
     "range_level": "1",
     "attack_level": "25"
+  },
+  {
+    "examine": "She looks dangerous!",
+    "name": "Chaeldar",
+    "id": "1598"
   },
   {
     "examine": "A spiky crawling critter. ",
@@ -31515,15 +31616,23 @@
     "attack_level": "30"
   },
   {
+    "examine": "A member of the Black Guard",
+    "slayer_task": "29",
+    "melee_animation": "99",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "weakness": "6",
     "slayer_exp": "16",
+    "magic_animation": "0",
+    "death_animation": "102",
     "name": "Black Guard",
-    "defence_level": "1",
+    "defence_level": "30",
     "safespot": null,
-    "lifepoints": "10",
-    "strength_level": "1",
+    "lifepoints": "42",
+    "strength_level": "30",
     "id": "3279",
     "range_level": "1",
-    "attack_level": "1"
+    "attack_level": "30"
   },
   {
     "examine": "He looks busy.",
@@ -31773,6 +31882,11 @@
     "id": "3309",
     "range_level": "1",
     "attack_level": "1"
+  },
+  {
+    "examine": "White and fluffy",
+    "name": "Sheep",
+    "id": "3310"
   },
   {
     "name": "Tanglefoot",
@@ -38363,6 +38477,11 @@
     "id": "4419",
     "range_level": "1",
     "attack_level": "1"
+  },
+  {
+    "examine": "A healing fairy.",
+    "name": "Fairy Nuff",
+    "id": "4434"
   },
   {
     "examine": "Horseplay.",
@@ -44959,6 +45078,11 @@
     "attack_level": "1"
   },
   {
+    "examine": "White and fluffy",
+    "name": "Sheep",
+    "id": "5164"
+  },
+  {
     "examine": "This goat belongs to the mountain camp people.",
     "melee_animation": "0",
     "range_animation": "0",
@@ -49249,10 +49373,10 @@
     "range_animation": "0",
     "attack_speed": "4",
     "magic_level": "1",
+    "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "2",
     "slayer_exp": "93",
-    "respawn_delay": "60",
     "magic_animation": "0",
     "death_animation": "6081",
     "name": "Cave bug",
@@ -72485,5 +72609,20 @@
     "combat_audio": "12,3295,3287",
     "id": "6744",
     "defence_animation": "7559"
+  },
+  {
+    "examine": "Distinctly heroic.",
+    "name": "Achietties",
+    "id": "796"
+  },
+  {
+    "examine": "The hat is a dead give away.",
+    "name": "Wizard Cromperty",
+    "id": "2328"
+  },
+  {
+    "examine": "An intelligent-looking shop owner.",
+    "name": "Obli",
+    "id": "516"
   }
 ]
