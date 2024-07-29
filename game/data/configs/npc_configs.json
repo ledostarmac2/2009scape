@@ -749,7 +749,6 @@
   },
   {
     "examine": "Yep. Definitely a chicken.",
-    "slayer_task": "7",
     "melee_animation": "5387",
     "range_animation": "5387",
     "combat_audio": "355,357,356",
@@ -836,7 +835,6 @@
   },
   {
     "examine": "Quackers.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -856,7 +854,6 @@
   },
   {
     "examine": "A popular dwarven delicacy.",
-    "slayer_task": "67",
     "melee_animation": "2705",
     "range_animation": "2705",
     "combat_audio": "3102,3104,3103",
@@ -879,7 +876,6 @@
   },
   {
     "examine": "A jungle version of the chicken, but more vicious.",
-    "slayer_task": "7",
     "melee_animation": "5387",
     "range_animation": "0",
     "attack_speed": "4",
@@ -899,7 +895,6 @@
   },
   {
     "examine": "Hello, nice doggy...",
-    "slayer_task": "43",
     "melee_animation": "6562",
     "range_animation": "6562",
     "combat_audio": "3717,3719,3718",
@@ -925,7 +920,6 @@
   {
     "agg_radius": "64",
     "examine": "The biggest, meanest dragon around.",
-    "slayer_task": "9",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -967,7 +961,6 @@
   },
   {
     "examine": "Young but still dangerous.",
-    "slayer_task": "11",
     "combat_audio": "405,407,406",
     "melee_animation": "25",
     "attack_speed": "4",
@@ -991,7 +984,6 @@
   },
   {
     "examine": "A big powerful dragon.",
-    "slayer_task": "68",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -1017,7 +1009,6 @@
   },
   {
     "examine": "A fierce dragon with black scales!",
-    "slayer_task": "9",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -1043,7 +1034,6 @@
   },
   {
     "examine": "A mother dragon.",
-    "slayer_task": "11",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -1101,7 +1091,6 @@
   },
   {
     "examine": "Is it a spider or is it a shadow?",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -1124,7 +1113,6 @@
   },
   {
     "examine": "I think this spider has been genetically modified.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -1147,7 +1135,6 @@
   },
   {
     "examine": "I think this spider has been genetically modified.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "5327",
     "combat_audio": "537,539,538",
@@ -1169,7 +1156,6 @@
   },
   {
     "examine": "Incey wincey.",
-    "slayer_task": "76",
     "melee_animation": "6249",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -1190,7 +1176,6 @@
   },
   {
     "examine": "A barely visible deadly jungle spider.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "5327",
     "combat_audio": "537,539,538",
@@ -1216,7 +1201,6 @@
   },
   {
     "examine": "I think this spider has been genetically modified.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "5327",
     "combat_audio": "537,539,538",
@@ -1240,7 +1224,6 @@
   },
   {
     "examine": "I think this spider has been genetically modified.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -1332,7 +1315,6 @@
   },
   {
     "examine": "A scaly reptilian creature.",
-    "slayer_task": "",
     "melee_animation": "422",
     "range_animation": "422",
     "attack_speed": "4",
@@ -1387,7 +1369,6 @@
   },
   {
     "examine": "Dead man walking.",
-    "slayer_task": "93",
     "melee_animation": "5567",
     "combat_audio": "931,923,922",
     "attack_speed": "4",
@@ -1407,7 +1388,6 @@
   },
   {
     "examine": "Dead woman walking.",
-    "slayer_task": "93",
     "melee_animation": "5578",
     "range_animation": "5578",
     "combat_audio": "931,923,922",
@@ -1429,7 +1409,6 @@
   },
   {
     "examine": "The walking dead.",
-    "slayer_task": "93",
     "melee_animation": "5578",
     "range_animation": "5578",
     "combat_audio": "931,923,922",
@@ -1451,7 +1430,6 @@
   },
   {
     "examine": "The walking dead.",
-    "slayer_task": "93",
     "melee_animation": "5571",
     "combat_audio": "931,923,922",
     "attack_speed": "4",
@@ -1471,7 +1449,6 @@
   },
   {
     "examine": "The living dead.",
-    "slayer_task": "93",
     "melee_animation": "5568",
     "range_animation": "0",
     "attack_speed": "4",
@@ -1491,7 +1468,6 @@
   },
   {
     "examine": "An annoying flappy thing.",
-    "slayer_task": "5",
     "melee_animation": "4915",
     "range_animation": "4915",
     "combat_audio": "292,294,293",
@@ -1516,7 +1492,6 @@
   },
   {
     "examine": "A shadowy, barely visible flying entity from some evil place.",
-    "slayer_task": "5",
     "melee_animation": "4915",
     "range_animation": "0",
     "attack_speed": "4",
@@ -1555,7 +1530,6 @@
   },
   {
     "examine": "Converts grass to beef.",
-    "slayer_task": "20",
     "melee_animation": "5849",
     "range_animation": "5849",
     "combat_audio": "369,371,370",
@@ -1576,7 +1550,6 @@
   },
   {
     "examine": "Lesser, but still pretty big.",
-    "slayer_task": "56",
     "melee_animation": "4630",
     "range_animation": "4630",
     "combat_audio": "400,404,403",
@@ -1601,7 +1574,6 @@
   },
   {
     "examine": "Big, red, and incredibly evil.",
-    "slayer_task": "40",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "400,404,403",
@@ -1627,7 +1599,6 @@
   },
   {
     "examine": "A big, scary, jet-black demon.",
-    "slayer_task": "8",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "397,399,398",
@@ -1670,7 +1641,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "4933",
     "combat_audio": "703,705,704",
@@ -1692,7 +1662,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -1715,7 +1684,6 @@
   },
   {
     "examine": "A dirty rat.",
-    "slayer_task": "67",
     "range_animation": "0",
     "combat_audio": "703,705,704",
     "attack_speed": "4",
@@ -1758,7 +1726,6 @@
   },
   {
     "examine": "Not man's best friend.",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "combat_audio": "481,491,490",
     "attack_speed": "4",
@@ -1776,7 +1743,6 @@
   },
   {
     "examine": "A vicious mountain wolf.",
-    "slayer_task": "92",
     "melee_animation": "6579",
     "range_animation": "6579",
     "combat_audio": "909,912,911",
@@ -1798,7 +1764,6 @@
   },
   {
     "examine": "A vicious mountain wolf.",
-    "slayer_task": "92",
     "melee_animation": "6579",
     "range_animation": "6579",
     "combat_audio": "909,912,911",
@@ -1836,7 +1801,6 @@
   },
   {
     "examine": "He doesn't seem pleased to see me.",
-    "slayer_task": "27",
     "melee_animation": "6562",
     "range_animation": "6562",
     "attack_speed": "4",
@@ -1919,7 +1883,6 @@
   {
     "agg_radius": "",
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5540",
     "range_animation": "5540",
     "combat_audio": "436,439,438",
@@ -1944,7 +1907,6 @@
   },
   {
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5540",
     "range_animation": "0",
     "combat_audio": "436,439,438",
@@ -1969,7 +1931,6 @@
   },
   {
     "examine": "Eek! A bear!",
-    "slayer_task": "6",
     "melee_animation": "4925",
     "range_animation": "0",
     "combat_audio": "300,302,301",
@@ -1994,7 +1955,6 @@
   },
   {
     "examine": "Eek! A bear!",
-    "slayer_task": "6",
     "melee_animation": "4925",
     "range_animation": "0",
     "combat_audio": "300,302,301",
@@ -2037,7 +1997,6 @@
   },
   {
     "examine": "It has a very vicious looking tail.",
-    "slayer_task": "71",
     "melee_animation": "6254",
     "range_animation": "0",
     "combat_audio": "3611,3612,3610",
@@ -2063,7 +2022,6 @@
   },
   {
     "examine": "Tiny",
-    "slayer_task": "71",
     "melee_animation": "6254",
     "range_animation": "0",
     "combat_audio": "3611,3612,3610",
@@ -2084,7 +2042,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -2109,7 +2066,6 @@
   },
   {
     "examine": "He's got icicles in his beard.",
-    "slayer_task": "47",
     "melee_animation": "4672",
     "range_animation": "0",
     "combat_audio": "448,451,450",
@@ -2134,7 +2090,6 @@
   },
   {
     "examine": "His beard seems to have a life of its own.",
-    "slayer_task": "62",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "449,451,450",
@@ -2159,7 +2114,6 @@
   },
   {
     "examine": "An aggressive humanoid.",
-    "slayer_task": "64",
     "melee_animation": "128",
     "range_animation": "128",
     "attack_speed": "5",
@@ -2180,7 +2134,6 @@
   },
   {
     "examine": "Big, ugly, and smelly.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -2224,7 +2177,6 @@
   },
   {
     "examine": "Big, ugly, and smelly.",
-    "slayer_task": "44",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "4",
@@ -2249,7 +2201,6 @@
   },
   {
     "examine": "A very large foe.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "4652",
     "combat_audio": "448,451,450",
@@ -2274,7 +2225,6 @@
   },
   {
     "examine": "A short angry guy.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "attack_speed": "7",
@@ -2295,7 +2245,6 @@
   },
   {
     "examine": "A dwarf gone bad.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "combat_audio": "2567,419,418",
@@ -2320,7 +2269,6 @@
   },
   {
     "examine": "A mountain dwelling short angry guy.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "attack_speed": "6",
@@ -2389,7 +2337,6 @@
   },
   {
     "examine": "A strange, inhuman, elemental warrior.",
-    "slayer_task": "30",
     "melee_animation": "393",
     "range_animation": "0",
     "attack_speed": "4",
@@ -2413,7 +2360,6 @@
   },
   {
     "examine": "A cold-hearted elemental warrior.",
-    "slayer_task": "48",
     "melee_animation": "451",
     "range_animation": "451",
     "combat_audio": "2500,530,529",
@@ -2438,7 +2384,6 @@
   },
   {
     "examine": "Looks pretty otherworldly to me!",
-    "slayer_task": "65",
     "range_animation": "0",
     "attack_speed": "5",
     "magic_level": "45",
@@ -2502,7 +2447,6 @@
   },
   {
     "examine": "An inhabitant of icy regions.",
-    "slayer_task": "7",
     "melee_animation": "5669",
     "range_animation": "0",
     "defence_animation": "0",
@@ -2520,7 +2464,6 @@
   },
   {
     "examine": "Perhaps our oldest relatives?",
-    "slayer_task": "61",
     "melee_animation": "220",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -2566,7 +2509,6 @@
   },
   {
     "examine": "A nasty, poisonous arachnid.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -2606,7 +2548,6 @@
   },
   {
     "examine": "A giant raptor.",
-    "slayer_task": "7",
     "melee_animation": "1010",
     "range_animation": "0",
     "combat_audio": "832,834,833",
@@ -2670,7 +2611,6 @@
   },
   {
     "examine": "Must be the pack leader.",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -2705,7 +2645,6 @@
   },
   {
     "examine": "A rare jungle wolf - specific to the Kharazi jungle.",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -2726,7 +2665,6 @@
   },
   {
     "examine": "Wow! Scorpions shouldn't grow that big.",
-    "slayer_task": "71",
     "melee_animation": "6254",
     "range_animation": "0",
     "combat_audio": "3611,3612,3610",
@@ -2749,7 +2687,6 @@
   },
   {
     "examine": "A cold-hearted elemental warrior.",
-    "slayer_task": "48",
     "melee_animation": "451",
     "range_animation": "451",
     "combat_audio": "2500,530,529",
@@ -2774,7 +2711,6 @@
   },
   {
     "examine": "A sea bird.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -2791,7 +2727,6 @@
   },
   {
     "examine": "A sea bird.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -2808,7 +2743,6 @@
   },
   {
     "examine": "A sea bird.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -2857,7 +2791,6 @@
   },
   {
     "examine": "A fighter from the supernatural world. He's a shadow of his former self.",
-    "slayer_task": "74",
     "melee_animation": "394",
     "range_animation": "0",
     "attack_speed": "5",
@@ -3566,7 +3499,6 @@
   },
   {
     "examine": "A rocky slug.",
-    "slayer_task": "69",
     "melee_animation": "1595",
     "range_animation": "1595",
     "combat_audio": "729,731,730",
@@ -3588,7 +3520,6 @@
   },
   {
     "examine": "A rocky slug.",
-    "slayer_task": "69",
     "melee_animation": "1595",
     "range_animation": "1595",
     "combat_audio": "729,731,730",
@@ -3667,7 +3598,6 @@
   },
   {
     "examine": "A dwarven guard.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "combat_audio": "511,513,512",
@@ -3857,7 +3787,6 @@
   },
   {
     "examine": "A dirty rat.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -5195,7 +5124,6 @@
   },
   {
     "examine": "Big, ugly, and smelly.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -5287,6 +5215,7 @@
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "3611,3612,3610",
+    "respawn_delay": "60",
     "defence_animation": "0",
     "magic_animation": "0",
     "death_animation": "0",
@@ -5309,6 +5238,7 @@
     "strength_level": "1",
     "id": "386",
     "range_level": "1",
+    "respawn_delay": "60",
     "attack_level": "1"
   },
   {
@@ -5321,6 +5251,7 @@
     "strength_level": "1",
     "id": "387",
     "range_level": "1",
+    "respawn_delay": "60",
     "attack_level": "1"
   },
   {
@@ -5378,7 +5309,6 @@
   },
   {
     "examine": "Beefy.",
-    "slayer_task": "20",
     "melee_animation": "5849",
     "range_animation": "5849",
     "combat_audio": "369,371,370",
@@ -5465,7 +5395,6 @@
   },
   {
     "examine": "An annoying flappy thing.",
-    "slayer_task": "5",
     "melee_animation": "4915",
     "range_animation": "4915",
     "attack_speed": "5",
@@ -5657,7 +5586,6 @@
   },
   {
     "examine": "Dead but not gone.",
-    "slayer_task": "73",
     "melee_animation": "390",
     "range_animation": "0",
     "combat_audio": "511,439,438",
@@ -5678,7 +5606,6 @@
   },
   {
     "examine": "Dead but not gone.",
-    "slayer_task": "73",
     "melee_animation": "390",
     "range_animation": "0",
     "combat_audio": "511,439,438",
@@ -5906,7 +5833,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -6315,7 +6241,6 @@
   },
   {
     "examine": "He doesn't look like he'd trust his own mother.",
-    "slayer_task": "38",
     "melee_animation": "6199",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -6384,7 +6309,6 @@
   },
   {
     "examine": "A vicious",
-    "slayer_task": "71",
     "melee_animation": "6261",
     "range_animation": "0",
     "combat_audio": "3611,3612,3610",
@@ -6471,7 +6395,6 @@
   },
   {
     "examine": "A minion of Rashiliyia.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "attack_speed": "5",
@@ -6492,7 +6415,6 @@
   },
   {
     "examine": "A minion of Rashiliyia.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "defence_animation": "0",
@@ -6510,7 +6432,6 @@
   },
   {
     "examine": "The animated dead; one of Rashiliyia's minions.",
-    "slayer_task": "93",
     "melee_animation": "5568",
     "range_animation": "0",
     "attack_speed": "5",
@@ -6531,7 +6452,6 @@
   },
   {
     "examine": "The animated dead; one of Rashiliyia's minions.",
-    "slayer_task": "93",
     "melee_animation": "5571",
     "range_animation": "0",
     "attack_speed": "5",
@@ -7817,7 +7737,6 @@
   },
   {
     "examine": "A big, scary, jet-black demon.",
-    "slayer_task": "8",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "397,399,398",
@@ -8406,7 +8325,6 @@
   },
   {
     "examine": "A badly-behaved goblin.",
-    "slayer_task": "38",
     "melee_animation": "6184",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9047,7 +8965,6 @@
   },
   {
     "examine": "A vicious desert wolf.",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9177,7 +9094,6 @@
   },
   {
     "examine": "Tough-looking.",
-    "slayer_task": "64",
     "range_animation": "0",
     "attack_speed": "4",
     "magic_level": "1",
@@ -9208,7 +9124,6 @@
   },
   {
     "examine": "These ogres protect the city.",
-    "slayer_task": "64",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9226,7 +9141,6 @@
   },
   {
     "examine": "An ogre that guards.",
-    "slayer_task": "64",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9244,7 +9158,6 @@
   },
   {
     "examine": "Tries to keep the peace.",
-    "slayer_task": "64",
     "melee_animation": "2100",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9294,7 +9207,6 @@
   },
   {
     "examine": "Big and ugly looking.",
-    "slayer_task": "64",
     "melee_animation": "2100",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -9329,7 +9241,6 @@
   },
   {
     "examine": "Funnily enough",
-    "slayer_task": "64",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9346,7 +9257,6 @@
   },
   {
     "examine": "Funnily enough",
-    "slayer_task": "64",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9363,7 +9273,6 @@
   },
   {
     "examine": "Funnily enough",
-    "slayer_task": "64",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9917,7 +9826,6 @@
   },
   {
     "examine": "Must be related to Elvarg.",
-    "slayer_task": "41",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -10123,7 +10031,6 @@
   },
   {
     "examine": "Converts grass to beef.",
-    "slayer_task": "20",
     "melee_animation": "5849",
     "range_animation": "5849",
     "combat_audio": "369,371,370",
@@ -10184,7 +10091,6 @@
   },
   {
     "examine": "It's one of Iban's pets.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -10203,7 +10109,6 @@
   },
   {
     "examine": "It's one of Iban's pet vermin.",
-    "slayer_task": "67",
     "range_animation": "0",
     "combat_audio": "703,705,704",
     "defence_animation": "0",
@@ -10592,7 +10497,6 @@
   },
   {
     "examine": "A nasty, poisonous arachnid.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -10651,7 +10555,6 @@
   },
   {
     "examine": "Yep. Definitely a chicken.",
-    "slayer_task": "7",
     "melee_animation": "5387",
     "range_animation": "5387",
     "combat_audio": "355,357,356",
@@ -10672,7 +10575,6 @@
   },
   {
     "examine": "He rules the",
-    "slayer_task": "7",
     "melee_animation": "5387",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11504,7 +11406,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "7",
@@ -11526,7 +11427,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "7",
@@ -11548,7 +11448,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "7",
@@ -11570,7 +11469,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "7",
@@ -11592,7 +11490,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "7",
@@ -11613,7 +11510,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -11632,7 +11528,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -11651,7 +11546,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -11670,7 +11564,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -11689,7 +11582,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -11708,7 +11600,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -11727,7 +11618,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -11746,7 +11636,6 @@
   },
   {
     "examine": "One of the troll generals.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "attack_speed": "5",
@@ -11767,7 +11656,6 @@
   },
   {
     "examine": "One of the troll generals.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "attack_speed": "5",
@@ -11788,7 +11676,6 @@
   },
   {
     "examine": "One of the troll generals.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "attack_speed": "5",
@@ -11809,7 +11696,6 @@
   },
   {
     "examine": "He's watching the arena.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11828,7 +11714,6 @@
   },
   {
     "examine": "He's watching the arena.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11847,7 +11732,6 @@
   },
   {
     "examine": "He's watching the arena.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11866,7 +11750,6 @@
   },
   {
     "examine": "He's watching the arena.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11885,7 +11768,6 @@
   },
   {
     "examine": "He's watching the arena.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11904,7 +11786,6 @@
   },
   {
     "examine": "He's watching the arena.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11923,7 +11804,6 @@
   },
   {
     "examine": "He's watching the arena.",
-    "slayer_task": "83",
     "melee_animation": "1259",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11942,7 +11822,6 @@
   },
   {
     "examine": "An unusually large troll.",
-    "slayer_task": "83",
     "melee_animation": "1158",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -11962,7 +11841,6 @@
   },
   {
     "examine": "He's guarding the cells.",
-    "slayer_task": "83",
     "range_animation": "0",
     "melee_animation": "1158",
     "respawn_delay": "60",
@@ -11983,7 +11861,6 @@
   },
   {
     "examine": "He's guarding the cells.",
-    "slayer_task": "83",
     "range_animation": "0",
     "melee_animation": "1158",
     "respawn_delay": "60",
@@ -12004,7 +11881,6 @@
   },
   {
     "examine": "He's guarding the cells.",
-    "slayer_task": "83",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "7",
@@ -12021,7 +11897,6 @@
   },
   {
     "examine": "He's guarding the cells.",
-    "slayer_task": "83",
     "range_animation": "0",
     "respawn_delay": "60",
     "defence_animation": "0",
@@ -12039,7 +11914,6 @@
   },
   {
     "examine": "Small for a troll, but it's mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "start_gfx": "33",
     "combat_style": "1",
     "melee_animation": "284",
@@ -12065,7 +11939,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but it's mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "start_gfx": "33",
     "combat_style": "1",
     "melee_animation": "284",
@@ -12091,7 +11964,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but it's mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "start_gfx": "33",
     "combat_style": "1",
     "melee_animation": "284",
@@ -12117,7 +11989,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but it's mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "start_gfx": "33",
     "combat_style": "1",
     "melee_animation": "284",
@@ -12143,7 +12014,6 @@
   {
     "agg_radius": "6",
     "examine": "Small for a troll, but it's mean, ugly and throws rocks.",
-    "slayer_task": "83",
     "start_gfx": "33",
     "combat_style": "1",
     "melee_animation": "284",
@@ -12216,7 +12086,6 @@
   },
   {
     "examine": "Small for a troll, but mean and ugly.",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "284",
     "attack_speed": "5",
@@ -12235,7 +12104,6 @@
   },
   {
     "examine": "He's fast asleep.",
-    "slayer_task": "83",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -12444,7 +12312,6 @@
   },
   {
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "6223",
     "range_animation": "6223",
     "combat_audio": "571,573,572",
@@ -12468,7 +12335,6 @@
   },
   {
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "6224",
     "attack_speed": "4",
     "poisonous": "true",
@@ -12495,7 +12361,6 @@
   },
   {
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "6223",
     "range_animation": "6223",
     "attack_speed": "4",
@@ -12520,7 +12385,6 @@
   },
   {
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "6223",
     "range_animation": "6223",
     "combat_audio": "571,573,572",
@@ -12544,7 +12408,6 @@
   },
   {
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "6223",
     "range_animation": "6223",
     "attack_speed": "4",
@@ -12570,13 +12433,12 @@
   {
     "agg_radius": "64",
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "6241",
     "range_animation": "6241",
     "attack_speed": "4",
     "poisonous": "true",
     "magic_level": "150",
-    "respawn_delay": "45",
+    "respawn_delay": "0",
     "defence_animation": "6232",
     "weakness": "10",
     "magic_animation": "6241",
@@ -12595,12 +12457,11 @@
   {
     "agg_radius": "64",
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "6235",
     "range_animation": "6235",
     "attack_speed": "4",
     "magic_level": "150",
-    "respawn_delay": "0",
+    "respawn_delay": "45",
     "defence_animation": "6234",
     "weakness": "10",
     "magic_animation": "6235",
@@ -12618,7 +12479,6 @@
   },
   {
     "examine": "I don't think insect repellent will work...",
-    "slayer_task": "53",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -12656,7 +12516,6 @@
   },
   {
     "examine": "He looks pretty handy with that bow.",
-    "slayer_task": "31",
     "start_gfx": "250",
     "combat_style": "1",
     "melee_animation": "428",
@@ -12680,7 +12539,6 @@
   },
   {
     "examine": "I don't wanna be at the wrong end of that pike.",
-    "slayer_task": "31",
     "melee_animation": "428",
     "range_animation": "0",
     "combat_audio": "425,427,426",
@@ -12784,7 +12642,6 @@
   },
   {
     "examine": "Eek! A bear cub!",
-    "slayer_task": "6",
     "range_animation": "0",
     "combat_audio": "498,500,499",
     "respawn_delay": "60",
@@ -12814,7 +12671,6 @@
   },
   {
     "examine": "What big teeth you have.",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "range_animation": "0",
     "defence_animation": "0",
@@ -12984,7 +12840,6 @@
   },
   {
     "examine": "A scary, man eating ghoul.",
-    "slayer_task": "37",
     "melee_animation": "422",
     "range_animation": "422",
     "combat_audio": "442,444,443",
@@ -13300,7 +13155,6 @@
   },
   {
     "examine": "A shadowy sort of entity",
-    "slayer_task": "73",
     "melee_animation": "0",
     "range_animation": "0",
     "magic_level": "1",
@@ -13321,7 +13175,6 @@
   },
   {
     "examine": "The shadowy remains of a long departed soul.",
-    "slayer_task": "73",
     "melee_animation": "1283",
     "range_animation": "0",
     "magic_level": "1",
@@ -13342,7 +13195,6 @@
   },
   {
     "examine": "A shadowy sort of entity",
-    "slayer_task": "73",
     "melee_animation": "0",
     "range_animation": "0",
     "magic_level": "1",
@@ -13363,7 +13215,6 @@
   },
   {
     "examine": "The shadowy remains of a long departed soul.",
-    "slayer_task": "73",
     "melee_animation": "1283",
     "range_animation": "0",
     "magic_level": "1",
@@ -13384,7 +13235,6 @@
   },
   {
     "examine": "A shadowy sort of entity",
-    "slayer_task": "73",
     "melee_animation": "0",
     "range_animation": "0",
     "magic_level": "1",
@@ -13405,7 +13255,6 @@
   },
   {
     "examine": "The shadowy remains of a long departed soul.",
-    "slayer_task": "73",
     "melee_animation": "1283",
     "range_animation": "0",
     "magic_level": "1",
@@ -13426,7 +13275,6 @@
   },
   {
     "examine": "A shadowy sort of entity",
-    "slayer_task": "73",
     "melee_animation": "0",
     "range_animation": "0",
     "magic_level": "1",
@@ -13447,7 +13295,6 @@
   },
   {
     "examine": "The shadowy remains of a long departed soul.",
-    "slayer_task": "73",
     "melee_animation": "1283",
     "range_animation": "0",
     "magic_level": "1",
@@ -13468,7 +13315,6 @@
   },
   {
     "examine": "A shadowy sort of entity",
-    "slayer_task": "73",
     "melee_animation": "0",
     "range_animation": "0",
     "magic_level": "1",
@@ -13489,7 +13335,6 @@
   },
   {
     "examine": "The shadowy remains of a long departed soul.",
-    "slayer_task": "73",
     "melee_animation": "1283",
     "range_animation": "0",
     "magic_level": "1",
@@ -14421,7 +14266,6 @@
   },
   {
     "examine": "Cute.  But deadly.",
-    "slayer_task": "6",
     "range_animation": "0",
     "combat_audio": "498,500,499",
     "respawn_delay": "60",
@@ -14496,7 +14340,6 @@
   },
   {
     "examine": "Fearsome predator found only in the Fremennik Province",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "range_animation": "0",
     "combat_audio": "481,491,490",
@@ -14675,7 +14518,6 @@
   },
   {
     "examine": "A horror from the ocean depths.",
-    "slayer_task": "24",
     "melee_animation": "1341",
     "range_animation": "0",
     "magic_level": "60",
@@ -15378,7 +15220,6 @@
   },
   {
     "examine": "A scimitar wielding ninja monkey.",
-    "slayer_task": "61",
     "melee_animation": "1392",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -15397,7 +15238,6 @@
   },
   {
     "examine": "A bow wielding ninja monkey.",
-    "slayer_task": "61",
     "combat_style": "1",
     "melee_animation": "0",
     "range_animation": "1394",
@@ -15453,7 +15293,6 @@
   },
   {
     "examine": "A huge brutish gorilla armoured with dangerous looking vambraces.",
-    "slayer_task": "61",
     "melee_animation": "1402",
     "range_animation": "1402",
     "combat_audio": "629,631,630",
@@ -15473,7 +15312,6 @@
   },
   {
     "examine": "A huge brutish gorilla armoured with dangerous looking vambraces.",
-    "slayer_task": "61",
     "melee_animation": "1402",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -15495,7 +15333,6 @@
   },
   {
     "examine": "A huge brutish gorilla stands here",
-    "slayer_task": "61",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -15535,7 +15372,6 @@
   },
   {
     "examine": "A large and lumbering undead monkey.",
-    "slayer_task": "61",
     "melee_animation": "1383",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -15651,7 +15487,6 @@
   },
   {
     "examine": "It's a brightly coloured bird of the jungle.",
-    "slayer_task": "7",
     "melee_animation": "6775",
     "range_animation": "0",
     "defence_animation": "0",
@@ -15669,7 +15504,6 @@
   },
   {
     "examine": "It's a brightly coloured bird of the jungle. It flies very quickly.",
-    "slayer_task": "7",
     "melee_animation": "6775",
     "range_animation": "0",
     "defence_animation": "0",
@@ -15699,7 +15533,6 @@
   },
   {
     "examine": "A very dangerous looking spider",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -15974,7 +15807,6 @@
   },
   {
     "examine": "Well",
-    "slayer_task": "75",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -15993,7 +15825,6 @@
   },
   {
     "examine": "I don't think the pickaxe is for hitting rocks.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16059,7 +15890,6 @@
   },
   {
     "examine": "A large boisterous bird, a delicacy for ogres.",
-    "slayer_task": "7",
     "melee_animation": "6761",
     "range_animation": "0",
     "combat_audio": "1449,1451,1450",
@@ -16127,7 +15957,6 @@
   },
   {
     "examine": "Not man's best friend.",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16147,7 +15976,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16167,7 +15995,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16186,7 +16013,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16206,7 +16032,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16225,7 +16050,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16245,7 +16069,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16265,7 +16088,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -16300,7 +16122,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -16325,7 +16146,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -16350,7 +16170,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -16375,7 +16194,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -16400,7 +16218,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -16425,7 +16242,6 @@
   },
   {
     "examine": "His beard seems to have a life of its own.",
-    "slayer_task": "62",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "449,451,450",
@@ -16450,7 +16266,6 @@
   },
   {
     "examine": "His beard seems to have a life of its own.",
-    "slayer_task": "62",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "449,451,450",
@@ -16475,7 +16290,6 @@
   },
   {
     "examine": "Young but still dangerous.",
-    "slayer_task": "68",
     "melee_animation": "25",
     "range_animation": "25",
     "combat_audio": "405,407,406",
@@ -16499,7 +16313,6 @@
   },
   {
     "examine": "Its scales seem to be made of bronze.",
-    "slayer_task": "13",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -16525,7 +16338,6 @@
   },
   {
     "examine": "Its scales seem to be made of iron.",
-    "slayer_task": "50",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -16551,7 +16363,6 @@
   },
   {
     "examine": "Its scales seem to be made of steel.",
-    "slayer_task": "80",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -16577,7 +16388,6 @@
   },
   {
     "examine": "An unsuitable pet.",
-    "slayer_task": "27",
     "melee_animation": "6562",
     "range_animation": "6562",
     "magic_level": "20",
@@ -16624,7 +16434,6 @@
   },
   {
     "examine": "A spiky crawling critter. ",
-    "slayer_task": "16",
     "melee_animation": "266",
     "range_animation": "266",
     "combat_audio": "341,343,342",
@@ -16714,7 +16523,6 @@
   },
   {
     "examine": "A very smelly ghost.",
-    "slayer_task": "0",
     "start_gfx": "334",
     "combat_style": "2",
     "melee_animation": "9466",
@@ -16743,7 +16551,6 @@
   },
   {
     "examine": "A very smelly ghost.",
-    "slayer_task": "0",
     "start_gfx": "334",
     "combat_style": "2",
     "melee_animation": "9466",
@@ -16772,7 +16579,6 @@
   },
   {
     "examine": "A very smelly ghost.",
-    "slayer_task": "0",
     "start_gfx": "334",
     "combat_style": "2",
     "melee_animation": "9466",
@@ -16801,7 +16607,6 @@
   },
   {
     "examine": "A very smelly ghost.",
-    "slayer_task": "0",
     "start_gfx": "334",
     "combat_style": "2",
     "melee_animation": "9466",
@@ -16899,7 +16704,6 @@
   },
   {
     "examine": "Flies like a rock.",
-    "slayer_task": "84",
     "melee_animation": "1516",
     "range_animation": "1516",
     "attack_speed": "5",
@@ -16987,7 +16791,6 @@
   },
   {
     "examine": "A denizen of the Abyss!",
-    "slayer_task": "1",
     "melee_animation": "1537",
     "range_animation": "1537",
     "combat_audio": "276,278,277",
@@ -17101,7 +16904,6 @@
   },
   {
     "examine": "The winged reptile.",
-    "slayer_task": "19",
     "melee_animation": "7762",
     "range_animation": "7762",
     "combat_audio": "363,365,364",
@@ -17189,7 +16991,6 @@
   },
   {
     "examine": "The vacuumed face of evil.",
-    "slayer_task": "28",
     "melee_animation": "1557",
     "range_animation": "1557",
     "combat_audio": "414,416,415",
@@ -17210,7 +17011,6 @@
   },
   {
     "examine": "The cave-dwelling cousin of the dust devils.",
-    "slayer_task": "28",
     "melee_animation": "1557",
     "range_animation": "0",
     "defence_animation": "0",
@@ -17339,7 +17139,6 @@
   {
     "spawn_animation": "8081",
     "examine": "A small fire demon.",
-    "slayer_task": "66",
     "melee_animation": "8080",
     "combat_audio": "696,698,697",
     "attack_speed": "5",
@@ -17363,7 +17162,6 @@
   {
     "spawn_animation": "8081",
     "examine": "A small fire demon.",
-    "slayer_task": "66",
     "melee_animation": "8080",
     "combat_audio": "696,698,697",
     "attack_speed": "5",
@@ -17387,7 +17185,6 @@
   {
     "spawn_animation": "8081",
     "examine": "A small fire demon.",
-    "slayer_task": "66",
     "melee_animation": "8080",
     "combat_audio": "696,698,697",
     "attack_speed": "5",
@@ -17411,7 +17208,6 @@
   {
     "spawn_animation": "8081",
     "examine": "A small fire demon.",
-    "slayer_task": "66",
     "melee_animation": "8080",
     "combat_audio": "696,698,697",
     "attack_speed": "5",
@@ -17434,7 +17230,6 @@
   },
   {
     "examine": "It's a Jelly.",
-    "slayer_task": "51",
     "melee_animation": "8569",
     "range_animation": "8569",
     "combat_audio": "547,550,549",
@@ -17457,7 +17252,6 @@
   },
   {
     "examine": "Doesn't look so tough...",
-    "slayer_task": "51",
     "melee_animation": "8569",
     "range_animation": "0",
     "combat_audio": "547,550,549",
@@ -17480,7 +17274,6 @@
   },
   {
     "examine": "Wibbly.",
-    "slayer_task": "51",
     "melee_animation": "8569",
     "range_animation": "0",
     "combat_audio": "547,550,549",
@@ -17503,7 +17296,6 @@
   },
   {
     "examine": "There's always room for jelly.",
-    "slayer_task": "51",
     "melee_animation": "8569",
     "range_animation": "0",
     "combat_audio": "547,550,549",
@@ -17560,7 +17352,6 @@
   },
   {
     "examine": "An evil magic user.",
-    "slayer_task": "49",
     "start_gfx": "99",
     "combat_style": "2",
     "melee_animation": "811",
@@ -17584,7 +17375,6 @@
     "attack_level": "1"
   },
   {
-    "slayer_task": "49",
     "start_gfx": "99",
     "combat_style": "2",
     "melee_animation": "811",
@@ -17609,7 +17399,6 @@
   },
   {
     "examine": "An evil magic user.",
-    "slayer_task": "49",
     "start_gfx": "99",
     "combat_style": "2",
     "melee_animation": "811",
@@ -17634,7 +17423,6 @@
   },
   {
     "examine": "An evil magic user.",
-    "slayer_task": "49",
     "start_gfx": "99",
     "combat_style": "2",
     "melee_animation": "811",
@@ -17659,7 +17447,6 @@
   },
   {
     "examine": "An evil magic user.",
-    "slayer_task": "49",
     "start_gfx": "99",
     "combat_style": "2",
     "melee_animation": "811",
@@ -17684,7 +17471,6 @@
   },
   {
     "examine": "Now THAT'S handy.",
-    "slayer_task": "21",
     "melee_animation": "9125",
     "range_animation": "9125",
     "combat_audio": "377,379,378",
@@ -17707,7 +17493,6 @@
   },
   {
     "examine": "Gimmie five.  Actually",
-    "slayer_task": "21",
     "melee_animation": "9125",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17729,7 +17514,6 @@
   },
   {
     "examine": "Gimmie five.  Actually",
-    "slayer_task": "21",
     "melee_animation": "9125",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17750,7 +17534,6 @@
   },
   {
     "examine": "Gimmie five.  Actually",
-    "slayer_task": "21",
     "melee_animation": "9125",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17772,7 +17555,6 @@
   },
   {
     "examine": "Gimmie five.  Actually",
-    "slayer_task": "21",
     "melee_animation": "9125",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17794,7 +17576,6 @@
   },
   {
     "examine": "Now THAT's handy.",
-    "slayer_task": "21",
     "melee_animation": "9444",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17816,7 +17597,6 @@
   },
   {
     "examine": "I'm glad it's just the hand I can see...",
-    "slayer_task": "21",
     "melee_animation": "9444",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17838,7 +17618,6 @@
   },
   {
     "examine": "A big severed hand.",
-    "slayer_task": "21",
     "melee_animation": "9444",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17859,7 +17638,6 @@
   },
   {
     "examine": "Give the guy a big hand.....",
-    "slayer_task": "21",
     "melee_animation": "9444",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -17881,7 +17659,6 @@
   },
   {
     "examine": "A big severed hand.",
-    "slayer_task": "21",
     "melee_animation": "9444",
     "range_animation": "0",
     "combat_audio": "377,379,378",
@@ -18070,7 +17847,6 @@
   },
   {
     "examine": "It's an undead cow.",
-    "slayer_task": "20",
     "melee_animation": "5849",
     "range_animation": "0",
     "attack_speed": "4",
@@ -18093,7 +17869,6 @@
   },
   {
     "examine": "Yup, definitely a chicken... an undead chicken.",
-    "slayer_task": "7",
     "melee_animation": "5387",
     "range_animation": "0",
     "combat_audio": "355,357,356",
@@ -18117,7 +17892,6 @@
   },
   {
     "examine": "An extremely vicious lobster.",
-    "slayer_task": "71",
     "melee_animation": "6265",
     "range_animation": "0",
     "defence_animation": "0",
@@ -18184,7 +17958,6 @@
   },
   {
     "examine": "This poor soul cannot understand why it has not passed to the next world.",
-    "slayer_task": "36",
     "melee_animation": "422",
     "range_animation": "0",
     "attack_speed": "5",
@@ -18693,7 +18466,6 @@
   },
   {
     "examine": "These gnomes know how to get around!",
-    "slayer_task": "7",
     "melee_animation": "6790",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -18712,7 +18484,6 @@
   },
   {
     "examine": "A farmer's enemy.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -18850,7 +18621,6 @@
   },
   {
     "examine": "Where beef comes from.",
-    "slayer_task": "20",
     "melee_animation": "5849",
     "range_animation": "5849",
     "combat_audio": "369,371,370",
@@ -18890,7 +18660,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -18912,7 +18681,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -18934,7 +18702,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -18956,7 +18723,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -18978,7 +18744,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -19000,7 +18765,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -19022,7 +18786,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -19044,7 +18807,6 @@
   },
   {
     "examine": "An ugly green creature.",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "6185",
     "combat_audio": "469,472,471",
@@ -19083,7 +18845,6 @@
   },
   {
     "examine": "A short stout menacing fellow.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "attack_speed": "6",
@@ -19103,7 +18864,6 @@
   },
   {
     "examine": "A short stout menacing fellow.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "attack_speed": "6",
@@ -19123,7 +18883,6 @@
   },
   {
     "examine": "A short stout menacing fellow.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "attack_speed": "6",
@@ -19382,7 +19141,6 @@
   },
   {
     "examine": "A goblin with big bulging eyes.",
-    "slayer_task": "38",
     "melee_animation": "6001",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -19402,7 +19160,6 @@
   },
   {
     "examine": "A goblin with big bulging eyes.",
-    "slayer_task": "38",
     "melee_animation": "6001",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -19422,7 +19179,6 @@
   },
   {
     "examine": "A goblin with big bulging eyes.",
-    "slayer_task": "38",
     "melee_animation": "6001",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -19442,7 +19198,6 @@
   },
   {
     "examine": "A goblin with big bulging eyes.",
-    "slayer_task": "38",
     "melee_animation": "6001",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -19522,7 +19277,6 @@
   },
   {
     "examine": "A foul-smelling blob of protoplasm.",
-    "slayer_task": "18",
     "melee_animation": "1789",
     "attack_speed": "4",
     "poisonous": "true",
@@ -19549,7 +19303,6 @@
   },
   {
     "examine": "A nasty crawling critter.",
-    "slayer_task": "15",
     "melee_animation": "6079",
     "range_animation": "0",
     "attack_speed": "4",
@@ -20338,7 +20091,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20358,7 +20110,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20377,7 +20128,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20397,7 +20147,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20416,7 +20165,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20436,7 +20184,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20456,7 +20203,6 @@
   },
   {
     "examine": "Brrrrr...he must be cold!",
-    "slayer_task": "83",
     "melee_animation": "284",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20717,7 +20463,6 @@
   },
   {
     "examine": "I think they're some kind of beetle...",
-    "slayer_task": "70",
     "melee_animation": "1948",
     "range_animation": "0",
     "poisonous": "true",
@@ -20747,7 +20492,6 @@
   },
   {
     "examine": "A giant skeleton.",
-    "slayer_task": "75",
     "melee_animation": "5499",
     "range_animation": "0",
     "defence_animation": "0",
@@ -20765,7 +20509,6 @@
   },
   {
     "examine": "Looks hungry!",
-    "slayer_task": "27",
     "melee_animation": "6565",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -20917,7 +20660,6 @@
   },
   {
     "examine": "He has had his day.",
-    "slayer_task": "27",
     "melee_animation": "6568",
     "range_animation": "0",
     "combat_audio": "544,546,545",
@@ -20980,7 +20722,6 @@
   },
   {
     "examine": "I might give the burgers a miss in this town.",
-    "slayer_task": "20",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -20998,7 +20739,6 @@
   },
   {
     "examine": "I don't fancy eating any part of this.",
-    "slayer_task": "20",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -21016,7 +20756,6 @@
   },
   {
     "examine": "I think they're some kind of beetle.",
-    "slayer_task": "70",
     "melee_animation": "1948",
     "range_animation": "0",
     "attack_speed": "2",
@@ -21330,7 +21069,6 @@
   },
   {
     "examine": "A nasty little rodent.",
-    "slayer_task": "67",
     "melee_animation": "240",
     "range_animation": "240",
     "combat_audio": "703,705,704",
@@ -21354,7 +21092,6 @@
   },
   {
     "examine": "A nasty overgrown rodent.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "4933",
     "combat_audio": "703,705,704",
@@ -21378,7 +21115,6 @@
   },
   {
     "examine": "Incey wincey.",
-    "slayer_task": "76",
     "melee_animation": "6249",
     "range_animation": "6249",
     "combat_audio": "537,539,538",
@@ -21402,7 +21138,6 @@
   },
   {
     "examine": "Not very incey wincey.",
-    "slayer_task": "76",
     "melee_animation": "5327",
     "range_animation": "5327",
     "combat_audio": "537,539,538",
@@ -21426,7 +21161,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "combat_audio": "",
     "melee_animation": "359",
     "range_animation": "359",
@@ -21450,7 +21184,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21473,7 +21206,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21496,7 +21228,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21519,7 +21250,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21542,7 +21272,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21565,7 +21294,6 @@
   },
   {
     "examine": "It's falling apart!",
-    "slayer_task": "64",
     "combat_audio": "",
     "range_animation": "359",
     "melee_animation": "359",
@@ -21589,7 +21317,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21612,7 +21339,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21635,7 +21361,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21658,7 +21383,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21681,7 +21405,6 @@
   },
   {
     "examine": "A partially decomposing zombie ogre.",
-    "slayer_task": "64",
     "melee_animation": "359",
     "range_animation": "359",
     "attack_speed": "6",
@@ -21704,7 +21427,6 @@
   },
   {
     "examine": "It's falling apart!",
-    "slayer_task": "64",
     "combat_audio": "",
     "melee_animation": "359",
     "range_animation": "359",
@@ -21728,7 +21450,6 @@
   },
   {
     "examine": "It's falling apart!",
-    "slayer_task": "64",
     "combat_audio": "",
     "range_animation": "359",
     "melee_animation": "359",
@@ -21752,7 +21473,6 @@
   },
   {
     "examine": "What could be hiding in that crack in the wall?",
-    "slayer_task": "87",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "931,923,922",
@@ -21803,7 +21523,6 @@
   },
   {
     "examine": "This one is slacking off.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -21822,7 +21541,6 @@
   },
   {
     "examine": "This one is slacking off.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -21841,7 +21559,6 @@
   },
   {
     "examine": "This one is slacking off.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -21860,7 +21577,6 @@
   },
   {
     "examine": "This one is slacking off.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -21879,7 +21595,6 @@
   },
   {
     "examine": "He protects the miners.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -21899,7 +21614,6 @@
   },
   {
     "examine": "He protects the miners.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -22475,7 +22189,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -22494,7 +22207,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -22513,7 +22225,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -22532,7 +22243,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -22551,7 +22261,6 @@
   },
   {
     "examine": "An elite member of the Black Guard.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -22570,7 +22279,6 @@
   },
   {
     "examine": "An elite member of the Black Guard.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -22589,7 +22297,6 @@
   },
   {
     "examine": "An elite member of the Black Guard.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -23872,7 +23579,6 @@
   },
   {
     "examine": "Young, but still beefy.",
-    "slayer_task": "20",
     "melee_animation": "5849",
     "range_animation": "5849",
     "combat_audio": "366,368,367",
@@ -24176,7 +23882,6 @@
   },
   {
     "examine": "I don't wanna be at the wrong end of that pike.",
-    "slayer_task": "31",
     "melee_animation": "428",
     "range_animation": "0",
     "combat_audio": "425,427,426",
@@ -24198,7 +23903,6 @@
   },
   {
     "examine": "I don't wanna be at the wrong end of that pike.",
-    "slayer_task": "31",
     "melee_animation": "428",
     "range_animation": "0",
     "combat_audio": "425,427,426",
@@ -24220,7 +23924,6 @@
   },
   {
     "examine": "He looks pretty handy with that bow.",
-    "slayer_task": "31",
     "start_gfx": "250",
     "combat_style": "1",
     "melee_animation": "428",
@@ -24244,7 +23947,6 @@
   },
   {
     "examine": "He looks pretty handy with that bow.",
-    "slayer_task": "31",
     "start_gfx": "250",
     "combat_style": "1",
     "melee_animation": "428",
@@ -24284,7 +23986,6 @@
   },
   {
     "examine": "A mourner, or plague healer.",
-    "slayer_task": "31",
     "melee_animation": "428",
     "range_animation": "0",
     "defence_animation": "0",
@@ -24368,7 +24069,6 @@
     "attack_level": "1"
   },
   {
-    "slayer_task": "29",
     "examine": "A dwarf gone bad.",
     "respawn_delay": "150",
     "slayer_exp": "61",
@@ -24470,7 +24170,6 @@
   },
   {
     "examine": "A teeny-tiny horror from the ocean depths...",
-    "slayer_task": "24",
     "melee_animation": "1341",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -26128,7 +25827,6 @@
   },
   {
     "examine": "She quackers.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -26148,7 +25846,6 @@
   },
   {
     "examine": "Mini quackers.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -26964,7 +26661,6 @@
   },
   {
     "examine": "From a darker dimension.",
-    "slayer_task": "25",
     "melee_animation": "2731",
     "range_animation": "2731",
     "combat_audio": "389,391,390",
@@ -27103,7 +26799,6 @@
   },
   {
     "examine": "A cold-blooded creature, partial to warmth.",
-    "slayer_task": "26",
     "melee_animation": "2776",
     "range_animation": "2776",
     "attack_speed": "5",
@@ -27124,7 +26819,6 @@
   },
   {
     "examine": "A cold-blooded creature, partial to warmth.",
-    "slayer_task": "26",
     "melee_animation": "2776",
     "range_animation": "2776",
     "attack_speed": "5",
@@ -27145,7 +26839,6 @@
   },
   {
     "examine": "A cold-blooded creature, partial to warmth.",
-    "slayer_task": "26",
     "melee_animation": "2776",
     "range_animation": "2776",
     "attack_speed": "5",
@@ -27185,7 +26878,6 @@
   },
   {
     "examine": "A cold-blooded creature, partial to warmth.",
-    "slayer_task": "26",
     "melee_animation": "2776",
     "range_animation": "2776",
     "attack_speed": "5",
@@ -27205,7 +26897,6 @@
   },
   {
     "examine": "A cold-blooded creature, partial to warmth.",
-    "slayer_task": "26",
     "melee_animation": "2776",
     "range_animation": "2776",
     "attack_speed": "5",
@@ -27483,7 +27174,6 @@
   },
   {
     "examine": "An undead sea scoundrel.",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -27504,7 +27194,6 @@
   },
   {
     "examine": "An undead sea scoundrel.",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -27525,7 +27214,6 @@
   },
   {
     "examine": "An undead sea scoundrel.",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -27546,7 +27234,6 @@
   },
   {
     "examine": "An undead sea scoundrel.",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -27567,7 +27254,6 @@
   },
   {
     "examine": "An undead sea scoundrel.",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -27588,7 +27274,6 @@
   },
   {
     "examine": "An undead sea scoundrel.",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -27609,7 +27294,6 @@
   },
   {
     "examine": "He talks a good fight.",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "defence_animation": "0",
@@ -27628,7 +27312,6 @@
   },
   {
     "examine": "He talks a good fight.",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "defence_animation": "0",
@@ -27647,7 +27330,6 @@
   },
   {
     "examine": "He talks a good fight.",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "defence_animation": "0",
@@ -27666,7 +27348,6 @@
   },
   {
     "examine": "He talks a good fight.",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "defence_animation": "0",
@@ -27685,7 +27366,6 @@
   },
   {
     "examine": "He talks a good fight.",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "defence_animation": "0",
@@ -27704,7 +27384,6 @@
   },
   {
     "examine": "He talks a good fight.",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "defence_animation": "0",
@@ -27743,7 +27422,6 @@
   },
   {
     "examine": "A bunch of legs, eyes and teeth.",
-    "slayer_task": "76",
     "melee_animation": "5319",
     "range_animation": "0",
     "combat_audio": "537,539,538",
@@ -27942,7 +27620,6 @@
   },
   {
     "examine": "A knee-high horror from the ocean depths...",
-    "slayer_task": "24",
     "melee_animation": "1579",
     "range_animation": "0",
     "defence_animation": "0",
@@ -29474,7 +29151,6 @@
   },
   {
     "examine": "A very dangerous pile of animated Wyvern bones.",
-    "slayer_task": "95",
     "start_gfx": "499",
     "melee_animation": "2985",
     "attack_speed": "6",
@@ -29503,7 +29179,6 @@
   },
   {
     "examine": "A very dangerous pile of animated Wyvern bones.",
-    "slayer_task": "95",
     "start_gfx": "499",
     "melee_animation": "2985",
     "attack_speed": "6",
@@ -29532,7 +29207,6 @@
   },
   {
     "examine": "A very dangerous pile of animated Wyvern bones.",
-    "slayer_task": "95",
     "start_gfx": "499",
     "melee_animation": "2985",
     "attack_speed": "6",
@@ -29561,7 +29235,6 @@
   },
   {
     "examine": "A very dangerous pile of animated Wyvern bones.",
-    "slayer_task": "95",
     "start_gfx": "499",
     "melee_animation": "2985",
     "attack_speed": "6",
@@ -29590,7 +29263,6 @@
   },
   {
     "examine": "He's got icicles in his beard.",
-    "slayer_task": "47",
     "melee_animation": "4672",
     "range_animation": "0",
     "combat_audio": "448,451,450",
@@ -29615,7 +29287,6 @@
   },
   {
     "examine": "A cold-hearted elemental warrior.",
-    "slayer_task": "48",
     "melee_animation": "451",
     "range_animation": "451",
     "combat_audio": "2500,530,529",
@@ -29995,7 +29666,6 @@
   },
   {
     "examine": "A swarm of bugs.",
-    "slayer_task": "42",
     "melee_animation": "1584",
     "range_animation": "0",
     "combat_audio": "2743,2745,2744",
@@ -30559,7 +30229,6 @@
   },
   {
     "examine": "Loves mining.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -30578,7 +30247,6 @@
   },
   {
     "examine": "Loves mining.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -30597,7 +30265,6 @@
   },
   {
     "examine": "Loves mining.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31408,7 +31075,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31427,7 +31093,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31446,7 +31111,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31465,7 +31129,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31484,7 +31147,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31503,7 +31165,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31522,7 +31183,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31541,7 +31201,6 @@
   },
   {
     "examine": "A dwarven worker.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31560,7 +31219,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31579,7 +31237,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31598,7 +31255,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31617,7 +31273,6 @@
   },
   {
     "examine": "A member of the Black Guard",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "defence_animation": "0",
@@ -31864,7 +31519,6 @@
   },
   {
     "examine": "Converts grass to beef.",
-    "slayer_task": "20",
     "melee_animation": "5849",
     "range_animation": "5849",
     "combat_audio": "369,371,370",
@@ -32052,7 +31706,6 @@
   },
   {
     "examine": "A bouncy fungus.",
-    "slayer_task": "94",
     "melee_animation": "2776",
     "range_animation": "0",
     "attack_speed": "5",
@@ -32202,7 +31855,6 @@
   },
   {
     "examine": "A fowl beast.",
-    "slayer_task": "7",
     "melee_animation": "2299",
     "range_animation": "0",
     "combat_audio": "355,357,356",
@@ -32224,7 +31876,6 @@
   },
   {
     "examine": "Young but still dangerous.",
-    "slayer_task": "68",
     "melee_animation": "25",
     "range_animation": "25",
     "combat_audio": "405,407,406",
@@ -32265,7 +31916,6 @@
   },
   {
     "examine": "Vermin from the underworld.",
-    "slayer_task": "67",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -32397,7 +32047,6 @@
   },
   {
     "examine": "A small ice demon.",
-    "slayer_task": "46",
     "range_animation": "0",
     "combat_audio": "531,533,532",
     "attack_speed": "5",
@@ -32623,16 +32272,21 @@
     "attack_level": "1"
   },
   {
+    "examine": "Big, ugly, and smelly.",
+    "slayer_task": "64",
+    "melee_animation": "359",
+    "attack_speed": "7",
+    "respawn_delay": "60",
+    "defence_animation": "360",
+    "weakness": "8",
+    "death_animation": "361",
     "name": "Ogre",
-    "defence_level": "1",
+    "defence_level": "27",
     "safespot": null,
     "lifepoints": "60",
-    "strength_level": "1",
-    "attack_speed": "7",
+    "strength_level": "27",
     "id": "3419",
     "aggressive": "true",
-    "range_level": "1",
-    "respawn_delay": "60",
     "attack_level": "1"
   },
   {
@@ -33023,7 +32677,6 @@
   },
   {
     "examine": "A large boisterous bird",
-    "slayer_task": "7",
     "melee_animation": "6800",
     "range_animation": "0",
     "defence_animation": "0",
@@ -33348,7 +33001,6 @@
   },
   {
     "examine": "An initiate juvenile vampyre",
-    "slayer_task": "86",
     "melee_animation": "6016",
     "range_animation": "0",
     "defence_animation": "0",
@@ -33383,7 +33035,6 @@
   },
   {
     "examine": "He looks really hungry!",
-    "slayer_task": "86",
     "melee_animation": "6276",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -33402,7 +33053,6 @@
   },
   {
     "examine": "She looks really hungry!",
-    "slayer_task": "86",
     "melee_animation": "6276",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -33434,7 +33084,6 @@
   },
   {
     "examine": "He looks really hungry!",
-    "slayer_task": "86",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -33452,7 +33101,6 @@
   },
   {
     "examine": "An initiate juvenile vampyre",
-    "slayer_task": "86",
     "melee_animation": "6016",
     "range_animation": "0",
     "defence_animation": "0",
@@ -33533,7 +33181,6 @@
   },
   {
     "examine": "Good doggy...",
-    "slayer_task": "43",
     "melee_animation": "6562",
     "range_animation": "0",
     "combat_audio": "3717,3719,3718",
@@ -33714,7 +33361,6 @@
   },
   {
     "examine": "A large snake that thrives in swamps.",
-    "slayer_task": "86",
     "melee_animation": "3538",
     "range_animation": "3538",
     "combat_audio": "3609,3608,3610",
@@ -34037,7 +33683,6 @@
   },
   {
     "examine": "He looks a little on the cross side!",
-    "slayer_task": "38",
     "melee_animation": "6185",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -34247,7 +33892,6 @@
   },
   {
     "examine": "Eww",
-    "slayer_task": "67",
     "melee_animation": "6117",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -34285,7 +33929,6 @@
   },
   {
     "examine": "An annoying flappy thing.",
-    "slayer_task": "5",
     "melee_animation": "4915",
     "range_animation": "4915",
     "combat_audio": "292,294,293",
@@ -36154,7 +35797,6 @@
   },
   {
     "examine": "Snake",
-    "slayer_task": "72",
     "melee_animation": "3538",
     "range_animation": "0",
     "combat_audio": "3609,3608,3610",
@@ -36175,7 +35817,6 @@
   },
   {
     "examine": "A baby sea snake. Snaaaaaaake!",
-    "slayer_task": "72",
     "melee_animation": "3538",
     "range_animation": "0",
     "combat_audio": "3609,3608,3610",
@@ -36293,7 +35934,6 @@
   },
   {
     "examine": "A denizen of the Abyss!",
-    "slayer_task": "1",
     "melee_animation": "1537",
     "range_animation": "1537",
     "combat_audio": "276,278,277",
@@ -36454,7 +36094,6 @@
   },
   {
     "examine": "A dwarven guard.",
-    "slayer_task": "29",
     "melee_animation": "99",
     "range_animation": "0",
     "combat_audio": "511,513,512",
@@ -37010,7 +36649,6 @@
   },
   {
     "examine": "A one-eyed man eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "combat_audio": "448,451,450",
@@ -37036,7 +36674,6 @@
   },
   {
     "examine": "A one-eyed woman eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "combat_audio": "448,451,450",
@@ -37363,7 +37000,6 @@
   },
   {
     "examine": "It's all white by me.",
-    "slayer_task": "5",
     "melee_animation": "4915",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -37401,7 +37037,6 @@
   },
   {
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
-    "slayer_task": "52",
     "melee_animation": "4235",
     "range_animation": "0",
     "combat_audio": "496,500,499",
@@ -37449,7 +37084,6 @@
   },
   {
     "examine": "A horrible, emaciated ape like creature with beady green eyes.",
-    "slayer_task": "52",
     "melee_animation": "4235",
     "range_animation": "0",
     "combat_audio": "496,500,499",
@@ -37519,7 +37153,6 @@
   },
   {
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
-    "slayer_task": "17",
     "melee_animation": "4234",
     "range_animation": "4234",
     "combat_audio": "496,500,499",
@@ -37545,7 +37178,6 @@
   },
   {
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
-    "slayer_task": "17",
     "melee_animation": "4234",
     "range_animation": "4234",
     "combat_audio": "496,500,499",
@@ -37571,7 +37203,6 @@
   },
   {
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
-    "slayer_task": "17",
     "melee_animation": "4234",
     "range_animation": "4234",
     "combat_audio": "496,500,499",
@@ -37597,7 +37228,6 @@
   },
   {
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
-    "slayer_task": "17",
     "melee_animation": "4234",
     "range_animation": "4234",
     "combat_audio": "496,500,499",
@@ -37623,7 +37253,6 @@
   },
   {
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
-    "slayer_task": "17",
     "melee_animation": "4234",
     "range_animation": "4234",
     "combat_audio": "496,500,499",
@@ -37843,7 +37472,6 @@
   },
   {
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5532",
     "range_animation": "0",
     "combat_audio": "436,439,438",
@@ -37866,7 +37494,6 @@
   },
   {
     "examine": "I don't think insect repellent will work.",
-    "slayer_task": "34",
     "melee_animation": "1184",
     "range_animation": "1184",
     "combat_audio": "571,573,572",
@@ -38000,7 +37627,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "combat_audio": "703,705,704",
     "melee_animation": "4933",
     "attack_speed": "5",
@@ -38187,7 +37813,6 @@
   },
   {
     "examine": "He doesn't look very pleased to see you.",
-    "slayer_task": "58",
     "melee_animation": "4266",
     "range_animation": "4266",
     "combat_audio": "626,628,627",
@@ -38425,7 +38050,6 @@
   },
   {
     "examine": "A popular dwarven delicacy.",
-    "slayer_task": "67",
     "melee_animation": "2705",
     "range_animation": "2705",
     "combat_audio": "710,713,711",
@@ -39264,7 +38888,6 @@
   },
   {
     "examine": "His beard seems to have a life of its own.",
-    "slayer_task": "62",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "449,451,450",
@@ -40287,7 +39910,6 @@
   },
   {
     "examine": "Young but still dangerous.",
-    "slayer_task": "11",
     "melee_animation": "25",
     "range_animation": "25",
     "combat_audio": "405,407,406",
@@ -40312,7 +39934,6 @@
   },
   {
     "examine": "Young but still dangerous.",
-    "slayer_task": "11",
     "combat_audio": "405,407,406",
     "melee_animation": "25",
     "attack_speed": "4",
@@ -40364,7 +39985,6 @@
   },
   {
     "examine": "A big powerful dragon.",
-    "slayer_task": "68",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40390,7 +40010,6 @@
   },
   {
     "examine": "A big powerful dragon.",
-    "slayer_task": "68",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40416,7 +40035,6 @@
   },
   {
     "examine": "A big powerful dragon.",
-    "slayer_task": "68",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40442,7 +40060,6 @@
   },
   {
     "examine": "A big powerful dragon.",
-    "slayer_task": "68",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40468,7 +40085,6 @@
   },
   {
     "examine": "A fierce dragon with black scales!",
-    "slayer_task": "9",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40494,7 +40110,6 @@
   },
   {
     "examine": "A fierce dragon with black scales!",
-    "slayer_task": "9",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40520,7 +40135,6 @@
   },
   {
     "examine": "A fierce dragon with black scales!",
-    "slayer_task": "9",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40546,7 +40160,6 @@
   },
   {
     "examine": "A fierce dragon with black scales!",
-    "slayer_task": "9",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40572,7 +40185,6 @@
   },
   {
     "examine": "Must be related to Elvarg.",
-    "slayer_task": "41",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40598,7 +40210,6 @@
   },
   {
     "examine": "Must be related to Elvarg.",
-    "slayer_task": "41",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40624,7 +40235,6 @@
   },
   {
     "examine": "Must be related to Elvarg.",
-    "slayer_task": "41",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40650,7 +40260,6 @@
   },
   {
     "examine": "Must be related to Elvarg.",
-    "slayer_task": "41",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40676,7 +40285,6 @@
   },
   {
     "examine": "A mother dragon.",
-    "slayer_task": "11",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40702,7 +40310,6 @@
   },
   {
     "examine": "A mother dragon.",
-    "slayer_task": "11",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40728,7 +40335,6 @@
   },
   {
     "examine": "A mother dragon.",
-    "slayer_task": "11",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40754,7 +40360,6 @@
   },
   {
     "examine": "A mother dragon.",
-    "slayer_task": "11",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -40780,7 +40385,6 @@
   },
   {
     "examine": "He's got icicles in his beard.",
-    "slayer_task": "47",
     "melee_animation": "4672",
     "range_animation": "0",
     "combat_audio": "448,451,450",
@@ -40805,7 +40409,6 @@
   },
   {
     "examine": "He's got icicles in his beard.",
-    "slayer_task": "47",
     "melee_animation": "4672",
     "range_animation": "0",
     "combat_audio": "448,451,450",
@@ -40830,7 +40433,6 @@
   },
   {
     "examine": "He's got icicles in his beard.",
-    "slayer_task": "47",
     "melee_animation": "4672",
     "range_animation": "0",
     "combat_audio": "448,451,450",
@@ -40855,7 +40457,6 @@
   },
   {
     "examine": "His beard seems to have a life of its own.",
-    "slayer_task": "62",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "449,451,450",
@@ -40880,7 +40481,6 @@
   },
   {
     "examine": "A very large foe.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "4652",
     "combat_audio": "448,451,450",
@@ -40905,7 +40505,6 @@
   },
   {
     "examine": "A very large foe.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "4652",
     "combat_audio": "448,451,450",
@@ -40930,7 +40529,6 @@
   },
   {
     "examine": "A very large foe.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "4652",
     "combat_audio": "448,451,450",
@@ -40955,7 +40553,6 @@
   },
   {
     "examine": "A very large foe.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "4652",
     "combat_audio": "448,451,450",
@@ -40980,7 +40577,6 @@
   },
   {
     "examine": "A very large foe.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "4652",
     "combat_audio": "448,451,450",
@@ -41005,7 +40601,6 @@
   },
   {
     "examine": "Lesser, but still pretty big.",
-    "slayer_task": "56",
     "melee_animation": "4630",
     "range_animation": "4630",
     "combat_audio": "400,404,403",
@@ -41030,7 +40625,6 @@
   },
   {
     "examine": "Lesser, but still pretty big.",
-    "slayer_task": "56",
     "melee_animation": "4630",
     "range_animation": "4630",
     "combat_audio": "400,404,403",
@@ -41055,7 +40649,6 @@
   },
   {
     "examine": "Lesser, but still pretty big.",
-    "slayer_task": "56",
     "melee_animation": "4630",
     "range_animation": "4630",
     "combat_audio": "400,404,403",
@@ -41080,7 +40673,6 @@
   },
   {
     "examine": "Lesser, but still pretty big.",
-    "slayer_task": "56",
     "melee_animation": "4630",
     "range_animation": "4630",
     "combat_audio": "400,404,403",
@@ -41105,7 +40697,6 @@
   },
   {
     "examine": "Big, red, and incredibly evil.",
-    "slayer_task": "40",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "400,404,403",
@@ -41131,7 +40722,6 @@
   },
   {
     "examine": "Big, red, and incredibly evil.",
-    "slayer_task": "40",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "400,404,403",
@@ -41157,7 +40747,6 @@
   },
   {
     "examine": "Big, red, and incredibly evil.",
-    "slayer_task": "40",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "400,404,403",
@@ -41183,7 +40772,6 @@
   },
   {
     "examine": "Big, red, and incredibly evil.",
-    "slayer_task": "40",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "400,404,403",
@@ -41209,7 +40797,6 @@
   },
   {
     "examine": "A big, scary, jet-black demon.",
-    "slayer_task": "8",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "397,399,398",
@@ -41234,7 +40821,6 @@
   },
   {
     "examine": "A big, scary, jet-black demon.",
-    "slayer_task": "8",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "397,399,398",
@@ -41259,7 +40845,6 @@
   },
   {
     "examine": "A big, scary, jet-black demon.",
-    "slayer_task": "8",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "397,399,398",
@@ -41284,7 +40869,6 @@
   },
   {
     "examine": "A big, scary, jet-black demon.",
-    "slayer_task": "8",
     "melee_animation": "64",
     "range_animation": "64",
     "combat_audio": "397,399,398",
@@ -41309,7 +40893,6 @@
   },
   {
     "examine": "His beard seems to have a life of its own.",
-    "slayer_task": "62",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "449,451,450",
@@ -42096,7 +41679,6 @@
   },
   {
     "examine": "An enraged vampyre!",
-    "slayer_task": "86",
     "melee_animation": "6016",
     "range_animation": "0",
     "defence_animation": "0",
@@ -42979,7 +42561,6 @@
   },
   {
     "examine": "An extremely vicious lobster.",
-    "slayer_task": "71",
     "melee_animation": "6265",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -43211,7 +42792,6 @@
   },
   {
     "examine": "A nasty overgrown rodent.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "4933",
     "combat_audio": "703,705,704",
@@ -43235,7 +42815,6 @@
   },
   {
     "examine": "A nasty overgrown rodent.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "4933",
     "combat_audio": "703,705,704",
@@ -43259,7 +42838,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43281,7 +42859,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43303,7 +42880,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43340,7 +42916,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43362,7 +42937,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43384,7 +42958,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43406,7 +42979,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43524,7 +43096,6 @@
   },
   {
     "examine": "A dirty rat.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43546,7 +43117,6 @@
   },
   {
     "examine": "A dirty rat.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43590,7 +43160,6 @@
   },
   {
     "examine": "He looks a little on the cross side!",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -43609,7 +43178,6 @@
   },
   {
     "examine": "It's one of Iban's pet vermin.",
-    "slayer_task": "67",
     "range_animation": "0",
     "combat_audio": "703,705,704",
     "defence_animation": "0",
@@ -43678,7 +43246,6 @@
   },
   {
     "examine": "Overgrown vermin.",
-    "slayer_task": "67",
     "combat_audio": "703,705,704",
     "melee_animation": "4933",
     "attack_speed": "5",
@@ -43698,7 +43265,6 @@
   },
   {
     "examine": "Trollish.",
-    "slayer_task": "83",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -43747,7 +43313,6 @@
   },
   {
     "examine": "A mountain-dwelling bird. Cute",
-    "slayer_task": "7",
     "melee_animation": "5031",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -43767,7 +43332,6 @@
   },
   {
     "examine": "A very",
-    "slayer_task": "7",
     "melee_animation": "5024",
     "range_animation": "5025",
     "magic_level": "55",
@@ -44380,7 +43944,6 @@
   },
   {
     "examine": "It blends in very well with its surroundings.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -44397,7 +43960,6 @@
   },
   {
     "examine": "This bird obviously doesn't believe in subtlety.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -44414,7 +43976,6 @@
   },
   {
     "examine": "Best served ice cold.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -44431,7 +43992,6 @@
   },
   {
     "examine": "Actually",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -44448,7 +44008,6 @@
   },
   {
     "examine": "Nothing much to get in a flap about.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -45220,7 +44779,6 @@
   },
   {
     "examine": "Seems intelligent... for an ogre.",
-    "slayer_task": "64",
     "combat_style": "2",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -45239,7 +44797,6 @@
   },
   {
     "examine": "A mother dragon.",
-    "slayer_task": "11",
     "melee_animation": "80",
     "range_animation": "80",
     "combat_audio": "408,410,409",
@@ -45265,7 +44822,6 @@
   },
   {
     "examine": "Seems intelligent... for an ogre.",
-    "slayer_task": "64",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "7",
@@ -45281,7 +44837,6 @@
   },
   {
     "examine": "Seems intelligent... for an ogre.",
-    "slayer_task": "64",
     "combat_style": "2",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -45300,7 +44855,6 @@
   },
   {
     "examine": "Seems intelligent... for an ogre.",
-    "slayer_task": "64",
     "combat_style": "2",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -45544,7 +45098,6 @@
   },
   {
     "examine": "Part scarab, part man.",
-    "slayer_task": "70",
     "combat_style": "2",
     "melee_animation": "7615",
     "range_animation": "0",
@@ -45566,7 +45119,6 @@
   },
   {
     "examine": "A mounted lancer.",
-    "slayer_task": "70",
     "melee_animation": "7584",
     "range_animation": "0",
     "defence_animation": "0",
@@ -45585,7 +45137,6 @@
   },
   {
     "examine": "A mounted archer.",
-    "slayer_task": "70",
     "melee_animation": "5451",
     "range_animation": "5451",
     "defence_animation": "0",
@@ -45604,7 +45155,6 @@
   },
   {
     "examine": "A huge scarab beast.",
-    "slayer_task": "70",
     "melee_animation": "5457",
     "range_animation": "0",
     "magic_level": "62",
@@ -46446,7 +45996,6 @@
   },
   {
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5532",
     "range_animation": "0",
     "combat_audio": "436,439,438",
@@ -46489,7 +46038,6 @@
   },
   {
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5532",
     "range_animation": "0",
     "combat_audio": "436,439,438",
@@ -46513,7 +46061,6 @@
   },
   {
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5532",
     "range_animation": "0",
     "combat_audio": "436,439,438",
@@ -46556,7 +46103,6 @@
   },
   {
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5532",
     "range_animation": "0",
     "combat_audio": "436,439,438",
@@ -46580,7 +46126,6 @@
   },
   {
     "examine": "Eeek! A ghost!",
-    "slayer_task": "36",
     "melee_animation": "5532",
     "range_animation": "0",
     "combat_audio": "436,439,438",
@@ -46680,7 +46225,6 @@
   },
   {
     "examine": "A minion of Rashiliyia.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "attack_speed": "5",
@@ -46701,7 +46245,6 @@
   },
   {
     "examine": "A minion of Rashiliyia.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "defence_animation": "0",
@@ -46719,7 +46262,6 @@
   },
   {
     "examine": "The animated dead; one of Rashiliyia's minions.",
-    "slayer_task": "93",
     "melee_animation": "5568",
     "range_animation": "0",
     "attack_speed": "5",
@@ -46740,7 +46282,6 @@
   },
   {
     "examine": "The animated dead; one of Rashiliyia's minions.",
-    "slayer_task": "93",
     "melee_animation": "5568",
     "range_animation": "0",
     "attack_speed": "5",
@@ -46761,7 +46302,6 @@
   },
   {
     "examine": "The animated dead; one of Rashiliyia's minions.",
-    "slayer_task": "93",
     "melee_animation": "5571",
     "range_animation": "0",
     "attack_speed": "5",
@@ -46782,7 +46322,6 @@
   },
   {
     "examine": "The animated dead; one of Rashiliyia's minions.",
-    "slayer_task": "93",
     "melee_animation": "5571",
     "range_animation": "0",
     "attack_speed": "5",
@@ -46803,7 +46342,6 @@
   },
   {
     "examine": "A giant skeleton.",
-    "slayer_task": "75",
     "melee_animation": "5499",
     "range_animation": "0",
     "defence_animation": "0",
@@ -46821,7 +46359,6 @@
   },
   {
     "examine": "A fiendish embodiment of water.",
-    "slayer_task": "90",
     "combat_style": "1",
     "melee_animation": "1582",
     "range_animation": "1582",
@@ -46847,7 +46384,6 @@
   },
   {
     "examine": "It appears to be intelligent and savage.",
-    "slayer_task": "41",
     "melee_animation": "91",
     "range_animation": "91",
     "combat_audio": "408,410,409",
@@ -46872,7 +46408,6 @@
   },
   {
     "examine": "Experimenting with mithril gone bad!",
-    "slayer_task": "57",
     "melee_animation": "91",
     "range_animation": "91",
     "combat_audio": "408,410,409",
@@ -47465,7 +47000,6 @@
   },
   {
     "examine": "A terrifying dog beast.",
-    "slayer_task": "82",
     "melee_animation": "5625",
     "range_animation": "0",
     "attack_speed": "5",
@@ -47602,7 +47136,6 @@
   },
   {
     "examine": "Sturdy cold being.",
-    "slayer_task": "48",
     "melee_animation": "5724",
     "range_animation": "5725",
     "respawn_delay": "60",
@@ -47622,7 +47155,6 @@
   },
   {
     "examine": "Sturdy cold being.",
-    "slayer_task": "48",
     "melee_animation": "5724",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -47642,7 +47174,6 @@
   },
   {
     "examine": "Sturdy cold being.",
-    "slayer_task": "48",
     "melee_animation": "5724",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -47662,7 +47193,6 @@
   },
   {
     "examine": "Sturdy cold being.",
-    "slayer_task": "48",
     "melee_animation": "5724",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -47682,7 +47212,6 @@
   },
   {
     "examine": "An impressive-looking troll.",
-    "slayer_task": "83",
     "melee_animation": "5374",
     "range_animation": "0",
     "magic_level": "65",
@@ -48574,7 +48103,6 @@
   },
   {
     "examine": "Bedside manner is a little lacking",
-    "slayer_task": "93",
     "melee_animation": "5643",
     "range_animation": "0",
     "defence_animation": "0",
@@ -48592,7 +48120,6 @@
   },
   {
     "examine": "I hope his hands don't shake.",
-    "slayer_task": "93",
     "melee_animation": "5643",
     "range_animation": "0",
     "defence_animation": "0",
@@ -48610,7 +48137,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48647,7 +48173,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48684,7 +48209,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48705,7 +48229,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48726,7 +48249,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5647",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48763,7 +48285,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48784,7 +48305,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48805,7 +48325,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48826,7 +48345,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48847,7 +48365,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5651",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48868,7 +48385,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5880",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48889,7 +48405,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5880",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48910,7 +48425,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5880",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48931,7 +48445,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5880",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48952,7 +48465,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5880",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48973,7 +48485,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5884",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -48994,7 +48505,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5884",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49031,7 +48541,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5884",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49068,7 +48577,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5884",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49105,7 +48613,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5884",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49142,7 +48649,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5889",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49179,7 +48685,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5889",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49200,7 +48705,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5889",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49237,7 +48741,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5889",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49274,7 +48777,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5889",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49311,7 +48813,6 @@
   },
   {
     "examine": "Aaaarg",
-    "slayer_task": "93",
     "melee_animation": "5889",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -49368,7 +48869,6 @@
   },
   {
     "examine": "A big",
-    "slayer_task": "15",
     "melee_animation": "6079",
     "range_animation": "0",
     "attack_speed": "4",
@@ -49802,7 +49302,6 @@
   },
   {
     "examine": "He keeps order in the city.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "511,513,512",
@@ -49822,7 +49321,6 @@
   },
   {
     "examine": "He keeps order in the city.",
-    "slayer_task": "38",
     "melee_animation": "6007",
     "range_animation": "0",
     "combat_audio": "511,513,512",
@@ -50497,7 +49995,6 @@
   },
   {
     "examine": "A goblin with big",
-    "slayer_task": "38",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -50515,7 +50012,6 @@
   },
   {
     "examine": "A goblin with big",
-    "slayer_task": "38",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -50566,7 +50062,6 @@
   },
   {
     "examine": "He sells tickets to Keldagrim.",
-    "slayer_task": "38",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "469,472,471",
@@ -51659,7 +51154,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51682,7 +51176,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51705,7 +51198,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51728,7 +51220,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51772,7 +51263,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51795,7 +51285,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51818,7 +51307,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51841,7 +51329,6 @@
   },
   {
     "examine": "I wish the moon wasn't out!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "attack_speed": "5",
@@ -51864,7 +51351,6 @@
   },
   {
     "examine": "Eek! A werewolf!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "0",
     "attack_speed": "5",
@@ -51886,7 +51372,6 @@
   },
   {
     "examine": "Eek! A werewolf!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "0",
     "attack_speed": "5",
@@ -51908,7 +51393,6 @@
   },
   {
     "examine": "Eek! A werewolf!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "0",
     "attack_speed": "5",
@@ -51930,7 +51414,6 @@
   },
   {
     "examine": "Eek! A werewolf!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "0",
     "attack_speed": "5",
@@ -51969,7 +51452,6 @@
   },
   {
     "examine": "Eek! A werewolf!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "0",
     "attack_speed": "5",
@@ -51991,7 +51473,6 @@
   },
   {
     "examine": "Eek! A werewolf!",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "0",
     "attack_speed": "5",
@@ -52436,7 +51917,6 @@
   },
   {
     "examine": "A vicious desert wolf.",
-    "slayer_task": "92",
     "melee_animation": "6579",
     "range_animation": "6579",
     "attack_speed": "5",
@@ -52561,7 +52041,6 @@
   },
   {
     "examine": "A one-eyed man eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "attack_speed": "4",
@@ -52586,7 +52065,6 @@
   },
   {
     "examine": "A one-eyed woman eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "attack_speed": "4",
@@ -52611,7 +52089,6 @@
   },
   {
     "examine": "A one-eyed man eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "attack_speed": "4",
@@ -52636,7 +52113,6 @@
   },
   {
     "examine": "A one-eyed woman eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "attack_speed": "4",
@@ -52661,7 +52137,6 @@
   },
   {
     "examine": "Overgrown undead vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -52681,7 +52156,6 @@
   },
   {
     "examine": "Overgrown undead vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -52701,7 +52175,6 @@
   },
   {
     "examine": "Overgrown undead vermin.",
-    "slayer_task": "67",
     "melee_animation": "4933",
     "range_animation": "0",
     "combat_audio": "703,705,704",
@@ -52845,7 +52318,6 @@
   },
   {
     "examine": "Lesser, but still pretty big.",
-    "slayer_task": "56",
     "melee_animation": "4630",
     "range_animation": "4630",
     "combat_audio": "400,404,403",
@@ -52888,7 +52360,6 @@
   },
   {
     "examine": "Probably not a chicken.",
-    "slayer_task": "7",
     "melee_animation": "6811",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -52907,7 +52378,6 @@
   },
   {
     "examine": "These gnomes know how to get around!",
-    "slayer_task": "7",
     "melee_animation": "6790",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -52956,7 +52426,6 @@
   },
   {
     "examine": "Aww, cute.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -52990,7 +52459,6 @@
   },
   {
     "examine": "A messy bird.",
-    "slayer_task": "7",
     "melee_animation": "3467",
     "range_animation": "3467",
     "combat_audio": "309,311,310",
@@ -53702,7 +53170,6 @@
   },
   {
     "examine": "A servant of the god Zamorak. ",
-    "slayer_task": "40",
     "melee_animation": "6945",
     "attack_speed": "6",
     "poisonous": "true",
@@ -53732,7 +53199,6 @@
   {
     "agg_radius": "64",
     "examine": "Destroyer of 1000 planes!",
-    "slayer_task": "40",
     "melee_animation": "6945",
     "range_animation": "6945",
     "attack_speed": "5",
@@ -53767,7 +53233,6 @@
   },
   {
     "examine": "Scourge of light.",
-    "slayer_task": "56",
     "start_gfx": "1208",
     "combat_style": "1",
     "melee_animation": "7033",
@@ -53843,7 +53308,6 @@
   },
   {
     "examine": "From the maws of hell.",
-    "slayer_task": "43",
     "melee_animation": "6579",
     "range_animation": "6579",
     "combat_audio": "3717,3719,3718",
@@ -53889,7 +53353,6 @@
   },
   {
     "examine": "He doesn't look pleased to see me.",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "respawn_delay": "25",
@@ -53911,7 +53374,6 @@
   },
   {
     "examine": "He doesn't look pleased to see me.",
-    "slayer_task": "91",
     "melee_animation": "6536",
     "range_animation": "6536",
     "respawn_delay": "25",
@@ -53975,7 +53437,6 @@
   },
   {
     "examine": "A small fire demon.",
-    "slayer_task": "66",
     "melee_animation": "1582",
     "range_animation": "1582",
     "combat_audio": "696,698,697",
@@ -54018,7 +53479,6 @@
   },
   {
     "examine": "Those horns look pretty sharp...",
-    "slayer_task": "39",
     "melee_animation": "4300",
     "range_animation": "4300",
     "respawn_delay": "25",
@@ -54040,7 +53500,6 @@
   },
   {
     "examine": "Warrior of Zamorak.",
-    "slayer_task": "79",
     "melee_animation": "390",
     "range_animation": "390",
     "attack_speed": "5",
@@ -54063,7 +53522,6 @@
   },
   {
     "examine": "A ranger spirit dedicated to Zamorak.",
-    "slayer_task": "78",
     "start_gfx": "18",
     "combat_style": "1",
     "start_height": "96",
@@ -54089,7 +53547,6 @@
   },
   {
     "examine": "A deadly servant of Zamorak.",
-    "slayer_task": "77",
     "combat_style": "2",
     "melee_animation": "811",
     "attack_speed": "5",
@@ -54256,7 +53713,6 @@
   },
   {
     "examine": "A servant of Armadyl.",
-    "slayer_task": "79",
     "combat_style": "1",
     "melee_animation": "6954",
     "range_animation": "6954",
@@ -54279,7 +53735,6 @@
   },
   {
     "examine": "Armadyl's favourite servant.",
-    "slayer_task": "78",
     "combat_style": "1",
     "melee_animation": "6953",
     "range_animation": "6953",
@@ -54304,7 +53759,6 @@
   },
   {
     "examine": "A mage who serves Armadyl above all else - even death.",
-    "slayer_task": "77",
     "combat_style": "2",
     "melee_animation": "6952",
     "attack_speed": "5",
@@ -54842,7 +54296,6 @@
   },
   {
     "examine": "Warrior of Saradomin.",
-    "slayer_task": "79",
     "melee_animation": "390",
     "range_animation": "390",
     "attack_speed": "5",
@@ -54865,7 +54318,6 @@
   },
   {
     "examine": "A ranger spirit dedicated to Saradomin.",
-    "slayer_task": "78",
     "start_gfx": "18",
     "combat_style": "1",
     "start_height": "96",
@@ -54891,7 +54343,6 @@
   },
   {
     "examine": "Saradomin's holy mage.",
-    "slayer_task": "77",
     "combat_style": "2",
     "melee_animation": "811",
     "attack_speed": "5",
@@ -54986,7 +54437,6 @@
   {
     "agg_radius": "64",
     "examine": "A battle-honed goblin. ",
-    "slayer_task": "38",
     "melee_animation": "6154",
     "range_animation": "6154",
     "attack_speed": "5",
@@ -55020,7 +54470,6 @@
   },
   {
     "examine": "A battle-honed goblin. ",
-    "slayer_task": "38",
     "start_gfx": "1202",
     "combat_style": "2",
     "melee_animation": "6154",
@@ -55059,7 +54508,6 @@
   {
     "agg_radius": "64",
     "examine": "A battle-honed goblin. ",
-    "slayer_task": "38",
     "combat_style": "1",
     "melee_animation": "6154",
     "range_animation": "6154",
@@ -55138,7 +54586,6 @@
   },
   {
     "examine": "A one-eyed man-eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "attack_speed": "4",
@@ -55163,7 +54610,6 @@
   },
   {
     "examine": "A one-eyed man-eater.",
-    "slayer_task": "44",
     "melee_animation": "4652",
     "range_animation": "0",
     "attack_speed": "4",
@@ -55265,7 +54711,6 @@
   },
   {
     "examine": "An ugly, smelly creature.",
-    "slayer_task": "45",
     "melee_animation": "164",
     "range_animation": "164",
     "combat_audio": "469,472,471",
@@ -55287,7 +54732,6 @@
   },
   {
     "examine": "The spirit of a ranger, serving bandos beyond death.",
-    "slayer_task": "78",
     "start_gfx": "95",
     "combat_style": "1",
     "melee_animation": "4320",
@@ -55312,7 +54756,6 @@
   },
   {
     "examine": "A true servant of Bandos.",
-    "slayer_task": "79",
     "melee_animation": "4320",
     "range_animation": "4320",
     "respawn_delay": "25",
@@ -55334,7 +54777,6 @@
   },
   {
     "examine": "One of Bandos' chosen.",
-    "slayer_task": "77",
     "combat_style": "2",
     "melee_animation": "4320",
     "range_animation": "4320",
@@ -55465,7 +54907,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55488,7 +54929,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55511,7 +54951,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55534,7 +54973,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55557,7 +54995,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55597,7 +55034,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55620,7 +55056,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55660,7 +55095,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55683,7 +55117,6 @@
   },
   {
     "examine": "You don't think you can harm this terrorbird.",
-    "slayer_task": "88",
     "combat_style": "1",
     "melee_animation": "7108",
     "range_animation": "0",
@@ -55706,7 +55139,6 @@
   },
   {
     "examine": "You don't think you can harm this creature.",
-    "slayer_task": "89",
     "melee_animation": "7093",
     "range_animation": "0",
     "attack_speed": "5",
@@ -55742,7 +55174,6 @@
   },
   {
     "examine": "Annoyingly easy to squish.",
-    "slayer_task": "73",
     "melee_animation": "0",
     "range_animation": "0",
     "magic_level": "2",
@@ -56518,7 +55949,6 @@
   },
   {
     "examine": "I wouldn't want to be footing that bill.",
-    "slayer_task": "7",
     "melee_animation": "6775",
     "range_animation": "0",
     "attack_speed": "5",
@@ -56595,7 +56025,6 @@
   },
   {
     "examine": "Polynomial - a parrot that goes without breakfast",
-    "slayer_task": "7",
     "melee_animation": "6775",
     "range_animation": "0",
     "attack_speed": "5",
@@ -57478,7 +56907,6 @@
   },
   {
     "examine": "A goblin high priest",
-    "slayer_task": "75",
     "melee_animation": "7317",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -57498,7 +56926,6 @@
   },
   {
     "examine": "A goblin high priest",
-    "slayer_task": "75",
     "melee_animation": "7317",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -57518,7 +56945,6 @@
   },
   {
     "examine": "A goblin high priest",
-    "slayer_task": "75",
     "melee_animation": "7317",
     "range_animation": "0",
     "magic_level": "22",
@@ -57538,7 +56964,6 @@
   },
   {
     "examine": "A goblin high priest",
-    "slayer_task": "75",
     "melee_animation": "7317",
     "range_animation": "0",
     "magic_level": "26",
@@ -57558,7 +56983,6 @@
   },
   {
     "examine": "A goblin high priest",
-    "slayer_task": "75",
     "melee_animation": "7317",
     "range_animation": "0",
     "magic_level": "26",
@@ -60786,7 +60210,6 @@
   },
   {
     "examine": "Cut-down and dried.",
-    "slayer_task": "93",
     "melee_animation": "5568",
     "range_animation": "0",
     "attack_speed": "5",
@@ -60806,7 +60229,6 @@
   },
   {
     "examine": "Needs moisturising.",
-    "slayer_task": "93",
     "melee_animation": "5568",
     "range_animation": "0",
     "attack_speed": "5",
@@ -60826,7 +60248,6 @@
   },
   {
     "examine": "I bet it's parched.",
-    "slayer_task": "93",
     "melee_animation": "5568",
     "range_animation": "0",
     "attack_speed": "5",
@@ -60862,7 +60283,6 @@
   },
   {
     "examine": "A huge beast of a beetle.",
-    "slayer_task": "70",
     "melee_animation": "7596",
     "range_animation": "0",
     "defence_animation": "0",
@@ -60898,7 +60318,6 @@
   },
   {
     "examine": "Bred to shoot you down.",
-    "slayer_task": "70",
     "start_gfx": "18",
     "combat_style": "1",
     "melee_animation": "7607",
@@ -60921,7 +60340,6 @@
   },
   {
     "examine": "It might be angry...it's hard to tell.",
-    "slayer_task": "70",
     "melee_animation": "7612",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -60960,7 +60378,6 @@
   },
   {
     "examine": "Bouncy",
-    "slayer_task": "70",
     "melee_animation": "7584",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -60980,7 +60397,6 @@
   },
   {
     "examine": "He'll have someone's eye out with that.",
-    "slayer_task": "70",
     "start_gfx": "18",
     "combat_style": "1",
     "melee_animation": "5451",
@@ -61021,7 +60437,6 @@
   },
   {
     "examine": "Part scarab, part man.",
-    "slayer_task": "70",
     "combat_style": "2",
     "melee_animation": "7615",
     "range_animation": "0",
@@ -61124,7 +60539,6 @@
   },
   {
     "examine": "He exudes something like holiness.",
-    "slayer_task": "70",
     "melee_animation": "7612",
     "range_animation": "0",
     "magic_level": "66",
@@ -61143,7 +60557,6 @@
   },
   {
     "examine": "He exudes something like holiness.",
-    "slayer_task": "70",
     "melee_animation": "7607",
     "range_animation": "7607",
     "magic_level": "66",
@@ -63606,7 +63019,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -63630,7 +63042,6 @@
   },
   {
     "examine": "A very large elemental adversary.",
-    "slayer_task": "33",
     "melee_animation": "4666",
     "range_animation": "4666",
     "combat_audio": "447,451,450",
@@ -63654,7 +63065,6 @@
   },
   {
     "examine": "Must be the pack leader.",
-    "slayer_task": "92",
     "melee_animation": "6559",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -63788,7 +63198,6 @@
   },
   {
     "examine": "An ogre snack with wings.",
-    "slayer_task": "7",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -63855,7 +63264,6 @@
   },
   {
     "examine": "A fearsome adversary with no sense of humour.",
-    "slayer_task": "64",
     "melee_animation": "8636",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -63875,7 +63283,6 @@
   },
   {
     "examine": "Irascible, belligerent and stupefyingly impolite.",
-    "slayer_task": "64",
     "melee_animation": "8636",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -63895,7 +63302,6 @@
   },
   {
     "examine": "Irascible, beliggerent and stupefyingly impolite.",
-    "slayer_task": "64",
     "melee_animation": "8637",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -63915,7 +63321,6 @@
   },
   {
     "examine": "A large and contentious lady ogre.",
-    "slayer_task": "64",
     "melee_animation": "8636",
     "range_animation": "0",
     "attack_speed": "5",
@@ -63936,7 +63341,6 @@
   },
   {
     "examine": "A large and contentious lady ogre.",
-    "slayer_task": "64",
     "melee_animation": "8637",
     "range_animation": "0",
     "attack_speed": "5",
@@ -66452,7 +65856,6 @@
   },
   {
     "examine": "You clearly can't live on treasure alone.",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66469,7 +65872,6 @@
   },
   {
     "examine": "A testament to the effect of greed.",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66486,7 +65888,6 @@
   },
   {
     "examine": "He wanted loot",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66503,7 +65904,6 @@
   },
   {
     "examine": "Eternally looking for that big payday.",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66520,7 +65920,6 @@
   },
   {
     "examine": "No more tea-breaks for this one.",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66537,7 +65936,6 @@
   },
   {
     "examine": "Even in death you can smell his feet.",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66554,7 +65952,6 @@
   },
   {
     "examine": "An anatomist's dream.",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66571,7 +65968,6 @@
   },
   {
     "examine": "A hand seems to be gripping his spine through his chest. Ouch.",
-    "slayer_task": "75",
     "range_animation": "0",
     "defence_animation": "0",
     "weakness": "6",
@@ -66689,7 +66085,6 @@
   },
   {
     "examine": "This dung beetle has mistaken you for its staple diet.",
-    "slayer_task": "70",
     "range_animation": "0",
     "respawn_delay": "60",
     "defence_animation": "0",
@@ -66707,7 +66102,6 @@
   },
   {
     "examine": "It's looking unwell - probably something it ate.",
-    "slayer_task": "70",
     "range_animation": "0",
     "respawn_delay": "60",
     "defence_animation": "0",
@@ -66725,7 +66119,6 @@
   },
   {
     "examine": "Once a valuable contributor to the ecosystem.",
-    "slayer_task": "70",
     "range_animation": "0",
     "respawn_delay": "60",
     "defence_animation": "0",
@@ -66743,7 +66136,6 @@
   },
   {
     "examine": "This is what happens if you play with your food.",
-    "slayer_task": "70",
     "range_animation": "0",
     "respawn_delay": "60",
     "defence_animation": "0",
@@ -67726,7 +67118,6 @@
   },
   {
     "examine": "Ew it's still alive.",
-    "slayer_task": "21",
     "melee_animation": "9125",
     "range_animation": "9125",
     "attack_speed": "5",
@@ -67748,7 +67139,6 @@
   },
   {
     "examine": "Ew it's still alive.",
-    "slayer_task": "21",
     "melee_animation": "9125",
     "range_animation": "9125",
     "attack_speed": "5",
@@ -67770,7 +67160,6 @@
   },
   {
     "examine": "A bloodveld with a very mixed heritage.",
-    "slayer_task": "10",
     "melee_animation": "9102",
     "range_animation": "0",
     "attack_speed": "5",
@@ -67792,7 +67181,6 @@
   },
   {
     "examine": "A bloodveld with a very mixed heritage.",
-    "slayer_task": "10",
     "melee_animation": "9102",
     "range_animation": "0",
     "attack_speed": "5",
@@ -68240,7 +67628,6 @@
   },
   {
     "examine": "Looks like a big ugly dog.",
-    "slayer_task": "27",
     "melee_animation": "6565",
     "range_animation": "0",
     "respawn_delay": "60",
@@ -68275,7 +67662,6 @@
   },
   {
     "examine": "A small ice demon.",
-    "slayer_task": "46",
     "melee_animation": "8080",
     "range_animation": "0",
     "combat_audio": "531,533,532",
@@ -68299,7 +67685,6 @@
   },
   {
     "examine": "The icefiend seems to be melting.",
-    "slayer_task": "46",
     "melee_animation": "8080",
     "range_animation": "0",
     "combat_audio": "531,533,532",
@@ -68323,7 +67708,6 @@
   },
   {
     "examine": "The icefiend seems to be melting.",
-    "slayer_task": "46",
     "melee_animation": "8080",
     "range_animation": "0",
     "attack_speed": "5",
@@ -69863,7 +69247,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -69885,7 +69268,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -69906,7 +69288,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -69927,7 +69308,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -69967,7 +69347,6 @@
   },
   {
     "examine": "It rattles when it moves.",
-    "slayer_task": "75",
     "combat_style": "2",
     "melee_animation": "5485",
     "range_animation": "5485",
@@ -69990,7 +69369,6 @@
   },
   {
     "examine": "It looks just a bit... underfed.",
-    "slayer_task": "75",
     "melee_animation": "5519",
     "range_animation": "5519",
     "combat_audio": "774,775,777",
@@ -70015,7 +69393,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "5487",
     "combat_audio": "774,775,777",
@@ -70039,7 +69416,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "5487",
     "combat_audio": "774,775,777",
@@ -70114,7 +69490,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70136,7 +69511,6 @@
   },
   {
     "examine": "He guards the dungeon with the faithfulness of the undead.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70159,7 +69533,6 @@
   },
   {
     "examine": "Could use a good meal.",
-    "slayer_task": "75",
     "melee_animation": "6128",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70209,7 +69582,6 @@
   },
   {
     "examine": "He seems a little underweight.",
-    "slayer_task": "75",
     "melee_animation": "6128",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70229,7 +69601,6 @@
   },
   {
     "examine": "He seems a little underweight.",
-    "slayer_task": "75",
     "melee_animation": "6128",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70264,7 +69635,6 @@
   },
   {
     "examine": "He seems a little underweight.",
-    "slayer_task": "75",
     "melee_animation": "6128",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70284,7 +69654,6 @@
   },
   {
     "examine": "He seems a little underweight.",
-    "slayer_task": "75",
     "melee_animation": "6128",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70333,7 +69702,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70390,7 +69758,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "combat_audio": "774,775,777",
     "melee_animation": "5485",
     "attack_speed": "4",
@@ -70411,7 +69778,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "range_animation": "0",
     "combat_audio": "774,775,777",
     "melee_animation": "5485",
@@ -70434,7 +69800,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "range_animation": "0",
     "combat_audio": "774,775,777",
     "melee_animation": "5485",
@@ -70493,7 +69858,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -70516,7 +69880,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -70536,7 +69899,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -70556,7 +69918,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "5485",
     "combat_audio": "774,775,777",
@@ -70576,7 +69937,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5499",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70598,7 +69958,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70673,7 +70032,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70695,7 +70053,6 @@
   },
   {
     "examine": "A skeleton in a dress!",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70718,7 +70075,6 @@
   },
   {
     "examine": "Achingly thin.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70740,7 +70096,6 @@
   },
   {
     "examine": "Look: another skeleton.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70762,7 +70117,6 @@
   },
   {
     "examine": "That skeleton's grinning at me.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70784,7 +70138,6 @@
   },
   {
     "examine": "He needs a tan.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70806,7 +70159,6 @@
   },
   {
     "examine": "How do you know if a skeleton's male or female?",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70827,7 +70179,6 @@
   },
   {
     "examine": "He obviously hasn't realised he's dead.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70849,7 +70200,6 @@
   },
   {
     "examine": "Put some meat on those bones!",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70871,7 +70221,6 @@
   },
   {
     "examine": "An angry skeleton.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70893,7 +70242,6 @@
   },
   {
     "examine": "Cross bones.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70915,7 +70263,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5485",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70971,7 +70318,6 @@
   },
   {
     "examine": "Could do with gaining a few pounds.",
-    "slayer_task": "75",
     "melee_animation": "5487",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -70993,7 +70339,6 @@
   },
   {
     "examine": "An opponent from the grave. He seems unimpressed by your bone rummaging.",
-    "slayer_task": "75",
     "melee_animation": "2067",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -71014,7 +70359,6 @@
   },
   {
     "examine": "An ex-barbarian, willing to make you ex too.",
-    "slayer_task": "75",
     "melee_animation": "422",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -71035,7 +70379,6 @@
   },
   {
     "examine": "He's heartless.",
-    "slayer_task": "75",
     "melee_animation": "2067",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -71056,7 +70399,6 @@
   },
   {
     "examine": "He's less heavy now.",
-    "slayer_task": "75",
     "melee_animation": "390",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -71077,7 +70419,6 @@
   },
   {
     "examine": "Floats like an anvil, hits like a hammer.",
-    "slayer_task": "75",
     "melee_animation": "422",
     "range_animation": "0",
     "combat_audio": "774,775,777",
@@ -72624,5 +71965,65 @@
     "examine": "An intelligent-looking shop owner.",
     "name": "Obli",
     "id": "516"
+  },
+  {
+    "examine": "A person sitting an exam.",
+    "melee_animation": "0",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "magic_animation": "0",
+    "death_animation": "0",
+    "name": "Student",
+    "defence_level": "1",
+    "lifepoints": "10",
+    "strength_level": "1",
+    "id": "7151",
+    "range_level": "1",
+    "attack_level": "1"
+  },
+  {
+    "examine": "A person sitting an exam.",
+    "melee_animation": "0",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "magic_animation": "0",
+    "death_animation": "0",
+    "name": "Student",
+    "defence_level": "1",
+    "lifepoints": "10",
+    "strength_level": "1",
+    "id": "7153",
+    "range_level": "1",
+    "attack_level": "1"
+  },
+  {
+    "examine": "A person sitting an exam.",
+    "melee_animation": "0",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "magic_animation": "0",
+    "death_animation": "0",
+    "name": "Student",
+    "defence_level": "1",
+    "lifepoints": "10",
+    "strength_level": "1",
+    "id": "7154",
+    "range_level": "1",
+    "attack_level": "1"
+  },
+  {
+    "examine": "A person sitting an exam.",
+    "melee_animation": "0",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "magic_animation": "0",
+    "death_animation": "0",
+    "name": "Student",
+    "defence_level": "1",
+    "lifepoints": "10",
+    "strength_level": "1",
+    "id": "7155",
+    "range_level": "1",
+    "attack_level": "1"
   }
 ]

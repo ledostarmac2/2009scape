@@ -4243,77 +4243,85 @@
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "456"
+    "id": "456",
+    "weight": "0.15"
   },
   {
     "destroy_message": "You will need to speak to Thormac to get another cage.",
-    "examine": "It's empty!",
+    "examine": "There is 1 scorpion inside.",
     "durability": null,
     "name": "Scorpion cage",
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "457"
+    "id": "457",
+    "weight": "0.175"
   },
   {
     "destroy_message": "You will need to speak to Thormac to get another cage.",
-    "examine": "It's empty!",
+    "examine": "There are 2 scorpions inside.",
     "durability": null,
     "name": "Scorpion cage",
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "458"
+    "id": "458",
+    "weight": "0.2"
   },
   {
     "destroy_message": "You will need to speak to Thormac to get another cage.",
-    "examine": "It's empty!",
+    "examine": "There is 1 scorpion inside.",
     "durability": null,
     "name": "Scorpion cage",
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "459"
+    "id": "459",
+    "weight": "0.175"
   },
   {
     "destroy_message": "You will need to speak to Thormac to get another cage.",
-    "examine": "It's empty!",
+    "examine": "There are 2 scorpions inside.",
     "durability": null,
     "name": "Scorpion cage",
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "460"
+    "id": "460",
+    "weight": "0.2"
   },
   {
     "destroy_message": "You will need to speak to Thormac to get another cage.",
-    "examine": "It's empty!",
+    "examine": "There is 1 scorpion inside.",
     "durability": null,
     "name": "Scorpion cage",
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "461"
+    "id": "461",
+    "weight": "0.175"
   },
   {
     "destroy_message": "You will need to speak to Thormac to get another cage.",
-    "examine": "It's empty!",
+    "examine": "There are 2 scorpions inside.",
     "durability": null,
     "name": "Scorpion cage",
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "462"
+    "id": "462",
+    "weight": "0.2"
   },
   {
     "destroy_message": "You will need to speak to Thormac to get another cage.",
-    "examine": "It's empty!",
+    "examine": "There are 3 scorpions inside.",
     "durability": null,
     "name": "Scorpion cage",
     "tradeable": "false",
     "destroy": "true",
     "archery_ticket_price": "0",
-    "id": "463"
+    "id": "463",
+    "weight": "0.225"
   },
   {
     "ge_buy_limit": "10000",
@@ -31617,7 +31625,7 @@
     "id": "3196",
     "stand_turn_anim": "1209",
     "bonuses": "19,25,0,-4,0,-1,2,3,0,0,0,20,0,0,0",
-    "requirements": "{0,5}-{2,10}",
+    "requirements": "{0,10}-{2,5}",
     "shop_price": "2496",
     "durability": null,
     "weight": "3",
@@ -37127,6 +37135,7 @@
     "ge_buy_limit": "10",
     "examine": "Looks pretty heavy.",
     "durability": null,
+    "rare_item": "true",
     "weight": "9",
     "absorb": "3,0,6",
     "equipment_slot": "7",
@@ -42020,6 +42029,7 @@
     "ge_buy_limit": "10",
     "examine": "This looks pretty heavy.",
     "durability": null,
+    "rare_item": "true",
     "weight": "9",
     "absorb": "3,0,6",
     "equipment_slot": "7",
@@ -46452,7 +46462,9 @@
     "weight": "0.9",
     "attack_speed": "6",
     "weapon_interface": "10",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "grand_exchange_price": "384",
     "name": "Bone club",
     "tradeable": "true",
@@ -59819,7 +59831,7 @@
     "id": "6599",
     "stand_turn_anim": "1209",
     "bonuses": "19,25,0,-4,0,-1,2,3,0,0,0,20,1,0,0",
-    "requirements": "{0,10}-{5,10}",
+    "requirements": "{0,10}-{2,5}",
     "shop_price": "1920",
     "durability": null,
     "weight": "3.1",
@@ -76417,6 +76429,7 @@
     "examine": "A magic cave horror mask.",
     "grand_exchange_price": "989400",
     "durability": null,
+    "rare_item": "true",
     "name": "Black mask (10)",
     "tradeable": "true",
     "weight": "10",
@@ -84282,7 +84295,9 @@
     "weapon_interface": "10",
     "turn180_anim": "1206",
     "render_anim": "28",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "grand_exchange_price": "1",
     "stand_anim": "813",
     "name": "Butterfly net",
@@ -96333,29 +96348,31 @@
     "id": "11258"
   },
   {
-    "requirements": "{21,17}",
-    "shop_price": "3",
     "turn90cw_anim": "6610",
     "examine": "For catching butterflies.",
     "walk_anim": "6607",
-    "durability": null,
-    "destroy": "true",
-    "weight": "0.2",
     "turn90ccw_anim": "6609",
     "attack_speed": "4",
     "two_handed": "",
-    "weapon_interface": "14",
     "turn180_anim": "6608",
-    "render_anim": "1426",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "You will have to trade with Elnock to get a new magic butterfly net.",
     "stand_anim": "6604",
-    "name": "Magic butterfly net",
     "tradeable": "false",
     "run_anim": "6603",
     "archery_ticket_price": "0",
     "id": "11259",
-    "stand_turn_anim": "6611"
+    "stand_turn_anim": "6611",
+    "requirements": "{21,17}",
+    "shop_price": "3",
+    "durability": null,
+    "destroy": "true",
+    "weight": "0.2",
+    "weapon_interface": "14",
+    "render_anim": "1426",
+    "name": "Magic butterfly net"
   },
   {
     "shop_price": "1",
@@ -122329,7 +122346,7 @@
     "bonuses": "133,113,120,0,0,18,21,21,0,0,0,122,0,0,0"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122347,7 +122364,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "1897306",
@@ -122360,7 +122377,7 @@
     "id": "13909"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122377,7 +122394,7 @@
     "bonuses": "5,5,7,-10,-30,154,145,121,-6,157,60,5,0,0,0"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122395,7 +122412,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "2546175",
@@ -122408,7 +122425,7 @@
     "id": "13912"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122425,7 +122442,7 @@
     "bonuses": "5,7,7,-15,0,120,131,145,-3,140,60,6,0,0,0"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122442,7 +122459,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "1734527",
@@ -122455,7 +122472,7 @@
     "id": "13915"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122471,7 +122488,7 @@
     "bonuses": "3,3,5,-21,-7,110,106,97,-4,121,30,3,0,0,0"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122488,7 +122505,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "1942627",
@@ -122501,7 +122518,7 @@
     "id": "13918"
   },
   {
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122518,7 +122535,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "50000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122535,7 +122552,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "50000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "1062835",
@@ -122549,7 +122566,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,78}",
+    "requirements": "{1,20}",
     "shop_price": "30000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122565,7 +122582,7 @@
     "bonuses": "3,3,4,-6,-2,65,70,63,-1,71,15,3,0,0,0"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "125000",
     "turn90cw_anim": "1207",
     "examine": "This item degrades while worn, and will turn to dust.",
@@ -122590,7 +122607,7 @@
     "bonuses": "106,121,-2,0,0,1,4,3,0,0,0,118,0,0,0"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "125000",
     "turn90cw_anim": "1207",
     "examine": "This item degrades while worn, and will turn to dust.",
@@ -122612,7 +122629,7 @@
     "stand_turn_anim": "823"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "75000",
     "turn90cw_anim": "1207",
     "examine": "This item degrades while worn, and will turn to dust.",
@@ -122636,7 +122653,7 @@
     "bonuses": "106,121,-2,0,0,1,4,3,0,0,0,118,0,0,0"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122656,7 +122673,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "3033516",
@@ -122669,7 +122686,7 @@
     "id": "13927"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122686,7 +122703,7 @@
     "bonuses": "-4,-4,123,0,0,0,0,0,0,0,0,0,0,0,0"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122706,7 +122723,7 @@
     "bonuses": "133,113,120,0,0,18,21,21,0,0,0,0,0,0,0"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122721,7 +122738,7 @@
     "id": "13930"
   },
   {
-    "requirements": "{0,78}",
+    "requirements": "{0,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122740,7 +122757,7 @@
     "bonuses": "133,113,120,0,0,18,21,21,0,0,0,0,0,0,0"
   },
   {
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122758,7 +122775,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "253230",
@@ -122771,7 +122788,7 @@
     "id": "13933"
   },
   {
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122788,7 +122805,7 @@
     "bonuses": "0,0,0,35,-10,63,45,74,35,0,60,0,0,0,0"
   },
   {
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122805,7 +122822,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "121290",
@@ -122818,7 +122835,7 @@
     "id": "13936"
   },
   {
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122835,7 +122852,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "50000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122852,7 +122869,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "50000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "43778",
@@ -122866,7 +122883,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,78}-{6,78}",
+    "requirements": "{1,20}-{6,20}",
     "shop_price": "30000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122882,7 +122899,7 @@
     "bonuses": "0,0,0,8,-2,20,16,22,8,0,15,0,0,0,0"
   },
   {
-    "requirements": "{6,78}",
+    "requirements": "{6,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122903,7 +122920,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{6,78}",
+    "requirements": "{6,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "219418",
@@ -122916,7 +122933,7 @@
     "id": "13942"
   },
   {
-    "requirements": "{6,78}",
+    "requirements": "{6,20}",
     "shop_price": "70000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122934,7 +122951,7 @@
     "bonuses": "13,-1,65,18,0,5,7,4,18,0,0,72,0,0,10"
   },
   {
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122952,7 +122969,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "387212",
@@ -122965,7 +122982,7 @@
     "id": "13945"
   },
   {
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122982,7 +122999,7 @@
     "bonuses": "0,0,0,-15,36,61,53,66,75,62,60,0,0,0,0"
   },
   {
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -122999,7 +123016,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "125000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "84592",
@@ -123012,7 +123029,7 @@
     "id": "13948"
   },
   {
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "75000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -123029,7 +123046,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "50000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -123046,7 +123063,7 @@
   },
   {
     "destroy_message": "Drop",
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "50000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "grand_exchange_price": "63502",
@@ -123060,7 +123077,7 @@
   },
   {
     "remove_head": "true",
-    "requirements": "{1,78}-{4,78}",
+    "requirements": "{1,20}-{4,20}",
     "shop_price": "30000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -123076,7 +123093,7 @@
     "bonuses": "0,0,0,-5,13,8,11,14,8,12,15,0,0,0,0"
   },
   {
-    "requirements": "{4,78}",
+    "requirements": "{4,20}",
     "shop_price": "1000",
     "examine": "A vicious javelin.",
     "durability": null,
@@ -123094,7 +123111,7 @@
     "bonuses": "0,0,0,0,105,0,0,0,0,0,0,0,0,0,145"
   },
   {
-    "requirements": "{4,78}",
+    "requirements": "{4,20}",
     "shop_price": "10000",
     "examine": "A vicious javelin.",
     "durability": null,
@@ -123112,7 +123129,7 @@
     "bonuses": "0,0,0,0,105,0,0,0,0,0,0,0,0,0,145"
   },
   {
-    "requirements": "{4,78}",
+    "requirements": "{4,20}",
     "shop_price": "10000",
     "examine": "A vicious javelin.",
     "durability": null,
@@ -123130,7 +123147,7 @@
     "bonuses": "0,0,0,0,105,0,0,0,0,0,0,0,0,0,145"
   },
   {
-    "requirements": "{4,78}",
+    "requirements": "{4,20}",
     "shop_price": "10000",
     "examine": "A vicious javelin.",
     "durability": null,
@@ -123148,7 +123165,7 @@
     "bonuses": "0,0,0,0,105,0,0,0,0,0,0,0,0,0,145"
   },
   {
-    "requirements": "{4,78}",
+    "requirements": "{4,20}",
     "shop_price": "1000",
     "examine": "A vicious throwing axe.",
     "durability": null,
@@ -123165,7 +123182,7 @@
     "bonuses": "0,0,0,0,93,0,0,0,0,0,0,0,0,0,117"
   },
   {
-    "requirements": "{0,78}-{4,78}",
+    "requirements": "{0,20}-{4,20}",
     "shop_price": "120000",
     "examine": "This item degrades while worn, and will turn to dust.",
     "durability": null,
@@ -124289,7 +124306,9 @@
     "weapon_interface": "5",
     "absorb": "0,0,0",
     "render_anim": "158",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "Drop",
     "name": "Volatile clay butterfly net",
     "archery_ticket_price": "0",
@@ -124403,7 +124422,9 @@
     "weapon_interface": "5",
     "absorb": "0,0,0",
     "render_anim": "158",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "Drop",
     "name": "Sacred clay butterfly net",
     "archery_ticket_price": "0",
@@ -124997,7 +125018,9 @@
     "weapon_interface": "14",
     "absorb": "0,0,0",
     "render_anim": "158",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "Drop",
     "name": "Butterfly net (class 1)",
     "tradeable": "true",
@@ -125026,7 +125049,9 @@
     "weapon_interface": "14",
     "absorb": "0,0,0",
     "render_anim": "158",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "Drop",
     "name": "Butterfly net (class 2)",
     "tradeable": "true",
@@ -125055,7 +125080,9 @@
     "weapon_interface": "14",
     "absorb": "0,0,0",
     "render_anim": "158",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "Drop",
     "name": "Butterfly net (class 3)",
     "tradeable": "true",
@@ -125084,7 +125111,9 @@
     "weapon_interface": "14",
     "absorb": "0,0,0",
     "render_anim": "158",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "Drop",
     "name": "Butterfly net (class 4)",
     "tradeable": "true",
@@ -125113,7 +125142,9 @@
     "weapon_interface": "14",
     "absorb": "0,0,0",
     "render_anim": "158",
+    "defence_anim": "403",
     "equipment_slot": "3",
+    "attack_anims": "401,401,400,401",
     "destroy_message": "Drop",
     "name": "Butterfly net (class 5)",
     "tradeable": "true",
