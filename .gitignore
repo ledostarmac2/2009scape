@@ -1,7 +1,7 @@
 **/.idea
 db/data
 
-game/data/global_kill_stats.json
+game/data/playerstats/
 game/data/eco/grandexchange.db
 
 game/data/logs/
