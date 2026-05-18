@@ -21,7 +21,7 @@ pushd %~dp0\game
     goto waitserver
   )
   
-  start /b /w %~dp0\jre\bin\java.exe -Xmx1G -Xms1G -jar client.jar
+  start /b /w %~dp0\jre\bin\java.exe -Xmx1G -Xms512m -Dsun.java2d.opengl=true -jar client.jar
 popd
 
 taskkill /im "java.exe" /f
