@@ -5575,7 +5575,7 @@
     "id": "601"
   },
   {
-    "destroy_message": "You'll have to get another down in the Dungeon",
+    "destroy_message": "You'll have to get another down in the dungeon.",
     "examine": "An unusual clay mould in the shape of a disc.",
     "durability": null,
     "name": "Lens mould",
@@ -17702,7 +17702,7 @@
   {
     "shop_price": "350",
     "ge_buy_limit": "5000",
-    "examine": "A plain gold amulet.",
+    "examine": "It needs a string so I can wear it.",
     "grand_exchange_price": "172",
     "durability": null,
     "name": "Gold amulet",
@@ -17722,7 +17722,7 @@
   {
     "shop_price": "810",
     "ge_buy_limit": "5000",
-    "examine": "I wonder if I can get this enchanted.",
+    "examine": "It needs a string so I can wear it.",
     "grand_exchange_price": "473",
     "durability": null,
     "name": "Sapphire amulet",
@@ -17742,7 +17742,7 @@
   {
     "shop_price": "1147",
     "ge_buy_limit": "5000",
-    "examine": "I wonder if I can get this enchanted.",
+    "examine": "It needs a string so I can wear it.",
     "grand_exchange_price": "695",
     "durability": null,
     "name": "Emerald amulet",
@@ -17762,7 +17762,7 @@
   {
     "shop_price": "2025",
     "ge_buy_limit": "5000",
-    "examine": "I wonder if I can get this enchanted.",
+    "examine": "It needs a string so I can wear it.",
     "grand_exchange_price": "1268",
     "durability": null,
     "name": "Ruby amulet",
@@ -17783,7 +17783,7 @@
   {
     "shop_price": "3307",
     "ge_buy_limit": "5000",
-    "examine": "I wonder if I can get this enchanted.",
+    "examine": "It needs a string so I can wear it.",
     "grand_exchange_price": "3359",
     "durability": null,
     "name": "Diamond amulet",
@@ -17802,7 +17802,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "I wonder if I can get this enchanted.",
+    "examine": "It needs a string so I can wear it.",
     "grand_exchange_price": "26900",
     "durability": null,
     "name": "Dragonstone ammy",
@@ -39175,7 +39175,7 @@
     "id": "4237"
   },
   {
-    "examine": "It's a bowl of (milky) nettle tea.",
+    "examine": "It's a bowl of nettle tea.",
     "durability": null,
     "name": "Nettle tea",
     "weight": "0.9",
@@ -39183,7 +39183,7 @@
     "id": "4239"
   },
   {
-    "examine": "It's a bowl of (milky) nettle tea.",
+    "examine": "It's a bowl of milky nettle tea.",
     "durability": null,
     "name": "Nettle tea",
     "weight": "0.9",
@@ -39191,7 +39191,7 @@
     "id": "4240"
   },
   {
-    "examine": "(In inventory) A handful of nettles (In ground) I better not get stung/I wouldn't like to get stung/I wish I could sting other people/Dock leaves at the ready/These may hurt/nettles sting my leggies(Draynor Village nettles)",
+    "examine": "A handful of nettles.",
     "durability": null,
     "name": "Nettles",
     "archery_ticket_price": "0",
@@ -39199,22 +39199,22 @@
   },
   {
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "A nice cup of nettle tea.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "4242"
   },
   {
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "A milky cup of nettle tea.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "4243"
@@ -39228,22 +39228,22 @@
   },
   {
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "Some nettle tea in a porcelain cup.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "4245"
   },
   {
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "Some milky nettle tea in a porcelain cup.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "4246"
@@ -48457,14 +48457,14 @@
   },
   {
     "shop_price": "200",
-    "examine": "An acorn has been sown and watered in this plant pot.",
+    "examine": "An acorn has been sown in this plant pot.",
     "durability": null,
     "name": "Oak seedling",
     "archery_ticket_price": "0",
     "id": "5358"
   },
   {
-    "examine": "A willow tree seed has been sown and watered in this plant pot",
+    "examine": "A willow tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Willow seedling",
     "weight": "0.9",
@@ -48472,7 +48472,7 @@
     "id": "5359"
   },
   {
-    "examine": "A maple tree has been sown (and watered) in this plant pot.",
+    "examine": "A maple tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Maple seedling",
     "weight": "0.9",
@@ -48480,7 +48480,7 @@
     "id": "5360"
   },
   {
-    "examine": "A yew seed has been sown in the plant pot",
+    "examine": "A yew tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Yew seedling",
     "weight": "1",
@@ -48488,7 +48488,7 @@
     "id": "5361"
   },
   {
-    "examine": "A magic tree seed has been sown and watered in this plant pot.",
+    "examine": "A magic tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Magic seedling",
     "weight": "0.9",
@@ -48496,7 +48496,7 @@
     "id": "5362"
   },
   {
-    "examine": "A spirit seedling is growing in this pot. It has been sown and watered.",
+    "examine": "A spirit tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Spirit seedling",
     "archery_ticket_price": "0",
@@ -48511,7 +48511,7 @@
     "id": "5364"
   },
   {
-    "examine": "A willow tree seed has been sown and watered in this plant pot",
+    "examine": "A willow tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Willow seedling",
     "weight": "0.9",
@@ -48519,7 +48519,7 @@
     "id": "5365"
   },
   {
-    "examine": "A maple tree has been sown (and watered) in this plant pot.",
+    "examine": "A maple tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Maple seedling",
     "weight": "0.9",
@@ -48527,7 +48527,7 @@
     "id": "5366"
   },
   {
-    "examine": "A yew seed has been sown in the plant pot",
+    "examine": "A yew tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Yew seedling",
     "weight": "1",
@@ -48543,7 +48543,7 @@
     "id": "5368"
   },
   {
-    "examine": "A spirit seedling is growing in this pot. It has been sown and watered.",
+    "examine": "A spirit tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Spirit seedling",
     "archery_ticket_price": "0",
@@ -49497,7 +49497,7 @@
     "id": "5479"
   },
   {
-    "examine": "An apple tree has been sown (and watered) in this plant pot.",
+    "examine": "An apple tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Apple seedling",
     "weight": "0.9",
@@ -49505,7 +49505,7 @@
     "id": "5480"
   },
   {
-    "examine": "A banana tree seed has been sown and watered in this plant pot.",
+    "examine": "A banana tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Banana seedling",
     "weight": "0.9",
@@ -49513,14 +49513,14 @@
     "id": "5481"
   },
   {
-    "examine": "An orange tree seed has been sown (and watered)in this plant pot.",
+    "examine": "An orange tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Orange seedling",
     "archery_ticket_price": "0",
     "id": "5482"
   },
   {
-    "examine": "A curry seed has been sown and watered in this plant pot.",
+    "examine": "A curry tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Curry seedling",
     "weight": "0.9",
@@ -49528,7 +49528,7 @@
     "id": "5483"
   },
   {
-    "examine": "A pineapple tree has been sown (and watered) in this plant pot.",
+    "examine": "A pineapple plant seed has been sown in this plant pot.",
     "durability": null,
     "name": "Pineapple seedling",
     "weight": "0.9",
@@ -49536,7 +49536,7 @@
     "id": "5484"
   },
   {
-    "examine": "This needs watering before it will grow.",
+    "examine": "A papaya tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Papaya seedling",
     "weight": "0.9",
@@ -49544,7 +49544,7 @@
     "id": "5485"
   },
   {
-    "examine": "This sapling is ready to be replanted in a fruit tree patch.",
+    "examine": "A palm tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Palm seedling",
     "weight": "0.66",
@@ -49552,7 +49552,7 @@
     "id": "5486"
   },
   {
-    "examine": "A calquat tree has been sown (and watered) in this plant pot.",
+    "examine": "A calquat tree seed has been sown in this plant pot.",
     "durability": null,
     "name": "Calquat seedling",
     "weight": "0.9",
@@ -49560,7 +49560,7 @@
     "id": "5487"
   },
   {
-    "examine": "An apple tree has been sown (and watered) in this plant pot.",
+    "examine": "An apple tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Apple seedling",
     "weight": "0.9",
@@ -49576,14 +49576,14 @@
     "id": "5489"
   },
   {
-    "examine": "An orange tree seed has been sown (and watered)in this plant pot.",
+    "examine": "An orange tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Orange seedling",
     "archery_ticket_price": "0",
     "id": "5490"
   },
   {
-    "examine": "A curry seed has been sown and watered in this plant pot.",
+    "examine": "A curry tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Curry seedling",
     "weight": "0.9",
@@ -49591,7 +49591,7 @@
     "id": "5491"
   },
   {
-    "examine": "A pineapple tree has been sown (and watered) in this plant pot.",
+    "examine": "A pineapple plant seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Pineapple seedling",
     "weight": "0.9",
@@ -49599,7 +49599,7 @@
     "id": "5492"
   },
   {
-    "examine": "This needs watering before it will grow.",
+    "examine": "A papaya tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Papaya seedling",
     "weight": "0.9",
@@ -49607,7 +49607,7 @@
     "id": "5493"
   },
   {
-    "examine": "This sapling is ready to be replanted in a fruit tree patch.",
+    "examine": "A palm tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Palm seedling",
     "weight": "0.66",
@@ -49615,7 +49615,7 @@
     "id": "5494"
   },
   {
-    "examine": "A calquat tree has been sown (and watered) in this plant pot.",
+    "examine": "A calquat tree seed has been sown and watered in this plant pot.",
     "durability": null,
     "name": "Calquat seedling",
     "weight": "0.9",
@@ -51571,6 +51571,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "483",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Iron dagger(p+)",
@@ -51599,6 +51600,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "350",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Bronze dagger(p+)",
@@ -51628,6 +51630,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "575",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Steel dagger(p+)",
@@ -51657,6 +51660,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "538",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Mithril dagger(p+)",
@@ -51682,6 +51686,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "800",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Adamant dagger(p+)",
@@ -51711,6 +51716,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "lendable": "true",
     "grand_exchange_price": "4538",
     "attack_audios": "2517,2517,2500,2517",
@@ -51777,6 +51783,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "664",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Black dagger(p+)",
@@ -51824,6 +51831,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "4128",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Iron dagger(p++)",
@@ -51852,6 +51860,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "5088",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Br'ze dagger(p++)",
@@ -51881,6 +51890,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "4729",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Steel dagger(p++)",
@@ -51910,6 +51920,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "3476",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Mithril dagger(p++)",
@@ -51935,6 +51946,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "4612",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Adamant dagger(p++)",
@@ -51964,6 +51976,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "lendable": "true",
     "grand_exchange_price": "5061",
     "attack_audios": "2517,2517,2500,2517",
@@ -52030,6 +52043,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "4921",
     "attack_audios": "2517,2517,2500,2517",
     "name": "Black dagger(p++)",
@@ -52737,7 +52751,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "This looks a good deal stronger than normal dwarven stout.",
+    "examine": "This looks a good deal stronger than normal Dwarven Stout.",
     "grand_exchange_price": "56400",
     "durability": null,
     "name": "Dwarven stout(m)",
@@ -53765,7 +53779,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "This looks a good deal stronger than normal dwarven stout.",
+    "examine": "This looks a good deal stronger than normal Dwarven Stout.",
     "grand_exchange_price": "44600",
     "durability": null,
     "name": "Dwarven stout(m1)",
@@ -53784,7 +53798,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "This looks a good deal stronger than normal dwarven stout.",
+    "examine": "This looks a good deal stronger than normal Dwarven Stout.",
     "grand_exchange_price": "68900",
     "durability": null,
     "name": "Dwarven stout(m2)",
@@ -53803,7 +53817,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "This looks a good deal stronger than normal dwarven stout.",
+    "examine": "This looks a good deal stronger than normal Dwarven Stout.",
     "grand_exchange_price": "98800",
     "durability": null,
     "name": "Dwarven stout(m3)",
@@ -53822,7 +53836,7 @@
   },
   {
     "ge_buy_limit": "100",
-    "examine": "This looks a good deal stronger than normal dwarven stout.",
+    "examine": "This looks a good deal stronger than normal Dwarven Stout.",
     "grand_exchange_price": "237400",
     "durability": null,
     "name": "Dwarven stout(m4)",
@@ -60122,7 +60136,7 @@
     "id": "6578"
   },
   {
-    "examine": "I wonder if I can get this enchanted.",
+    "examine": "It needs a string so I can wear it.",
     "grand_exchange_price": "9058124",
     "durability": null,
     "name": "Onyx amulet",
@@ -60304,6 +60318,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "497",
     "attack_audios": "2517,2517,2500,2517",
     "name": "White dagger(p)",
@@ -60333,6 +60348,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "982",
     "attack_audios": "2517,2517,2500,2517",
     "name": "White dagger(p+)",
@@ -60362,6 +60378,7 @@
     "equip_audio": "2248",
     "render_anim": "2584",
     "equipment_slot": "3",
+    "attack_anims": "400,400,401,400",
     "grand_exchange_price": "8422",
     "attack_audios": "2517,2517,2500,2517",
     "name": "White dagger(p++)",
@@ -70066,517 +70083,584 @@
     "id": "7687"
   },
   {
+    "bankable": "false",
     "examine": "The kettle is empty.",
     "durability": null,
     "name": "Kettle",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7688"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Kettle",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7689"
   },
   {
+    "bankable": "false",
     "examine": "It's full of cold water.",
     "durability": null,
     "name": "Full kettle",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7690"
   },
   {
+    "bankable": "false",
     "examine": "It's full of boiling water.",
     "durability": null,
     "name": "Hot kettle",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7691"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (4)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7692"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (4)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7693"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (3)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7694"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (3)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7695"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (2)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7696"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (2)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7697"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (1)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7698"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (1)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7699"
   },
   {
+    "bankable": "false",
     "examine": "Add boiling water to make a tea.",
     "durability": null,
     "name": "Teapot with leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7700"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Teapot with leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7701"
   },
   {
+    "bankable": "false",
     "examine": "This teapot is empty.",
     "durability": null,
     "name": "Teapot",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.4",
     "archery_ticket_price": "0",
     "id": "7702"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Teapot",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7703"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (4)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7704"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (4)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7705"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (3)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7706"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (3)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7707"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (2)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7708"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (2)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7709"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (1)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7710"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (1)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7711"
   },
   {
+    "bankable": "false",
     "examine": "Add boiling water to make a tea.",
     "durability": null,
     "name": "Teapot with leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7712"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Teapot with leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7713"
   },
   {
+    "bankable": "false",
     "examine": "This teapot is empty.",
     "durability": null,
     "name": "Teapot",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.4",
     "archery_ticket_price": "0",
     "id": "7714"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Teapot",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7715"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (4)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7716"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (4)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7717"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (3)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7718"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (3)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7719"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (2)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7720"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (2)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7721"
   },
   {
+    "bankable": "false",
     "examine": "I'd really like a nice cup of tea.",
     "durability": null,
     "name": "Pot of tea (1)",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7722"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Pot of tea (1)",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7723"
   },
   {
+    "bankable": "false",
     "examine": "Add boiling water to make a tea.",
     "durability": null,
     "name": "Teapot with leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1.5",
     "archery_ticket_price": "0",
     "id": "7724"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Teapot with leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7725"
   },
   {
+    "bankable": "false",
     "examine": "This teapot is empty.",
     "durability": null,
     "name": "Teapot",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.4",
     "archery_ticket_price": "0",
     "id": "7726"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Teapot",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7727"
   },
   {
+    "bankable": "false",
     "shop_price": "1",
     "examine": "An empty cup.",
     "grand_exchange_price": "7",
     "durability": null,
     "name": "Empty cup",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7728"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Empty cup",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7729"
   },
   {
+    "bankable": "false",
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "A nice cup of nettle tea.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "7730"
   },
   {
+    "bankable": "false",
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "A milky cup of nettle tea.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "7731"
   },
   {
+    "bankable": "false",
     "examine": "A porcelain cup.",
     "durability": null,
     "name": "Porcelain cup",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7732"
   },
   {
+    "bankable": "false",
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "Some nettle tea in a porcelain cup.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "7733"
   },
   {
+    "bankable": "false",
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "Some milky nettle tea in a porcelain cup.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "7734"
   },
   {
+    "bankable": "false",
     "examine": "A porcelain cup.",
     "durability": null,
     "name": "Porcelain cup",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7735"
   },
   {
+    "bankable": "false",
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "Some nettle tea in a porcelain cup.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "7736"
   },
   {
+    "bankable": "false",
     "shop_price": "10",
-    "examine": "A nice cup of tea.",
+    "examine": "Some milky nettle tea in a porcelain cup.",
     "grand_exchange_price": "30",
     "durability": null,
     "name": "Cup of tea",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.1",
     "archery_ticket_price": "0",
     "id": "7737"
   },
   {
+    "bankable": "false",
     "examine": "Mmm, how about a nice cup of tea?",
     "durability": null,
     "name": "Tea leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7738"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Tea leaves",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7739"
   },
   {
+    "bankable": "false",
     "examine": "A glass of frothy ale.",
     "grand_exchange_price": "151",
     "durability": null,
     "name": "Beer",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1",
     "archery_ticket_price": "0",
     "id": "7740"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Beer",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7741"
   },
   {
+    "bankable": "false",
     "shop_price": "1",
     "examine": "I need to fill this with beer.",
     "grand_exchange_price": "25",
     "durability": null,
     "name": "Beer glass",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "0.05",
     "archery_ticket_price": "0",
     "id": "7742"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Beer glass",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7743"
   },
   {
+    "bankable": "false",
     "shop_price": "3",
     "examine": "Probably the finest readily-available ale in Asgarnia.",
     "grand_exchange_price": "131",
     "durability": null,
     "name": "Asgarnian ale",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7744"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Asgarnian ale",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7745"
   },
   {
+    "bankable": "false",
     "shop_price": "2",
     "examine": "A glass of frothy ale.",
     "grand_exchange_price": "569",
     "durability": null,
     "name": "Greenman's ale",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7746"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Greenman's ale",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7747"
   },
   {
+    "bankable": "false",
     "shop_price": "2",
     "examine": "A glass of bitter.",
     "grand_exchange_price": "523",
     "durability": null,
     "name": "Dragon bitter",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1",
     "archery_ticket_price": "0",
     "id": "7748"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Dragon bitter",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7749"
   },
@@ -70598,36 +70682,40 @@
     "id": "7751"
   },
   {
+    "bankable": "false",
     "shop_price": "2",
     "examine": "A glass of Cider",
     "grand_exchange_price": "1539",
     "durability": null,
     "name": "Cider",
-    "tradeable": "true",
+    "tradeable": "false",
     "weight": "1",
     "archery_ticket_price": "0",
     "id": "7752"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Cider",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7753"
   },
   {
+    "bankable": "false",
     "examine": "A fruity, full-bodied ale.",
     "grand_exchange_price": "2371",
     "durability": null,
     "name": "Chef's delight",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7754"
   },
   {
+    "bankable": "false",
     "durability": null,
     "name": "Chef's delight",
-    "tradeable": "true",
+    "tradeable": "false",
     "archery_ticket_price": "0",
     "id": "7755"
   },
@@ -132117,5 +132205,15 @@
     "examine": "Emperor of all he surveys.",
     "name": "Penguin",
     "id": "12764"
+  },
+  {
+    "examine": "This key opens a chest in the Carnillean household.",
+    "name": "Chest key",
+    "id": "709"
+  },
+  {
+    "examine": "This stuff looks nasty.",
+    "name": "Poison",
+    "id": "273"
   }
 ]

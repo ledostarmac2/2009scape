@@ -41,7 +41,7 @@ while [ $? -eq "1" ]; do
 done;
 
 sleep 2
-$JAVA_CMD -Xmx1G -Xms1G -jar client.jar
+$JAVA_CMD -Xmx1G -Xms1G -Dsun.java2d.opengl=true -jar client.jar
 
 kill $SERVER_PID
 exit

@@ -1175,7 +1175,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "A barely visible deadly jungle spider.",
+    "examine": "A barely visible deadly spider.",
     "melee_animation": "5327",
     "range_animation": "5327",
     "combat_audio": "537,539,538",
@@ -2006,7 +2006,7 @@
     "defence_animation": "6255",
     "weakness": "0",
     "slayer_exp": "23",
-    "poison_amount": "3",
+    "poison_amount": "15",
     "magic_animation": "0",
     "death_animation": "6256",
     "name": "Poison Scorpion",
@@ -2517,7 +2517,7 @@
     "respawn_delay": "30",
     "defence_animation": "5328",
     "weakness": "2",
-    "poison_amount": "6",
+    "poison_amount": "30",
     "magic_animation": "0",
     "death_animation": "5329",
     "name": "Poison spider",
@@ -2949,7 +2949,7 @@
     "attack_level": "30"
   },
   {
-    "examine": "One of Gielinor's many citizens",
+    "examine": "One of Gielinor's many citizens.",
     "melee_animation": "422",
     "range_animation": "0",
     "combat_audio": "511,513,512",
@@ -3177,6 +3177,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "422",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -3330,7 +3331,7 @@
     "respawn_delay": "50",
     "defence_animation": "0",
     "weakness": "8",
-    "poison_amount": "11",
+    "poison_amount": "55",
     "magic_animation": "0",
     "death_animation": "836",
     "name": "Tribesman",
@@ -6228,6 +6229,22 @@
     "attack_level": "1"
   },
   {
+    "examine": "A man, learned in the ways of the stars.",
+    "melee_animation": "0",
+    "range_animation": "0",
+    "defence_animation": "0",
+    "magic_animation": "0",
+    "death_animation": "0",
+    "name": "Observatory professor",
+    "defence_level": "1",
+    "safespot": null,
+    "lifepoints": "10",
+    "strength_level": "1",
+    "id": "488",
+    "range_level": "1",
+    "attack_level": "1"
+  },
+  {
     "examine": "He doesn't look like he'd trust his own mother.",
     "melee_animation": "6199",
     "range_animation": "0",
@@ -6237,13 +6254,13 @@
     "magic_animation": "0",
     "death_animation": "6190",
     "name": "Goblin guard",
-    "defence_level": "20",
+    "defence_level": "37",
     "safespot": null,
-    "lifepoints": "28",
-    "strength_level": "20",
+    "lifepoints": "43",
+    "strength_level": "37",
     "id": "489",
     "range_level": "1",
-    "attack_level": "20"
+    "attack_level": "32"
   },
   {
     "examine": "If the mummy is at school",
@@ -8565,7 +8582,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "Smartly dressed",
+    "examine": "Smartly dressed, and ready to deliver food.",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -9369,6 +9386,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "On special duty to protect the Canilleans.",
     "name": "Guard",
     "defence_level": "1",
     "safespot": null,
@@ -9381,18 +9399,19 @@
     "attack_level": "1"
   },
   {
+    "examine": "A member of the Hazeel cult.",
+    "melee_animation": "811",
+    "respawn_delay": "60",
+    "defence_animation": "425",
     "death_animation": "836",
     "name": "Clivet",
     "defence_level": "1",
     "safespot": null,
     "lifepoints": "25",
-    "melee_animation": "811",
     "strength_level": "1",
     "id": "893",
     "range_level": "1",
-    "respawn_delay": "60",
-    "attack_level": "1",
-    "defence_animation": "425"
+    "attack_level": "1"
   },
   {
     "examine": "A member of the Hazeel cult.",
@@ -9414,7 +9433,7 @@
     "attack_level": "15"
   },
   {
-    "examine": "Children are just like real people...just smaller.",
+    "examine": "A sad looking child.",
     "melee_animation": "0",
     "range_animation": "0",
     "defence_animation": "0",
@@ -10513,18 +10532,18 @@
     "respawn_delay": "30",
     "defence_animation": "5328",
     "weakness": "2",
-    "poison_amount": "6",
+    "poison_amount": "30",
     "magic_animation": "0",
     "death_animation": "5329",
     "name": "Poison spider",
     "safespot": null,
-    "defence_level": "52",
-    "lifepoints": "64",
-    "strength_level": "65",
+    "defence_level": "28",
+    "lifepoints": "25",
+    "strength_level": "28",
     "id": "1009",
     "aggressive": "true",
     "range_level": "1",
-    "attack_level": "50"
+    "attack_level": "28"
   },
   {
     "examine": "A green skinned croaker",
@@ -12353,7 +12372,7 @@
     "defence_animation": "6227",
     "weakness": "7",
     "slayer_exp": "90",
-    "poison_amount": "4",
+    "poison_amount": "20",
     "magic_animation": "0",
     "death_animation": "6228",
     "name": "Kalphite Soldier",
@@ -12377,7 +12396,7 @@
     "respawn_delay": "65",
     "defence_animation": "6232",
     "weakness": "7",
-    "poison_amount": "6",
+    "poison_amount": "30",
     "magic_animation": "6223",
     "death_animation": "6230",
     "name": "Kalphite Guardian",
@@ -12424,7 +12443,7 @@
     "respawn_delay": "65",
     "defence_animation": "6232",
     "weakness": "7",
-    "poison_amount": "6",
+    "poison_amount": "30",
     "magic_animation": "6223",
     "death_animation": "6230",
     "name": "Kalphite Guardian",
@@ -12444,7 +12463,7 @@
     "melee_animation": "6241",
     "range_animation": "6241",
     "attack_speed": "4",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "150",
     "respawn_delay": "0",
     "defence_animation": "6232",
@@ -13455,6 +13474,7 @@
     "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "3",
+    "poison_amount": "30",
     "magic_animation": "811",
     "death_animation": "836",
     "name": "Saradomin wizard",
@@ -16454,6 +16474,7 @@
     "defence_animation": "267",
     "weakness": "1",
     "slayer_exp": "22",
+    "poison_amount": "40",
     "magic_animation": "266",
     "death_animation": "265",
     "name": "Cave crawler",
@@ -16476,6 +16497,7 @@
     "respawn_delay": "25",
     "defence_animation": "267",
     "slayer_exp": "22",
+    "poison_amount": "40",
     "magic_animation": "266",
     "death_animation": "265",
     "name": "Cave crawler",
@@ -16498,6 +16520,7 @@
     "respawn_delay": "25",
     "defence_animation": "267",
     "slayer_exp": "22",
+    "poison_amount": "40",
     "magic_animation": "266",
     "death_animation": "265",
     "name": "Cave crawler",
@@ -16520,6 +16543,7 @@
     "respawn_delay": "25",
     "defence_animation": "267",
     "slayer_exp": "22",
+    "poison_amount": "40",
     "magic_animation": "266",
     "death_animation": "265",
     "name": "Cave crawler",
@@ -16886,7 +16910,7 @@
     "lifepoints": "120",
     "strength_level": "45",
     "id": "1618",
-    "aggressive": "true",
+    "aggressive": "false",
     "clue_level": "2",
     "range_level": "1",
     "attack_level": "75"
@@ -19313,7 +19337,7 @@
     "defence_animation": "0",
     "weakness": "1",
     "slayer_exp": "25",
-    "poison_amount": "3",
+    "poison_amount": "15",
     "magic_animation": "0",
     "death_animation": "1792",
     "name": "Cave slime",
@@ -20627,6 +20651,7 @@
     "poisonous": "true",
     "defence_animation": "1946",
     "weakness": "7",
+    "poison_amount": "15",
     "magic_animation": "0",
     "death_animation": "5464",
     "name": "Scarabs",
@@ -20964,6 +20989,7 @@
     "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "6",
+    "poison_amount": "15",
     "magic_animation": "0",
     "death_animation": "1946",
     "name": "Scarab swarm",
@@ -25072,42 +25098,52 @@
     "melee_animation": "275",
     "range_animation": "0",
     "combat_audio": "3609,3608,3610",
+    "attack_speed": "7",
     "poisonous": "true",
+    "magic_level": "1",
     "respawn_delay": "60",
-    "defence_animation": "0",
+    "defence_animation": "276",
     "weakness": "1",
-    "poison_amount": "11",
+    "poison_amount": "55",
     "magic_animation": "0",
     "death_animation": "278",
     "name": "Bush snake",
-    "defence_level": "61",
-    "safespot": null,
-    "lifepoints": "87",
-    "strength_level": "1",
-    "id": "2489",
-    "aggressive": "true",
-    "range_level": "61",
-    "attack_level": "1"
-  },
-  {
-    "melee_animation": "275",
-    "combat_audio": "3609,3608,3610",
-    "poisonous": "true",
-    "respawn_delay": "60",
-    "defence_animation": "276",
-    "poison_amount": "11",
-    "death_animation": "278",
-    "name": "Bush snake",
-    "defence_level": "1",
+    "defence_level": "50",
     "safespot": null,
     "lifepoints": "25",
-    "strength_level": "1",
-    "id": "2490",
+    "strength_level": "25",
+    "id": "2489",
     "aggressive": "true",
+    "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "1",
-    "attack_level": "1"
+    "attack_level": "25"
   },
   {
+    "examine": "A slithering serpent that likes to hide in the bush.",
+    "melee_animation": "275",
+    "combat_audio": "3609,3608,3610",
+    "range_animation": "0",
+    "attack_speed": "7",
+    "poisonous": "true",
+    "magic_level": "1",
+    "respawn_delay": "60",
+    "defence_animation": "276",
+    "poison_amount": "55",
+    "magic_animation": "0",
+    "death_animation": "278",
+    "name": "Bush snake",
+    "defence_level": "50",
+    "safespot": null,
+    "lifepoints": "25",
+    "strength_level": "25",
+    "id": "2490",
+    "aggressive": "true",
+    "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+    "range_level": "1",
+    "attack_level": "25"
+  },
+  {
+    "examine": "",
     "melee_animation": "5327",
     "combat_audio": "537,539,538",
     "respawn_delay": "60",
@@ -25121,9 +25157,10 @@
     "id": "2491",
     "aggressive": "true",
     "range_level": "1",
-    "attack_level": "1"
+    "attack_level": "25"
   },
   {
+    "examine": "",
     "melee_animation": "5327",
     "combat_audio": "537,539,538",
     "respawn_delay": "60",
@@ -25211,7 +25248,7 @@
     "respawn_delay": "50",
     "defence_animation": "0",
     "weakness": "9",
-    "poison_amount": "11",
+    "poison_amount": "55",
     "magic_animation": "0",
     "death_animation": "836",
     "name": "Tribesman",
@@ -29571,6 +29608,7 @@
     "respawn_delay": "60",
     "defence_animation": "2937",
     "weakness": "9",
+    "poison_amount": "40",
     "magic_animation": "2936",
     "death_animation": "2938",
     "name": "Jogre Champion",
@@ -29609,7 +29647,7 @@
     "examine": "Champion of the jogres.",
     "melee_animation": "5485",
     "range_animation": "5493",
-    "poisonous": "true",
+    "poisonous": "",
     "respawn_delay": "60",
     "defence_animation": "5493",
     "weakness": "9",
@@ -30846,6 +30884,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "One of Gielinor's many citizens.",
     "name": "Woman",
     "defence_level": "1",
     "safespot": null,
@@ -32631,6 +32670,7 @@
     "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "10",
+    "poison_amount": "35",
     "magic_animation": "0",
     "death_animation": "7249",
     "name": "Wild jade vine",
@@ -32652,6 +32692,7 @@
     "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "10",
+    "poison_amount": "35",
     "magic_animation": "0",
     "death_animation": "7249",
     "name": "Wild jade vine",
@@ -32673,6 +32714,7 @@
     "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "10",
+    "poison_amount": "35",
     "magic_animation": "0",
     "death_animation": "7249",
     "name": "Wild jade vine",
@@ -32694,6 +32736,7 @@
     "respawn_delay": "60",
     "defence_animation": "0",
     "weakness": "10",
+    "poison_amount": "35",
     "magic_animation": "0",
     "death_animation": "7249",
     "name": "Wild jade vine",
@@ -33773,7 +33816,7 @@
     "respawn_delay": "60",
     "defence_animation": "6227",
     "weakness": "6",
-    "poison_amount": "4",
+    "poison_amount": "20",
     "magic_animation": "0",
     "death_animation": "6228",
     "name": "Kalphite Soldier",
@@ -35991,7 +36034,7 @@
     "name": "Tortoise",
     "defence_level": "36",
     "safespot": null,
-    "lifepoints": "51",
+    "lifepoints": "121",
     "strength_level": "36",
     "id": "3808",
     "range_level": "1",
@@ -36065,61 +36108,68 @@
     "examine": "A Gnome Arrow-chucker",
     "combat_style": "1",
     "melee_animation": "190",
-    "range_animation": "0",
+    "range_animation": "190",
     "respawn_delay": "60",
-    "defence_animation": "0",
+    "defence_animation": "193",
     "weakness": "2",
     "magic_animation": "0",
     "death_animation": "196",
     "name": "Gnome Archer",
-    "defence_level": "30",
+    "defence_level": "1",
     "safespot": null,
-    "lifepoints": "42",
+    "lifepoints": "10",
     "strength_level": "1",
     "id": "3814",
     "aggressive": "true",
-    "range_level": "30",
-    "attack_level": "1"
+    "range_level": "5",
+    "projectile": "10",
+    "attack_level": "1",
+    "prj_height": "30"
   },
   {
     "examine": "Yee haa!",
     "melee_animation": "3969",
     "range_animation": "0",
     "respawn_delay": "60",
-    "defence_animation": "0",
+    "defence_animation": "193",
     "weakness": "9",
     "magic_animation": "0",
     "death_animation": "196",
     "name": "Gnome Driver",
-    "defence_level": "33",
+    "defence_level": "1",
     "safespot": null,
-    "lifepoints": "47",
-    "strength_level": "33",
+    "lifepoints": "10",
+    "strength_level": "1",
     "id": "3815",
     "aggressive": "true",
     "range_level": "1",
-    "attack_level": "33"
+    "attack_level": "5"
   },
   {
     "examine": "A battle mage of the gnomish variety.",
     "combat_style": "2",
+    "start_gfx": "93",
+    "start_height": "80",
     "melee_animation": "3968",
     "range_animation": "0",
-    "magic_level": "34",
+    "magic_level": "5",
+    "spell_id": "",
     "respawn_delay": "60",
-    "defence_animation": "0",
+    "defence_animation": "193",
     "weakness": "5",
-    "magic_animation": "0",
+    "magic_animation": "200",
     "death_animation": "196",
     "name": "Gnome Mage",
-    "defence_level": "34",
+    "defence_level": "1",
     "safespot": null,
-    "lifepoints": "48",
+    "lifepoints": "10",
     "strength_level": "1",
     "id": "3816",
     "aggressive": "true",
     "range_level": "1",
-    "attack_level": "1"
+    "projectile": "94",
+    "attack_level": "1",
+    "prj_height": "30"
   },
   {
     "examine": "The cruel tortoise trainer. Boo!",
@@ -36148,7 +36198,7 @@
     "name": "Tortoise",
     "defence_level": "36",
     "safespot": null,
-    "lifepoints": "51",
+    "lifepoints": "101",
     "strength_level": "36",
     "id": "3819",
     "range_level": "1",
@@ -37486,15 +37536,30 @@
     "attack_level": "1"
   },
   {
-    "name": "Snake",
-    "defence_level": "1",
-    "safespot": null,
-    "lifepoints": "10",
+    "examine": "Snake! Snaaaaake! ",
     "combat_audio": "3609,3608,3610",
-    "strength_level": "1",
+    "range_animation": "0",
+    "melee_animation": "275",
+    "attack_speed": "3",
+    "poisonous": "true",
+    "magic_level": "1",
+    "end_gfx": "",
+    "respawn_delay": "30",
+    "defence_animation": "276",
+    "poison_amount": "15",
+    "end_height": "",
+    "magic_animation": "0",
+    "death_animation": "278",
+    "name": "Snake",
+    "defence_level": "50",
+    "safespot": null,
+    "lifepoints": "25",
+    "strength_level": "25",
     "id": "4343",
+    "aggressive": "true",
+    "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "1",
-    "attack_level": "1"
+    "attack_level": "25"
   },
   {
     "melee_animation": "220",
@@ -44547,7 +44612,9 @@
     "strength_level": "1",
     "id": "5079",
     "range_level": "1",
-    "attack_level": "1"
+    "attack_level": "1",
+    "death_animation": "5183",
+    "examine": "Handle with care."
   },
   {
     "examine": "It looks fluffy and cute; it's probably deadly.",
@@ -53243,6 +53310,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "An ugly green creature.",
     "name": "Goblin",
     "defence_level": "1",
     "safespot": null,
@@ -53255,6 +53323,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "An ugly green creature.",
     "name": "Goblin",
     "defence_level": "1",
     "safespot": null,
@@ -53840,11 +53909,11 @@
     "examine": "A servant of the god Zamorak. ",
     "melee_animation": "6945",
     "attack_speed": "6",
-    "poisonous": "true",
+    "poisonous": "",
     "respawn_delay": "150",
     "weakness": "9",
     "slayer_exp": "350",
-    "poison_amount": "16",
+    "poison_amount": "",
     "magic_animation": "6945",
     "death_animation": "6946",
     "lifepoints": "255",
@@ -54943,7 +55012,7 @@
     "combat_style": "2",
     "melee_animation": "811",
     "range_animation": "811",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "60",
     "respawn_delay": "25",
     "end_gfx": "76",
@@ -56194,6 +56263,7 @@
     "attack_level": "48"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56210,6 +56280,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56226,6 +56297,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56242,6 +56314,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56258,6 +56331,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56274,6 +56348,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56290,6 +56365,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56306,6 +56382,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56322,6 +56399,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "This one's had too much to drink!",
     "melee_animation": "390",
     "combat_audio": "703,705,704",
     "respawn_delay": "60",
@@ -56584,6 +56662,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "A barely visible deadly spider.",
     "melee_animation": "5327",
     "combat_audio": "537,539,538",
     "respawn_delay": "60",
@@ -56600,6 +56679,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "A barely visible deadly spider.",
     "melee_animation": "5327",
     "combat_audio": "537,539,538",
     "respawn_delay": "60",
@@ -56711,6 +56791,7 @@
     "attack_level": "45"
   },
   {
+    "examine": "That stinger has to hurt...",
     "melee_animation": "7242",
     "attack_speed": "5",
     "respawn_delay": "60",
@@ -58366,11 +58447,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -58522,11 +58603,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -58681,11 +58762,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -58742,11 +58823,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -58822,11 +58903,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -59073,7 +59154,7 @@
     "magic_animation": "7515",
     "death_animation": "7461",
     "name": "Revenant hellhound",
-    "defence_level": "1",
+    "defence_level": "50",
     "safespot": null,
     "lifepoints": "80",
     "strength_level": "50",
@@ -59145,11 +59226,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -59225,11 +59306,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -59427,6 +59508,7 @@
     "examine": "A ghost of an ork slain during the god wars.",
     "melee_animation": "7411",
     "range_animation": "7518",
+    "poisonous": "",
     "magic_level": "70",
     "defence_animation": "7413",
     "magic_animation": "7505",
@@ -59446,11 +59528,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -59548,6 +59630,7 @@
     "examine": "A ghost of an ork slain during the god wars.",
     "melee_animation": "7411",
     "range_animation": "7518",
+    "poisonous": "",
     "magic_level": "70",
     "defence_animation": "7413",
     "magic_animation": "7505",
@@ -59605,11 +59688,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -59620,7 +59703,8 @@
     "id": "6673",
     "clue_level": "2",
     "range_level": "80",
-    "attack_level": "80"
+    "attack_level": "80",
+    "prj_height": ""
   },
   {
     "spawn_animation": "7426",
@@ -59666,11 +59750,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -59917,7 +60001,7 @@
     "magic_animation": "7515",
     "death_animation": "7461",
     "name": "Revenant hellhound",
-    "defence_level": "1",
+    "defence_level": "50",
     "safespot": null,
     "lifepoints": "80",
     "strength_level": "50",
@@ -59989,11 +60073,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -60426,11 +60510,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -60667,11 +60751,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -60746,11 +60830,11 @@
     "examine": "A ghost of a knight slain during the god wars.",
     "melee_animation": "7441",
     "range_animation": "7522",
-    "poisonous": "true",
+    "poisonous": "",
     "magic_level": "80",
     "defence_animation": "7443",
     "slayer_exp": "143",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "7508",
     "death_animation": "7442",
     "name": "Revenant knight",
@@ -63342,7 +63426,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "It's a tiny",
+    "examine": "It's a tiny, cheeky monkey.",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -63810,9 +63894,9 @@
     "melee_animation": "8591",
     "range_animation": "8594",
     "combat_audio": "408,410,409",
-    "poisonous": "true",
+    "poisonous": "",
     "defence_animation": "8592",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "8594",
     "death_animation": "8593",
     "name": "Revenant dragon",
@@ -63831,9 +63915,9 @@
     "melee_animation": "8591",
     "range_animation": "8594",
     "combat_audio": "408,410,409",
-    "poisonous": "true",
+    "poisonous": "",
     "defence_animation": "8592",
-    "poison_amount": "8",
+    "poison_amount": "",
     "magic_animation": "8594",
     "death_animation": "8593",
     "name": "Revenant dragon",
@@ -65300,6 +65384,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "It's a tiny, cheeky monkey.",
     "name": "Baby monkey",
     "defence_level": "1",
     "safespot": null,
@@ -65322,6 +65407,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "It's a tiny, cheeky monkey.",
     "name": "Baby monkey",
     "defence_level": "1",
     "safespot": null,
@@ -65344,6 +65430,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "It's a tiny, cheeky monkey.",
     "name": "Baby monkey",
     "defence_level": "1",
     "safespot": null,
@@ -65366,7 +65453,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "It's a tiny",
+    "examine": "It's a tiny, cheeky monkey.",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -65383,7 +65470,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "It's a tiny",
+    "examine": "It's a tiny, cheeky monkey.",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -65400,7 +65487,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "It's a tiny",
+    "examine": "It's a tiny, cheeky monkey.",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -65417,7 +65504,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "It's a tiny",
+    "examine": "It's a tiny, cheeky monkey.",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -65434,7 +65521,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "It's a tiny",
+    "examine": "It's a tiny, cheeky monkey.",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -65451,7 +65538,7 @@
     "attack_level": "1"
   },
   {
-    "examine": "It's a tiny",
+    "examine": "It's a tiny, cheeky monkey.",
     "melee_animation": "0",
     "range_animation": "0",
     "combat_audio": "629,631,630",
@@ -65468,6 +65555,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "It's a tiny, cheeky monkey.",
     "name": "Baby monkey",
     "defence_level": "1",
     "safespot": null,
@@ -65479,6 +65567,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "It's a tiny, cheeky monkey.",
     "name": "Baby monkey",
     "defence_level": "1",
     "safespot": null,
@@ -65490,6 +65579,7 @@
     "attack_level": "1"
   },
   {
+    "examine": "It's a tiny, cheeky monkey.",
     "name": "Baby monkey",
     "defence_level": "1",
     "safespot": null,
@@ -72656,9 +72746,10 @@
   {
     "examine": "Rock with attitude.",
     "combat_style": "1",
-    "range_animation": "0",
-    "attack_speed": "4",
-    "defence_animation": "8",
+    "range_animation": "5347",
+    "attack_speed": "6",
+    "defence_animation": "154",
+    "death_animation": "156",
     "name": "Rock Golem",
     "lifepoints": "25",
     "strength_level": "8",
@@ -72666,14 +72757,16 @@
     "aggressive": "true",
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "15",
+    "projectile": "968",
     "attack_level": "8"
   },
   {
     "examine": "Rock with attitude.",
     "combat_style": "1",
-    "range_animation": "0",
-    "attack_speed": "4",
-    "defence_animation": "17",
+    "range_animation": "5347",
+    "attack_speed": "6",
+    "defence_animation": "154",
+    "death_animation": "156",
     "name": "Rock Golem",
     "lifepoints": "40",
     "strength_level": "17",
@@ -72681,14 +72774,16 @@
     "aggressive": "true",
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "30",
+    "projectile": "968",
     "attack_level": "17"
   },
   {
     "examine": "Rock with attitude.",
     "combat_style": "1",
-    "range_animation": "0",
-    "attack_speed": "4",
-    "defence_animation": "36",
+    "range_animation": "5347",
+    "attack_speed": "6",
+    "defence_animation": "154",
+    "death_animation": "156",
     "name": "Rock Golem",
     "lifepoints": "60",
     "strength_level": "36",
@@ -72696,14 +72791,16 @@
     "aggressive": "true",
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "40",
+    "projectile": "968",
     "attack_level": "38"
   },
   {
     "examine": "Rock with attitude.",
     "combat_style": "1",
-    "range_animation": "0",
-    "attack_speed": "4",
-    "defence_animation": "64",
+    "range_animation": "5347",
+    "attack_speed": "6",
+    "defence_animation": "154",
+    "death_animation": "156",
     "name": "Rock Golem",
     "lifepoints": "86",
     "strength_level": "64",
@@ -72711,14 +72808,16 @@
     "aggressive": "true",
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "60",
+    "projectile": "968",
     "attack_level": "64"
   },
   {
     "examine": "Rock with attitude.",
     "combat_style": "1",
-    "range_animation": "0",
-    "attack_speed": "4",
-    "defence_animation": "100",
+    "range_animation": "5347",
+    "attack_speed": "6",
+    "defence_animation": "154",
+    "death_animation": "156",
     "name": "Rock Golem",
     "lifepoints": "120",
     "strength_level": "100",
@@ -72726,14 +72825,16 @@
     "aggressive": "true",
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "75",
+    "projectile": "968",
     "attack_level": "100"
   },
   {
     "examine": "Rock with attitude.",
     "combat_style": "1",
-    "range_animation": "0",
-    "attack_speed": "4",
-    "defence_animation": "130",
+    "range_animation": "5347",
+    "attack_speed": "6",
+    "defence_animation": "154",
+    "death_animation": "156",
     "name": "Rock Golem",
     "lifepoints": "166",
     "strength_level": "130",
@@ -72741,6 +72842,7 @@
     "aggressive": "true",
     "bonuses": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
     "range_level": "80",
+    "projectile": "968",
     "attack_level": "130"
   },
   {
@@ -73394,6 +73496,7 @@
     "id": "366"
   },
   {
+    "examine": "Owner of the banana plantation.",
     "name": "Luthas",
     "id": "379"
   },
@@ -73502,22 +73605,22 @@
     "id": "486"
   },
   {
-    "name": "Observatory professor",
-    "id": "488"
-  },
-  {
+    "examine": "A cart driver; it looks like he's quite experienced.",
     "name": "Hajedy",
     "id": "510"
   },
   {
+    "examine": "A cart driver; it looks like he's quite experienced.",
     "name": "Vigroy",
     "id": "511"
   },
   {
+    "examine": "This is Yohnus - he runs the local blacksmiths.",
     "name": "Yohnus",
     "id": "513"
   },
   {
+    "examine": "This is Seravel. He sells tickets for the 'Lady of the Waves.'",
     "name": "Seravel",
     "id": "514"
   },
@@ -73534,6 +73637,7 @@
     "id": "553"
   },
   {
+    "examine": "Goods for sale and trade.",
     "name": "Jiminua",
     "id": "560"
   },
@@ -73546,6 +73650,7 @@
     "id": "565"
   },
   {
+    "examine": "Appears slightly drunk.",
     "name": "Zambo",
     "id": "568"
   },
@@ -73570,6 +73675,7 @@
     "id": "585"
   },
   {
+    "examine": "An amulet trader.",
     "name": "Davon",
     "id": "588"
   },
@@ -73738,6 +73844,7 @@
     "id": "673"
   },
   {
+    "examine": "Builds ships for a living.",
     "name": "Shipyard worker",
     "id": "675"
   },
@@ -73826,6 +73933,7 @@
     "id": "725"
   },
   {
+    "examine": "A wise old witch doctor.",
     "name": "Trufitus",
     "id": "740"
   },
@@ -73926,10 +74034,12 @@
     "id": "784"
   },
   {
+    "examine": "A diligent guard.",
     "name": "Garv",
     "id": "788"
   },
   {
+    "examine": "A rough looking thief.",
     "name": "Grubor",
     "id": "789"
   },
@@ -73938,6 +74048,7 @@
     "id": "791"
   },
   {
+    "examine": "Looks like he's been in the wars.",
     "name": "Grip",
     "id": "792"
   },
@@ -74033,6 +74144,7 @@
     "id": "844"
   },
   {
+    "examine": "A happening kind of guy!",
     "name": "Kangai Mau",
     "id": "846"
   },
@@ -74101,6 +74213,7 @@
     "id": "880"
   },
   {
+    "examine": "The Carnillean family chef.",
     "name": "Claus the chef",
     "id": "886"
   },
@@ -74109,14 +74222,17 @@
     "id": "888"
   },
   {
+    "examine": "Ceril Carnillean's wife.",
     "name": "Henryeta Carnillean",
     "id": "889"
   },
   {
+    "examine": "The Carnellian family butler.",
     "name": "Butler Jones",
     "id": "890"
   },
   {
+    "examine": "Leader of the Hazeel cult.",
     "name": "Alomone",
     "id": "891"
   },
@@ -74309,14 +74425,17 @@
     "id": "1159"
   },
   {
+    "examine": "The imposing Chief of Tai Bwo Wannai.",
     "name": "Timfraku",
     "id": "1162"
   },
   {
+    "examine": "A rather depressed looking fisherman.",
     "name": "Tiadeche",
     "id": "1163"
   },
   {
+    "examine": "A rather depressed looking fisherman.",
     "name": "Tiadeche",
     "id": "1164"
   },
@@ -74329,6 +74448,7 @@
     "id": "1166"
   },
   {
+    "examine": "A hunter who long ago succumbed to blood lust.",
     "name": "Tamayu",
     "id": "1167"
   },
@@ -74345,6 +74465,7 @@
     "id": "1170"
   },
   {
+    "examine": "A crotchety old fisherman who doesn't like young whippersnappers.",
     "name": "Lubufu",
     "id": "1171"
   },
@@ -74369,10 +74490,12 @@
     "id": "1178"
   },
   {
+    "examine": "A sea bird.",
     "name": "Cormorant",
     "id": "1180"
   },
   {
+    "examine": "A sea bird.",
     "name": "Pelican",
     "id": "1181"
   },
@@ -74738,6 +74861,7 @@
   },
   {
     "name": "Solihib",
+    "movement_radius": "1",
     "id": "1433"
   },
   {
@@ -75041,6 +75165,7 @@
     "id": "1581"
   },
   {
+    "examine": "Looks like he wants money.",
     "name": "Saniboch",
     "id": "1595"
   },
@@ -75385,6 +75510,7 @@
     "id": "1883"
   },
   {
+    "examine": "A well dressed thief.",
     "name": "Trobert",
     "id": "1884"
   },
@@ -76005,6 +76131,7 @@
     "id": "2308"
   },
   {
+    "examine": "In his former life an expert brewer.",
     "name": "Metarialus",
     "id": "2322"
   },
@@ -76541,26 +76668,32 @@
     "id": "2590"
   },
   {
+    "examine": "Another one of those mystic-types.",
     "name": "TzHaar-Mej-Jal",
     "id": "2617"
   },
   {
+    "examine": "Another one of those mystic-types.",
     "name": "TzHaar-Mej-Kah",
     "id": "2618"
   },
   {
+    "examine": "Maybe it'll guard my possessions.",
     "name": "TzHaar-Ket-Zuh",
     "id": "2619"
   },
   {
+    "examine": "Wonder what it's making.",
     "name": "TzHaar-Hur-Tel",
     "id": "2620"
   },
   {
+    "examine": "Wonder what it's making.",
     "name": "TzHaar-Hur-Lek",
     "id": "2622"
   },
   {
+    "examine": "Another one of those mystic-types.",
     "name": "TzHaar-Mej-Roh",
     "id": "2623"
   },
@@ -77556,6 +77689,7 @@
     "id": "3311"
   },
   {
+    "examine": "They're going to sing to you!",
     "name": "Zanaris choir",
     "id": "3312"
   },
@@ -80436,6 +80570,7 @@
     "id": "4577"
   },
   {
+    "examine": "He looks like he's a long way from home.",
     "name": "Penwie",
     "id": "4578"
   },
@@ -82636,6 +82771,7 @@
     "id": "6114"
   },
   {
+    "examine": "A man, learned in the ways of the stars.",
     "name": "Observatory professor",
     "id": "6119"
   },
@@ -83220,6 +83356,7 @@
     "id": "6741"
   },
   {
+    "examine": "A traditional snowman.",
     "name": "Snowman",
     "id": "6746"
   },
@@ -83336,10 +83473,12 @@
     "id": "6915"
   },
   {
+    "examine": "",
     "name": "Gecko",
     "id": "6916"
   },
   {
+    "examine": "How cute!",
     "name": "Gecko",
     "id": "6918"
   },
@@ -83928,6 +84067,7 @@
     "id": "7280"
   },
   {
+    "examine": "",
     "name": "Gecko",
     "id": "7281"
   },
@@ -83944,14 +84084,17 @@
     "id": "7284"
   },
   {
+    "examine": "It's so adorably tiny!",
     "name": "Baby gecko",
     "id": "7286"
   },
   {
+    "examine": "",
     "name": "Baby gecko",
     "id": "7287"
   },
   {
+    "examine": "It's so adorably tiny!",
     "name": "Baby gecko",
     "id": "7288"
   },
@@ -83960,6 +84103,7 @@
     "id": "7289"
   },
   {
+    "examine": "How cute!",
     "name": "Gecko",
     "id": "7290"
   },
@@ -83968,6 +84112,7 @@
     "id": "7291"
   },
   {
+    "examine": "How cute!",
     "name": "Gecko",
     "id": "7292"
   },
@@ -86720,6 +86865,7 @@
     "id": "8274"
   },
   {
+    "examine": "He looks dangerous!",
     "name": "Duradel",
     "id": "8275"
   },
@@ -87448,6 +87594,7 @@
     "id": "8516"
   },
   {
+    "examine": "The rebellious teenage son of the Queen of Snow. Interesting outfit!",
     "name": "Jack Frost",
     "id": "8517"
   },
@@ -87480,6 +87627,7 @@
     "id": "8539"
   },
   {
+    "examine": "A jolly-looking present-distributor.",
     "name": "Santa Claus",
     "id": "8540"
   },
@@ -87874,5 +88022,15 @@
     "examine": "He looks angry and smells drunk.",
     "name": "Skippy",
     "id": "2796"
+  },
+  {
+    "examine": "Angry and stressed, he doesn't seem to have time for anything other than sand.",
+    "name": "Sandy",
+    "id": "3112"
+  },
+  {
+    "examine": "I hope she can find all the ingredients!",
+    "name": "Cook",
+    "id": "4239"
   }
 ]
