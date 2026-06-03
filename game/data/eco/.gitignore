@@ -2,3 +2,5 @@
 *
 # Except this file
 !.gitignore
+# Except the Grand Exchange economy DB (synced as part of the save)
+!grandexchange.db

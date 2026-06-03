@@ -1,0 +1,2910 @@
+﻿Compiled from "Component.java"
+public final class rt4.Component {
+  public static final rt4.SoftLruHashTable sprites;
+
+  public static final rt4.SoftLruHashTable models;
+
+  public static final rt4.SoftLruHashTable fonts;
+
+  public static boolean aBoolean72;
+
+  public java.lang.Object[] onFriendTransmit;
+
+  public java.lang.Object[] onStatTransmit;
+
+  public java.lang.Object[] anObjectArray3;
+
+  public java.lang.Object[] onVarcTransmit;
+
+  public java.lang.Object[] onClickRepeat;
+
+  public java.lang.Object[] onDrag;
+
+  public rt4.JagString[] ops;
+
+  public rt4.JagString[] invOptions;
+
+  public java.lang.Object[] onInvTransmit;
+
+  public int[] inventoryTriggers;
+
+  public java.lang.Object[] onWidgetsOpenClose;
+
+  public boolean vFlip;
+
+  public java.lang.Object[] onHold;
+
+  public java.lang.Object[] onScroll;
+
+  public int[] varcstrTriggers;
+
+  public int type;
+
+  public int[] invSprite;
+
+  public boolean hFlip;
+
+  public int modelId;
+
+  public java.lang.Object[] onUse;
+
+  public java.lang.Object[] onDialogAbort;
+
+  public int[] anIntArray37;
+
+  public int[] varcTriggers;
+
+  public java.lang.Object[] onMinimapUnlock;
+
+  public java.lang.Object[] onKey;
+
+  public java.lang.Object[] onVarcstrTransmit;
+
+  public java.lang.Object[] onDragRelease;
+
+  public byte[] aByteArray7;
+
+  public java.lang.Object[] onResize;
+
+  public java.lang.Object[] onRelease;
+
+  public java.lang.Object[] onMouseOver;
+
+  public int[] anIntArray39;
+
+  public int[] objTypes;
+
+  public java.lang.Object[] onMsg;
+
+  public rt4.Component[] createdComponents;
+
+  public byte[] aByteArray8;
+
+  public java.lang.Object[] onStockTransmit;
+
+  public java.lang.Object[] onTimer;
+
+  public int[] invOffsetX;
+
+  public int[] statTriggers;
+
+  public int[] cs1ComparisonOpcodes;
+
+  public java.lang.Object[] onMouseRepeat;
+
+  public java.lang.Object[] onMouseLeave;
+
+  public java.lang.Object[] onVarpTransmit;
+
+  public int[] varpTriggers;
+
+  public int[] anIntArray45;
+
+  public java.lang.Object[] onDragStart;
+
+  public int[][] cs1Scripts;
+
+  public int[] anIntArray46;
+
+  public int[] invOffsetY;
+
+  public java.lang.Object[] onUseWith;
+
+  public int[] cs1ComparisonOperands;
+
+  public int[] anIntArray49;
+
+  public java.lang.Object[] onClanTransmit;
+
+  public java.lang.Object[] onOptionClick;
+
+  public java.lang.Object[] onMiscTransmit;
+
+  public int[] objCounts;
+
+  public boolean spriteTiling;
+
+  public int aspectHeight;
+
+  public int height;
+
+  public int halign;
+
+  public int modelZoom;
+
+  public byte xMode;
+
+  public int y;
+
+  public int dragDeadzone;
+
+  public int activeModelSeqId;
+
+  public short aShort10;
+
+  public int modelXAngle;
+
+  public int anInt481;
+
+  public boolean modelOrtho;
+
+  public boolean filled;
+
+  public int dragDeadtime;
+
+  public int scrollY;
+
+  public int spriteId;
+
+  public int vpadding;
+
+  public boolean hidden;
+
+  public int lineWidth;
+
+  public int anInt484;
+
+  public int createdComponentId;
+
+  public boolean aBoolean24;
+
+  public static final rt4.JagString EMPTY_STRING;
+
+  public rt4.JagString optionSuffix;
+
+  public boolean aBoolean19;
+
+  public int valign;
+
+  public int anInt470;
+
+  public boolean aBoolean20;
+
+  public int anInt499;
+
+  public byte dynamicHeightValue;
+
+  public int scrollMaxV;
+
+  public boolean dragRenderBehavior;
+
+  public boolean shadowed;
+
+  public int rectangleLoop;
+
+  public int anInt496;
+
+  public int overColor;
+
+  public boolean if3;
+
+  public static final rt4.ServerActiveProperties DEFAULT_SERVER_ACTIVE_PROPERTIES;
+
+  public rt4.ServerActiveProperties properties;
+
+  public int activeColor;
+
+  public rt4.JagString text;
+
+  public int width;
+
+  public int scrollX;
+
+  public boolean noClickThrough;
+
+  private int activeModelId;
+
+  public int overlayer;
+
+  public int aspectWidth;
+
+  public int objId;
+
+  public int anInt475;
+
+  public int modelZOffset;
+
+  public rt4.JagString optionBase;
+
+  public int updatedVarcsReaderIndex;
+
+  public int baseWidth;
+
+  public int invMarginX;
+
+  public int lastTransmitTimer;
+
+  public boolean hasAlpha;
+
+  public int anInt451;
+
+  public int alpha;
+
+  public int modelXOffset;
+
+  public rt4.JagString optionCircumfix;
+
+  public int modelRotationSpeed;
+
+  public rt4.JagString activeText;
+
+  public int outlineThickness;
+
+  public int anInt498;
+
+  public int updatedVarcstrsReaderIndex;
+
+  public int anInt495;
+
+  public int invMarginY;
+
+  public int baseHeight;
+
+  public int id;
+
+  public int activeSpriteId;
+
+  public byte yMode;
+
+  public int anInt500;
+
+  public int font;
+
+  public int scrollMaxH;
+
+  public int updatedInventoriesReaderIndex;
+
+  public short aShort11;
+
+  public int angle2d;
+
+  public int modelSeqId;
+
+  public rt4.JagString option;
+
+  public int modelYOffset;
+
+  public int objCount;
+
+  public int rectangle;
+
+  public int clientCode;
+
+  public int shadowColor;
+
+  public rt4.Component aClass13_5;
+
+  public int updatedStatsReaderIndex;
+
+  public int modelType;
+
+  public boolean aBoolean34;
+
+  public byte dynamicWidthValue;
+
+  private int activeModelType;
+
+  public int anInt526;
+
+  public int modelYAngle;
+
+  public boolean aBoolean25;
+
+  public int baseX;
+
+  public int x;
+
+  public int baseY;
+
+  public boolean objDrawText;
+
+  public int anInt510;
+
+  public int updatedVarpsReaderIndex;
+
+  public int color;
+
+  public int buttonType;
+
+  public rt4.Component();
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iconst_0
+         6: putfield      #2                  // Field spriteTiling:Z
+         9: aload_0
+        10: iconst_1
+        11: putfield      #3                  // Field aspectHeight:I
+        14: aload_0
+        15: iconst_0
+        16: putfield      #4                  // Field height:I
+        19: aload_0
+        20: iconst_0
+        21: putfield      #5                  // Field halign:I
+        24: aload_0
+        25: bipush        100
+        27: putfield      #6                  // Field modelZoom:I
+        30: aload_0
+        31: iconst_0
+        32: putfield      #7                  // Field xMode:B
+        35: aload_0
+        36: iconst_0
+        37: putfield      #8                  // Field y:I
+        40: aload_0
+        41: iconst_0
+        42: putfield      #9                  // Field dragDeadzone:I
+        45: aload_0
+        46: iconst_m1
+        47: putfield      #10                 // Field activeModelSeqId:I
+        50: aload_0
+        51: sipush        3000
+        54: putfield      #11                 // Field aShort10:S
+        57: aload_0
+        58: iconst_0
+        59: putfield      #12                 // Field modelXAngle:I
+        62: aload_0
+        63: iconst_0
+        64: putfield      #13                 // Field anInt481:I
+        67: aload_0
+        68: iconst_0
+        69: putfield      #14                 // Field modelOrtho:Z
+        72: aload_0
+        73: iconst_0
+        74: putfield      #15                 // Field filled:Z
+        77: aload_0
+        78: iconst_0
+        79: putfield      #16                 // Field dragDeadtime:I
+        82: aload_0
+        83: iconst_0
+        84: putfield      #17                 // Field scrollY:I
+        87: aload_0
+        88: iconst_m1
+        89: putfield      #18                 // Field spriteId:I
+        92: aload_0
+        93: iconst_0
+        94: putfield      #19                 // Field vpadding:I
+        97: aload_0
+        98: iconst_0
+        99: putfield      #20                 // Field hidden:Z
+       102: aload_0
+       103: iconst_1
+       104: putfield      #21                 // Field lineWidth:I
+       107: aload_0
+       108: iconst_m1
+       109: putfield      #22                 // Field anInt484:I
+       112: aload_0
+       113: iconst_m1
+       114: putfield      #23                 // Field createdComponentId:I
+       117: aload_0
+       118: iconst_0
+       119: putfield      #24                 // Field aBoolean24:Z
+       122: aload_0
+       123: getstatic     #25                 // Field EMPTY_STRING:Lrt4/JagString;
+       126: putfield      #26                 // Field optionSuffix:Lrt4/JagString;
+       129: aload_0
+       130: iconst_0
+       131: putfield      #27                 // Field aBoolean19:Z
+       134: aload_0
+       135: iconst_0
+       136: putfield      #28                 // Field valign:I
+       139: aload_0
+       140: iconst_m1
+       141: putfield      #29                 // Field anInt470:I
+       144: aload_0
+       145: iconst_0
+       146: putfield      #30                 // Field aBoolean20:Z
+       149: aload_0
+       150: iconst_m1
+       151: putfield      #31                 // Field anInt499:I
+       154: aload_0
+       155: iconst_0
+       156: putfield      #32                 // Field dynamicHeightValue:B
+       159: aload_0
+       160: iconst_0
+       161: putfield      #33                 // Field scrollMaxV:I
+       164: aload_0
+       165: iconst_0
+       166: putfield      #34                 // Field dragRenderBehavior:Z
+       169: aload_0
+       170: iconst_0
+       171: putfield      #35                 // Field shadowed:Z
+       174: aload_0
+       175: iconst_m1
+       176: putfield      #36                 // Field rectangleLoop:I
+       179: aload_0
+       180: iconst_1
+       181: putfield      #37                 // Field anInt496:I
+       184: aload_0
+       185: iconst_0
+       186: putfield      #38                 // Field overColor:I
+       189: aload_0
+       190: iconst_0
+       191: putfield      #39                 // Field if3:Z
+       194: aload_0
+       195: getstatic     #40                 // Field DEFAULT_SERVER_ACTIVE_PROPERTIES:Lrt4/ServerActiveProperties;
+       198: putfield      #41                 // Field properties:Lrt4/ServerActiveProperties;
+       201: aload_0
+       202: iconst_0
+       203: putfield      #42                 // Field activeColor:I
+       206: aload_0
+       207: getstatic     #25                 // Field EMPTY_STRING:Lrt4/JagString;
+       210: putfield      #43                 // Field text:Lrt4/JagString;
+       213: aload_0
+       214: iconst_0
+       215: putfield      #44                 // Field width:I
+       218: aload_0
+       219: iconst_0
+       220: putfield      #45                 // Field scrollX:I
+       223: aload_0
+       224: iconst_0
+       225: putfield      #46                 // Field noClickThrough:Z
+       228: aload_0
+       229: iconst_m1
+       230: putfield      #47                 // Field activeModelId:I
+       233: aload_0
+       234: iconst_m1
+       235: putfield      #48                 // Field overlayer:I
+       238: aload_0
+       239: iconst_1
+       240: putfield      #49                 // Field aspectWidth:I
+       243: aload_0
+       244: iconst_m1
+       245: putfield      #50                 // Field objId:I
+       248: aload_0
+       249: iconst_0
+       250: putfield      #51                 // Field anInt475:I
+       253: aload_0
+       254: iconst_0
+       255: putfield      #52                 // Field modelZOffset:I
+       258: aload_0
+       259: getstatic     #25                 // Field EMPTY_STRING:Lrt4/JagString;
+       262: putfield      #53                 // Field optionBase:Lrt4/JagString;
+       265: aload_0
+       266: iconst_0
+       267: putfield      #54                 // Field updatedVarcsReaderIndex:I
+       270: aload_0
+       271: iconst_0
+       272: putfield      #55                 // Field baseWidth:I
+       275: aload_0
+       276: iconst_0
+       277: putfield      #56                 // Field invMarginX:I
+       280: aload_0
+       281: iconst_m1
+       282: putfield      #57                 // Field lastTransmitTimer:I
+       285: aload_0
+       286: iconst_0
+       287: putfield      #58                 // Field hasAlpha:Z
+       290: aload_0
+       291: iconst_0
+       292: putfield      #59                 // Field anInt451:I
+       295: aload_0
+       296: iconst_0
+       297: putfield      #60                 // Field alpha:I
+       300: aload_0
+       301: iconst_0
+       302: putfield      #61                 // Field modelXOffset:I
+       305: aload_0
+       306: getstatic     #25                 // Field EMPTY_STRING:Lrt4/JagString;
+       309: putfield      #62                 // Field optionCircumfix:Lrt4/JagString;
+       312: aload_0
+       313: iconst_0
+       314: putfield      #63                 // Field modelRotationSpeed:I
+       317: aload_0
+       318: getstatic     #25                 // Field EMPTY_STRING:Lrt4/JagString;
+       321: putfield      #64                 // Field activeText:Lrt4/JagString;
+       324: aload_0
+       325: iconst_0
+       326: putfield      #65                 // Field outlineThickness:I
+       329: aload_0
+       330: iconst_m1
+       331: putfield      #66                 // Field anInt498:I
+       334: aload_0
+       335: iconst_0
+       336: putfield      #67                 // Field updatedVarcstrsReaderIndex:I
+       339: aload_0
+       340: iconst_0
+       341: putfield      #68                 // Field anInt495:I
+       344: aload_0
+       345: iconst_0
+       346: putfield      #69                 // Field invMarginY:I
+       349: aload_0
+       350: iconst_0
+       351: putfield      #70                 // Field baseHeight:I
+       354: aload_0
+       355: iconst_m1
+       356: putfield      #71                 // Field id:I
+       359: aload_0
+       360: iconst_m1
+       361: putfield      #72                 // Field activeSpriteId:I
+       364: aload_0
+       365: iconst_0
+       366: putfield      #73                 // Field yMode:B
+       369: aload_0
+       370: iconst_0
+       371: putfield      #74                 // Field anInt500:I
+       374: aload_0
+       375: iconst_m1
+       376: putfield      #75                 // Field font:I
+       379: aload_0
+       380: iconst_0
+       381: putfield      #76                 // Field scrollMaxH:I
+       384: aload_0
+       385: iconst_0
+       386: putfield      #77                 // Field updatedInventoriesReaderIndex:I
+       389: aload_0
+       390: iconst_0
+       391: putfield      #78                 // Field aShort11:S
+       394: aload_0
+       395: iconst_0
+       396: putfield      #79                 // Field angle2d:I
+       399: aload_0
+       400: iconst_m1
+       401: putfield      #80                 // Field modelSeqId:I
+       404: aload_0
+       405: getstatic     #81                 // Field rt4/LocalizedText.OK:Lrt4/JagString;
+       408: putfield      #82                 // Field option:Lrt4/JagString;
+       411: aload_0
+       412: iconst_0
+       413: putfield      #83                 // Field modelYOffset:I
+       416: aload_0
+       417: iconst_0
+       418: putfield      #84                 // Field objCount:I
+       421: aload_0
+       422: iconst_m1
+       423: putfield      #85                 // Field rectangle:I
+       426: aload_0
+       427: iconst_0
+       428: putfield      #86                 // Field clientCode:I
+       431: aload_0
+       432: iconst_0
+       433: putfield      #87                 // Field shadowColor:I
+       436: aload_0
+       437: aconst_null
+       438: putfield      #88                 // Field aClass13_5:Lrt4/Component;
+       441: aload_0
+       442: iconst_0
+       443: putfield      #89                 // Field updatedStatsReaderIndex:I
+       446: aload_0
+       447: iconst_1
+       448: putfield      #90                 // Field modelType:I
+       451: aload_0
+       452: iconst_0
+       453: putfield      #91                 // Field aBoolean34:Z
+       456: aload_0
+       457: iconst_0
+       458: putfield      #92                 // Field dynamicWidthValue:B
+       461: aload_0
+       462: iconst_1
+       463: putfield      #93                 // Field activeModelType:I
+       466: aload_0
+       467: iconst_0
+       468: putfield      #94                 // Field anInt526:I
+       471: aload_0
+       472: iconst_0
+       473: putfield      #95                 // Field modelYAngle:I
+       476: aload_0
+       477: iconst_0
+       478: putfield      #96                 // Field aBoolean25:Z
+       481: aload_0
+       482: iconst_0
+       483: putfield      #97                 // Field baseX:I
+       486: aload_0
+       487: iconst_0
+       488: putfield      #98                 // Field x:I
+       491: aload_0
+       492: iconst_0
+       493: putfield      #99                 // Field baseY:I
+       496: aload_0
+       497: iconst_1
+       498: putfield      #100                // Field objDrawText:Z
+       501: aload_0
+       502: iconst_0
+       503: putfield      #101                // Field anInt510:I
+       506: aload_0
+       507: iconst_0
+       508: putfield      #102                // Field updatedVarpsReaderIndex:I
+       511: aload_0
+       512: iconst_0
+       513: putfield      #103                // Field color:I
+       516: aload_0
+       517: iconst_0
+       518: putfield      #104                // Field buttonType:I
+       521: return
+
+  public static void clean();
+    Code:
+         0: getstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+         3: bipush        50
+         5: invokevirtual #106                // Method rt4/SoftLruHashTable.clean:(I)V
+         8: getstatic     #107                // Field models:Lrt4/SoftLruHashTable;
+        11: bipush        50
+        13: invokevirtual #106                // Method rt4/SoftLruHashTable.clean:(I)V
+        16: getstatic     #108                // Field fonts:Lrt4/SoftLruHashTable;
+        19: bipush        50
+        21: invokevirtual #106                // Method rt4/SoftLruHashTable.clean:(I)V
+        24: return
+
+  public static void clear();
+    Code:
+         0: getstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+         3: invokevirtual #109                // Method rt4/SoftLruHashTable.clear:()V
+         6: getstatic     #107                // Field models:Lrt4/SoftLruHashTable;
+         9: invokevirtual #109                // Method rt4/SoftLruHashTable.clear:()V
+        12: getstatic     #108                // Field fonts:Lrt4/SoftLruHashTable;
+        15: invokevirtual #109                // Method rt4/SoftLruHashTable.clear:()V
+        18: return
+
+  public static void removeSoft();
+    Code:
+         0: getstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+         3: invokevirtual #110                // Method rt4/SoftLruHashTable.removeSoft:()V
+         6: getstatic     #107                // Field models:Lrt4/SoftLruHashTable;
+         9: invokevirtual #110                // Method rt4/SoftLruHashTable.removeSoft:()V
+        12: getstatic     #108                // Field fonts:Lrt4/SoftLruHashTable;
+        15: invokevirtual #110                // Method rt4/SoftLruHashTable.removeSoft:()V
+        18: return
+
+  public final void method477(int, int);
+    Code:
+         0: aload_0
+         1: getfield      #111                // Field anIntArray39:[I
+         4: ifnull        16
+         7: aload_0
+         8: getfield      #111                // Field anIntArray39:[I
+        11: arraylength
+        12: iload_1
+        13: if_icmpgt     88
+        16: iload_1
+        17: iconst_1
+        18: iadd
+        19: newarray       int
+        21: astore_3
+        22: aload_0
+        23: getfield      #111                // Field anIntArray39:[I
+        26: ifnull        83
+        29: iconst_0
+        30: istore        4
+        32: iload         4
+        34: aload_0
+        35: getfield      #111                // Field anIntArray39:[I
+        38: arraylength
+        39: if_icmpge     59
+        42: aload_3
+        43: iload         4
+        45: aload_0
+        46: getfield      #111                // Field anIntArray39:[I
+        49: iload         4
+        51: iaload
+        52: iastore
+        53: iinc          4, 1
+        56: goto          32
+        59: aload_0
+        60: getfield      #111                // Field anIntArray39:[I
+        63: arraylength
+        64: istore        4
+        66: iload         4
+        68: iload_1
+        69: if_icmpge     83
+        72: aload_3
+        73: iload         4
+        75: iconst_m1
+        76: iastore
+        77: iinc          4, 1
+        80: goto          66
+        83: aload_0
+        84: aload_3
+        85: putfield      #111                // Field anIntArray39:[I
+        88: aload_0
+        89: getfield      #111                // Field anIntArray39:[I
+        92: iload_1
+        93: iload_2
+        94: iastore
+        95: return
+
+  public final boolean method478();
+    Code:
+         0: aload_0
+         1: getfield      #112                // Field anIntArray37:[I
+         4: ifnull        9
+         7: iconst_1
+         8: ireturn
+         9: aload_0
+        10: getfield      #18                 // Field spriteId:I
+        13: getstatic     #113                // Field rt4/InterfaceList.aClass153_12:Lrt4/Js5;
+        16: invokestatic  #114                // Method rt4/SpriteLoader.loadSoftwareIndexedSprite:(ILrt4/Js5;)Lrt4/SoftwareIndexedSprite;
+        19: astore_1
+        20: aload_1
+        21: ifnonnull     26
+        24: iconst_0
+        25: ireturn
+        26: aload_1
+        27: invokevirtual #115                // Method rt4/SoftwareIndexedSprite.trim:()V
+        30: aload_0
+        31: aload_1
+        32: getfield      #116                // Field rt4/SoftwareIndexedSprite.height:I
+        35: newarray       int
+        37: putfield      #112                // Field anIntArray37:[I
+        40: aload_0
+        41: aload_1
+        42: getfield      #116                // Field rt4/SoftwareIndexedSprite.height:I
+        45: newarray       int
+        47: putfield      #117                // Field anIntArray45:[I
+        50: iconst_0
+        51: istore_2
+        52: iload_2
+        53: aload_1
+        54: getfield      #116                // Field rt4/SoftwareIndexedSprite.height:I
+        57: if_icmpge     174
+        60: iconst_0
+        61: istore_3
+        62: aload_1
+        63: getfield      #118                // Field rt4/SoftwareIndexedSprite.width:I
+        66: istore        4
+        68: iconst_0
+        69: istore        5
+        71: iload         5
+        73: aload_1
+        74: getfield      #118                // Field rt4/SoftwareIndexedSprite.width:I
+        77: if_icmpge     109
+        80: aload_1
+        81: getfield      #119                // Field rt4/SoftwareIndexedSprite.pixels:[B
+        84: aload_1
+        85: getfield      #118                // Field rt4/SoftwareIndexedSprite.width:I
+        88: iload_2
+        89: imul
+        90: iload         5
+        92: iadd
+        93: baload
+        94: ifeq          103
+        97: iload         5
+        99: istore_3
+       100: goto          109
+       103: iinc          5, 1
+       106: goto          71
+       109: iload_3
+       110: istore        5
+       112: iload         5
+       114: aload_1
+       115: getfield      #118                // Field rt4/SoftwareIndexedSprite.width:I
+       118: if_icmpge     151
+       121: aload_1
+       122: getfield      #119                // Field rt4/SoftwareIndexedSprite.pixels:[B
+       125: iload_2
+       126: aload_1
+       127: getfield      #118                // Field rt4/SoftwareIndexedSprite.width:I
+       130: imul
+       131: iload         5
+       133: iadd
+       134: baload
+       135: ifne          145
+       138: iload         5
+       140: istore        4
+       142: goto          151
+       145: iinc          5, 1
+       148: goto          112
+       151: aload_0
+       152: getfield      #112                // Field anIntArray37:[I
+       155: iload_2
+       156: iload_3
+       157: iastore
+       158: aload_0
+       159: getfield      #117                // Field anIntArray45:[I
+       162: iload_2
+       163: iload         4
+       165: iload_3
+       166: isub
+       167: iastore
+       168: iinc          2, 1
+       171: goto          52
+       174: iconst_1
+       175: ireturn
+
+  public final void method480(rt4.JagString, int);
+    Code:
+         0: aload_0
+         1: getfield      #120                // Field ops:[Lrt4/JagString;
+         4: ifnull        16
+         7: aload_0
+         8: getfield      #120                // Field ops:[Lrt4/JagString;
+        11: arraylength
+        12: iload_2
+        13: if_icmpgt     65
+        16: iload_2
+        17: iconst_1
+        18: iadd
+        19: anewarray     #121                // class rt4/JagString
+        22: astore_3
+        23: aload_0
+        24: getfield      #120                // Field ops:[Lrt4/JagString;
+        27: ifnull        60
+        30: iconst_0
+        31: istore        4
+        33: iload         4
+        35: aload_0
+        36: getfield      #120                // Field ops:[Lrt4/JagString;
+        39: arraylength
+        40: if_icmpge     60
+        43: aload_3
+        44: iload         4
+        46: aload_0
+        47: getfield      #120                // Field ops:[Lrt4/JagString;
+        50: iload         4
+        52: aaload
+        53: aastore
+        54: iinc          4, 1
+        57: goto          33
+        60: aload_0
+        61: aload_3
+        62: putfield      #120                // Field ops:[Lrt4/JagString;
+        65: aload_0
+        66: getfield      #120                // Field ops:[Lrt4/JagString;
+        69: iload_2
+        70: aload_1
+        71: aastore
+        72: return
+
+  public final void decodeIf1(rt4.Buffer);
+    Code:
+         0: aload_0
+         1: iconst_0
+         2: putfield      #39                 // Field if3:Z
+         5: aload_0
+         6: aload_1
+         7: invokevirtual #122                // Method rt4/Buffer.g1:()I
+        10: putfield      #123                // Field type:I
+        13: aload_0
+        14: aload_1
+        15: invokevirtual #122                // Method rt4/Buffer.g1:()I
+        18: putfield      #104                // Field buttonType:I
+        21: aload_0
+        22: aload_1
+        23: invokevirtual #124                // Method rt4/Buffer.g2:()I
+        26: putfield      #86                 // Field clientCode:I
+        29: aload_0
+        30: aload_1
+        31: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+        34: putfield      #97                 // Field baseX:I
+        37: aload_0
+        38: aload_1
+        39: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+        42: putfield      #99                 // Field baseY:I
+        45: aload_0
+        46: aload_1
+        47: invokevirtual #124                // Method rt4/Buffer.g2:()I
+        50: putfield      #55                 // Field baseWidth:I
+        53: aload_0
+        54: aload_1
+        55: invokevirtual #124                // Method rt4/Buffer.g2:()I
+        58: putfield      #70                 // Field baseHeight:I
+        61: aload_0
+        62: iconst_0
+        63: putfield      #92                 // Field dynamicWidthValue:B
+        66: aload_0
+        67: iconst_0
+        68: putfield      #32                 // Field dynamicHeightValue:B
+        71: aload_0
+        72: iconst_0
+        73: putfield      #73                 // Field yMode:B
+        76: aload_0
+        77: iconst_0
+        78: putfield      #7                  // Field xMode:B
+        81: aload_0
+        82: aload_1
+        83: invokevirtual #122                // Method rt4/Buffer.g1:()I
+        86: putfield      #60                 // Field alpha:I
+        89: aload_0
+        90: aload_1
+        91: invokevirtual #124                // Method rt4/Buffer.g2:()I
+        94: putfield      #48                 // Field overlayer:I
+        97: aload_0
+        98: getfield      #48                 // Field overlayer:I
+       101: ldc           #126                // int 65535
+       103: if_icmpne     114
+       106: aload_0
+       107: iconst_m1
+       108: putfield      #48                 // Field overlayer:I
+       111: goto          130
+       114: aload_0
+       115: dup
+       116: getfield      #48                 // Field overlayer:I
+       119: aload_0
+       120: getfield      #71                 // Field id:I
+       123: ldc           #127                // int -65536
+       125: iand
+       126: iadd
+       127: putfield      #48                 // Field overlayer:I
+       130: aload_0
+       131: aload_1
+       132: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       135: putfield      #29                 // Field anInt470:I
+       138: aload_0
+       139: getfield      #29                 // Field anInt470:I
+       142: ldc           #126                // int 65535
+       144: if_icmpne     152
+       147: aload_0
+       148: iconst_m1
+       149: putfield      #29                 // Field anInt470:I
+       152: aload_1
+       153: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       156: istore_2
+       157: iload_2
+       158: ifle          208
+       161: aload_0
+       162: iload_2
+       163: newarray       int
+       165: putfield      #128                // Field cs1ComparisonOperands:[I
+       168: aload_0
+       169: iload_2
+       170: newarray       int
+       172: putfield      #129                // Field cs1ComparisonOpcodes:[I
+       175: iconst_0
+       176: istore_3
+       177: iload_3
+       178: iload_2
+       179: if_icmpge     208
+       182: aload_0
+       183: getfield      #129                // Field cs1ComparisonOpcodes:[I
+       186: iload_3
+       187: aload_1
+       188: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       191: iastore
+       192: aload_0
+       193: getfield      #128                // Field cs1ComparisonOperands:[I
+       196: iload_3
+       197: aload_1
+       198: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       201: iastore
+       202: iinc          3, 1
+       205: goto          177
+       208: aload_1
+       209: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       212: istore_3
+       213: iload_3
+       214: ifle          313
+       217: aload_0
+       218: iload_3
+       219: anewarray     #130                // class "[I"
+       222: putfield      #131                // Field cs1Scripts:[[I
+       225: iconst_0
+       226: istore        4
+       228: iload         4
+       230: iload_3
+       231: if_icmpge     313
+       234: aload_1
+       235: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       238: istore        5
+       240: aload_0
+       241: getfield      #131                // Field cs1Scripts:[[I
+       244: iload         4
+       246: iload         5
+       248: newarray       int
+       250: aastore
+       251: iconst_0
+       252: istore        6
+       254: iload         6
+       256: iload         5
+       258: if_icmpge     307
+       261: aload_0
+       262: getfield      #131                // Field cs1Scripts:[[I
+       265: iload         4
+       267: aaload
+       268: iload         6
+       270: aload_1
+       271: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       274: iastore
+       275: aload_0
+       276: getfield      #131                // Field cs1Scripts:[[I
+       279: iload         4
+       281: aaload
+       282: iload         6
+       284: iaload
+       285: ldc           #126                // int 65535
+       287: if_icmpne     301
+       290: aload_0
+       291: getfield      #131                // Field cs1Scripts:[[I
+       294: iload         4
+       296: aaload
+       297: iload         6
+       299: iconst_m1
+       300: iastore
+       301: iinc          6, 1
+       304: goto          254
+       307: iinc          4, 1
+       310: goto          228
+       313: aload_0
+       314: getfield      #123                // Field type:I
+       317: ifne          345
+       320: aload_0
+       321: aload_1
+       322: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       325: putfield      #33                 // Field scrollMaxV:I
+       328: aload_0
+       329: aload_1
+       330: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       333: iconst_1
+       334: if_icmpne     341
+       337: iconst_1
+       338: goto          342
+       341: iconst_0
+       342: putfield      #20                 // Field hidden:Z
+       345: aload_0
+       346: getfield      #123                // Field type:I
+       349: iconst_1
+       350: if_icmpne     363
+       353: aload_1
+       354: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       357: pop
+       358: aload_1
+       359: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       362: pop
+       363: iconst_0
+       364: istore        4
+       366: aload_0
+       367: getfield      #123                // Field type:I
+       370: iconst_2
+       371: if_icmpne     657
+       374: aload_0
+       375: iconst_3
+       376: putfield      #32                 // Field dynamicHeightValue:B
+       379: aload_0
+       380: aload_0
+       381: getfield      #55                 // Field baseWidth:I
+       384: aload_0
+       385: getfield      #70                 // Field baseHeight:I
+       388: imul
+       389: newarray       int
+       391: putfield      #132                // Field objCounts:[I
+       394: aload_0
+       395: aload_0
+       396: getfield      #70                 // Field baseHeight:I
+       399: aload_0
+       400: getfield      #55                 // Field baseWidth:I
+       403: imul
+       404: newarray       int
+       406: putfield      #133                // Field objTypes:[I
+       409: aload_0
+       410: iconst_3
+       411: putfield      #92                 // Field dynamicWidthValue:B
+       414: aload_1
+       415: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       418: istore        5
+       420: aload_1
+       421: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       424: istore        6
+       426: iload         5
+       428: iconst_1
+       429: if_icmpne     436
+       432: ldc           #134                // int 268435456
+       434: istore        4
+       436: aload_1
+       437: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       440: istore        7
+       442: iload         6
+       444: iconst_1
+       445: if_icmpne     455
+       448: iload         4
+       450: ldc           #135                // int 1073741824
+       452: ior
+       453: istore        4
+       455: iload         7
+       457: iconst_1
+       458: if_icmpne     468
+       461: iload         4
+       463: ldc           #137                // int -2147483648
+       465: ior
+       466: istore        4
+       468: aload_1
+       469: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       472: istore        8
+       474: iload         8
+       476: iconst_1
+       477: if_icmpne     487
+       480: iload         4
+       482: ldc           #138                // int 536870912
+       484: ior
+       485: istore        4
+       487: aload_0
+       488: aload_1
+       489: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       492: putfield      #56                 // Field invMarginX:I
+       495: aload_0
+       496: aload_1
+       497: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       500: putfield      #69                 // Field invMarginY:I
+       503: aload_0
+       504: bipush        20
+       506: newarray       int
+       508: putfield      #139                // Field invOffsetY:[I
+       511: aload_0
+       512: bipush        20
+       514: newarray       int
+       516: putfield      #140                // Field invOffsetX:[I
+       519: aload_0
+       520: bipush        20
+       522: newarray       int
+       524: putfield      #141                // Field invSprite:[I
+       527: iconst_0
+       528: istore        9
+       530: iload         9
+       532: bipush        20
+       534: if_icmpge     599
+       537: aload_1
+       538: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       541: istore        10
+       543: iload         10
+       545: iconst_1
+       546: if_icmpne     585
+       549: aload_0
+       550: getfield      #140                // Field invOffsetX:[I
+       553: iload         9
+       555: aload_1
+       556: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+       559: iastore
+       560: aload_0
+       561: getfield      #139                // Field invOffsetY:[I
+       564: iload         9
+       566: aload_1
+       567: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+       570: iastore
+       571: aload_0
+       572: getfield      #141                // Field invSprite:[I
+       575: iload         9
+       577: aload_1
+       578: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       581: iastore
+       582: goto          593
+       585: aload_0
+       586: getfield      #141                // Field invSprite:[I
+       589: iload         9
+       591: iconst_m1
+       592: iastore
+       593: iinc          9, 1
+       596: goto          530
+       599: aload_0
+       600: iconst_5
+       601: anewarray     #121                // class rt4/JagString
+       604: putfield      #143                // Field invOptions:[Lrt4/JagString;
+       607: iconst_0
+       608: istore        9
+       610: iload         9
+       612: iconst_5
+       613: if_icmpge     657
+       616: aload_1
+       617: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+       620: astore        10
+       622: aload         10
+       624: invokevirtual #145                // Method rt4/JagString.length:()I
+       627: ifle          651
+       630: aload_0
+       631: getfield      #143                // Field invOptions:[Lrt4/JagString;
+       634: iload         9
+       636: aload         10
+       638: aastore
+       639: iload         4
+       641: iconst_1
+       642: iload         9
+       644: bipush        23
+       646: iadd
+       647: ishl
+       648: ior
+       649: istore        4
+       651: iinc          9, 1
+       654: goto          610
+       657: aload_0
+       658: getfield      #123                // Field type:I
+       661: iconst_3
+       662: if_icmpne     682
+       665: aload_0
+       666: aload_1
+       667: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       670: iconst_1
+       671: if_icmpne     678
+       674: iconst_1
+       675: goto          679
+       678: iconst_0
+       679: putfield      #15                 // Field filled:Z
+       682: aload_0
+       683: getfield      #123                // Field type:I
+       686: iconst_4
+       687: if_icmpeq     698
+       690: aload_0
+       691: getfield      #123                // Field type:I
+       694: iconst_1
+       695: if_icmpne     761
+       698: aload_0
+       699: aload_1
+       700: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       703: putfield      #5                  // Field halign:I
+       706: aload_0
+       707: aload_1
+       708: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       711: putfield      #28                 // Field valign:I
+       714: aload_0
+       715: aload_1
+       716: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       719: putfield      #19                 // Field vpadding:I
+       722: aload_0
+       723: aload_1
+       724: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       727: putfield      #75                 // Field font:I
+       730: aload_0
+       731: getfield      #75                 // Field font:I
+       734: ldc           #126                // int 65535
+       736: if_icmpne     744
+       739: aload_0
+       740: iconst_m1
+       741: putfield      #75                 // Field font:I
+       744: aload_0
+       745: aload_1
+       746: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       749: iconst_1
+       750: if_icmpne     757
+       753: iconst_1
+       754: goto          758
+       757: iconst_0
+       758: putfield      #35                 // Field shadowed:Z
+       761: aload_0
+       762: getfield      #123                // Field type:I
+       765: iconst_4
+       766: if_icmpne     785
+       769: aload_0
+       770: aload_1
+       771: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+       774: putfield      #43                 // Field text:Lrt4/JagString;
+       777: aload_0
+       778: aload_1
+       779: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+       782: putfield      #64                 // Field activeText:Lrt4/JagString;
+       785: aload_0
+       786: getfield      #123                // Field type:I
+       789: iconst_1
+       790: if_icmpeq     809
+       793: aload_0
+       794: getfield      #123                // Field type:I
+       797: iconst_3
+       798: if_icmpeq     809
+       801: aload_0
+       802: getfield      #123                // Field type:I
+       805: iconst_4
+       806: if_icmpne     817
+       809: aload_0
+       810: aload_1
+       811: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       814: putfield      #103                // Field color:I
+       817: aload_0
+       818: getfield      #123                // Field type:I
+       821: iconst_3
+       822: if_icmpeq     833
+       825: aload_0
+       826: getfield      #123                // Field type:I
+       829: iconst_4
+       830: if_icmpne     857
+       833: aload_0
+       834: aload_1
+       835: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       838: putfield      #42                 // Field activeColor:I
+       841: aload_0
+       842: aload_1
+       843: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       846: putfield      #38                 // Field overColor:I
+       849: aload_0
+       850: aload_1
+       851: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       854: putfield      #51                 // Field anInt475:I
+       857: aload_0
+       858: getfield      #123                // Field type:I
+       861: iconst_5
+       862: if_icmpne     881
+       865: aload_0
+       866: aload_1
+       867: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       870: putfield      #18                 // Field spriteId:I
+       873: aload_0
+       874: aload_1
+       875: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       878: putfield      #72                 // Field activeSpriteId:I
+       881: aload_0
+       882: getfield      #123                // Field type:I
+       885: bipush        6
+       887: if_icmpne     1012
+       890: aload_0
+       891: iconst_1
+       892: putfield      #90                 // Field modelType:I
+       895: aload_0
+       896: aload_1
+       897: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       900: putfield      #146                // Field modelId:I
+       903: aload_0
+       904: getfield      #146                // Field modelId:I
+       907: ldc           #126                // int 65535
+       909: if_icmpne     917
+       912: aload_0
+       913: iconst_m1
+       914: putfield      #146                // Field modelId:I
+       917: aload_0
+       918: iconst_1
+       919: putfield      #93                 // Field activeModelType:I
+       922: aload_0
+       923: aload_1
+       924: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       927: putfield      #47                 // Field activeModelId:I
+       930: aload_0
+       931: getfield      #47                 // Field activeModelId:I
+       934: ldc           #126                // int 65535
+       936: if_icmpne     944
+       939: aload_0
+       940: iconst_m1
+       941: putfield      #47                 // Field activeModelId:I
+       944: aload_0
+       945: aload_1
+       946: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       949: putfield      #80                 // Field modelSeqId:I
+       952: aload_0
+       953: getfield      #80                 // Field modelSeqId:I
+       956: ldc           #126                // int 65535
+       958: if_icmpne     966
+       961: aload_0
+       962: iconst_m1
+       963: putfield      #80                 // Field modelSeqId:I
+       966: aload_0
+       967: aload_1
+       968: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       971: putfield      #10                 // Field activeModelSeqId:I
+       974: aload_0
+       975: getfield      #10                 // Field activeModelSeqId:I
+       978: ldc           #126                // int 65535
+       980: if_icmpne     988
+       983: aload_0
+       984: iconst_m1
+       985: putfield      #10                 // Field activeModelSeqId:I
+       988: aload_0
+       989: aload_1
+       990: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       993: putfield      #6                  // Field modelZoom:I
+       996: aload_0
+       997: aload_1
+       998: invokevirtual #124                // Method rt4/Buffer.g2:()I
+      1001: putfield      #12                 // Field modelXAngle:I
+      1004: aload_0
+      1005: aload_1
+      1006: invokevirtual #124                // Method rt4/Buffer.g2:()I
+      1009: putfield      #95                 // Field modelYAngle:I
+      1012: aload_0
+      1013: getfield      #123                // Field type:I
+      1016: bipush        7
+      1018: if_icmpne     1209
+      1021: aload_0
+      1022: iconst_3
+      1023: putfield      #32                 // Field dynamicHeightValue:B
+      1026: aload_0
+      1027: iconst_3
+      1028: putfield      #92                 // Field dynamicWidthValue:B
+      1031: aload_0
+      1032: aload_0
+      1033: getfield      #70                 // Field baseHeight:I
+      1036: aload_0
+      1037: getfield      #55                 // Field baseWidth:I
+      1040: imul
+      1041: newarray       int
+      1043: putfield      #132                // Field objCounts:[I
+      1046: aload_0
+      1047: aload_0
+      1048: getfield      #55                 // Field baseWidth:I
+      1051: aload_0
+      1052: getfield      #70                 // Field baseHeight:I
+      1055: imul
+      1056: newarray       int
+      1058: putfield      #133                // Field objTypes:[I
+      1061: aload_0
+      1062: aload_1
+      1063: invokevirtual #122                // Method rt4/Buffer.g1:()I
+      1066: putfield      #5                  // Field halign:I
+      1069: aload_0
+      1070: aload_1
+      1071: invokevirtual #124                // Method rt4/Buffer.g2:()I
+      1074: putfield      #75                 // Field font:I
+      1077: aload_0
+      1078: getfield      #75                 // Field font:I
+      1081: ldc           #126                // int 65535
+      1083: if_icmpne     1091
+      1086: aload_0
+      1087: iconst_m1
+      1088: putfield      #75                 // Field font:I
+      1091: aload_0
+      1092: aload_1
+      1093: invokevirtual #122                // Method rt4/Buffer.g1:()I
+      1096: iconst_1
+      1097: if_icmpne     1104
+      1100: iconst_1
+      1101: goto          1105
+      1104: iconst_0
+      1105: putfield      #35                 // Field shadowed:Z
+      1108: aload_0
+      1109: aload_1
+      1110: invokevirtual #142                // Method rt4/Buffer.g4:()I
+      1113: putfield      #103                // Field color:I
+      1116: aload_0
+      1117: aload_1
+      1118: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+      1121: putfield      #56                 // Field invMarginX:I
+      1124: aload_0
+      1125: aload_1
+      1126: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+      1129: putfield      #69                 // Field invMarginY:I
+      1132: aload_1
+      1133: invokevirtual #122                // Method rt4/Buffer.g1:()I
+      1136: istore        7
+      1138: iload         7
+      1140: iconst_1
+      1141: if_icmpne     1151
+      1144: iload         4
+      1146: ldc           #135                // int 1073741824
+      1148: ior
+      1149: istore        4
+      1151: aload_0
+      1152: iconst_5
+      1153: anewarray     #121                // class rt4/JagString
+      1156: putfield      #143                // Field invOptions:[Lrt4/JagString;
+      1159: iconst_0
+      1160: istore        8
+      1162: iload         8
+      1164: iconst_5
+      1165: if_icmpge     1209
+      1168: aload_1
+      1169: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+      1172: astore        9
+      1174: aload         9
+      1176: invokevirtual #145                // Method rt4/JagString.length:()I
+      1179: ifle          1203
+      1182: aload_0
+      1183: getfield      #143                // Field invOptions:[Lrt4/JagString;
+      1186: iload         8
+      1188: aload         9
+      1190: aastore
+      1191: iload         4
+      1193: iconst_1
+      1194: iload         8
+      1196: bipush        23
+      1198: iadd
+      1199: ishl
+      1200: ior
+      1201: istore        4
+      1203: iinc          8, 1
+      1206: goto          1162
+      1209: aload_0
+      1210: getfield      #123                // Field type:I
+      1213: bipush        8
+      1215: if_icmpne     1226
+      1218: aload_0
+      1219: aload_1
+      1220: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+      1223: putfield      #43                 // Field text:Lrt4/JagString;
+      1226: aload_0
+      1227: getfield      #104                // Field buttonType:I
+      1230: iconst_2
+      1231: if_icmpeq     1242
+      1234: aload_0
+      1235: getfield      #123                // Field type:I
+      1238: iconst_2
+      1239: if_icmpne     1277
+      1242: aload_0
+      1243: aload_1
+      1244: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+      1247: putfield      #62                 // Field optionCircumfix:Lrt4/JagString;
+      1250: aload_0
+      1251: aload_1
+      1252: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+      1255: putfield      #26                 // Field optionSuffix:Lrt4/JagString;
+      1258: aload_1
+      1259: invokevirtual #124                // Method rt4/Buffer.g2:()I
+      1262: bipush        63
+      1264: iand
+      1265: istore        5
+      1267: iload         4
+      1269: iload         5
+      1271: bipush        11
+      1273: ishl
+      1274: ior
+      1275: istore        4
+      1277: aload_0
+      1278: getfield      #104                // Field buttonType:I
+      1281: iconst_1
+      1282: if_icmpeq     1310
+      1285: aload_0
+      1286: getfield      #104                // Field buttonType:I
+      1289: iconst_4
+      1290: if_icmpeq     1310
+      1293: aload_0
+      1294: getfield      #104                // Field buttonType:I
+      1297: iconst_5
+      1298: if_icmpeq     1310
+      1301: aload_0
+      1302: getfield      #104                // Field buttonType:I
+      1305: bipush        6
+      1307: if_icmpne     1389
+      1310: aload_0
+      1311: aload_1
+      1312: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+      1315: putfield      #82                 // Field option:Lrt4/JagString;
+      1318: aload_0
+      1319: getfield      #82                 // Field option:Lrt4/JagString;
+      1322: invokevirtual #145                // Method rt4/JagString.length:()I
+      1325: ifne          1389
+      1328: aload_0
+      1329: getfield      #104                // Field buttonType:I
+      1332: iconst_1
+      1333: if_icmpne     1343
+      1336: aload_0
+      1337: getstatic     #81                 // Field rt4/LocalizedText.OK:Lrt4/JagString;
+      1340: putfield      #82                 // Field option:Lrt4/JagString;
+      1343: aload_0
+      1344: getfield      #104                // Field buttonType:I
+      1347: iconst_4
+      1348: if_icmpne     1358
+      1351: aload_0
+      1352: getstatic     #147                // Field rt4/LocalizedText.SELECT:Lrt4/JagString;
+      1355: putfield      #82                 // Field option:Lrt4/JagString;
+      1358: aload_0
+      1359: getfield      #104                // Field buttonType:I
+      1362: iconst_5
+      1363: if_icmpne     1373
+      1366: aload_0
+      1367: getstatic     #147                // Field rt4/LocalizedText.SELECT:Lrt4/JagString;
+      1370: putfield      #82                 // Field option:Lrt4/JagString;
+      1373: aload_0
+      1374: getfield      #104                // Field buttonType:I
+      1377: bipush        6
+      1379: if_icmpne     1389
+      1382: aload_0
+      1383: getstatic     #148                // Field rt4/LocalizedText.CONTINUE:Lrt4/JagString;
+      1386: putfield      #82                 // Field option:Lrt4/JagString;
+      1389: aload_0
+      1390: getfield      #104                // Field buttonType:I
+      1393: iconst_1
+      1394: if_icmpeq     1413
+      1397: aload_0
+      1398: getfield      #104                // Field buttonType:I
+      1401: iconst_4
+      1402: if_icmpeq     1413
+      1405: aload_0
+      1406: getfield      #104                // Field buttonType:I
+      1409: iconst_5
+      1410: if_icmpne     1420
+      1413: iload         4
+      1415: ldc           #149                // int 4194304
+      1417: ior
+      1418: istore        4
+      1420: aload_0
+      1421: getfield      #104                // Field buttonType:I
+      1424: bipush        6
+      1426: if_icmpne     1435
+      1429: iload         4
+      1431: iconst_1
+      1432: ior
+      1433: istore        4
+      1435: aload_0
+      1436: new           #150                // class rt4/ServerActiveProperties
+      1439: dup
+      1440: iload         4
+      1442: iconst_m1
+      1443: invokespecial #151                // Method rt4/ServerActiveProperties."<init>":(II)V
+      1446: putfield      #41                 // Field properties:Lrt4/ServerActiveProperties;
+      1449: return
+
+  public final rt4.Sprite method482(int);
+    Code:
+         0: iconst_0
+         1: putstatic     #152                // Field aBoolean72:Z
+         4: iload_1
+         5: iflt          17
+         8: iload_1
+         9: aload_0
+        10: getfield      #141                // Field invSprite:[I
+        13: arraylength
+        14: if_icmplt     19
+        17: aconst_null
+        18: areturn
+        19: aload_0
+        20: getfield      #141                // Field invSprite:[I
+        23: iload_1
+        24: iaload
+        25: istore_2
+        26: iload_2
+        27: iconst_m1
+        28: if_icmpne     33
+        31: aconst_null
+        32: areturn
+        33: getstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+        36: iload_2
+        37: i2l
+        38: invokevirtual #153                // Method rt4/SoftLruHashTable.get:(J)Ljava/lang/Object;
+        41: checkcast     #154                // class rt4/Sprite
+        44: astore_3
+        45: aload_3
+        46: ifnull        51
+        49: aload_3
+        50: areturn
+        51: iload_2
+        52: getstatic     #113                // Field rt4/InterfaceList.aClass153_12:Lrt4/Js5;
+        55: invokestatic  #155                // Method rt4/SpriteLoader.loadSprites:(ILrt4/Js5;)Lrt4/Sprite;
+        58: astore_3
+        59: aload_3
+        60: ifnonnull     70
+        63: iconst_1
+        64: putstatic     #152                // Field aBoolean72:Z
+        67: goto          79
+        70: getstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+        73: aload_3
+        74: iload_2
+        75: i2l
+        76: invokevirtual #156                // Method rt4/SoftLruHashTable.put:(Ljava/lang/Object;J)V
+        79: aload_3
+        80: areturn
+
+  private java.lang.Object[] method485(rt4.Buffer);
+    Code:
+         0: aload_1
+         1: invokevirtual #122                // Method rt4/Buffer.g1:()I
+         4: istore_2
+         5: iload_2
+         6: ifne          11
+         9: aconst_null
+        10: areturn
+        11: iload_2
+        12: anewarray     #157                // class java/lang/Object
+        15: astore_3
+        16: iconst_0
+        17: istore        4
+        19: iload         4
+        21: iload_2
+        22: if_icmpge     70
+        25: aload_1
+        26: invokevirtual #122                // Method rt4/Buffer.g1:()I
+        29: istore        5
+        31: iload         5
+        33: ifne          50
+        36: aload_3
+        37: iload         4
+        39: aload_1
+        40: invokevirtual #142                // Method rt4/Buffer.g4:()I
+        43: invokestatic  #158                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        46: aastore
+        47: goto          64
+        50: iload         5
+        52: iconst_1
+        53: if_icmpne     64
+        56: aload_3
+        57: iload         4
+        59: aload_1
+        60: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+        63: aastore
+        64: iinc          4, 1
+        67: goto          19
+        70: aload_0
+        71: iconst_1
+        72: putfield      #96                 // Field aBoolean25:Z
+        75: aload_3
+        76: areturn
+
+  private int[] method486(rt4.Buffer);
+    Code:
+         0: aload_1
+         1: invokevirtual #122                // Method rt4/Buffer.g1:()I
+         4: istore_2
+         5: iload_2
+         6: ifne          11
+         9: aconst_null
+        10: areturn
+        11: iload_2
+        12: newarray       int
+        14: astore_3
+        15: iconst_0
+        16: istore        4
+        18: iload         4
+        20: iload_2
+        21: if_icmpge     38
+        24: aload_3
+        25: iload         4
+        27: aload_1
+        28: invokevirtual #142                // Method rt4/Buffer.g4:()I
+        31: iastore
+        32: iinc          4, 1
+        35: goto          18
+        38: aload_3
+        39: areturn
+
+  public final void swapObjs(int, int);
+    Code:
+         0: aload_0
+         1: getfield      #133                // Field objTypes:[I
+         4: iload_2
+         5: iaload
+         6: istore_3
+         7: aload_0
+         8: getfield      #133                // Field objTypes:[I
+        11: iload_2
+        12: aload_0
+        13: getfield      #133                // Field objTypes:[I
+        16: iload_1
+        17: iaload
+        18: iastore
+        19: aload_0
+        20: getfield      #133                // Field objTypes:[I
+        23: iload_1
+        24: iload_3
+        25: iastore
+        26: aload_0
+        27: getfield      #132                // Field objCounts:[I
+        30: iload_2
+        31: iaload
+        32: istore        4
+        34: aload_0
+        35: getfield      #132                // Field objCounts:[I
+        38: iload_2
+        39: aload_0
+        40: getfield      #132                // Field objCounts:[I
+        43: iload_1
+        44: iaload
+        45: iastore
+        46: aload_0
+        47: getfield      #132                // Field objCounts:[I
+        50: iload_1
+        51: iload         4
+        53: iastore
+        54: return
+
+  public final rt4.Model method488(int, rt4.SeqType, int, int, boolean, rt4.PlayerAppearance);
+    Code:
+         0: iconst_0
+         1: putstatic     #152                // Field aBoolean72:Z
+         4: iload         5
+         6: ifeq          24
+         9: aload_0
+        10: getfield      #93                 // Field activeModelType:I
+        13: istore        7
+        15: aload_0
+        16: getfield      #47                 // Field activeModelId:I
+        19: istore        8
+        21: goto          36
+        24: aload_0
+        25: getfield      #146                // Field modelId:I
+        28: istore        8
+        30: aload_0
+        31: getfield      #90                 // Field modelType:I
+        34: istore        7
+        36: iload         7
+        38: ifne          43
+        41: aconst_null
+        42: areturn
+        43: iload         7
+        45: iconst_1
+        46: if_icmpne     57
+        49: iload         8
+        51: iconst_m1
+        52: if_icmpne     57
+        55: aconst_null
+        56: areturn
+        57: iload         7
+        59: iconst_1
+        60: if_icmpne     163
+        63: getstatic     #107                // Field models:Lrt4/SoftLruHashTable;
+        66: iload         7
+        68: bipush        16
+        70: ishl
+        71: iload         8
+        73: iadd
+        74: i2l
+        75: invokevirtual #153                // Method rt4/SoftLruHashTable.get:(J)Ljava/lang/Object;
+        78: checkcast     #159                // class rt4/Model
+        81: astore        9
+        83: aload         9
+        85: ifnonnull     144
+        88: getstatic     #160                // Field rt4/InterfaceList.aClass153_85:Lrt4/Js5;
+        91: iload         8
+        93: invokestatic  #161                // Method rt4/RawModel.create:(Lrt4/Js5;I)Lrt4/RawModel;
+        96: astore        10
+        98: aload         10
+       100: ifnonnull     109
+       103: iconst_1
+       104: putstatic     #152                // Field aBoolean72:Z
+       107: aconst_null
+       108: areturn
+       109: aload         10
+       111: bipush        64
+       113: sipush        768
+       116: bipush        -50
+       118: bipush        -10
+       120: bipush        -50
+       122: invokevirtual #162                // Method rt4/RawModel.createModel:(IIIII)Lrt4/Model;
+       125: astore        9
+       127: getstatic     #107                // Field models:Lrt4/SoftLruHashTable;
+       130: aload         9
+       132: iload         8
+       134: iload         7
+       136: bipush        16
+       138: ishl
+       139: iadd
+       140: i2l
+       141: invokevirtual #156                // Method rt4/SoftLruHashTable.put:(Ljava/lang/Object;J)V
+       144: aload_2
+       145: ifnull        160
+       148: aload_2
+       149: aload         9
+       151: iload_1
+       152: iload         4
+       154: iload_3
+       155: invokevirtual #163                // Method rt4/SeqType.method4215:(Lrt4/Model;III)Lrt4/Model;
+       158: astore        9
+       160: aload         9
+       162: areturn
+       163: iload         7
+       165: iconst_2
+       166: if_icmpne     198
+       169: iload         8
+       171: invokestatic  #164                // Method rt4/NpcTypeList.get:(I)Lrt4/NpcType;
+       174: aload_2
+       175: iload         4
+       177: iload_1
+       178: iload_3
+       179: invokevirtual #165                // Method rt4/NpcType.getHeadModel:(Lrt4/SeqType;III)Lrt4/Model;
+       182: astore        9
+       184: aload         9
+       186: ifnonnull     195
+       189: iconst_1
+       190: putstatic     #152                // Field aBoolean72:Z
+       193: aconst_null
+       194: areturn
+       195: aload         9
+       197: areturn
+       198: iload         7
+       200: iconst_3
+       201: if_icmpne     237
+       204: aload         6
+       206: ifnonnull     211
+       209: aconst_null
+       210: areturn
+       211: aload         6
+       213: iload         4
+       215: aload_2
+       216: iload_3
+       217: iload_1
+       218: invokevirtual #166                // Method rt4/PlayerAppearance.method1956:(ILrt4/SeqType;II)Lrt4/Model;
+       221: astore        9
+       223: aload         9
+       225: ifnonnull     234
+       228: iconst_1
+       229: putstatic     #152                // Field aBoolean72:Z
+       232: aconst_null
+       233: areturn
+       234: aload         9
+       236: areturn
+       237: iload         7
+       239: iconst_4
+       240: if_icmpne     278
+       243: iload         8
+       245: invokestatic  #167                // Method rt4/ObjTypeList.get:(I)Lrt4/ObjType;
+       248: astore        10
+       250: aload         10
+       252: iload_1
+       253: iload         4
+       255: aload_2
+       256: bipush        10
+       258: iload_3
+       259: invokevirtual #168                // Method rt4/ObjType.getModel:(IILrt4/SeqType;II)Lrt4/Model;
+       262: astore        11
+       264: aload         11
+       266: ifnonnull     275
+       269: iconst_1
+       270: putstatic     #152                // Field aBoolean72:Z
+       273: aconst_null
+       274: areturn
+       275: aload         11
+       277: areturn
+       278: iload         7
+       280: bipush        6
+       282: if_icmpne     319
+       285: iload         8
+       287: invokestatic  #164                // Method rt4/NpcTypeList.get:(I)Lrt4/NpcType;
+       290: aconst_null
+       291: iconst_0
+       292: iconst_0
+       293: iload_1
+       294: iload         4
+       296: iload_3
+       297: aconst_null
+       298: iconst_0
+       299: aload_2
+       300: invokevirtual #169                // Method rt4/NpcType.getBodyModel:([Lrt4/PathingEntity_Class147;IIIIILrt4/SeqType;ILrt4/SeqType;)Lrt4/Model;
+       303: astore        9
+       305: aload         9
+       307: ifnonnull     316
+       310: iconst_1
+       311: putstatic     #152                // Field aBoolean72:Z
+       314: aconst_null
+       315: areturn
+       316: aload         9
+       318: areturn
+       319: iload         7
+       321: bipush        7
+       323: if_icmpeq     328
+       326: aconst_null
+       327: areturn
+       328: aload         6
+       330: ifnonnull     335
+       333: aconst_null
+       334: areturn
+       335: aload_0
+       336: getfield      #146                // Field modelId:I
+       339: bipush        16
+       341: iushr
+       342: istore        10
+       344: aload_0
+       345: getfield      #146                // Field modelId:I
+       348: ldc           #126                // int 65535
+       350: iand
+       351: istore        11
+       353: aload_0
+       354: getfield      #66                 // Field anInt498:I
+       357: istore        12
+       359: aload         6
+       361: iload_1
+       362: iload         12
+       364: iload         10
+       366: iload         4
+       368: aload_2
+       369: iload_3
+       370: iload         11
+       372: invokevirtual #170                // Method rt4/PlayerAppearance.method1946:(IIIILrt4/SeqType;II)Lrt4/Model;
+       375: astore        13
+       377: aload         13
+       379: ifnonnull     388
+       382: iconst_1
+       383: putstatic     #152                // Field aBoolean72:Z
+       386: aconst_null
+       387: areturn
+       388: aload         13
+       390: areturn
+
+  public final rt4.Sprite method489(boolean);
+    Code:
+         0: iconst_0
+         1: putstatic     #152                // Field aBoolean72:Z
+         4: iload_1
+         5: ifeq          16
+         8: aload_0
+         9: getfield      #72                 // Field activeSpriteId:I
+        12: istore_2
+        13: goto          21
+        16: aload_0
+        17: getfield      #18                 // Field spriteId:I
+        20: istore_2
+        21: iload_2
+        22: iconst_m1
+        23: if_icmpne     28
+        26: aconst_null
+        27: areturn
+        28: aload_0
+        29: getfield      #171                // Field vFlip:Z
+        32: ifeq          39
+        35: lconst_1
+        36: goto          40
+        39: lconst_0
+        40: bipush        38
+        42: lshl
+        43: aload_0
+        44: getfield      #58                 // Field hasAlpha:Z
+        47: ifeq          54
+        50: lconst_1
+        51: goto          55
+        54: lconst_0
+        55: bipush        35
+        57: lshl
+        58: ladd
+        59: iload_2
+        60: i2l
+        61: ladd
+        62: aload_0
+        63: getfield      #65                 // Field outlineThickness:I
+        66: i2l
+        67: bipush        36
+        69: lshl
+        70: ladd
+        71: aload_0
+        72: getfield      #172                // Field hFlip:Z
+        75: ifeq          82
+        78: lconst_1
+        79: goto          83
+        82: lconst_0
+        83: bipush        39
+        85: lshl
+        86: ladd
+        87: aload_0
+        88: getfield      #87                 // Field shadowColor:I
+        91: i2l
+        92: bipush        40
+        94: lshl
+        95: ladd
+        96: lstore_3
+        97: getstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+       100: lload_3
+       101: invokevirtual #153                // Method rt4/SoftLruHashTable.get:(J)Ljava/lang/Object;
+       104: checkcast     #154                // class rt4/Sprite
+       107: astore        5
+       109: aload         5
+       111: ifnull        117
+       114: aload         5
+       116: areturn
+       117: aload_0
+       118: getfield      #58                 // Field hasAlpha:Z
+       121: ifeq          136
+       124: getstatic     #113                // Field rt4/InterfaceList.aClass153_12:Lrt4/Js5;
+       127: iload_2
+       128: invokestatic  #173                // Method rt4/SoftwareSprite.loadSoftwareAlphaSprite:(Lrt4/Js5;I)Lrt4/SoftwareSprite;
+       131: astore        6
+       133: goto          146
+       136: iconst_0
+       137: getstatic     #113                // Field rt4/InterfaceList.aClass153_12:Lrt4/Js5;
+       140: iload_2
+       141: invokestatic  #174                // Method rt4/SpriteLoader.loadSoftwareSprite:(ILrt4/Js5;I)Lrt4/SoftwareSprite;
+       144: astore        6
+       146: aload         6
+       148: ifnonnull     157
+       151: iconst_1
+       152: putstatic     #152                // Field aBoolean72:Z
+       155: aconst_null
+       156: areturn
+       157: aload_0
+       158: getfield      #171                // Field vFlip:Z
+       161: ifeq          169
+       164: aload         6
+       166: invokevirtual #175                // Method rt4/SoftwareSprite.method309:()V
+       169: aload_0
+       170: getfield      #172                // Field hFlip:Z
+       173: ifeq          181
+       176: aload         6
+       178: invokevirtual #176                // Method rt4/SoftwareSprite.method299:()V
+       181: aload_0
+       182: getfield      #65                 // Field outlineThickness:I
+       185: ifle          197
+       188: aload         6
+       190: aload_0
+       191: getfield      #65                 // Field outlineThickness:I
+       194: invokevirtual #177                // Method rt4/SoftwareSprite.method298:(I)V
+       197: aload_0
+       198: getfield      #65                 // Field outlineThickness:I
+       201: iconst_1
+       202: if_icmplt     211
+       205: aload         6
+       207: iconst_1
+       208: invokevirtual #178                // Method rt4/SoftwareSprite.drawOutline:(I)V
+       211: aload_0
+       212: getfield      #65                 // Field outlineThickness:I
+       215: iconst_2
+       216: if_icmplt     226
+       219: aload         6
+       221: ldc           #179                // int 16777215
+       223: invokevirtual #178                // Method rt4/SoftwareSprite.drawOutline:(I)V
+       226: aload_0
+       227: getfield      #87                 // Field shadowColor:I
+       230: ifeq          242
+       233: aload         6
+       235: aload_0
+       236: getfield      #87                 // Field shadowColor:I
+       239: invokevirtual #180                // Method rt4/SoftwareSprite.drawShadow:(I)V
+       242: getstatic     #181                // Field rt4/GlRenderer.enabled:Z
+       245: ifne          255
+       248: aload         6
+       250: astore        5
+       252: goto          288
+       255: aload         6
+       257: instanceof    #182                // class rt4/SoftwareAlphaSprite
+       260: ifeq          277
+       263: new           #183                // class rt4/GlAlphaSprite
+       266: dup
+       267: aload         6
+       269: invokespecial #184                // Method rt4/GlAlphaSprite."<init>":(Lrt4/SoftwareSprite;)V
+       272: astore        5
+       274: goto          288
+       277: new           #185                // class rt4/GlSprite
+       280: dup
+       281: aload         6
+       283: invokespecial #186                // Method rt4/GlSprite."<init>":(Lrt4/SoftwareSprite;)V
+       286: astore        5
+       288: getstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+       291: aload         5
+       293: lload_3
+       294: invokevirtual #156                // Method rt4/SoftLruHashTable.put:(Ljava/lang/Object;J)V
+       297: aload         5
+       299: areturn
+
+  public final void decodeIf3(rt4.Buffer);
+    Code:
+         0: aload_0
+         1: iconst_1
+         2: putfield      #39                 // Field if3:Z
+         5: aload_1
+         6: dup
+         7: getfield      #187                // Field rt4/Buffer.offset:I
+        10: iconst_1
+        11: iadd
+        12: putfield      #187                // Field rt4/Buffer.offset:I
+        15: aload_0
+        16: aload_1
+        17: invokevirtual #122                // Method rt4/Buffer.g1:()I
+        20: putfield      #123                // Field type:I
+        23: aload_0
+        24: getfield      #123                // Field type:I
+        27: sipush        128
+        30: iand
+        31: ifeq          50
+        34: aload_0
+        35: dup
+        36: getfield      #123                // Field type:I
+        39: bipush        127
+        41: iand
+        42: putfield      #123                // Field type:I
+        45: aload_1
+        46: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+        49: pop
+        50: aload_0
+        51: aload_1
+        52: invokevirtual #124                // Method rt4/Buffer.g2:()I
+        55: putfield      #86                 // Field clientCode:I
+        58: aload_0
+        59: aload_1
+        60: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+        63: putfield      #97                 // Field baseX:I
+        66: aload_0
+        67: aload_1
+        68: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+        71: putfield      #99                 // Field baseY:I
+        74: aload_0
+        75: aload_1
+        76: invokevirtual #124                // Method rt4/Buffer.g2:()I
+        79: putfield      #55                 // Field baseWidth:I
+        82: aload_0
+        83: aload_1
+        84: invokevirtual #124                // Method rt4/Buffer.g2:()I
+        87: putfield      #70                 // Field baseHeight:I
+        90: aload_0
+        91: aload_1
+        92: invokevirtual #188                // Method rt4/Buffer.g1b:()B
+        95: putfield      #92                 // Field dynamicWidthValue:B
+        98: aload_0
+        99: aload_1
+       100: invokevirtual #188                // Method rt4/Buffer.g1b:()B
+       103: putfield      #32                 // Field dynamicHeightValue:B
+       106: aload_0
+       107: aload_1
+       108: invokevirtual #188                // Method rt4/Buffer.g1b:()B
+       111: putfield      #73                 // Field yMode:B
+       114: aload_0
+       115: aload_1
+       116: invokevirtual #188                // Method rt4/Buffer.g1b:()B
+       119: putfield      #7                  // Field xMode:B
+       122: aload_0
+       123: aload_1
+       124: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       127: putfield      #48                 // Field overlayer:I
+       130: aload_0
+       131: getfield      #48                 // Field overlayer:I
+       134: ldc           #126                // int 65535
+       136: if_icmpne     147
+       139: aload_0
+       140: iconst_m1
+       141: putfield      #48                 // Field overlayer:I
+       144: goto          163
+       147: aload_0
+       148: aload_0
+       149: getfield      #71                 // Field id:I
+       152: ldc           #127                // int -65536
+       154: iand
+       155: aload_0
+       156: getfield      #48                 // Field overlayer:I
+       159: iadd
+       160: putfield      #48                 // Field overlayer:I
+       163: aload_0
+       164: aload_1
+       165: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       168: iconst_1
+       169: if_icmpne     176
+       172: iconst_1
+       173: goto          177
+       176: iconst_0
+       177: putfield      #20                 // Field hidden:Z
+       180: aload_0
+       181: getfield      #123                // Field type:I
+       184: ifne          220
+       187: aload_0
+       188: aload_1
+       189: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       192: putfield      #76                 // Field scrollMaxH:I
+       195: aload_0
+       196: aload_1
+       197: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       200: putfield      #33                 // Field scrollMaxV:I
+       203: aload_0
+       204: aload_1
+       205: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       208: iconst_1
+       209: if_icmpne     216
+       212: iconst_1
+       213: goto          217
+       216: iconst_0
+       217: putfield      #46                 // Field noClickThrough:Z
+       220: aload_0
+       221: getfield      #123                // Field type:I
+       224: iconst_5
+       225: if_icmpne     337
+       228: aload_0
+       229: aload_1
+       230: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       233: putfield      #18                 // Field spriteId:I
+       236: aload_0
+       237: aload_1
+       238: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       241: putfield      #79                 // Field angle2d:I
+       244: aload_1
+       245: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       248: istore_2
+       249: aload_0
+       250: iload_2
+       251: iconst_2
+       252: iand
+       253: ifeq          260
+       256: iconst_1
+       257: goto          261
+       260: iconst_0
+       261: putfield      #58                 // Field hasAlpha:Z
+       264: aload_0
+       265: iload_2
+       266: iconst_1
+       267: iand
+       268: ifeq          275
+       271: iconst_1
+       272: goto          276
+       275: iconst_0
+       276: putfield      #2                  // Field spriteTiling:Z
+       279: aload_0
+       280: aload_1
+       281: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       284: putfield      #60                 // Field alpha:I
+       287: aload_0
+       288: aload_1
+       289: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       292: putfield      #65                 // Field outlineThickness:I
+       295: aload_0
+       296: aload_1
+       297: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       300: putfield      #87                 // Field shadowColor:I
+       303: aload_0
+       304: aload_1
+       305: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       308: iconst_1
+       309: if_icmpne     316
+       312: iconst_1
+       313: goto          317
+       316: iconst_0
+       317: putfield      #171                // Field vFlip:Z
+       320: aload_0
+       321: aload_1
+       322: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       325: iconst_1
+       326: if_icmpne     333
+       329: iconst_1
+       330: goto          334
+       333: iconst_0
+       334: putfield      #172                // Field hFlip:Z
+       337: aload_0
+       338: getfield      #123                // Field type:I
+       341: bipush        6
+       343: if_icmpne     525
+       346: aload_0
+       347: iconst_1
+       348: putfield      #90                 // Field modelType:I
+       351: aload_0
+       352: aload_1
+       353: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       356: putfield      #146                // Field modelId:I
+       359: aload_0
+       360: getfield      #146                // Field modelId:I
+       363: ldc           #126                // int 65535
+       365: if_icmpne     373
+       368: aload_0
+       369: iconst_m1
+       370: putfield      #146                // Field modelId:I
+       373: aload_0
+       374: aload_1
+       375: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+       378: putfield      #68                 // Field anInt495:I
+       381: aload_0
+       382: aload_1
+       383: invokevirtual #125                // Method rt4/Buffer.g2b:()I
+       386: putfield      #13                 // Field anInt481:I
+       389: aload_0
+       390: aload_1
+       391: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       394: putfield      #12                 // Field modelXAngle:I
+       397: aload_0
+       398: aload_1
+       399: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       402: putfield      #95                 // Field modelYAngle:I
+       405: aload_0
+       406: aload_1
+       407: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       410: putfield      #83                 // Field modelYOffset:I
+       413: aload_0
+       414: aload_1
+       415: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       418: putfield      #6                  // Field modelZoom:I
+       421: aload_0
+       422: aload_1
+       423: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       426: putfield      #80                 // Field modelSeqId:I
+       429: aload_0
+       430: getfield      #80                 // Field modelSeqId:I
+       433: ldc           #126                // int 65535
+       435: if_icmpne     443
+       438: aload_0
+       439: iconst_m1
+       440: putfield      #80                 // Field modelSeqId:I
+       443: aload_0
+       444: aload_1
+       445: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       448: iconst_1
+       449: if_icmpne     456
+       452: iconst_1
+       453: goto          457
+       456: iconst_0
+       457: putfield      #14                 // Field modelOrtho:Z
+       460: aload_0
+       461: aload_1
+       462: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       465: i2s
+       466: putfield      #78                 // Field aShort11:S
+       469: aload_0
+       470: aload_1
+       471: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       474: i2s
+       475: putfield      #11                 // Field aShort10:S
+       478: aload_0
+       479: aload_1
+       480: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       483: iconst_1
+       484: if_icmpne     491
+       487: iconst_1
+       488: goto          492
+       491: iconst_0
+       492: putfield      #91                 // Field aBoolean34:Z
+       495: aload_0
+       496: getfield      #92                 // Field dynamicWidthValue:B
+       499: ifeq          510
+       502: aload_0
+       503: aload_1
+       504: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       507: putfield      #59                 // Field anInt451:I
+       510: aload_0
+       511: getfield      #32                 // Field dynamicHeightValue:B
+       514: ifeq          525
+       517: aload_0
+       518: aload_1
+       519: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       522: putfield      #94                 // Field anInt526:I
+       525: aload_0
+       526: getfield      #123                // Field type:I
+       529: iconst_4
+       530: if_icmpne     612
+       533: aload_0
+       534: aload_1
+       535: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       538: putfield      #75                 // Field font:I
+       541: aload_0
+       542: getfield      #75                 // Field font:I
+       545: ldc           #126                // int 65535
+       547: if_icmpne     555
+       550: aload_0
+       551: iconst_m1
+       552: putfield      #75                 // Field font:I
+       555: aload_0
+       556: aload_1
+       557: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+       560: putfield      #43                 // Field text:Lrt4/JagString;
+       563: aload_0
+       564: aload_1
+       565: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       568: putfield      #19                 // Field vpadding:I
+       571: aload_0
+       572: aload_1
+       573: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       576: putfield      #5                  // Field halign:I
+       579: aload_0
+       580: aload_1
+       581: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       584: putfield      #28                 // Field valign:I
+       587: aload_0
+       588: aload_1
+       589: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       592: iconst_1
+       593: if_icmpne     600
+       596: iconst_1
+       597: goto          601
+       600: iconst_0
+       601: putfield      #35                 // Field shadowed:Z
+       604: aload_0
+       605: aload_1
+       606: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       609: putfield      #103                // Field color:I
+       612: aload_0
+       613: getfield      #123                // Field type:I
+       616: iconst_3
+       617: if_icmpne     653
+       620: aload_0
+       621: aload_1
+       622: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       625: putfield      #103                // Field color:I
+       628: aload_0
+       629: aload_1
+       630: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       633: iconst_1
+       634: if_icmpne     641
+       637: iconst_1
+       638: goto          642
+       641: iconst_0
+       642: putfield      #15                 // Field filled:Z
+       645: aload_0
+       646: aload_1
+       647: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       650: putfield      #60                 // Field alpha:I
+       653: aload_0
+       654: getfield      #123                // Field type:I
+       657: bipush        9
+       659: if_icmpne     695
+       662: aload_0
+       663: aload_1
+       664: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       667: putfield      #21                 // Field lineWidth:I
+       670: aload_0
+       671: aload_1
+       672: invokevirtual #142                // Method rt4/Buffer.g4:()I
+       675: putfield      #103                // Field color:I
+       678: aload_0
+       679: aload_1
+       680: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       683: iconst_1
+       684: if_icmpne     691
+       687: iconst_1
+       688: goto          692
+       691: iconst_0
+       692: putfield      #30                 // Field aBoolean20:Z
+       695: aload_1
+       696: invokevirtual #189                // Method rt4/Buffer.g3:()I
+       699: istore_2
+       700: aload_1
+       701: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       704: istore_3
+       705: iload_3
+       706: ifeq          816
+       709: aload_0
+       710: bipush        10
+       712: newarray       int
+       714: putfield      #190                // Field anIntArray46:[I
+       717: aload_0
+       718: bipush        10
+       720: newarray       byte
+       722: putfield      #191                // Field aByteArray8:[B
+       725: aload_0
+       726: bipush        10
+       728: newarray       byte
+       730: putfield      #192                // Field aByteArray7:[B
+       733: iload_3
+       734: ifeq          816
+       737: iload_3
+       738: iconst_4
+       739: ishr
+       740: iconst_1
+       741: isub
+       742: istore        4
+       744: aload_1
+       745: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       748: iload_3
+       749: bipush        8
+       751: ishl
+       752: ior
+       753: istore_3
+       754: iload_3
+       755: sipush        4095
+       758: iand
+       759: istore_3
+       760: iload_3
+       761: sipush        4095
+       764: if_icmpne     778
+       767: aload_0
+       768: getfield      #190                // Field anIntArray46:[I
+       771: iload         4
+       773: iconst_m1
+       774: iastore
+       775: goto          786
+       778: aload_0
+       779: getfield      #190                // Field anIntArray46:[I
+       782: iload         4
+       784: iload_3
+       785: iastore
+       786: aload_0
+       787: getfield      #191                // Field aByteArray8:[B
+       790: iload         4
+       792: aload_1
+       793: invokevirtual #188                // Method rt4/Buffer.g1b:()B
+       796: bastore
+       797: aload_0
+       798: getfield      #192                // Field aByteArray7:[B
+       801: iload         4
+       803: aload_1
+       804: invokevirtual #188                // Method rt4/Buffer.g1b:()B
+       807: bastore
+       808: aload_1
+       809: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       812: istore_3
+       813: goto          733
+       816: aload_0
+       817: aload_1
+       818: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+       821: putfield      #53                 // Field optionBase:Lrt4/JagString;
+       824: aload_1
+       825: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       828: istore        4
+       830: iload         4
+       832: bipush        15
+       834: iand
+       835: istore        5
+       837: iload         5
+       839: ifle          878
+       842: aload_0
+       843: iload         5
+       845: anewarray     #121                // class rt4/JagString
+       848: putfield      #120                // Field ops:[Lrt4/JagString;
+       851: iconst_0
+       852: istore        6
+       854: iload         6
+       856: iload         5
+       858: if_icmpge     878
+       861: aload_0
+       862: getfield      #120                // Field ops:[Lrt4/JagString;
+       865: iload         6
+       867: aload_1
+       868: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+       871: aastore
+       872: iinc          6, 1
+       875: goto          854
+       878: iload         4
+       880: iconst_4
+       881: ishr
+       882: istore        7
+       884: iload         7
+       886: ifle          943
+       889: aload_1
+       890: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       893: istore        6
+       895: aload_0
+       896: iload         6
+       898: iconst_1
+       899: iadd
+       900: newarray       int
+       902: putfield      #111                // Field anIntArray39:[I
+       905: iconst_0
+       906: istore        8
+       908: iload         8
+       910: aload_0
+       911: getfield      #111                // Field anIntArray39:[I
+       914: arraylength
+       915: if_icmpge     932
+       918: aload_0
+       919: getfield      #111                // Field anIntArray39:[I
+       922: iload         8
+       924: iconst_m1
+       925: iastore
+       926: iinc          8, 1
+       929: goto          908
+       932: aload_0
+       933: getfield      #111                // Field anIntArray39:[I
+       936: iload         6
+       938: aload_1
+       939: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       942: iastore
+       943: iload         7
+       945: iconst_1
+       946: if_icmple     966
+       949: aload_1
+       950: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       953: istore        6
+       955: aload_0
+       956: getfield      #111                // Field anIntArray39:[I
+       959: iload         6
+       961: aload_1
+       962: invokevirtual #124                // Method rt4/Buffer.g2:()I
+       965: iastore
+       966: aload_0
+       967: aload_1
+       968: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       971: putfield      #9                  // Field dragDeadzone:I
+       974: aload_0
+       975: aload_1
+       976: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       979: putfield      #16                 // Field dragDeadtime:I
+       982: aload_0
+       983: aload_1
+       984: invokevirtual #122                // Method rt4/Buffer.g1:()I
+       987: iconst_1
+       988: if_icmpne     995
+       991: iconst_1
+       992: goto          996
+       995: iconst_0
+       996: putfield      #34                 // Field dragRenderBehavior:Z
+       999: iconst_m1
+      1000: istore        6
+      1002: aload_0
+      1003: aload_1
+      1004: invokevirtual #144                // Method rt4/Buffer.gjstr:()Lrt4/JagString;
+      1007: putfield      #62                 // Field optionCircumfix:Lrt4/JagString;
+      1010: iload_2
+      1011: invokestatic  #193                // Method rt4/ServerActiveProperties.getTargetMask:(I)I
+      1014: ifeq          1077
+      1017: aload_1
+      1018: invokevirtual #124                // Method rt4/Buffer.g2:()I
+      1021: istore        6
+      1023: aload_0
+      1024: aload_1
+      1025: invokevirtual #124                // Method rt4/Buffer.g2:()I
+      1028: putfield      #31                 // Field anInt499:I
+      1031: iload         6
+      1033: ldc           #126                // int 65535
+      1035: if_icmpne     1041
+      1038: iconst_m1
+      1039: istore        6
+      1041: aload_0
+      1042: getfield      #31                 // Field anInt499:I
+      1045: ldc           #126                // int 65535
+      1047: if_icmpne     1055
+      1050: aload_0
+      1051: iconst_m1
+      1052: putfield      #31                 // Field anInt499:I
+      1055: aload_0
+      1056: aload_1
+      1057: invokevirtual #124                // Method rt4/Buffer.g2:()I
+      1060: putfield      #22                 // Field anInt484:I
+      1063: aload_0
+      1064: getfield      #22                 // Field anInt484:I
+      1067: ldc           #126                // int 65535
+      1069: if_icmpne     1077
+      1072: aload_0
+      1073: iconst_m1
+      1074: putfield      #22                 // Field anInt484:I
+      1077: aload_0
+      1078: new           #150                // class rt4/ServerActiveProperties
+      1081: dup
+      1082: iload_2
+      1083: iload         6
+      1085: invokespecial #151                // Method rt4/ServerActiveProperties."<init>":(II)V
+      1088: putfield      #41                 // Field properties:Lrt4/ServerActiveProperties;
+      1091: aload_0
+      1092: aload_0
+      1093: aload_1
+      1094: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1097: putfield      #195                // Field anObjectArray3:[Ljava/lang/Object;
+      1100: aload_0
+      1101: aload_0
+      1102: aload_1
+      1103: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1106: putfield      #196                // Field onMouseOver:[Ljava/lang/Object;
+      1109: aload_0
+      1110: aload_0
+      1111: aload_1
+      1112: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1115: putfield      #197                // Field onMouseLeave:[Ljava/lang/Object;
+      1118: aload_0
+      1119: aload_0
+      1120: aload_1
+      1121: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1124: putfield      #198                // Field onUseWith:[Ljava/lang/Object;
+      1127: aload_0
+      1128: aload_0
+      1129: aload_1
+      1130: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1133: putfield      #199                // Field onUse:[Ljava/lang/Object;
+      1136: aload_0
+      1137: aload_0
+      1138: aload_1
+      1139: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1142: putfield      #200                // Field onVarpTransmit:[Ljava/lang/Object;
+      1145: aload_0
+      1146: aload_0
+      1147: aload_1
+      1148: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1151: putfield      #201                // Field onInvTransmit:[Ljava/lang/Object;
+      1154: aload_0
+      1155: aload_0
+      1156: aload_1
+      1157: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1160: putfield      #202                // Field onStatTransmit:[Ljava/lang/Object;
+      1163: aload_0
+      1164: aload_0
+      1165: aload_1
+      1166: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1169: putfield      #203                // Field onTimer:[Ljava/lang/Object;
+      1172: aload_0
+      1173: aload_0
+      1174: aload_1
+      1175: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1178: putfield      #204                // Field onOptionClick:[Ljava/lang/Object;
+      1181: aload_0
+      1182: aload_0
+      1183: aload_1
+      1184: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1187: putfield      #205                // Field onMouseRepeat:[Ljava/lang/Object;
+      1190: aload_0
+      1191: aload_0
+      1192: aload_1
+      1193: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1196: putfield      #206                // Field onClickRepeat:[Ljava/lang/Object;
+      1199: aload_0
+      1200: aload_0
+      1201: aload_1
+      1202: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1205: putfield      #207                // Field onDrag:[Ljava/lang/Object;
+      1208: aload_0
+      1209: aload_0
+      1210: aload_1
+      1211: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1214: putfield      #208                // Field onRelease:[Ljava/lang/Object;
+      1217: aload_0
+      1218: aload_0
+      1219: aload_1
+      1220: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1223: putfield      #209                // Field onHold:[Ljava/lang/Object;
+      1226: aload_0
+      1227: aload_0
+      1228: aload_1
+      1229: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1232: putfield      #210                // Field onDragStart:[Ljava/lang/Object;
+      1235: aload_0
+      1236: aload_0
+      1237: aload_1
+      1238: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1241: putfield      #211                // Field onDragRelease:[Ljava/lang/Object;
+      1244: aload_0
+      1245: aload_0
+      1246: aload_1
+      1247: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1250: putfield      #212                // Field onScroll:[Ljava/lang/Object;
+      1253: aload_0
+      1254: aload_0
+      1255: aload_1
+      1256: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1259: putfield      #213                // Field onVarcTransmit:[Ljava/lang/Object;
+      1262: aload_0
+      1263: aload_0
+      1264: aload_1
+      1265: invokespecial #194                // Method method485:(Lrt4/Buffer;)[Ljava/lang/Object;
+      1268: putfield      #214                // Field onVarcstrTransmit:[Ljava/lang/Object;
+      1271: aload_0
+      1272: aload_0
+      1273: aload_1
+      1274: invokespecial #215                // Method method486:(Lrt4/Buffer;)[I
+      1277: putfield      #216                // Field varpTriggers:[I
+      1280: aload_0
+      1281: aload_0
+      1282: aload_1
+      1283: invokespecial #215                // Method method486:(Lrt4/Buffer;)[I
+      1286: putfield      #217                // Field inventoryTriggers:[I
+      1289: aload_0
+      1290: aload_0
+      1291: aload_1
+      1292: invokespecial #215                // Method method486:(Lrt4/Buffer;)[I
+      1295: putfield      #218                // Field statTriggers:[I
+      1298: aload_0
+      1299: aload_0
+      1300: aload_1
+      1301: invokespecial #215                // Method method486:(Lrt4/Buffer;)[I
+      1304: putfield      #219                // Field varcTriggers:[I
+      1307: aload_0
+      1308: aload_0
+      1309: aload_1
+      1310: invokespecial #215                // Method method486:(Lrt4/Buffer;)[I
+      1313: putfield      #220                // Field varcstrTriggers:[I
+      1316: return
+
+  public final rt4.Font method491(rt4.IndexedSprite[]);
+    Code:
+         0: iconst_0
+         1: putstatic     #152                // Field aBoolean72:Z
+         4: aload_0
+         5: getfield      #75                 // Field font:I
+         8: iconst_m1
+         9: if_icmpne     14
+        12: aconst_null
+        13: areturn
+        14: getstatic     #108                // Field fonts:Lrt4/SoftLruHashTable;
+        17: aload_0
+        18: getfield      #75                 // Field font:I
+        21: i2l
+        22: invokevirtual #153                // Method rt4/SoftLruHashTable.get:(J)Ljava/lang/Object;
+        25: checkcast     #221                // class rt4/Font
+        28: astore_2
+        29: aload_2
+        30: ifnull        35
+        33: aload_2
+        34: areturn
+        35: aload_0
+        36: getfield      #75                 // Field font:I
+        39: getstatic     #113                // Field rt4/InterfaceList.aClass153_12:Lrt4/Js5;
+        42: getstatic     #222                // Field rt4/InterfaceList.aClass153_64:Lrt4/Js5;
+        45: invokestatic  #223                // Method rt4/Font.method2462:(ILrt4/Js5;Lrt4/Js5;)Lrt4/Font;
+        48: astore_2
+        49: aload_2
+        50: ifnonnull     60
+        53: iconst_1
+        54: putstatic     #152                // Field aBoolean72:Z
+        57: goto          78
+        60: aload_2
+        61: aload_1
+        62: aconst_null
+        63: invokevirtual #224                // Method rt4/Font.setNameIcons:([Lrt4/IndexedSprite;[I)V
+        66: getstatic     #108                // Field fonts:Lrt4/SoftLruHashTable;
+        69: aload_2
+        70: aload_0
+        71: getfield      #75                 // Field font:I
+        74: i2l
+        75: invokevirtual #156                // Method rt4/SoftLruHashTable.put:(Ljava/lang/Object;J)V
+        78: aload_2
+        79: areturn
+
+  static {};
+    Code:
+         0: new           #225                // class rt4/SoftLruHashTable
+         3: dup
+         4: sipush        200
+         7: invokespecial #226                // Method rt4/SoftLruHashTable."<init>":(I)V
+        10: putstatic     #105                // Field sprites:Lrt4/SoftLruHashTable;
+        13: new           #225                // class rt4/SoftLruHashTable
+        16: dup
+        17: bipush        50
+        19: invokespecial #226                // Method rt4/SoftLruHashTable."<init>":(I)V
+        22: putstatic     #107                // Field models:Lrt4/SoftLruHashTable;
+        25: new           #225                // class rt4/SoftLruHashTable
+        28: dup
+        29: bipush        20
+        31: invokespecial #226                // Method rt4/SoftLruHashTable."<init>":(I)V
+        34: putstatic     #108                // Field fonts:Lrt4/SoftLruHashTable;
+        37: iconst_0
+        38: putstatic     #152                // Field aBoolean72:Z
+        41: ldc           #227                // String
+        43: invokestatic  #228                // Method rt4/JagString.parse:(Ljava/lang/String;)Lrt4/JagString;
+        46: putstatic     #25                 // Field EMPTY_STRING:Lrt4/JagString;
+        49: new           #150                // class rt4/ServerActiveProperties
+        52: dup
+        53: iconst_0
+        54: iconst_m1
+        55: invokespecial #151                // Method rt4/ServerActiveProperties."<init>":(II)V
+        58: putstatic     #40                 // Field DEFAULT_SERVER_ACTIVE_PROPERTIES:Lrt4/ServerActiveProperties;
+        61: return
+}

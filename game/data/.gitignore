@@ -1,0 +1,8 @@
+# 2009scape save-sync repo — track progress/save data only.
+# The static game cache ships with the install (same on every PC) and its
+# files can exceed GitHub's 100 MB limit, so never sync it.
+cache/
+
+# Logs and transient files
+logs/
+*.log

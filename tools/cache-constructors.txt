@@ -1,0 +1,113 @@
+﻿Compiled from "BufferedFile.java"
+public final class rt4.BufferedFile {
+  private long physicalPosition;
+  private int readLen;
+  private long writePosition;
+  private int writeLen;
+  private long readPosition;
+  private final rt4.FileOnDisk file;
+  private long physicalLength;
+  private long virtualLength;
+  private final byte[] writeBuffer;
+  private final byte[] readBuffer;
+  private long virtualPosition;
+  public rt4.BufferedFile(rt4.FileOnDisk, int, int) throws java.io.IOException;
+  private void flush() throws java.io.IOException;
+  public final long length();
+  private java.io.File getFile();
+  public final void read(int, byte[], int) throws java.io.IOException;
+  public final void method1455() throws java.io.IOException;
+  private void fill() throws java.io.IOException;
+  public final void read(byte[]) throws java.io.IOException;
+  public final void write(byte[], int, int) throws java.io.IOException;
+  public final void seek(long) throws java.io.IOException;
+}
+Compiled from "FileOnDisk.java"
+public final class rt4.FileOnDisk {
+  private java.io.RandomAccessFile randomAccessFile;
+  private final java.io.File file;
+  private final long maxLength;
+  private long offset;
+  public rt4.FileOnDisk(java.io.File, java.lang.String, long) throws java.io.IOException;
+  public final void seek(long) throws java.io.IOException;
+  public final void finalize() throws java.lang.Throwable;
+  public final void write(byte[], int, int) throws java.io.IOException;
+  public final int read(int, int, byte[]) throws java.io.IOException;
+  public final void close() throws java.io.IOException;
+  public final long length() throws java.io.IOException;
+  public final java.io.File getFile();
+}
+Compiled from "Cache.java"
+public final class rt4.Cache {
+  public static final byte[] buffer;
+  private rt4.BufferedFile data;
+  private rt4.BufferedFile index;
+  private int maxLen;
+  private final int archive;
+  public rt4.Cache(int, rt4.BufferedFile, rt4.BufferedFile, int);
+  public final java.lang.String toString();
+  public final boolean write(int, int, byte[]);
+  public final byte[] read(int);
+  private boolean write(int, int, byte[], boolean);
+  static {};
+}
+Compiled from "Js5Index.java"
+public final class rt4.Js5Index {
+  public int[][] fileNameHashes;
+  public int[] groupChecksums;
+  public int size;
+  public rt4.IntHashTable groupNameHashTable;
+  public int[] groupIds;
+  public int[] groupCapacities;
+  public int[] groupNameHashes;
+  public int[] groupSizes;
+  public int[] groupVersions;
+  public int[][] fileIds;
+  public int capacity;
+  public int version;
+  public rt4.IntHashTable[] fileNameHashTables;
+  public final int checksum;
+  public rt4.Js5Index(byte[], int);
+  private void method2293(byte[]);
+}
+Compiled from "Js5.java"
+public final class rt4.Js5 {
+  public static final boolean RAISE_EXCEPTIONS;
+  private java.lang.Object[][] unpacked;
+  private java.lang.Object[] packed;
+  private rt4.Js5Index index;
+  private final rt4.Js5ResourceProvider provider;
+  private final boolean discardPacked;
+  private final boolean discardUnpacked;
+  public rt4.Js5(rt4.Js5ResourceProvider, boolean, boolean);
+  public final boolean fetchAll();
+  private int getPercentageComplete(int);
+  public final void discardNames(boolean);
+  public final int getPercentageComplete(rt4.JagString);
+  public final boolean isGroupReady(int);
+  public final int getChecksum();
+  public final int getGroupId(rt4.JagString);
+  public final int capacity();
+  private boolean isIndexReady();
+  public final byte[] fetchFile(rt4.JagString, rt4.JagString);
+  public final void prefetchGroup(rt4.JagString);
+  public final boolean isFileReady(rt4.JagString, rt4.JagString);
+  public final byte[] fetchFile(int, int[], int);
+  public final boolean isGroupReady(rt4.JagString);
+  public final void discardUnpacked(int);
+  public final boolean isFileReady(int, int);
+  private boolean isGroupValid(int);
+  private void prefetchGroup(int);
+  private boolean unpackGroup(int, int[]);
+  public final byte[] fetchFile(int, int);
+  private void fetchGroup(int);
+  public final boolean isGroupNameValid(rt4.JagString);
+  public final int getPercentageComplete();
+  public final void discardUnpacked();
+  public final byte[] fetchFile(int);
+  private boolean isFileValid(int, int);
+  public final byte[] fetchFileNoDiscard(int, int);
+  public final int[] getFileIds(int);
+  public final int getGroupCapacity(int);
+  public final boolean isFileReady(int);
+}

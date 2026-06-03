@@ -1,0 +1,64 @@
+﻿Death Plateau	44	43	1	314,0,1,80	content.region.asgarnia.burthorpe.quest.deathplateau.DeathPlateau
+Heroes' Quest	75	74	1	188,0,1,15	content.region.asgarnia.burthorpe.quest.heroesquest.HeroesQuest
+Troll Stronghold	128	127	1	317,0,1,50	content.region.asgarnia.burthorpe.quest.trollstronghold.TrollStronghold
+The Knight's Sword	22	21	1	122,0,1,7	content.region.asgarnia.falador.quest.TheKnightsSword
+Black Knights' Fortress	14	13	3	130,0,1,4	content.region.asgarnia.falador.quest.blackknightsfortress.BlackKnightsFortress
+Doric's Quest	17	16	1	31,0,1,100	content.region.asgarnia.falador.quest.doricsquest.DoricsQuest
+Recruitment Drive	103	102	1	496,0,1,2	content.region.asgarnia.falador.quest.recruitmentdrive.RecruitmentDrive
+Goblin Diplomacy	20	19	5		content.region.asgarnia.goblinvillage.quest.goblindiplomacy.GoblinDiplomacy
+Pirate's Treasure	23	22	2	71,0,1,4	content.region.asgarnia.portsarim.quest.piratestreasure.PiratesTreasure
+Witch's Potion	31	30	1	67,0,1,3	content.region.asgarnia.rimmington.quest.witchpotion.WitchsPotion
+Druidic Ritual	48	47	4	80,0,3,4	content.region.asgarnia.taverley.quest.DruidicRitual
+Wolf Whistle	146	145	1		content.region.asgarnia.taverley.quest.WolfWhistle
+Witch's House	124	123	4	226,0,1,7	content.region.asgarnia.taverley.quest.witchshouse.WitchsHouse
+Prince Ali Rescue	24	23	3	273,0,1,110	content.region.desert.alkharid.quest.princealirescue.PrinceAliRescue
+Desert Treasure	45	44	3	440,358,0,1,15	content.region.desert.quest.deserttreasure.DesertTreasure
+The Golem	70	69	1	437,0,1,10	content.region.desert.quest.thegolem.TheGolemQuest
+The Tourist Trap	123	122	2	197,0,1,30	content.region.desert.quest.thetouristrap.TouristTrap
+Fight Arena	61	60	2	17,0,1,14	content.region.kandarin.ardougne.quest.arena.FightArena
+Clock Tower	38	37	1	10,0,1,8	content.region.kandarin.ardougne.quest.clocktower.ClockTower
+Monk's Friend	89	88	1	30,0,1,80	content.region.kandarin.ardougne.quest.monksfriend.MonksFriend
+Plague City	98	97	1	165,0,1,29	content.region.kandarin.ardougne.quest.plaguecity.PlagueCity
+Sheep Herder	113	112	4	60,0,1,3	content.region.kandarin.ardougne.quest.sheepherder.SheepHerder
+Big Chompy Bird Hunting	35	34	2	293,0,1,65	content.region.kandarin.feldip.quest.chompybird.ChompyBird
+Zogre Flesh Eaters	40	39	1	455,0,1,13	content.region.kandarin.feldip.quest.zogreflesheaters.ZogreFleshEaters
+Dwarf Cannon	49	48	1		content.region.kandarin.quest.dwarfcannon.DwarfCannon
+Fishing Contest	62	61	1	11,0,1,5	content.region.kandarin.quest.fishingcontest.FishingContest
+The Grand Tree	71	70	5	150,0,1,160	content.region.kandarin.quest.grandtree.TheGrandTree
+Murder Mystery	93	92	3	192,0,1,2	content.region.kandarin.quest.murdermystery.MurderMystery
+Scorpion Catcher	108	107	1	76,0,1,6	content.region.kandarin.quest.scorpioncatcher.ScorpionCatcher
+Temple of Ikov	121	120	1	26,0,1,80	content.region.kandarin.quest.templeofikov.TempleOfIkov
+Tree Gnome Village	125	124	2	111,0,1,9	content.region.kandarin.quest.tree.TreeGnomeVillage
+Waterfall Quest	65	64	1	65,0,1,10	content.region.kandarin.quest.waterfall.WaterFall
+While Guthix Sleeps	161	160	5	5491,0,1,900	content.region.kandarin.quest.whileguthixsleeps.WhileGuthixSleeps
+Elemental Workshop I	52	51	1		content.region.kandarin.seers.quest.elementalworkshop.ElementalWorkshopQuest
+Merlin's Crystal	87	86	6	14,0,1,7	content.region.kandarin.seers.quest.merlinsquest.MerlinCrystal
+Sea Slug	109	108	1	159,0,1,12	content.region.kandarin.witchhaven.quest.seaslug.SeaSlug
+Jungle Potion	81	80	1	175,0,1,12	content.region.karamja.quest.junglepotion.JunglePotion
+Tribal Totem	126	125	1	200,0,1,5	content.region.karamja.quest.tribaltotem.TribalTotem
+The Dig Site	47	46	2	131,0,1,9	content.region.misthalin.digsite.quest.thedigsite.TheDigSite
+The Lost Tribe	84	83	1		content.region.misthalin.dorgeshuun.quest.thelosttribe.LostTribe
+Animal Magnetism	33	32	1		content.region.misthalin.draynor.quest.anma.AnimalMagnetism
+Ernest the Chicken	19	18	4	32,0,1,3	content.region.misthalin.draynor.quest.ernest.ErnestTheChicken
+Vampire Slayer	30	29	3	178,0,1,3	content.region.misthalin.draynor.quest.vampire.VampireSlayer
+Cook's Assistant	15	14	1	29,0,1,2	content.region.misthalin.lumbridge.quest.cooksassistant.CooksAssistant
+Lost City	83	82	3	147,0,1,6	content.region.misthalin.lumbridge.quest.lostcity.LostCity
+Rune Mysteries	27	26	1	63,0,1,6	content.region.misthalin.lumbridge.quest.runemysteries.RuneMysteries
+Sheep Shearer	28	27	1	179,0,20,21	content.region.misthalin.lumbridge.quest.sheepshearer.SheepShearer
+Tears of Guthix	120	119	1	449,451,0,1,2	content.region.misthalin.lumbridge.quest.tearsofguthix.TearsOfGuthix
+The Restless Ghost	25	24	1	107,0,4,5	content.region.misthalin.lumbridge.quest.therestlessghost.RestlessGhost
+Priest in Peril	99	98	1	302,0,1,100	content.region.misthalin.quest.priestinperil.PriestInPeril
+Rag and Bone Man	100	99	2	714,0,1,4	content.region.misthalin.silvarea.quest.ragandboneman.RagAndBoneMan
+All Fired Up	157	156	1		content.region.misthalin.varrock.quest.allfiredup.AllFiredUp
+Demon Slayer	16	15	3	222,0,1,3	content.region.misthalin.varrock.quest.demonslayer.DemonSlayer
+Dragon Slayer	18	17	2	176,0,1,10	content.region.misthalin.varrock.quest.dragonslayer.DragonSlayer
+Family Crest	59	58	1	148,0,1,11	content.region.misthalin.varrock.quest.familycrest.FamilyCrest
+Gertrude's Cat	67	66	1	180,0,1,100	content.region.misthalin.varrock.quest.gertrude.GertrudesCat
+Romeo & Juliet	26	25	5	144,0,1,100	content.region.misthalin.varrock.quest.romeo.RomeoJuliet
+Shield of Arrav	29	28	1	145,0,1,7	content.region.misthalin.varrock.quest.shieldofarrav.ShieldofArrav
+What Lies Below	136	135	1		content.region.misthalin.varrock.quest.whatliesbelow.WhatLiesBelow
+Imp Catcher	21	20	1	160,0,1,2	content.region.misthalin.wiztower.quest.ImpCatcher
+Creature of Fenkenstrain	41	40	2	399,0,1,9	content.region.morytania.quest.creatureoffenkenstrain.CreatureOfFenkenstrain
+Nature Spirit	95	94	2	307,0,1,110	content.region.morytania.quest.naturespirit.NatureSpiritQuest
+Roving Elves	105	104	1	402,0,1,6	content.region.tirranwn.quest.rovingelves.RovingElves
+The Fremennik Trials	64	63	3	347,0,1,10	core.game.content.quest.fremtrials.FremennikTrials

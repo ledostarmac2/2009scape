@@ -1,0 +1,3885 @@
+﻿Compiled from "Cache.java"
+public final class rt4.Cache {
+  public static final byte[] buffer;
+
+  private rt4.BufferedFile data;
+
+  private rt4.BufferedFile index;
+
+  private int maxLen;
+
+  private final int archive;
+
+  public rt4.Cache(int, rt4.BufferedFile, rt4.BufferedFile, int);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aconst_null
+         6: putfield      #2                  // Field data:Lrt4/BufferedFile;
+         9: aload_0
+        10: aconst_null
+        11: putfield      #3                  // Field index:Lrt4/BufferedFile;
+        14: aload_0
+        15: ldc           #4                  // int 65000
+        17: putfield      #5                  // Field maxLen:I
+        20: aload_0
+        21: iload         4
+        23: putfield      #5                  // Field maxLen:I
+        26: aload_0
+        27: aload_3
+        28: putfield      #3                  // Field index:Lrt4/BufferedFile;
+        31: aload_0
+        32: iload_1
+        33: putfield      #6                  // Field archive:I
+        36: aload_0
+        37: aload_2
+        38: putfield      #2                  // Field data:Lrt4/BufferedFile;
+        41: return
+
+  public final java.lang.String toString();
+    Code:
+         0: new           #7                  // class java/lang/StringBuilder
+         3: dup
+         4: invokespecial #8                  // Method java/lang/StringBuilder."<init>":()V
+         7: ldc           #9                  // String Cache:
+         9: invokevirtual #10                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        12: aload_0
+        13: getfield      #6                  // Field archive:I
+        16: invokevirtual #11                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+        19: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        22: areturn
+
+  public final boolean write(int, int, byte[]);
+    Code:
+         0: aload_0
+         1: getfield      #2                  // Field data:Lrt4/BufferedFile;
+         4: astore        4
+         6: aload_0
+         7: getfield      #2                  // Field data:Lrt4/BufferedFile;
+        10: dup
+        11: astore        5
+        13: monitorenter
+        14: iload_2
+        15: iflt          26
+        18: iload_2
+        19: aload_0
+        20: getfield      #5                  // Field maxLen:I
+        23: if_icmple     34
+        26: new           #13                 // class java/lang/IllegalArgumentException
+        29: dup
+        30: invokespecial #14                 // Method java/lang/IllegalArgumentException."<init>":()V
+        33: athrow
+        34: aload_0
+        35: iload_2
+        36: iload_1
+        37: aload_3
+        38: iconst_1
+        39: invokespecial #15                 // Method write:(II[BZ)Z
+        42: istore        6
+        44: iload         6
+        46: ifne          59
+        49: aload_0
+        50: iload_2
+        51: iload_1
+        52: aload_3
+        53: iconst_0
+        54: invokespecial #15                 // Method write:(II[BZ)Z
+        57: istore        6
+        59: iload         6
+        61: aload         5
+        63: monitorexit
+        64: ireturn
+        65: astore        7
+        67: aload         5
+        69: monitorexit
+        70: aload         7
+        72: athrow
+      Exception table:
+         from    to  target type
+            14    64    65   any
+            65    70    65   any
+
+  public final byte[] read(int);
+    Code:
+         0: aload_0
+         1: getfield      #2                  // Field data:Lrt4/BufferedFile;
+         4: astore_2
+         5: aload_0
+         6: getfield      #2                  // Field data:Lrt4/BufferedFile;
+         9: dup
+        10: astore_3
+        11: monitorenter
+        12: aload_0
+        13: getfield      #3                  // Field index:Lrt4/BufferedFile;
+        16: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+        19: iload_1
+        20: bipush        6
+        22: imul
+        23: bipush        6
+        25: iadd
+        26: i2l
+        27: lcmp
+        28: ifge          45
+        31: aconst_null
+        32: astore        4
+        34: aload         4
+        36: checkcast     #17                 // class "[B"
+        39: checkcast     #17                 // class "[B"
+        42: aload_3
+        43: monitorexit
+        44: areturn
+        45: aload_0
+        46: getfield      #3                  // Field index:Lrt4/BufferedFile;
+        49: iload_1
+        50: bipush        6
+        52: imul
+        53: i2l
+        54: invokevirtual #18                 // Method rt4/BufferedFile.seek:(J)V
+        57: aload_0
+        58: getfield      #3                  // Field index:Lrt4/BufferedFile;
+        61: iconst_0
+        62: getstatic     #19                 // Field buffer:[B
+        65: bipush        6
+        67: invokevirtual #20                 // Method rt4/BufferedFile.read:(I[BI)V
+        70: getstatic     #19                 // Field buffer:[B
+        73: iconst_3
+        74: baload
+        75: sipush        255
+        78: iand
+        79: bipush        16
+        81: ishl
+        82: getstatic     #19                 // Field buffer:[B
+        85: iconst_4
+        86: baload
+        87: sipush        255
+        90: iand
+        91: bipush        8
+        93: ishl
+        94: ineg
+        95: getstatic     #19                 // Field buffer:[B
+        98: iconst_5
+        99: baload
+       100: sipush        255
+       103: iand
+       104: isub
+       105: isub
+       106: istore        5
+       108: getstatic     #19                 // Field buffer:[B
+       111: iconst_2
+       112: baload
+       113: sipush        255
+       116: iand
+       117: getstatic     #19                 // Field buffer:[B
+       120: iconst_1
+       121: baload
+       122: sipush        255
+       125: iand
+       126: bipush        8
+       128: ishl
+       129: iadd
+       130: getstatic     #19                 // Field buffer:[B
+       133: iconst_0
+       134: baload
+       135: sipush        255
+       138: iand
+       139: bipush        16
+       141: ishl
+       142: iadd
+       143: istore        6
+       145: iload         6
+       147: iflt          159
+       150: aload_0
+       151: getfield      #5                  // Field maxLen:I
+       154: iload         6
+       156: if_icmpge     173
+       159: aconst_null
+       160: astore        4
+       162: aload         4
+       164: checkcast     #17                 // class "[B"
+       167: checkcast     #17                 // class "[B"
+       170: aload_3
+       171: monitorexit
+       172: areturn
+       173: iload         5
+       175: ifle          196
+       178: iload         5
+       180: i2l
+       181: aload_0
+       182: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       185: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+       188: ldc2_w        #21                 // long 520l
+       191: ldiv
+       192: lcmp
+       193: ifle          210
+       196: aconst_null
+       197: astore        4
+       199: aload         4
+       201: checkcast     #17                 // class "[B"
+       204: checkcast     #17                 // class "[B"
+       207: aload_3
+       208: monitorexit
+       209: areturn
+       210: iload         6
+       212: newarray       byte
+       214: astore        7
+       216: iconst_0
+       217: istore        8
+       219: iconst_0
+       220: istore        9
+       222: iload         8
+       224: iload         6
+       226: if_icmpge     512
+       229: iload         5
+       231: ifne          248
+       234: aconst_null
+       235: astore        4
+       237: aload         4
+       239: checkcast     #17                 // class "[B"
+       242: checkcast     #17                 // class "[B"
+       245: aload_3
+       246: monitorexit
+       247: areturn
+       248: iload         6
+       250: iload         8
+       252: isub
+       253: istore        10
+       255: aload_0
+       256: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       259: iload         5
+       261: sipush        520
+       264: imul
+       265: i2l
+       266: invokevirtual #18                 // Method rt4/BufferedFile.seek:(J)V
+       269: iload         10
+       271: sipush        512
+       274: if_icmple     282
+       277: sipush        512
+       280: istore        10
+       282: aload_0
+       283: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       286: iconst_0
+       287: getstatic     #19                 // Field buffer:[B
+       290: iload         10
+       292: bipush        8
+       294: iadd
+       295: invokevirtual #20                 // Method rt4/BufferedFile.read:(I[BI)V
+       298: getstatic     #19                 // Field buffer:[B
+       301: iconst_0
+       302: baload
+       303: sipush        255
+       306: iand
+       307: bipush        8
+       309: ishl
+       310: getstatic     #19                 // Field buffer:[B
+       313: iconst_1
+       314: baload
+       315: sipush        255
+       318: iand
+       319: iadd
+       320: istore        11
+       322: getstatic     #19                 // Field buffer:[B
+       325: iconst_3
+       326: baload
+       327: sipush        255
+       330: iand
+       331: getstatic     #19                 // Field buffer:[B
+       334: iconst_2
+       335: baload
+       336: sipush        255
+       339: iand
+       340: bipush        8
+       342: ishl
+       343: iadd
+       344: istore        12
+       346: getstatic     #19                 // Field buffer:[B
+       349: bipush        7
+       351: baload
+       352: sipush        255
+       355: iand
+       356: istore        13
+       358: getstatic     #19                 // Field buffer:[B
+       361: bipush        6
+       363: baload
+       364: sipush        255
+       367: iand
+       368: getstatic     #19                 // Field buffer:[B
+       371: iconst_5
+       372: baload
+       373: sipush        255
+       376: iand
+       377: bipush        8
+       379: ishl
+       380: iadd
+       381: getstatic     #19                 // Field buffer:[B
+       384: iconst_4
+       385: baload
+       386: sipush        255
+       389: iand
+       390: bipush        16
+       392: ishl
+       393: iadd
+       394: istore        14
+       396: iload_1
+       397: iload         11
+       399: if_icmpne     418
+       402: iload         9
+       404: iload         12
+       406: if_icmpne     418
+       409: aload_0
+       410: getfield      #6                  // Field archive:I
+       413: iload         13
+       415: if_icmpeq     432
+       418: aconst_null
+       419: astore        4
+       421: aload         4
+       423: checkcast     #17                 // class "[B"
+       426: checkcast     #17                 // class "[B"
+       429: aload_3
+       430: monitorexit
+       431: areturn
+       432: iload         14
+       434: iflt          455
+       437: iload         14
+       439: i2l
+       440: aload_0
+       441: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       444: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+       447: ldc2_w        #21                 // long 520l
+       450: ldiv
+       451: lcmp
+       452: ifle          469
+       455: aconst_null
+       456: astore        4
+       458: aload         4
+       460: checkcast     #17                 // class "[B"
+       463: checkcast     #17                 // class "[B"
+       466: aload_3
+       467: monitorexit
+       468: areturn
+       469: iconst_0
+       470: istore        15
+       472: iload         15
+       474: iload         10
+       476: if_icmpge     502
+       479: aload         7
+       481: iload         8
+       483: iinc          8, 1
+       486: getstatic     #19                 // Field buffer:[B
+       489: iload         15
+       491: bipush        8
+       493: iadd
+       494: baload
+       495: bastore
+       496: iinc          15, 1
+       499: goto          472
+       502: iinc          9, 1
+       505: iload         14
+       507: istore        5
+       509: goto          222
+       512: aload         7
+       514: astore        10
+       516: aload         10
+       518: aload_3
+       519: monitorexit
+       520: areturn
+       521: astore        4
+       523: aload         4
+       525: invokevirtual #24                 // Method java/io/IOException.printStackTrace:()V
+       528: aconst_null
+       529: aload_3
+       530: monitorexit
+       531: areturn
+       532: astore        16
+       534: aload_3
+       535: monitorexit
+       536: aload         16
+       538: athrow
+      Exception table:
+         from    to  target type
+            12    42   521   Class java/io/IOException
+            45   170   521   Class java/io/IOException
+           173   207   521   Class java/io/IOException
+           210   245   521   Class java/io/IOException
+           248   429   521   Class java/io/IOException
+           432   466   521   Class java/io/IOException
+           469   518   521   Class java/io/IOException
+            12    44   532   any
+            45   172   532   any
+           173   209   532   any
+           210   247   532   any
+           248   431   532   any
+           432   468   532   any
+           469   520   532   any
+           521   531   532   any
+           532   536   532   any
+
+  private boolean write(int, int, byte[], boolean);
+    Code:
+         0: aload_0
+         1: getfield      #2                  // Field data:Lrt4/BufferedFile;
+         4: astore        5
+         6: aload_0
+         7: getfield      #2                  // Field data:Lrt4/BufferedFile;
+        10: dup
+        11: astore        6
+        13: monitorenter
+        14: iload         4
+        16: ifeq          140
+        19: aload_0
+        20: getfield      #3                  // Field index:Lrt4/BufferedFile;
+        23: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+        26: iload_2
+        27: bipush        6
+        29: imul
+        30: bipush        6
+        32: iadd
+        33: i2l
+        34: lcmp
+        35: ifge          47
+        38: iconst_0
+        39: istore        8
+        41: iload         8
+        43: aload         6
+        45: monitorexit
+        46: ireturn
+        47: aload_0
+        48: getfield      #3                  // Field index:Lrt4/BufferedFile;
+        51: iload_2
+        52: bipush        6
+        54: imul
+        55: i2l
+        56: invokevirtual #18                 // Method rt4/BufferedFile.seek:(J)V
+        59: aload_0
+        60: getfield      #3                  // Field index:Lrt4/BufferedFile;
+        63: iconst_0
+        64: getstatic     #19                 // Field buffer:[B
+        67: bipush        6
+        69: invokevirtual #20                 // Method rt4/BufferedFile.read:(I[BI)V
+        72: getstatic     #19                 // Field buffer:[B
+        75: iconst_3
+        76: baload
+        77: sipush        255
+        80: iand
+        81: bipush        16
+        83: ishl
+        84: getstatic     #19                 // Field buffer:[B
+        87: iconst_4
+        88: baload
+        89: bipush        8
+        91: ishl
+        92: ldc           #25                 // int 65280
+        94: iand
+        95: iadd
+        96: getstatic     #19                 // Field buffer:[B
+        99: iconst_5
+       100: baload
+       101: sipush        255
+       104: iand
+       105: iadd
+       106: istore        7
+       108: iload         7
+       110: ifle          131
+       113: aload_0
+       114: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       117: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+       120: ldc2_w        #21                 // long 520l
+       123: ldiv
+       124: iload         7
+       126: i2l
+       127: lcmp
+       128: ifge          166
+       131: iconst_0
+       132: istore        8
+       134: iload         8
+       136: aload         6
+       138: monitorexit
+       139: ireturn
+       140: aload_0
+       141: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       144: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+       147: ldc2_w        #26                 // long 519l
+       150: ladd
+       151: ldc2_w        #21                 // long 520l
+       154: ldiv
+       155: l2i
+       156: istore        7
+       158: iload         7
+       160: ifne          166
+       163: iconst_1
+       164: istore        7
+       166: getstatic     #19                 // Field buffer:[B
+       169: iconst_0
+       170: iload_1
+       171: bipush        16
+       173: ishr
+       174: i2b
+       175: bastore
+       176: getstatic     #19                 // Field buffer:[B
+       179: iconst_4
+       180: iload         7
+       182: bipush        8
+       184: ishr
+       185: i2b
+       186: bastore
+       187: iconst_0
+       188: istore        9
+       190: getstatic     #19                 // Field buffer:[B
+       193: iconst_5
+       194: iload         7
+       196: i2b
+       197: bastore
+       198: getstatic     #19                 // Field buffer:[B
+       201: iconst_2
+       202: iload_1
+       203: i2b
+       204: bastore
+       205: getstatic     #19                 // Field buffer:[B
+       208: iconst_3
+       209: iload         7
+       211: bipush        16
+       213: ishr
+       214: i2b
+       215: bastore
+       216: iconst_0
+       217: istore        10
+       219: getstatic     #19                 // Field buffer:[B
+       222: iconst_1
+       223: iload_1
+       224: bipush        8
+       226: ishr
+       227: i2b
+       228: bastore
+       229: aload_0
+       230: getfield      #3                  // Field index:Lrt4/BufferedFile;
+       233: iload_2
+       234: bipush        6
+       236: imul
+       237: i2l
+       238: invokevirtual #18                 // Method rt4/BufferedFile.seek:(J)V
+       241: aload_0
+       242: getfield      #3                  // Field index:Lrt4/BufferedFile;
+       245: getstatic     #19                 // Field buffer:[B
+       248: iconst_0
+       249: bipush        6
+       251: invokevirtual #28                 // Method rt4/BufferedFile.write:([BII)V
+       254: iload         9
+       256: iload_1
+       257: if_icmpge     674
+       260: iconst_0
+       261: istore        11
+       263: iload         4
+       265: ifeq          464
+       268: aload_0
+       269: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       272: iload         7
+       274: sipush        520
+       277: imul
+       278: i2l
+       279: invokevirtual #18                 // Method rt4/BufferedFile.seek:(J)V
+       282: aload_0
+       283: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       286: iconst_0
+       287: getstatic     #19                 // Field buffer:[B
+       290: bipush        8
+       292: invokevirtual #20                 // Method rt4/BufferedFile.read:(I[BI)V
+       295: goto          303
+       298: astore        13
+       300: goto          674
+       303: getstatic     #19                 // Field buffer:[B
+       306: iconst_4
+       307: baload
+       308: sipush        255
+       311: iand
+       312: bipush        16
+       314: ishl
+       315: getstatic     #19                 // Field buffer:[B
+       318: iconst_5
+       319: baload
+       320: sipush        255
+       323: iand
+       324: bipush        8
+       326: ishl
+       327: iadd
+       328: getstatic     #19                 // Field buffer:[B
+       331: bipush        6
+       333: baload
+       334: sipush        255
+       337: iand
+       338: iadd
+       339: istore        11
+       341: getstatic     #19                 // Field buffer:[B
+       344: iconst_1
+       345: baload
+       346: sipush        255
+       349: iand
+       350: getstatic     #19                 // Field buffer:[B
+       353: iconst_0
+       354: baload
+       355: sipush        255
+       358: iand
+       359: bipush        8
+       361: ishl
+       362: iadd
+       363: istore        12
+       365: getstatic     #19                 // Field buffer:[B
+       368: bipush        7
+       370: baload
+       371: sipush        255
+       374: iand
+       375: istore        13
+       377: getstatic     #19                 // Field buffer:[B
+       380: iconst_3
+       381: baload
+       382: sipush        255
+       385: iand
+       386: getstatic     #19                 // Field buffer:[B
+       389: iconst_2
+       390: baload
+       391: sipush        255
+       394: iand
+       395: bipush        8
+       397: ishl
+       398: iadd
+       399: istore        14
+       401: iload         12
+       403: iload_2
+       404: if_icmpne     423
+       407: iload         10
+       409: iload         14
+       411: if_icmpne     423
+       414: aload_0
+       415: getfield      #6                  // Field archive:I
+       418: iload         13
+       420: if_icmpeq     432
+       423: iconst_0
+       424: istore        8
+       426: iload         8
+       428: aload         6
+       430: monitorexit
+       431: ireturn
+       432: iload         11
+       434: iflt          455
+       437: iload         11
+       439: i2l
+       440: aload_0
+       441: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       444: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+       447: ldc2_w        #21                 // long 520l
+       450: ldiv
+       451: lcmp
+       452: ifle          464
+       455: iconst_0
+       456: istore        8
+       458: iload         8
+       460: aload         6
+       462: monitorexit
+       463: ireturn
+       464: iload_1
+       465: iload         9
+       467: isub
+       468: istore        12
+       470: iload         11
+       472: ifne          514
+       475: iconst_0
+       476: istore        4
+       478: aload_0
+       479: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       482: invokevirtual #16                 // Method rt4/BufferedFile.length:()J
+       485: ldc2_w        #26                 // long 519l
+       488: ladd
+       489: ldc2_w        #21                 // long 520l
+       492: ldiv
+       493: l2i
+       494: istore        11
+       496: iload         11
+       498: ifne          504
+       501: iinc          11, 1
+       504: iload         11
+       506: iload         7
+       508: if_icmpne     514
+       511: iinc          11, 1
+       514: getstatic     #19                 // Field buffer:[B
+       517: bipush        7
+       519: aload_0
+       520: getfield      #6                  // Field archive:I
+       523: i2b
+       524: bastore
+       525: getstatic     #19                 // Field buffer:[B
+       528: iconst_0
+       529: iload_2
+       530: bipush        8
+       532: ishr
+       533: i2b
+       534: bastore
+       535: iload_1
+       536: iload         9
+       538: isub
+       539: sipush        512
+       542: if_icmpgt     548
+       545: iconst_0
+       546: istore        11
+       548: getstatic     #19                 // Field buffer:[B
+       551: iconst_4
+       552: iload         11
+       554: bipush        16
+       556: ishr
+       557: i2b
+       558: bastore
+       559: iload         12
+       561: sipush        512
+       564: if_icmple     572
+       567: sipush        512
+       570: istore        12
+       572: getstatic     #19                 // Field buffer:[B
+       575: iconst_1
+       576: iload_2
+       577: i2b
+       578: bastore
+       579: getstatic     #19                 // Field buffer:[B
+       582: bipush        6
+       584: iload         11
+       586: i2b
+       587: bastore
+       588: getstatic     #19                 // Field buffer:[B
+       591: iconst_2
+       592: iload         10
+       594: bipush        8
+       596: ishr
+       597: i2b
+       598: bastore
+       599: getstatic     #19                 // Field buffer:[B
+       602: iconst_3
+       603: iload         10
+       605: i2b
+       606: bastore
+       607: iinc          10, 1
+       610: getstatic     #19                 // Field buffer:[B
+       613: iconst_5
+       614: iload         11
+       616: bipush        8
+       618: ishr
+       619: i2b
+       620: bastore
+       621: aload_0
+       622: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       625: iload         7
+       627: sipush        520
+       630: imul
+       631: i2l
+       632: invokevirtual #18                 // Method rt4/BufferedFile.seek:(J)V
+       635: iload         11
+       637: istore        7
+       639: aload_0
+       640: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       643: getstatic     #19                 // Field buffer:[B
+       646: iconst_0
+       647: bipush        8
+       649: invokevirtual #28                 // Method rt4/BufferedFile.write:([BII)V
+       652: aload_0
+       653: getfield      #2                  // Field data:Lrt4/BufferedFile;
+       656: aload_3
+       657: iload         9
+       659: iload         12
+       661: invokevirtual #28                 // Method rt4/BufferedFile.write:([BII)V
+       664: iload         9
+       666: iload         12
+       668: iadd
+       669: istore        9
+       671: goto          254
+       674: iconst_1
+       675: istore        8
+       677: iload         8
+       679: aload         6
+       681: monitorexit
+       682: ireturn
+       683: astore        7
+       685: iconst_0
+       686: aload         6
+       688: monitorexit
+       689: ireturn
+       690: astore        15
+       692: aload         6
+       694: monitorexit
+       695: aload         15
+       697: athrow
+      Exception table:
+         from    to  target type
+           282   295   298   Class java/io/EOFException
+            14    43   683   Class java/io/IOException
+            47   136   683   Class java/io/IOException
+           140   428   683   Class java/io/IOException
+           432   460   683   Class java/io/IOException
+           464   679   683   Class java/io/IOException
+            14    46   690   any
+            47   139   690   any
+           140   431   690   any
+           432   463   690   any
+           464   682   690   any
+           683   689   690   any
+           690   695   690   any
+
+  static {};
+    Code:
+         0: sipush        520
+         3: newarray       byte
+         5: putstatic     #19                 // Field buffer:[B
+         8: return
+}
+Compiled from "Js5.java"
+public final class rt4.Js5 {
+  public static final boolean RAISE_EXCEPTIONS;
+
+  private java.lang.Object[][] unpacked;
+
+  private java.lang.Object[] packed;
+
+  private rt4.Js5Index index;
+
+  private final rt4.Js5ResourceProvider provider;
+
+  private final boolean discardPacked;
+
+  private final boolean discardUnpacked;
+
+  public rt4.Js5(rt4.Js5ResourceProvider, boolean, boolean);
+    Code:
+         0: aload_0
+         1: invokespecial #2                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aconst_null
+         6: putfield      #3                  // Field index:Lrt4/Js5Index;
+         9: aload_0
+        10: aload_1
+        11: putfield      #4                  // Field provider:Lrt4/Js5ResourceProvider;
+        14: aload_0
+        15: iload_2
+        16: putfield      #5                  // Field discardPacked:Z
+        19: aload_0
+        20: iload_3
+        21: putfield      #6                  // Field discardUnpacked:Z
+        24: return
+
+  public final boolean fetchAll();
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: iconst_0
+         8: ireturn
+         9: iconst_1
+        10: istore_1
+        11: iconst_0
+        12: istore_2
+        13: iload_2
+        14: aload_0
+        15: getfield      #3                  // Field index:Lrt4/Js5Index;
+        18: getfield      #8                  // Field rt4/Js5Index.groupIds:[I
+        21: arraylength
+        22: if_icmpge     66
+        25: aload_0
+        26: getfield      #3                  // Field index:Lrt4/Js5Index;
+        29: getfield      #8                  // Field rt4/Js5Index.groupIds:[I
+        32: iload_2
+        33: iaload
+        34: istore_3
+        35: aload_0
+        36: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        39: iload_3
+        40: aaload
+        41: ifnonnull     60
+        44: aload_0
+        45: iload_3
+        46: invokespecial #10                 // Method fetchGroup:(I)V
+        49: aload_0
+        50: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        53: iload_3
+        54: aaload
+        55: ifnonnull     60
+        58: iconst_0
+        59: istore_1
+        60: iinc          2, 1
+        63: goto          13
+        66: iload_1
+        67: ireturn
+
+  private int getPercentageComplete(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokespecial #11                 // Method isGroupValid:(I)Z
+         5: ifeq          31
+         8: aload_0
+         9: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        12: iload_1
+        13: aaload
+        14: ifnonnull     28
+        17: aload_0
+        18: getfield      #4                  // Field provider:Lrt4/Js5ResourceProvider;
+        21: iload_1
+        22: invokevirtual #12                 // Method rt4/Js5ResourceProvider.getPercentageComplete:(I)I
+        25: goto          30
+        28: bipush        100
+        30: ireturn
+        31: iconst_0
+        32: ireturn
+
+  public final void discardNames(boolean);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          8
+         7: return
+         8: iload_1
+         9: ifeq          28
+        12: aload_0
+        13: getfield      #3                  // Field index:Lrt4/Js5Index;
+        16: aconst_null
+        17: putfield      #13                 // Field rt4/Js5Index.groupNameHashes:[I
+        20: aload_0
+        21: getfield      #3                  // Field index:Lrt4/Js5Index;
+        24: aconst_null
+        25: putfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        28: aload_0
+        29: getfield      #3                  // Field index:Lrt4/Js5Index;
+        32: aconst_null
+        33: putfield      #15                 // Field rt4/Js5Index.fileNameHashTables:[Lrt4/IntHashTable;
+        36: aload_0
+        37: getfield      #3                  // Field index:Lrt4/Js5Index;
+        40: aconst_null
+        41: checkcast     #16                 // class "[[I"
+        44: putfield      #17                 // Field rt4/Js5Index.fileNameHashes:[[I
+        47: return
+
+  public final int getPercentageComplete(rt4.JagString);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifeq          33
+         7: aload_1
+         8: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        11: astore_2
+        12: aload_0
+        13: getfield      #3                  // Field index:Lrt4/Js5Index;
+        16: getfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        19: aload_2
+        20: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        23: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        26: istore_3
+        27: aload_0
+        28: iload_3
+        29: invokespecial #21                 // Method getPercentageComplete:(I)I
+        32: ireturn
+        33: iconst_0
+        34: ireturn
+
+  public final boolean isGroupReady(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokespecial #11                 // Method isGroupValid:(I)Z
+         5: ifne          10
+         8: iconst_0
+         9: ireturn
+        10: aload_0
+        11: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        14: iload_1
+        15: aaload
+        16: ifnonnull     39
+        19: aload_0
+        20: iload_1
+        21: invokespecial #10                 // Method fetchGroup:(I)V
+        24: aload_0
+        25: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        28: iload_1
+        29: aaload
+        30: ifnull        37
+        33: iconst_1
+        34: goto          38
+        37: iconst_0
+        38: ireturn
+        39: iconst_1
+        40: ireturn
+
+  public final int getChecksum();
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          17
+         7: new           #22                 // class java/lang/IllegalStateException
+        10: dup
+        11: ldc           #23                 // String
+        13: invokespecial #24                 // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+        16: athrow
+        17: aload_0
+        18: getfield      #3                  // Field index:Lrt4/Js5Index;
+        21: getfield      #25                 // Field rt4/Js5Index.checksum:I
+        24: ireturn
+
+  public final int getGroupId(rt4.JagString);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifeq          41
+         7: aload_1
+         8: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        11: astore_2
+        12: aload_0
+        13: getfield      #3                  // Field index:Lrt4/Js5Index;
+        16: getfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        19: aload_2
+        20: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        23: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        26: istore_3
+        27: aload_0
+        28: iload_3
+        29: invokespecial #11                 // Method isGroupValid:(I)Z
+        32: ifeq          39
+        35: iload_3
+        36: goto          40
+        39: iconst_m1
+        40: ireturn
+        41: iconst_m1
+        42: ireturn
+
+  public final int capacity();
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifeq          18
+         7: aload_0
+         8: getfield      #3                  // Field index:Lrt4/Js5Index;
+        11: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        14: arraylength
+        15: goto          19
+        18: iconst_m1
+        19: ireturn
+
+  private boolean isIndexReady();
+    Code:
+         0: aload_0
+         1: getfield      #3                  // Field index:Lrt4/Js5Index;
+         4: ifnonnull     55
+         7: aload_0
+         8: aload_0
+         9: getfield      #4                  // Field provider:Lrt4/Js5ResourceProvider;
+        12: invokevirtual #27                 // Method rt4/Js5ResourceProvider.fetchIndex:()Lrt4/Js5Index;
+        15: putfield      #3                  // Field index:Lrt4/Js5Index;
+        18: aload_0
+        19: getfield      #3                  // Field index:Lrt4/Js5Index;
+        22: ifnonnull     27
+        25: iconst_0
+        26: ireturn
+        27: aload_0
+        28: aload_0
+        29: getfield      #3                  // Field index:Lrt4/Js5Index;
+        32: getfield      #28                 // Field rt4/Js5Index.capacity:I
+        35: anewarray     #29                 // class "[Ljava/lang/Object;"
+        38: putfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        41: aload_0
+        42: aload_0
+        43: getfield      #3                  // Field index:Lrt4/Js5Index;
+        46: getfield      #28                 // Field rt4/Js5Index.capacity:I
+        49: anewarray     #31                 // class java/lang/Object
+        52: putfield      #9                  // Field packed:[Ljava/lang/Object;
+        55: iconst_1
+        56: ireturn
+
+  public final byte[] fetchFile(rt4.JagString, rt4.JagString);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: aconst_null
+         8: areturn
+         9: aload_2
+        10: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        13: astore_3
+        14: aload_1
+        15: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        18: astore        4
+        20: aload_0
+        21: getfield      #3                  // Field index:Lrt4/Js5Index;
+        24: getfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        27: aload_3
+        28: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        31: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        34: istore        5
+        36: aload_0
+        37: iload         5
+        39: invokespecial #11                 // Method isGroupValid:(I)Z
+        42: ifeq          74
+        45: aload_0
+        46: getfield      #3                  // Field index:Lrt4/Js5Index;
+        49: getfield      #15                 // Field rt4/Js5Index.fileNameHashTables:[Lrt4/IntHashTable;
+        52: iload         5
+        54: aaload
+        55: aload         4
+        57: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        60: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        63: istore        6
+        65: aload_0
+        66: iload         5
+        68: iload         6
+        70: invokevirtual #32                 // Method fetchFile:(II)[B
+        73: areturn
+        74: aconst_null
+        75: areturn
+
+  public final void prefetchGroup(rt4.JagString);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifeq          32
+         7: aload_1
+         8: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        11: astore_2
+        12: aload_0
+        13: getfield      #3                  // Field index:Lrt4/Js5Index;
+        16: getfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        19: aload_2
+        20: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        23: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        26: istore_3
+        27: aload_0
+        28: iload_3
+        29: invokespecial #33                 // Method prefetchGroup:(I)V
+        32: return
+
+  public final boolean isFileReady(rt4.JagString, rt4.JagString);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: iconst_0
+         8: ireturn
+         9: aload_2
+        10: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        13: astore_3
+        14: aload_1
+        15: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        18: astore        4
+        20: aload_0
+        21: getfield      #3                  // Field index:Lrt4/Js5Index;
+        24: getfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        27: aload_3
+        28: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        31: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        34: istore        5
+        36: aload_0
+        37: iload         5
+        39: invokespecial #11                 // Method isGroupValid:(I)Z
+        42: ifeq          74
+        45: aload_0
+        46: getfield      #3                  // Field index:Lrt4/Js5Index;
+        49: getfield      #15                 // Field rt4/Js5Index.fileNameHashTables:[Lrt4/IntHashTable;
+        52: iload         5
+        54: aaload
+        55: aload         4
+        57: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        60: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        63: istore        6
+        65: aload_0
+        66: iload         6
+        68: iload         5
+        70: invokevirtual #34                 // Method isFileReady:(II)Z
+        73: ireturn
+        74: iconst_0
+        75: ireturn
+
+  public final byte[] fetchFile(int, int[], int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: iload_3
+         3: invokespecial #35                 // Method isFileValid:(II)Z
+         6: ifne          11
+         9: aconst_null
+        10: areturn
+        11: aload_0
+        12: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        15: iload_1
+        16: aaload
+        17: ifnull        31
+        20: aload_0
+        21: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        24: iload_1
+        25: aaload
+        26: iload_3
+        27: aaload
+        28: ifnonnull     64
+        31: aload_0
+        32: iload_1
+        33: aload_2
+        34: invokespecial #36                 // Method unpackGroup:(I[I)Z
+        37: istore        4
+        39: iload         4
+        41: ifne          64
+        44: aload_0
+        45: iload_1
+        46: invokespecial #10                 // Method fetchGroup:(I)V
+        49: aload_0
+        50: iload_1
+        51: aload_2
+        52: invokespecial #36                 // Method unpackGroup:(I[I)Z
+        55: istore        4
+        57: iload         4
+        59: ifne          64
+        62: aconst_null
+        63: areturn
+        64: aload_0
+        65: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        68: iload_1
+        69: aaload
+        70: iload_3
+        71: aaload
+        72: iconst_0
+        73: invokestatic  #37                 // Method rt4/ByteArray.unwrap:(Ljava/lang/Object;Z)[B
+        76: astore        4
+        78: aload_0
+        79: getfield      #6                  // Field discardUnpacked:Z
+        82: ifeq          114
+        85: aload_0
+        86: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        89: iload_1
+        90: aaload
+        91: iload_3
+        92: aconst_null
+        93: aastore
+        94: aload_0
+        95: getfield      #3                  // Field index:Lrt4/Js5Index;
+        98: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+       101: iload_1
+       102: iaload
+       103: iconst_1
+       104: if_icmpne     114
+       107: aload_0
+       108: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+       111: iload_1
+       112: aconst_null
+       113: aastore
+       114: aload         4
+       116: areturn
+
+  public final boolean isGroupReady(rt4.JagString);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifeq          33
+         7: aload_1
+         8: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        11: astore_2
+        12: aload_0
+        13: getfield      #3                  // Field index:Lrt4/Js5Index;
+        16: getfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        19: aload_2
+        20: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        23: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        26: istore_3
+        27: aload_0
+        28: iload_3
+        29: invokevirtual #38                 // Method isGroupReady:(I)Z
+        32: ireturn
+        33: iconst_0
+        34: ireturn
+
+  public final void discardUnpacked(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokespecial #11                 // Method isGroupValid:(I)Z
+         5: ifeq          22
+         8: aload_0
+         9: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        12: ifnull        22
+        15: aload_0
+        16: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        19: iload_1
+        20: aconst_null
+        21: aastore
+        22: return
+
+  public final boolean isFileReady(int, int);
+    Code:
+         0: aload_0
+         1: iload_2
+         2: iload_1
+         3: invokespecial #35                 // Method isFileValid:(II)Z
+         6: ifne          11
+         9: iconst_0
+        10: ireturn
+        11: aload_0
+        12: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        15: iload_2
+        16: aaload
+        17: ifnull        33
+        20: aload_0
+        21: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        24: iload_2
+        25: aaload
+        26: iload_1
+        27: aaload
+        28: ifnull        33
+        31: iconst_1
+        32: ireturn
+        33: aload_0
+        34: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        37: iload_2
+        38: aaload
+        39: ifnonnull     62
+        42: aload_0
+        43: iload_2
+        44: invokespecial #10                 // Method fetchGroup:(I)V
+        47: aload_0
+        48: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        51: iload_2
+        52: aaload
+        53: ifnull        60
+        56: iconst_1
+        57: goto          61
+        60: iconst_0
+        61: ireturn
+        62: iconst_1
+        63: ireturn
+
+  private boolean isGroupValid(int);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: iconst_0
+         8: ireturn
+         9: iload_1
+        10: iflt          39
+        13: aload_0
+        14: getfield      #3                  // Field index:Lrt4/Js5Index;
+        17: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        20: arraylength
+        21: iload_1
+        22: if_icmple     39
+        25: aload_0
+        26: getfield      #3                  // Field index:Lrt4/Js5Index;
+        29: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        32: iload_1
+        33: iaload
+        34: ifeq          39
+        37: iconst_1
+        38: ireturn
+        39: iconst_0
+        40: ireturn
+
+  private void prefetchGroup(int);
+    Code:
+         0: aload_0
+         1: getfield      #4                  // Field provider:Lrt4/Js5ResourceProvider;
+         4: iload_1
+         5: invokevirtual #39                 // Method rt4/Js5ResourceProvider.prefetchGroup:(I)V
+         8: return
+
+  private boolean unpackGroup(int, int[]);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokespecial #11                 // Method isGroupValid:(I)Z
+         5: ifne          10
+         8: iconst_0
+         9: ireturn
+        10: aload_0
+        11: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        14: iload_1
+        15: aaload
+        16: ifnonnull     21
+        19: iconst_0
+        20: ireturn
+        21: aload_0
+        22: getfield      #3                  // Field index:Lrt4/Js5Index;
+        25: getfield      #40                 // Field rt4/Js5Index.fileIds:[[I
+        28: iload_1
+        29: aaload
+        30: astore_3
+        31: aload_0
+        32: getfield      #3                  // Field index:Lrt4/Js5Index;
+        35: getfield      #41                 // Field rt4/Js5Index.groupSizes:[I
+        38: iload_1
+        39: iaload
+        40: istore        4
+        42: aload_0
+        43: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        46: iload_1
+        47: aaload
+        48: ifnonnull     69
+        51: aload_0
+        52: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        55: iload_1
+        56: aload_0
+        57: getfield      #3                  // Field index:Lrt4/Js5Index;
+        60: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        63: iload_1
+        64: iaload
+        65: anewarray     #31                 // class java/lang/Object
+        68: aastore
+        69: iconst_1
+        70: istore        5
+        72: aload_0
+        73: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        76: iload_1
+        77: aaload
+        78: astore        6
+        80: iconst_0
+        81: istore        7
+        83: iload         7
+        85: iload         4
+        87: if_icmpge     127
+        90: aload_3
+        91: ifnonnull     101
+        94: iload         7
+        96: istore        8
+        98: goto          107
+       101: aload_3
+       102: iload         7
+       104: iaload
+       105: istore        8
+       107: aload         6
+       109: iload         8
+       111: aaload
+       112: ifnonnull     121
+       115: iconst_0
+       116: istore        5
+       118: goto          127
+       121: iinc          7, 1
+       124: goto          83
+       127: iload         5
+       129: ifeq          134
+       132: iconst_1
+       133: ireturn
+       134: aload_2
+       135: ifnull        162
+       138: aload_2
+       139: iconst_0
+       140: iaload
+       141: ifne          177
+       144: aload_2
+       145: iconst_1
+       146: iaload
+       147: ifne          177
+       150: aload_2
+       151: iconst_2
+       152: iaload
+       153: ifne          177
+       156: aload_2
+       157: iconst_3
+       158: iaload
+       159: ifne          177
+       162: aload_0
+       163: getfield      #9                  // Field packed:[Ljava/lang/Object;
+       166: iload_1
+       167: aaload
+       168: iconst_0
+       169: invokestatic  #37                 // Method rt4/ByteArray.unwrap:(Ljava/lang/Object;Z)[B
+       172: astore        7
+       174: goto          212
+       177: aload_0
+       178: getfield      #9                  // Field packed:[Ljava/lang/Object;
+       181: iload_1
+       182: aaload
+       183: iconst_1
+       184: invokestatic  #37                 // Method rt4/ByteArray.unwrap:(Ljava/lang/Object;Z)[B
+       187: astore        7
+       189: new           #42                 // class rt4/Buffer
+       192: dup
+       193: aload         7
+       195: invokespecial #43                 // Method rt4/Buffer."<init>":([B)V
+       198: astore        8
+       200: aload         8
+       202: aload_2
+       203: aload         8
+       205: getfield      #44                 // Field rt4/Buffer.data:[B
+       208: arraylength
+       209: invokevirtual #45                 // Method rt4/Buffer.tinydec:([II)V
+       212: aload         7
+       214: invokestatic  #46                 // Method rt4/Js5Compression.uncompress:([B)[B
+       217: astore        8
+       219: goto          357
+       222: astore        9
+       224: aload         9
+       226: invokevirtual #48                 // Method java/lang/RuntimeException.printStackTrace:()V
+       229: getstatic     #49                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       232: new           #50                 // class java/lang/StringBuilder
+       235: dup
+       236: invokespecial #51                 // Method java/lang/StringBuilder."<init>":()V
+       239: ldc           #52                 // String T3 -
+       241: invokevirtual #53                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       244: aload_2
+       245: ifnull        252
+       248: iconst_1
+       249: goto          253
+       252: iconst_0
+       253: invokevirtual #54                 // Method java/lang/StringBuilder.append:(Z)Ljava/lang/StringBuilder;
+       256: ldc           #55                 // String ,
+       258: invokevirtual #53                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       261: iload_1
+       262: invokevirtual #56                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+       265: ldc           #55                 // String ,
+       267: invokevirtual #53                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       270: aload         7
+       272: arraylength
+       273: invokevirtual #56                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+       276: ldc           #55                 // String ,
+       278: invokevirtual #53                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       281: aload         7
+       283: aload         7
+       285: arraylength
+       286: invokestatic  #57                 // Method rt4/Buffer.crc32:([BI)I
+       289: invokevirtual #56                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+       292: ldc           #55                 // String ,
+       294: invokevirtual #53                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       297: aload         7
+       299: aload         7
+       301: arraylength
+       302: iconst_2
+       303: isub
+       304: invokestatic  #57                 // Method rt4/Buffer.crc32:([BI)I
+       307: invokevirtual #56                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+       310: ldc           #55                 // String ,
+       312: invokevirtual #53                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       315: aload_0
+       316: getfield      #3                  // Field index:Lrt4/Js5Index;
+       319: getfield      #58                 // Field rt4/Js5Index.groupChecksums:[I
+       322: iload_1
+       323: iaload
+       324: invokevirtual #56                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+       327: ldc           #55                 // String ,
+       329: invokevirtual #53                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       332: aload_0
+       333: getfield      #3                  // Field index:Lrt4/Js5Index;
+       336: getfield      #25                 // Field rt4/Js5Index.checksum:I
+       339: invokevirtual #56                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+       342: invokevirtual #59                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       345: invokevirtual #60                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       348: iconst_1
+       349: newarray       byte
+       351: dup
+       352: iconst_0
+       353: iconst_0
+       354: bastore
+       355: astore        8
+       357: aload_0
+       358: getfield      #5                  // Field discardPacked:Z
+       361: ifeq          371
+       364: aload_0
+       365: getfield      #9                  // Field packed:[Ljava/lang/Object;
+       368: iload_1
+       369: aconst_null
+       370: aastore
+       371: iload         4
+       373: iconst_1
+       374: if_icmple     691
+       377: aload         8
+       379: arraylength
+       380: istore        9
+       382: iload         9
+       384: iconst_1
+       385: isub
+       386: istore        10
+       388: aload         8
+       390: iload         10
+       392: baload
+       393: sipush        255
+       396: iand
+       397: istore        11
+       399: iload         10
+       401: iload         4
+       403: iload         11
+       405: imul
+       406: iconst_4
+       407: imul
+       408: isub
+       409: istore        12
+       411: new           #42                 // class rt4/Buffer
+       414: dup
+       415: aload         8
+       417: invokespecial #43                 // Method rt4/Buffer."<init>":([B)V
+       420: astore        13
+       422: aload         13
+       424: iload         12
+       426: putfield      #61                 // Field rt4/Buffer.offset:I
+       429: iload         4
+       431: newarray       int
+       433: astore        14
+       435: iconst_0
+       436: istore        17
+       438: iload         17
+       440: iload         11
+       442: if_icmpge     490
+       445: iconst_0
+       446: istore        15
+       448: iconst_0
+       449: istore        16
+       451: iload         16
+       453: iload         4
+       455: if_icmpge     484
+       458: iload         15
+       460: aload         13
+       462: invokevirtual #62                 // Method rt4/Buffer.g4:()I
+       465: iadd
+       466: istore        15
+       468: aload         14
+       470: iload         16
+       472: dup2
+       473: iaload
+       474: iload         15
+       476: iadd
+       477: iastore
+       478: iinc          16, 1
+       481: goto          451
+       484: iinc          17, 1
+       487: goto          438
+       490: iload         4
+       492: anewarray     #63                 // class "[B"
+       495: astore        17
+       497: iconst_0
+       498: istore        15
+       500: iload         15
+       502: iload         4
+       504: if_icmpge     531
+       507: aload         17
+       509: iload         15
+       511: aload         14
+       513: iload         15
+       515: iaload
+       516: newarray       byte
+       518: aastore
+       519: aload         14
+       521: iload         15
+       523: iconst_0
+       524: iastore
+       525: iinc          15, 1
+       528: goto          500
+       531: aload         13
+       533: iload         12
+       535: putfield      #61                 // Field rt4/Buffer.offset:I
+       538: iconst_0
+       539: istore        15
+       541: iconst_0
+       542: istore        16
+       544: iload         16
+       546: iload         11
+       548: if_icmpge     622
+       551: iconst_0
+       552: istore        18
+       554: iconst_0
+       555: istore        19
+       557: iload         19
+       559: iload         4
+       561: if_icmpge     616
+       564: iload         18
+       566: aload         13
+       568: invokevirtual #62                 // Method rt4/Buffer.g4:()I
+       571: iadd
+       572: istore        18
+       574: aload         8
+       576: iload         15
+       578: aload         17
+       580: iload         19
+       582: aaload
+       583: aload         14
+       585: iload         19
+       587: iaload
+       588: iload         18
+       590: invokestatic  #64                 // Method rt4/JagString.copy:([BI[BII)V
+       593: iload         15
+       595: iload         18
+       597: iadd
+       598: istore        15
+       600: aload         14
+       602: iload         19
+       604: dup2
+       605: iaload
+       606: iload         18
+       608: iadd
+       609: iastore
+       610: iinc          19, 1
+       613: goto          557
+       616: iinc          16, 1
+       619: goto          544
+       622: iconst_0
+       623: istore        16
+       625: iload         16
+       627: iload         4
+       629: if_icmpge     688
+       632: aload_3
+       633: ifnonnull     643
+       636: iload         16
+       638: istore        18
+       640: goto          649
+       643: aload_3
+       644: iload         16
+       646: iaload
+       647: istore        18
+       649: aload_0
+       650: getfield      #6                  // Field discardUnpacked:Z
+       653: ifeq          669
+       656: aload         6
+       658: iload         18
+       660: aload         17
+       662: iload         16
+       664: aaload
+       665: aastore
+       666: goto          682
+       669: aload         6
+       671: iload         18
+       673: aload         17
+       675: iload         16
+       677: aaload
+       678: invokestatic  #65                 // Method rt4/ByteArray.wrap:([B)Ljava/lang/Object;
+       681: aastore
+       682: iinc          16, 1
+       685: goto          625
+       688: goto          733
+       691: aload_3
+       692: ifnonnull     701
+       695: iconst_0
+       696: istore        9
+       698: goto          706
+       701: aload_3
+       702: iconst_0
+       703: iaload
+       704: istore        9
+       706: aload_0
+       707: getfield      #6                  // Field discardUnpacked:Z
+       710: ifeq          723
+       713: aload         6
+       715: iload         9
+       717: aload         8
+       719: aastore
+       720: goto          733
+       723: aload         6
+       725: iload         9
+       727: aload         8
+       729: invokestatic  #65                 // Method rt4/ByteArray.wrap:([B)Ljava/lang/Object;
+       732: aastore
+       733: iconst_1
+       734: ireturn
+      Exception table:
+         from    to  target type
+           212   219   222   Class java/lang/RuntimeException
+
+  public final byte[] fetchFile(int, int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: aconst_null
+         3: iload_2
+         4: invokevirtual #66                 // Method fetchFile:(I[II)[B
+         7: areturn
+
+  private void fetchGroup(int);
+    Code:
+         0: aload_0
+         1: getfield      #5                  // Field discardPacked:Z
+         4: ifeq          24
+         7: aload_0
+         8: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        11: iload_1
+        12: aload_0
+        13: getfield      #4                  // Field provider:Lrt4/Js5ResourceProvider;
+        16: iload_1
+        17: invokevirtual #67                 // Method rt4/Js5ResourceProvider.fetchGroup:(I)[B
+        20: aastore
+        21: goto          41
+        24: aload_0
+        25: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        28: iload_1
+        29: aload_0
+        30: getfield      #4                  // Field provider:Lrt4/Js5ResourceProvider;
+        33: iload_1
+        34: invokevirtual #67                 // Method rt4/Js5ResourceProvider.fetchGroup:(I)[B
+        37: invokestatic  #65                 // Method rt4/ByteArray.wrap:([B)Ljava/lang/Object;
+        40: aastore
+        41: return
+
+  public final boolean isGroupNameValid(rt4.JagString);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifeq          37
+         7: aload_1
+         8: invokevirtual #18                 // Method rt4/JagString.toLowerCase:()Lrt4/JagString;
+        11: astore_2
+        12: aload_0
+        13: getfield      #3                  // Field index:Lrt4/Js5Index;
+        16: getfield      #14                 // Field rt4/Js5Index.groupNameHashTable:Lrt4/IntHashTable;
+        19: aload_2
+        20: invokevirtual #19                 // Method rt4/JagString.getHash:()I
+        23: invokevirtual #20                 // Method rt4/IntHashTable.get:(I)I
+        26: istore_3
+        27: iload_3
+        28: iflt          35
+        31: iconst_1
+        32: goto          36
+        35: iconst_0
+        36: ireturn
+        37: iconst_0
+        38: ireturn
+
+  public final int getPercentageComplete();
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: iconst_0
+         8: ireturn
+         9: iconst_0
+        10: istore_1
+        11: iconst_0
+        12: istore_2
+        13: iconst_0
+        14: istore_3
+        15: iload_3
+        16: aload_0
+        17: getfield      #9                  // Field packed:[Ljava/lang/Object;
+        20: arraylength
+        21: if_icmpge     53
+        24: aload_0
+        25: getfield      #3                  // Field index:Lrt4/Js5Index;
+        28: getfield      #41                 // Field rt4/Js5Index.groupSizes:[I
+        31: iload_3
+        32: iaload
+        33: ifle          47
+        36: iinc          1, 100
+        39: iload_2
+        40: aload_0
+        41: iload_3
+        42: invokespecial #21                 // Method getPercentageComplete:(I)I
+        45: iadd
+        46: istore_2
+        47: iinc          3, 1
+        50: goto          15
+        53: iload_1
+        54: ifne          60
+        57: bipush        100
+        59: ireturn
+        60: iload_2
+        61: bipush        100
+        63: imul
+        64: iload_1
+        65: idiv
+        66: ireturn
+
+  public final void discardUnpacked();
+    Code:
+         0: aload_0
+         1: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+         4: ifnull        15
+         7: aload_0
+         8: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        11: aconst_null
+        12: invokestatic  #68                 // Method java/util/Arrays.fill:([Ljava/lang/Object;Ljava/lang/Object;)V
+        15: return
+
+  public final byte[] fetchFile(int);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: aconst_null
+         8: areturn
+         9: aload_0
+        10: getfield      #3                  // Field index:Lrt4/Js5Index;
+        13: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        16: arraylength
+        17: iconst_1
+        18: if_icmpne     28
+        21: aload_0
+        22: iconst_0
+        23: iload_1
+        24: invokevirtual #32                 // Method fetchFile:(II)[B
+        27: areturn
+        28: aload_0
+        29: iload_1
+        30: invokespecial #11                 // Method isGroupValid:(I)Z
+        33: ifne          38
+        36: aconst_null
+        37: areturn
+        38: aload_0
+        39: getfield      #3                  // Field index:Lrt4/Js5Index;
+        42: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        45: iload_1
+        46: iaload
+        47: iconst_1
+        48: if_icmpne     58
+        51: aload_0
+        52: iload_1
+        53: iconst_0
+        54: invokevirtual #32                 // Method fetchFile:(II)[B
+        57: areturn
+        58: new           #47                 // class java/lang/RuntimeException
+        61: dup
+        62: invokespecial #69                 // Method java/lang/RuntimeException."<init>":()V
+        65: athrow
+
+  private boolean isFileValid(int, int);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: iconst_0
+         8: ireturn
+         9: iload_1
+        10: iflt          44
+        13: iload_2
+        14: iflt          44
+        17: aload_0
+        18: getfield      #3                  // Field index:Lrt4/Js5Index;
+        21: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        24: arraylength
+        25: iload_1
+        26: if_icmple     44
+        29: aload_0
+        30: getfield      #3                  // Field index:Lrt4/Js5Index;
+        33: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        36: iload_1
+        37: iaload
+        38: iload_2
+        39: if_icmple     44
+        42: iconst_1
+        43: ireturn
+        44: iconst_0
+        45: ireturn
+
+  public final byte[] fetchFileNoDiscard(int, int);
+    Code:
+         0: aload_0
+         1: iload_2
+         2: iload_1
+         3: invokespecial #35                 // Method isFileValid:(II)Z
+         6: ifne          11
+         9: aconst_null
+        10: areturn
+        11: aload_0
+        12: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        15: iload_2
+        16: aaload
+        17: ifnull        31
+        20: aload_0
+        21: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        24: iload_2
+        25: aaload
+        26: iload_1
+        27: aaload
+        28: ifnonnull     60
+        31: aload_0
+        32: iload_2
+        33: aconst_null
+        34: invokespecial #36                 // Method unpackGroup:(I[I)Z
+        37: istore_3
+        38: iload_3
+        39: ifne          60
+        42: aload_0
+        43: iload_2
+        44: invokespecial #10                 // Method fetchGroup:(I)V
+        47: aload_0
+        48: iload_2
+        49: aconst_null
+        50: invokespecial #36                 // Method unpackGroup:(I[I)Z
+        53: istore_3
+        54: iload_3
+        55: ifne          60
+        58: aconst_null
+        59: areturn
+        60: aload_0
+        61: getfield      #30                 // Field unpacked:[[Ljava/lang/Object;
+        64: iload_2
+        65: aaload
+        66: iload_1
+        67: aaload
+        68: iconst_0
+        69: invokestatic  #37                 // Method rt4/ByteArray.unwrap:(Ljava/lang/Object;Z)[B
+        72: areturn
+
+  public final int[] getFileIds(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokespecial #11                 // Method isGroupValid:(I)Z
+         5: ifne          10
+         8: aconst_null
+         9: areturn
+        10: aload_0
+        11: getfield      #3                  // Field index:Lrt4/Js5Index;
+        14: getfield      #40                 // Field rt4/Js5Index.fileIds:[[I
+        17: iload_1
+        18: aaload
+        19: astore_2
+        20: aload_2
+        21: ifnonnull     54
+        24: aload_0
+        25: getfield      #3                  // Field index:Lrt4/Js5Index;
+        28: getfield      #41                 // Field rt4/Js5Index.groupSizes:[I
+        31: iload_1
+        32: iaload
+        33: newarray       int
+        35: astore_2
+        36: iconst_0
+        37: istore_3
+        38: aload_2
+        39: arraylength
+        40: iload_3
+        41: if_icmple     54
+        44: aload_2
+        45: iload_3
+        46: iload_3
+        47: iinc          3, 1
+        50: iastore
+        51: goto          38
+        54: aload_2
+        55: areturn
+
+  public final int getGroupCapacity(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokespecial #11                 // Method isGroupValid:(I)Z
+         5: ifeq          20
+         8: aload_0
+         9: getfield      #3                  // Field index:Lrt4/Js5Index;
+        12: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        15: iload_1
+        16: iaload
+        17: goto          21
+        20: iconst_0
+        21: ireturn
+
+  public final boolean isFileReady(int);
+    Code:
+         0: aload_0
+         1: invokespecial #7                  // Method isIndexReady:()Z
+         4: ifne          9
+         7: iconst_0
+         8: ireturn
+         9: aload_0
+        10: getfield      #3                  // Field index:Lrt4/Js5Index;
+        13: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        16: arraylength
+        17: iconst_1
+        18: if_icmpne     28
+        21: aload_0
+        22: iload_1
+        23: iconst_0
+        24: invokevirtual #34                 // Method isFileReady:(II)Z
+        27: ireturn
+        28: aload_0
+        29: iload_1
+        30: invokespecial #11                 // Method isGroupValid:(I)Z
+        33: ifne          38
+        36: iconst_0
+        37: ireturn
+        38: aload_0
+        39: getfield      #3                  // Field index:Lrt4/Js5Index;
+        42: getfield      #26                 // Field rt4/Js5Index.groupCapacities:[I
+        45: iload_1
+        46: iaload
+        47: iconst_1
+        48: if_icmpne     58
+        51: aload_0
+        52: iconst_0
+        53: iload_1
+        54: invokevirtual #34                 // Method isFileReady:(II)Z
+        57: ireturn
+        58: new           #47                 // class java/lang/RuntimeException
+        61: dup
+        62: invokespecial #69                 // Method java/lang/RuntimeException."<init>":()V
+        65: athrow
+}
+Compiled from "Js5MasterIndex.java"
+public final class rt4.Js5MasterIndex {
+  private rt4.Buffer buffer;
+
+  private rt4.Js5CachedResourceProvider[] resourceProviders;
+
+  private final rt4.Js5CacheQueue cacheQueue;
+
+  private final rt4.Js5NetQueue netQueue;
+
+  private rt4.Js5NetRequest request;
+
+  public rt4.Js5MasterIndex(rt4.Js5NetQueue, rt4.Js5CacheQueue);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_2
+         6: putfield      #2                  // Field cacheQueue:Lrt4/Js5CacheQueue;
+         9: aload_0
+        10: aload_1
+        11: putfield      #3                  // Field netQueue:Lrt4/Js5NetQueue;
+        14: aload_0
+        15: getfield      #3                  // Field netQueue:Lrt4/Js5NetQueue;
+        18: invokevirtual #4                  // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+        21: ifne          43
+        24: aload_0
+        25: aload_0
+        26: getfield      #3                  // Field netQueue:Lrt4/Js5NetQueue;
+        29: sipush        255
+        32: iconst_0
+        33: sipush        255
+        36: iconst_1
+        37: invokevirtual #5                  // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+        40: putfield      #6                  // Field request:Lrt4/Js5NetRequest;
+        43: return
+
+  public final boolean isReady();
+    Code:
+         0: aload_0
+         1: getfield      #7                  // Field buffer:Lrt4/Buffer;
+         4: ifnull        9
+         7: iconst_1
+         8: ireturn
+         9: aload_0
+        10: getfield      #6                  // Field request:Lrt4/Js5NetRequest;
+        13: ifnonnull     47
+        16: aload_0
+        17: getfield      #3                  // Field netQueue:Lrt4/Js5NetQueue;
+        20: invokevirtual #4                  // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+        23: ifeq          28
+        26: iconst_0
+        27: ireturn
+        28: aload_0
+        29: aload_0
+        30: getfield      #3                  // Field netQueue:Lrt4/Js5NetQueue;
+        33: sipush        255
+        36: iconst_0
+        37: sipush        255
+        40: iconst_1
+        41: invokevirtual #5                  // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+        44: putfield      #6                  // Field request:Lrt4/Js5NetRequest;
+        47: aload_0
+        48: getfield      #6                  // Field request:Lrt4/Js5NetRequest;
+        51: getfield      #8                  // Field rt4/Js5NetRequest.incomplete:Z
+        54: ifeq          59
+        57: iconst_0
+        58: ireturn
+        59: aload_0
+        60: new           #9                  // class rt4/Buffer
+        63: dup
+        64: aload_0
+        65: getfield      #6                  // Field request:Lrt4/Js5NetRequest;
+        68: invokevirtual #10                 // Method rt4/Js5NetRequest.getData:()[B
+        71: invokespecial #11                 // Method rt4/Buffer."<init>":([B)V
+        74: putfield      #7                  // Field buffer:Lrt4/Buffer;
+        77: aload_0
+        78: aload_0
+        79: getfield      #7                  // Field buffer:Lrt4/Buffer;
+        82: getfield      #12                 // Field rt4/Buffer.data:[B
+        85: arraylength
+        86: iconst_5
+        87: isub
+        88: bipush        8
+        90: idiv
+        91: anewarray     #13                 // class rt4/Js5CachedResourceProvider
+        94: putfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        97: iconst_1
+        98: ireturn
+
+  public final void method179();
+    Code:
+         0: aload_0
+         1: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+         4: ifnonnull     8
+         7: return
+         8: iconst_0
+         9: istore_1
+        10: iload_1
+        11: aload_0
+        12: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        15: arraylength
+        16: if_icmpge     43
+        19: aload_0
+        20: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        23: iload_1
+        24: aaload
+        25: ifnull        37
+        28: aload_0
+        29: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        32: iload_1
+        33: aaload
+        34: invokevirtual #15                 // Method rt4/Js5CachedResourceProvider.processPrefetchQueue:()V
+        37: iinc          1, 1
+        40: goto          10
+        43: iconst_0
+        44: istore_1
+        45: iload_1
+        46: aload_0
+        47: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        50: arraylength
+        51: if_icmpge     78
+        54: aload_0
+        55: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        58: iload_1
+        59: aaload
+        60: ifnull        72
+        63: aload_0
+        64: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        67: iload_1
+        68: aaload
+        69: invokevirtual #16                 // Method rt4/Js5CachedResourceProvider.loop:()V
+        72: iinc          1, 1
+        75: goto          45
+        78: return
+
+  public final rt4.Js5CachedResourceProvider getResourceProvider(int, rt4.Cache, rt4.Cache);
+    Code:
+         0: aload_0
+         1: aload_3
+         2: iload_1
+         3: aload_2
+         4: invokespecial #17                 // Method method188:(Lrt4/Cache;ILrt4/Cache;)Lrt4/Js5CachedResourceProvider;
+         7: areturn
+
+  private rt4.Js5CachedResourceProvider method188(rt4.Cache, int, rt4.Cache);
+    Code:
+         0: aload_0
+         1: getfield      #7                  // Field buffer:Lrt4/Buffer;
+         4: ifnonnull     15
+         7: new           #18                 // class java/lang/RuntimeException
+        10: dup
+        11: invokespecial #19                 // Method java/lang/RuntimeException."<init>":()V
+        14: athrow
+        15: aload_0
+        16: getfield      #7                  // Field buffer:Lrt4/Buffer;
+        19: iload_2
+        20: bipush        8
+        22: imul
+        23: iconst_5
+        24: iadd
+        25: putfield      #20                 // Field rt4/Buffer.offset:I
+        28: aload_0
+        29: getfield      #7                  // Field buffer:Lrt4/Buffer;
+        32: getfield      #12                 // Field rt4/Buffer.data:[B
+        35: arraylength
+        36: aload_0
+        37: getfield      #7                  // Field buffer:Lrt4/Buffer;
+        40: getfield      #20                 // Field rt4/Buffer.offset:I
+        43: if_icmpgt     54
+        46: new           #18                 // class java/lang/RuntimeException
+        49: dup
+        50: invokespecial #19                 // Method java/lang/RuntimeException."<init>":()V
+        53: athrow
+        54: aload_0
+        55: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+        58: iload_2
+        59: aaload
+        60: ifnonnull     117
+        63: aload_0
+        64: getfield      #7                  // Field buffer:Lrt4/Buffer;
+        67: invokevirtual #21                 // Method rt4/Buffer.g4:()I
+        70: istore        4
+        72: aload_0
+        73: getfield      #7                  // Field buffer:Lrt4/Buffer;
+        76: invokevirtual #21                 // Method rt4/Buffer.g4:()I
+        79: istore        5
+        81: new           #13                 // class rt4/Js5CachedResourceProvider
+        84: dup
+        85: iload_2
+        86: aload_1
+        87: aload_3
+        88: aload_0
+        89: getfield      #3                  // Field netQueue:Lrt4/Js5NetQueue;
+        92: aload_0
+        93: getfield      #2                  // Field cacheQueue:Lrt4/Js5CacheQueue;
+        96: iload         4
+        98: iload         5
+       100: iconst_1
+       101: invokespecial #22                 // Method rt4/Js5CachedResourceProvider."<init>":(ILrt4/Cache;Lrt4/Cache;Lrt4/Js5NetQueue;Lrt4/Js5CacheQueue;IIZ)V
+       104: astore        6
+       106: aload_0
+       107: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+       110: iload_2
+       111: aload         6
+       113: aastore
+       114: aload         6
+       116: areturn
+       117: aload_0
+       118: getfield      #14                 // Field resourceProviders:[Lrt4/Js5CachedResourceProvider;
+       121: iload_2
+       122: aaload
+       123: areturn
+}
+Compiled from "Js5ResourceProvider.java"
+public abstract class rt4.Js5ResourceProvider {
+  protected rt4.Js5ResourceProvider();
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public abstract rt4.Js5Index fetchIndex();
+
+  public abstract void prefetchGroup(int);
+
+  public abstract int getPercentageComplete(int);
+
+  public abstract byte[] fetchGroup(int);
+}
+Compiled from "Js5CachedResourceProvider.java"
+public final class rt4.Js5CachedResourceProvider extends rt4.Js5ResourceProvider {
+  public static final java.util.zip.CRC32 crc32;
+
+  private rt4.Js5Index index;
+
+  private byte[] groupStatus;
+
+  private boolean prefetchAll;
+
+  private int verifiedGroups;
+
+  private final rt4.HashTable requests;
+
+  private int group;
+
+  private final rt4.LinkedList prefetchQueue;
+
+  private long orphanCheckTime;
+
+  private final int archive;
+
+  private final rt4.Cache cache;
+
+  private boolean verifyAll;
+
+  private rt4.LinkedList groupQueue;
+
+  private final rt4.Js5CacheQueue cacheQueue;
+
+  private final int expectedChecksum;
+
+  private final boolean discardOrphans;
+
+  private final rt4.Cache masterCache;
+
+  private final rt4.Js5NetQueue netQueue;
+
+  private final int expectedVersion;
+
+  private rt4.Js5Request indexRequest;
+
+  public rt4.Js5CachedResourceProvider(int, rt4.Cache, rt4.Cache, rt4.Js5NetQueue, rt4.Js5CacheQueue, int, int, boolean);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method rt4/Js5ResourceProvider."<init>":()V
+         4: aload_0
+         5: iconst_0
+         6: putfield      #2                  // Field verifiedGroups:I
+         9: aload_0
+        10: new           #3                  // class rt4/HashTable
+        13: dup
+        14: bipush        16
+        16: invokespecial #4                  // Method rt4/HashTable."<init>":(I)V
+        19: putfield      #5                  // Field requests:Lrt4/HashTable;
+        22: aload_0
+        23: iconst_0
+        24: putfield      #6                  // Field group:I
+        27: aload_0
+        28: new           #7                  // class rt4/LinkedList
+        31: dup
+        32: invokespecial #8                  // Method rt4/LinkedList."<init>":()V
+        35: putfield      #9                  // Field prefetchQueue:Lrt4/LinkedList;
+        38: aload_0
+        39: lconst_0
+        40: putfield      #10                 // Field orphanCheckTime:J
+        43: aload_0
+        44: iload_1
+        45: putfield      #11                 // Field archive:I
+        48: aload_0
+        49: aload_2
+        50: putfield      #12                 // Field cache:Lrt4/Cache;
+        53: aload_0
+        54: getfield      #12                 // Field cache:Lrt4/Cache;
+        57: ifnonnull     68
+        60: aload_0
+        61: iconst_0
+        62: putfield      #13                 // Field verifyAll:Z
+        65: goto          84
+        68: aload_0
+        69: iconst_1
+        70: putfield      #13                 // Field verifyAll:Z
+        73: aload_0
+        74: new           #7                  // class rt4/LinkedList
+        77: dup
+        78: invokespecial #8                  // Method rt4/LinkedList."<init>":()V
+        81: putfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+        84: aload_0
+        85: aload         5
+        87: putfield      #15                 // Field cacheQueue:Lrt4/Js5CacheQueue;
+        90: aload_0
+        91: iload         6
+        93: putfield      #16                 // Field expectedChecksum:I
+        96: aload_0
+        97: iload         8
+        99: putfield      #17                 // Field discardOrphans:Z
+       102: aload_0
+       103: aload_3
+       104: putfield      #18                 // Field masterCache:Lrt4/Cache;
+       107: aload_0
+       108: aload         4
+       110: putfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       113: aload_0
+       114: iload         7
+       116: putfield      #20                 // Field expectedVersion:I
+       119: aload_0
+       120: getfield      #18                 // Field masterCache:Lrt4/Cache;
+       123: ifnull        145
+       126: aload_0
+       127: aload_0
+       128: getfield      #15                 // Field cacheQueue:Lrt4/Js5CacheQueue;
+       131: aload_0
+       132: getfield      #18                 // Field masterCache:Lrt4/Cache;
+       135: aload_0
+       136: getfield      #11                 // Field archive:I
+       139: invokevirtual #21                 // Method rt4/Js5CacheQueue.readSynchronous:(Lrt4/Cache;I)Lrt4/Js5CacheRequest;
+       142: putfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+       145: return
+
+  public final void prefetchGroup(int);
+    Code:
+         0: aload_0
+         1: getfield      #12                 // Field cache:Lrt4/Cache;
+         4: ifnonnull     8
+         7: return
+         8: aload_0
+         9: getfield      #9                  // Field prefetchQueue:Lrt4/LinkedList;
+        12: invokevirtual #23                 // Method rt4/LinkedList.head:()Lrt4/Node;
+        15: astore_2
+        16: aload_2
+        17: ifnull        42
+        20: aload_2
+        21: getfield      #24                 // Field rt4/Node.key:J
+        24: iload_1
+        25: i2l
+        26: lcmp
+        27: ifne          31
+        30: return
+        31: aload_0
+        32: getfield      #9                  // Field prefetchQueue:Lrt4/LinkedList;
+        35: invokevirtual #25                 // Method rt4/LinkedList.next:()Lrt4/Node;
+        38: astore_2
+        39: goto          16
+        42: new           #26                 // class rt4/Node
+        45: dup
+        46: invokespecial #27                 // Method rt4/Node."<init>":()V
+        49: astore_2
+        50: aload_2
+        51: iload_1
+        52: i2l
+        53: putfield      #24                 // Field rt4/Node.key:J
+        56: aload_0
+        57: getfield      #9                  // Field prefetchQueue:Lrt4/LinkedList;
+        60: aload_2
+        61: invokevirtual #28                 // Method rt4/LinkedList.addTail:(Lrt4/Node;)V
+        64: return
+
+  public final rt4.Js5Index fetchIndex();
+    Code:
+         0: aload_0
+         1: getfield      #29                 // Field index:Lrt4/Js5Index;
+         4: ifnull        12
+         7: aload_0
+         8: getfield      #29                 // Field index:Lrt4/Js5Index;
+        11: areturn
+        12: aload_0
+        13: getfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+        16: ifnonnull     51
+        19: aload_0
+        20: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+        23: invokevirtual #30                 // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+        26: ifeq          31
+        29: aconst_null
+        30: areturn
+        31: aload_0
+        32: aload_0
+        33: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+        36: sipush        255
+        39: iconst_0
+        40: aload_0
+        41: getfield      #11                 // Field archive:I
+        44: iconst_1
+        45: invokevirtual #31                 // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+        48: putfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+        51: aload_0
+        52: getfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+        55: getfield      #32                 // Field rt4/Js5Request.incomplete:Z
+        58: ifeq          63
+        61: aconst_null
+        62: areturn
+        63: aload_0
+        64: getfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+        67: invokevirtual #33                 // Method rt4/Js5Request.getData:()[B
+        70: astore_1
+        71: aload_0
+        72: getfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+        75: instanceof    #34                 // class rt4/Js5CacheRequest
+        78: ifeq          180
+        81: aload_1
+        82: ifnonnull     93
+        85: new           #35                 // class java/lang/RuntimeException
+        88: dup
+        89: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+        92: athrow
+        93: aload_0
+        94: new           #37                 // class rt4/Js5Index
+        97: dup
+        98: aload_1
+        99: aload_0
+       100: getfield      #16                 // Field expectedChecksum:I
+       103: invokespecial #38                 // Method rt4/Js5Index."<init>":([BI)V
+       106: putfield      #29                 // Field index:Lrt4/Js5Index;
+       109: aload_0
+       110: getfield      #20                 // Field expectedVersion:I
+       113: aload_0
+       114: getfield      #29                 // Field index:Lrt4/Js5Index;
+       117: getfield      #39                 // Field rt4/Js5Index.version:I
+       120: if_icmpeq     131
+       123: new           #35                 // class java/lang/RuntimeException
+       126: dup
+       127: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       130: athrow
+       131: goto          288
+       134: astore_2
+       135: aload_0
+       136: aconst_null
+       137: putfield      #29                 // Field index:Lrt4/Js5Index;
+       140: aload_0
+       141: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       144: invokevirtual #30                 // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+       147: ifeq          158
+       150: aload_0
+       151: aconst_null
+       152: putfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+       155: goto          178
+       158: aload_0
+       159: aload_0
+       160: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       163: sipush        255
+       166: iconst_0
+       167: aload_0
+       168: getfield      #11                 // Field archive:I
+       171: iconst_1
+       172: invokevirtual #31                 // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+       175: putfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+       178: aconst_null
+       179: areturn
+       180: aload_1
+       181: ifnonnull     192
+       184: new           #35                 // class java/lang/RuntimeException
+       187: dup
+       188: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       191: athrow
+       192: aload_0
+       193: new           #37                 // class rt4/Js5Index
+       196: dup
+       197: aload_1
+       198: aload_0
+       199: getfield      #16                 // Field expectedChecksum:I
+       202: invokespecial #38                 // Method rt4/Js5Index."<init>":([BI)V
+       205: putfield      #29                 // Field index:Lrt4/Js5Index;
+       208: goto          264
+       211: astore_2
+       212: aload_0
+       213: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       216: invokevirtual #40                 // Method rt4/Js5NetQueue.rekey:()V
+       219: aload_0
+       220: aconst_null
+       221: putfield      #29                 // Field index:Lrt4/Js5Index;
+       224: aload_0
+       225: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       228: invokevirtual #30                 // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+       231: ifeq          242
+       234: aload_0
+       235: aconst_null
+       236: putfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+       239: goto          262
+       242: aload_0
+       243: aload_0
+       244: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       247: sipush        255
+       250: iconst_0
+       251: aload_0
+       252: getfield      #11                 // Field archive:I
+       255: iconst_1
+       256: invokevirtual #31                 // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+       259: putfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+       262: aconst_null
+       263: areturn
+       264: aload_0
+       265: getfield      #18                 // Field masterCache:Lrt4/Cache;
+       268: ifnull        288
+       271: aload_0
+       272: getfield      #15                 // Field cacheQueue:Lrt4/Js5CacheQueue;
+       275: aload_0
+       276: getfield      #18                 // Field masterCache:Lrt4/Cache;
+       279: aload_1
+       280: aload_0
+       281: getfield      #11                 // Field archive:I
+       284: invokevirtual #41                 // Method rt4/Js5CacheQueue.write:(Lrt4/Cache;[BI)Lrt4/Js5CacheRequest;
+       287: pop
+       288: aload_0
+       289: getfield      #12                 // Field cache:Lrt4/Cache;
+       292: ifnull        313
+       295: aload_0
+       296: aload_0
+       297: getfield      #29                 // Field index:Lrt4/Js5Index;
+       300: getfield      #42                 // Field rt4/Js5Index.capacity:I
+       303: newarray       byte
+       305: putfield      #43                 // Field groupStatus:[B
+       308: aload_0
+       309: iconst_0
+       310: putfield      #2                  // Field verifiedGroups:I
+       313: aload_0
+       314: aconst_null
+       315: putfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+       318: aload_0
+       319: getfield      #29                 // Field index:Lrt4/Js5Index;
+       322: areturn
+      Exception table:
+         from    to  target type
+            81   131   134   Class java/lang/RuntimeException
+           180   208   211   Class java/lang/RuntimeException
+
+  public final void prefetchAll();
+    Code:
+         0: aload_0
+         1: getfield      #12                 // Field cache:Lrt4/Cache;
+         4: ifnull        30
+         7: aload_0
+         8: iconst_1
+         9: putfield      #44                 // Field prefetchAll:Z
+        12: aload_0
+        13: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+        16: ifnonnull     30
+        19: aload_0
+        20: new           #7                  // class rt4/LinkedList
+        23: dup
+        24: invokespecial #8                  // Method rt4/LinkedList."<init>":()V
+        27: putfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+        30: return
+
+  public final int getVerifiedGroups();
+    Code:
+         0: aload_0
+         1: getfield      #2                  // Field verifiedGroups:I
+         4: ireturn
+
+  public final int getTotalVerifiedGroups();
+    Code:
+         0: aload_0
+         1: getfield      #29                 // Field index:Lrt4/Js5Index;
+         4: ifnonnull     9
+         7: iconst_0
+         8: ireturn
+         9: aload_0
+        10: getfield      #13                 // Field verifyAll:Z
+        13: ifeq          38
+        16: aload_0
+        17: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+        20: invokevirtual #23                 // Method rt4/LinkedList.head:()Lrt4/Node;
+        23: astore_1
+        24: aload_1
+        25: ifnonnull     32
+        28: iconst_0
+        29: goto          37
+        32: aload_1
+        33: getfield      #24                 // Field rt4/Node.key:J
+        36: l2i
+        37: ireturn
+        38: aload_0
+        39: getfield      #29                 // Field index:Lrt4/Js5Index;
+        42: getfield      #45                 // Field rt4/Js5Index.size:I
+        45: ireturn
+
+  public final void loop();
+    Code:
+         0: aload_0
+         1: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+         4: ifnull        469
+         7: aload_0
+         8: invokevirtual #46                 // Method fetchIndex:()Lrt4/Js5Index;
+        11: ifnonnull     15
+        14: return
+        15: aload_0
+        16: getfield      #13                 // Field verifyAll:Z
+        19: ifeq          239
+        22: iconst_1
+        23: istore_1
+        24: aload_0
+        25: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+        28: invokevirtual #23                 // Method rt4/LinkedList.head:()Lrt4/Node;
+        31: astore_2
+        32: aload_2
+        33: ifnull        87
+        36: aload_2
+        37: getfield      #24                 // Field rt4/Node.key:J
+        40: l2i
+        41: istore_3
+        42: aload_0
+        43: getfield      #43                 // Field groupStatus:[B
+        46: iload_3
+        47: baload
+        48: ifne          58
+        51: aload_0
+        52: iconst_1
+        53: iload_3
+        54: invokespecial #47                 // Method fetchGroupInner:(II)Lrt4/Js5Request;
+        57: pop
+        58: aload_0
+        59: getfield      #43                 // Field groupStatus:[B
+        62: iload_3
+        63: baload
+        64: ifne          72
+        67: iconst_0
+        68: istore_1
+        69: goto          76
+        72: aload_2
+        73: invokevirtual #48                 // Method rt4/Node.unlink:()V
+        76: aload_0
+        77: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+        80: invokevirtual #25                 // Method rt4/LinkedList.next:()Lrt4/Node;
+        83: astore_2
+        84: goto          32
+        87: aload_0
+        88: getfield      #29                 // Field index:Lrt4/Js5Index;
+        91: getfield      #49                 // Field rt4/Js5Index.groupSizes:[I
+        94: arraylength
+        95: aload_0
+        96: getfield      #6                  // Field group:I
+        99: if_icmple     222
+       102: aload_0
+       103: getfield      #29                 // Field index:Lrt4/Js5Index;
+       106: getfield      #49                 // Field rt4/Js5Index.groupSizes:[I
+       109: aload_0
+       110: getfield      #6                  // Field group:I
+       113: iaload
+       114: ifne          130
+       117: aload_0
+       118: dup
+       119: getfield      #6                  // Field group:I
+       122: iconst_1
+       123: iadd
+       124: putfield      #6                  // Field group:I
+       127: goto          87
+       130: aload_0
+       131: getfield      #15                 // Field cacheQueue:Lrt4/Js5CacheQueue;
+       134: getfield      #50                 // Field rt4/Js5CacheQueue.size:I
+       137: sipush        250
+       140: if_icmplt     148
+       143: iconst_0
+       144: istore_1
+       145: goto          222
+       148: aload_0
+       149: getfield      #43                 // Field groupStatus:[B
+       152: aload_0
+       153: getfield      #6                  // Field group:I
+       156: baload
+       157: ifne          170
+       160: aload_0
+       161: iconst_1
+       162: aload_0
+       163: getfield      #6                  // Field group:I
+       166: invokespecial #47                 // Method fetchGroupInner:(II)Lrt4/Js5Request;
+       169: pop
+       170: aload_0
+       171: getfield      #43                 // Field groupStatus:[B
+       174: aload_0
+       175: getfield      #6                  // Field group:I
+       178: baload
+       179: ifne          209
+       182: iconst_0
+       183: istore_1
+       184: new           #26                 // class rt4/Node
+       187: dup
+       188: invokespecial #27                 // Method rt4/Node."<init>":()V
+       191: astore_2
+       192: aload_2
+       193: aload_0
+       194: getfield      #6                  // Field group:I
+       197: i2l
+       198: putfield      #24                 // Field rt4/Node.key:J
+       201: aload_0
+       202: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+       205: aload_2
+       206: invokevirtual #28                 // Method rt4/LinkedList.addTail:(Lrt4/Node;)V
+       209: aload_0
+       210: dup
+       211: getfield      #6                  // Field group:I
+       214: iconst_1
+       215: iadd
+       216: putfield      #6                  // Field group:I
+       219: goto          87
+       222: iload_1
+       223: ifeq          469
+       226: aload_0
+       227: iconst_0
+       228: putfield      #13                 // Field verifyAll:Z
+       231: aload_0
+       232: iconst_0
+       233: putfield      #6                  // Field group:I
+       236: goto          469
+       239: aload_0
+       240: getfield      #44                 // Field prefetchAll:Z
+       243: ifeq          464
+       246: iconst_1
+       247: istore_1
+       248: aload_0
+       249: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+       252: invokevirtual #23                 // Method rt4/LinkedList.head:()Lrt4/Node;
+       255: astore_2
+       256: aload_2
+       257: ifnull        313
+       260: aload_2
+       261: getfield      #24                 // Field rt4/Node.key:J
+       264: l2i
+       265: istore_3
+       266: aload_0
+       267: getfield      #43                 // Field groupStatus:[B
+       270: iload_3
+       271: baload
+       272: iconst_1
+       273: if_icmpeq     283
+       276: aload_0
+       277: iconst_2
+       278: iload_3
+       279: invokespecial #47                 // Method fetchGroupInner:(II)Lrt4/Js5Request;
+       282: pop
+       283: aload_0
+       284: getfield      #43                 // Field groupStatus:[B
+       287: iload_3
+       288: baload
+       289: iconst_1
+       290: if_icmpne     300
+       293: aload_2
+       294: invokevirtual #48                 // Method rt4/Node.unlink:()V
+       297: goto          302
+       300: iconst_0
+       301: istore_1
+       302: aload_0
+       303: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+       306: invokevirtual #25                 // Method rt4/LinkedList.next:()Lrt4/Node;
+       309: astore_2
+       310: goto          256
+       313: aload_0
+       314: getfield      #29                 // Field index:Lrt4/Js5Index;
+       317: getfield      #49                 // Field rt4/Js5Index.groupSizes:[I
+       320: arraylength
+       321: aload_0
+       322: getfield      #6                  // Field group:I
+       325: if_icmple     447
+       328: aload_0
+       329: getfield      #29                 // Field index:Lrt4/Js5Index;
+       332: getfield      #49                 // Field rt4/Js5Index.groupSizes:[I
+       335: aload_0
+       336: getfield      #6                  // Field group:I
+       339: iaload
+       340: ifne          356
+       343: aload_0
+       344: dup
+       345: getfield      #6                  // Field group:I
+       348: iconst_1
+       349: iadd
+       350: putfield      #6                  // Field group:I
+       353: goto          313
+       356: aload_0
+       357: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       360: invokevirtual #51                 // Method rt4/Js5NetQueue.isPrefetchRequestQueueFull:()Z
+       363: ifeq          371
+       366: iconst_0
+       367: istore_1
+       368: goto          447
+       371: aload_0
+       372: getfield      #43                 // Field groupStatus:[B
+       375: aload_0
+       376: getfield      #6                  // Field group:I
+       379: baload
+       380: iconst_1
+       381: if_icmpeq     394
+       384: aload_0
+       385: iconst_2
+       386: aload_0
+       387: getfield      #6                  // Field group:I
+       390: invokespecial #47                 // Method fetchGroupInner:(II)Lrt4/Js5Request;
+       393: pop
+       394: aload_0
+       395: getfield      #43                 // Field groupStatus:[B
+       398: aload_0
+       399: getfield      #6                  // Field group:I
+       402: baload
+       403: iconst_1
+       404: if_icmpeq     434
+       407: new           #26                 // class rt4/Node
+       410: dup
+       411: invokespecial #27                 // Method rt4/Node."<init>":()V
+       414: astore_2
+       415: aload_2
+       416: aload_0
+       417: getfield      #6                  // Field group:I
+       420: i2l
+       421: putfield      #24                 // Field rt4/Node.key:J
+       424: aload_0
+       425: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+       428: aload_2
+       429: invokevirtual #28                 // Method rt4/LinkedList.addTail:(Lrt4/Node;)V
+       432: iconst_0
+       433: istore_1
+       434: aload_0
+       435: dup
+       436: getfield      #6                  // Field group:I
+       439: iconst_1
+       440: iadd
+       441: putfield      #6                  // Field group:I
+       444: goto          313
+       447: iload_1
+       448: ifeq          469
+       451: aload_0
+       452: iconst_0
+       453: putfield      #6                  // Field group:I
+       456: aload_0
+       457: iconst_0
+       458: putfield      #44                 // Field prefetchAll:Z
+       461: goto          469
+       464: aload_0
+       465: aconst_null
+       466: putfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+       469: aload_0
+       470: getfield      #17                 // Field discardOrphans:Z
+       473: ifeq          487
+       476: aload_0
+       477: getfield      #10                 // Field orphanCheckTime:J
+       480: invokestatic  #52                 // Method rt4/MonotonicClock.currentTimeMillis:()J
+       483: lcmp
+       484: ifle          488
+       487: return
+       488: aload_0
+       489: getfield      #5                  // Field requests:Lrt4/HashTable;
+       492: invokevirtual #53                 // Method rt4/HashTable.head:()Lrt4/Node;
+       495: checkcast     #54                 // class rt4/Js5Request
+       498: astore_1
+       499: aload_1
+       500: ifnull        558
+       503: aload_1
+       504: getfield      #32                 // Field rt4/Js5Request.incomplete:Z
+       507: ifne          544
+       510: aload_1
+       511: getfield      #55                 // Field rt4/Js5Request.orphan:Z
+       514: ifeq          539
+       517: aload_1
+       518: getfield      #56                 // Field rt4/Js5Request.urgent:Z
+       521: ifne          532
+       524: new           #35                 // class java/lang/RuntimeException
+       527: dup
+       528: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       531: athrow
+       532: aload_1
+       533: invokevirtual #57                 // Method rt4/Js5Request.unlink:()V
+       536: goto          544
+       539: aload_1
+       540: iconst_1
+       541: putfield      #55                 // Field rt4/Js5Request.orphan:Z
+       544: aload_0
+       545: getfield      #5                  // Field requests:Lrt4/HashTable;
+       548: invokevirtual #58                 // Method rt4/HashTable.next:()Lrt4/Node;
+       551: checkcast     #54                 // class rt4/Js5Request
+       554: astore_1
+       555: goto          499
+       558: aload_0
+       559: invokestatic  #52                 // Method rt4/MonotonicClock.currentTimeMillis:()J
+       562: ldc2_w        #59                 // long 1000l
+       565: ladd
+       566: putfield      #10                 // Field orphanCheckTime:J
+       569: return
+
+  public final int getPercentageComplete(int);
+    Code:
+         0: aload_0
+         1: getfield      #5                  // Field requests:Lrt4/HashTable;
+         4: iload_1
+         5: i2l
+         6: invokevirtual #61                 // Method rt4/HashTable.get:(J)Lrt4/Node;
+         9: checkcast     #54                 // class rt4/Js5Request
+        12: astore_2
+        13: aload_2
+        14: ifnonnull     21
+        17: iconst_0
+        18: goto          25
+        21: aload_2
+        22: invokevirtual #62                 // Method rt4/Js5Request.getPercentageComplete:()I
+        25: ireturn
+
+  public final int getIndexSize();
+    Code:
+         0: aload_0
+         1: getfield      #29                 // Field index:Lrt4/Js5Index;
+         4: ifnonnull     11
+         7: iconst_0
+         8: goto          18
+        11: aload_0
+        12: getfield      #29                 // Field index:Lrt4/Js5Index;
+        15: getfield      #45                 // Field rt4/Js5Index.size:I
+        18: ireturn
+
+  private rt4.Js5Request fetchGroupInner(int, int);
+    Code:
+         0: aload_0
+         1: getfield      #5                  // Field requests:Lrt4/HashTable;
+         4: iload_2
+         5: i2l
+         6: invokevirtual #61                 // Method rt4/HashTable.get:(J)Lrt4/Node;
+         9: checkcast     #54                 // class rt4/Js5Request
+        12: astore_3
+        13: aload_3
+        14: ifnull        41
+        17: iload_1
+        18: ifne          41
+        21: aload_3
+        22: getfield      #56                 // Field rt4/Js5Request.urgent:Z
+        25: ifne          41
+        28: aload_3
+        29: getfield      #32                 // Field rt4/Js5Request.incomplete:Z
+        32: ifeq          41
+        35: aload_3
+        36: invokevirtual #57                 // Method rt4/Js5Request.unlink:()V
+        39: aconst_null
+        40: astore_3
+        41: aload_3
+        42: ifnonnull     234
+        45: iload_1
+        46: ifne          112
+        49: aload_0
+        50: getfield      #12                 // Field cache:Lrt4/Cache;
+        53: ifnull        66
+        56: aload_0
+        57: getfield      #43                 // Field groupStatus:[B
+        60: iload_2
+        61: baload
+        62: iconst_m1
+        63: if_icmpne     96
+        66: aload_0
+        67: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+        70: invokevirtual #30                 // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+        73: ifeq          78
+        76: aconst_null
+        77: areturn
+        78: aload_0
+        79: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+        82: aload_0
+        83: getfield      #11                 // Field archive:I
+        86: iconst_2
+        87: iload_2
+        88: iconst_1
+        89: invokevirtual #31                 // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+        92: astore_3
+        93: goto          224
+        96: aload_0
+        97: getfield      #15                 // Field cacheQueue:Lrt4/Js5CacheQueue;
+       100: aload_0
+       101: getfield      #12                 // Field cache:Lrt4/Cache;
+       104: iload_2
+       105: invokevirtual #21                 // Method rt4/Js5CacheQueue.readSynchronous:(Lrt4/Cache;I)Lrt4/Js5CacheRequest;
+       108: astore_3
+       109: goto          224
+       112: iload_1
+       113: iconst_1
+       114: if_icmpne     148
+       117: aload_0
+       118: getfield      #12                 // Field cache:Lrt4/Cache;
+       121: ifnonnull     132
+       124: new           #35                 // class java/lang/RuntimeException
+       127: dup
+       128: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       131: athrow
+       132: aload_0
+       133: getfield      #15                 // Field cacheQueue:Lrt4/Js5CacheQueue;
+       136: iload_2
+       137: aload_0
+       138: getfield      #12                 // Field cache:Lrt4/Cache;
+       141: invokevirtual #63                 // Method rt4/Js5CacheQueue.read:(ILrt4/Cache;)Lrt4/Js5CacheRequest;
+       144: astore_3
+       145: goto          224
+       148: iload_1
+       149: iconst_2
+       150: if_icmpne     216
+       153: aload_0
+       154: getfield      #12                 // Field cache:Lrt4/Cache;
+       157: ifnonnull     168
+       160: new           #35                 // class java/lang/RuntimeException
+       163: dup
+       164: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       167: athrow
+       168: aload_0
+       169: getfield      #43                 // Field groupStatus:[B
+       172: iload_2
+       173: baload
+       174: iconst_m1
+       175: if_icmpeq     186
+       178: new           #35                 // class java/lang/RuntimeException
+       181: dup
+       182: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       185: athrow
+       186: aload_0
+       187: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       190: invokevirtual #51                 // Method rt4/Js5NetQueue.isPrefetchRequestQueueFull:()Z
+       193: ifeq          198
+       196: aconst_null
+       197: areturn
+       198: aload_0
+       199: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       202: aload_0
+       203: getfield      #11                 // Field archive:I
+       206: iconst_2
+       207: iload_2
+       208: iconst_0
+       209: invokevirtual #31                 // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+       212: astore_3
+       213: goto          224
+       216: new           #35                 // class java/lang/RuntimeException
+       219: dup
+       220: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       223: athrow
+       224: aload_0
+       225: getfield      #5                  // Field requests:Lrt4/HashTable;
+       228: aload_3
+       229: iload_2
+       230: i2l
+       231: invokevirtual #64                 // Method rt4/HashTable.put:(Lrt4/Node;J)V
+       234: aload_3
+       235: getfield      #32                 // Field rt4/Js5Request.incomplete:Z
+       238: ifeq          243
+       241: aconst_null
+       242: areturn
+       243: aload_3
+       244: invokevirtual #33                 // Method rt4/Js5Request.getData:()[B
+       247: astore        4
+       249: aload_3
+       250: instanceof    #34                 // class rt4/Js5CacheRequest
+       253: ifne          506
+       256: aload         4
+       258: ifnull        268
+       261: aload         4
+       263: arraylength
+       264: iconst_2
+       265: if_icmpgt     276
+       268: new           #35                 // class java/lang/RuntimeException
+       271: dup
+       272: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       275: athrow
+       276: getstatic     #65                 // Field crc32:Ljava/util/zip/CRC32;
+       279: invokevirtual #66                 // Method java/util/zip/CRC32.reset:()V
+       282: getstatic     #65                 // Field crc32:Ljava/util/zip/CRC32;
+       285: aload         4
+       287: iconst_0
+       288: aload         4
+       290: arraylength
+       291: iconst_2
+       292: isub
+       293: invokevirtual #67                 // Method java/util/zip/CRC32.update:([BII)V
+       296: getstatic     #65                 // Field crc32:Ljava/util/zip/CRC32;
+       299: invokevirtual #68                 // Method java/util/zip/CRC32.getValue:()J
+       302: l2i
+       303: istore        5
+       305: aload_0
+       306: getfield      #29                 // Field index:Lrt4/Js5Index;
+       309: getfield      #69                 // Field rt4/Js5Index.groupChecksums:[I
+       312: iload_2
+       313: iaload
+       314: iload         5
+       316: if_icmpeq     327
+       319: new           #35                 // class java/lang/RuntimeException
+       322: dup
+       323: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       326: athrow
+       327: aload_0
+       328: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       331: iconst_0
+       332: putfield      #70                 // Field rt4/Js5NetQueue.errors:I
+       335: aload_0
+       336: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       339: iconst_0
+       340: putfield      #71                 // Field rt4/Js5NetQueue.response:I
+       343: goto          405
+       346: astore        7
+       348: aload_0
+       349: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       352: invokevirtual #40                 // Method rt4/Js5NetQueue.rekey:()V
+       355: aload_3
+       356: invokevirtual #57                 // Method rt4/Js5Request.unlink:()V
+       359: aload_3
+       360: getfield      #56                 // Field rt4/Js5Request.urgent:Z
+       363: ifeq          403
+       366: aload_0
+       367: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       370: invokevirtual #30                 // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+       373: ifne          403
+       376: aload_0
+       377: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       380: aload_0
+       381: getfield      #11                 // Field archive:I
+       384: iconst_2
+       385: iload_2
+       386: iconst_1
+       387: invokevirtual #31                 // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+       390: astore        6
+       392: aload_0
+       393: getfield      #5                  // Field requests:Lrt4/HashTable;
+       396: aload         6
+       398: iload_2
+       399: i2l
+       400: invokevirtual #64                 // Method rt4/HashTable.put:(Lrt4/Node;J)V
+       403: aconst_null
+       404: areturn
+       405: aload         4
+       407: aload         4
+       409: arraylength
+       410: iconst_2
+       411: isub
+       412: aload_0
+       413: getfield      #29                 // Field index:Lrt4/Js5Index;
+       416: getfield      #72                 // Field rt4/Js5Index.groupVersions:[I
+       419: iload_2
+       420: iaload
+       421: bipush        8
+       423: iushr
+       424: i2b
+       425: bastore
+       426: aload         4
+       428: aload         4
+       430: arraylength
+       431: iconst_1
+       432: isub
+       433: aload_0
+       434: getfield      #29                 // Field index:Lrt4/Js5Index;
+       437: getfield      #72                 // Field rt4/Js5Index.groupVersions:[I
+       440: iload_2
+       441: iaload
+       442: i2b
+       443: bastore
+       444: aload_0
+       445: getfield      #12                 // Field cache:Lrt4/Cache;
+       448: ifnull        493
+       451: aload_0
+       452: getfield      #15                 // Field cacheQueue:Lrt4/Js5CacheQueue;
+       455: aload_0
+       456: getfield      #12                 // Field cache:Lrt4/Cache;
+       459: aload         4
+       461: iload_2
+       462: invokevirtual #41                 // Method rt4/Js5CacheQueue.write:(Lrt4/Cache;[BI)Lrt4/Js5CacheRequest;
+       465: pop
+       466: aload_0
+       467: getfield      #43                 // Field groupStatus:[B
+       470: iload_2
+       471: baload
+       472: iconst_1
+       473: if_icmpeq     493
+       476: aload_0
+       477: dup
+       478: getfield      #2                  // Field verifiedGroups:I
+       481: iconst_1
+       482: iadd
+       483: putfield      #2                  // Field verifiedGroups:I
+       486: aload_0
+       487: getfield      #43                 // Field groupStatus:[B
+       490: iload_2
+       491: iconst_1
+       492: bastore
+       493: aload_3
+       494: getfield      #56                 // Field rt4/Js5Request.urgent:Z
+       497: ifne          504
+       500: aload_3
+       501: invokevirtual #57                 // Method rt4/Js5Request.unlink:()V
+       504: aload_3
+       505: areturn
+       506: aload         4
+       508: ifnull        518
+       511: aload         4
+       513: arraylength
+       514: iconst_2
+       515: if_icmpgt     526
+       518: new           #35                 // class java/lang/RuntimeException
+       521: dup
+       522: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       525: athrow
+       526: getstatic     #65                 // Field crc32:Ljava/util/zip/CRC32;
+       529: invokevirtual #66                 // Method java/util/zip/CRC32.reset:()V
+       532: getstatic     #65                 // Field crc32:Ljava/util/zip/CRC32;
+       535: aload         4
+       537: iconst_0
+       538: aload         4
+       540: arraylength
+       541: iconst_2
+       542: isub
+       543: invokevirtual #67                 // Method java/util/zip/CRC32.update:([BII)V
+       546: getstatic     #65                 // Field crc32:Ljava/util/zip/CRC32;
+       549: invokevirtual #68                 // Method java/util/zip/CRC32.getValue:()J
+       552: l2i
+       553: istore        5
+       555: aload_0
+       556: getfield      #29                 // Field index:Lrt4/Js5Index;
+       559: getfield      #69                 // Field rt4/Js5Index.groupChecksums:[I
+       562: iload_2
+       563: iaload
+       564: iload         5
+       566: if_icmpeq     577
+       569: new           #35                 // class java/lang/RuntimeException
+       572: dup
+       573: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       576: athrow
+       577: aload         4
+       579: aload         4
+       581: arraylength
+       582: iconst_2
+       583: isub
+       584: baload
+       585: sipush        255
+       588: iand
+       589: bipush        8
+       591: ishl
+       592: aload         4
+       594: aload         4
+       596: arraylength
+       597: iconst_1
+       598: isub
+       599: baload
+       600: sipush        255
+       603: iand
+       604: iadd
+       605: istore        7
+       607: iload         7
+       609: aload_0
+       610: getfield      #29                 // Field index:Lrt4/Js5Index;
+       613: getfield      #72                 // Field rt4/Js5Index.groupVersions:[I
+       616: iload_2
+       617: iaload
+       618: ldc           #73                 // int 65535
+       620: iand
+       621: if_icmpeq     632
+       624: new           #35                 // class java/lang/RuntimeException
+       627: dup
+       628: invokespecial #36                 // Method java/lang/RuntimeException."<init>":()V
+       631: athrow
+       632: aload_0
+       633: getfield      #43                 // Field groupStatus:[B
+       636: iload_2
+       637: baload
+       638: iconst_1
+       639: if_icmpeq     668
+       642: aload_0
+       643: getfield      #43                 // Field groupStatus:[B
+       646: iload_2
+       647: baload
+       648: ifeq          651
+       651: aload_0
+       652: dup
+       653: getfield      #2                  // Field verifiedGroups:I
+       656: iconst_1
+       657: iadd
+       658: putfield      #2                  // Field verifiedGroups:I
+       661: aload_0
+       662: getfield      #43                 // Field groupStatus:[B
+       665: iload_2
+       666: iconst_1
+       667: bastore
+       668: aload_3
+       669: getfield      #56                 // Field rt4/Js5Request.urgent:Z
+       672: ifne          679
+       675: aload_3
+       676: invokevirtual #57                 // Method rt4/Js5Request.unlink:()V
+       679: aload_3
+       680: areturn
+       681: astore        7
+       683: aload_0
+       684: getfield      #43                 // Field groupStatus:[B
+       687: iload_2
+       688: iconst_m1
+       689: bastore
+       690: aload_3
+       691: invokevirtual #57                 // Method rt4/Js5Request.unlink:()V
+       694: aload_3
+       695: getfield      #56                 // Field rt4/Js5Request.urgent:Z
+       698: ifeq          738
+       701: aload_0
+       702: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       705: invokevirtual #30                 // Method rt4/Js5NetQueue.isUrgentRequestQueueFull:()Z
+       708: ifne          738
+       711: aload_0
+       712: getfield      #19                 // Field netQueue:Lrt4/Js5NetQueue;
+       715: aload_0
+       716: getfield      #11                 // Field archive:I
+       719: iconst_2
+       720: iload_2
+       721: iconst_1
+       722: invokevirtual #31                 // Method rt4/Js5NetQueue.read:(IBIZ)Lrt4/Js5NetRequest;
+       725: astore        6
+       727: aload_0
+       728: getfield      #5                  // Field requests:Lrt4/HashTable;
+       731: aload         6
+       733: iload_2
+       734: i2l
+       735: invokevirtual #64                 // Method rt4/HashTable.put:(Lrt4/Node;J)V
+       738: aconst_null
+       739: areturn
+      Exception table:
+         from    to  target type
+           256   343   346   Class java/lang/RuntimeException
+           506   680   681   Class java/lang/Exception
+
+  public final void processPrefetchQueue();
+    Code:
+         0: aload_0
+         1: getfield      #14                 // Field groupQueue:Lrt4/LinkedList;
+         4: ifnull        14
+         7: aload_0
+         8: invokevirtual #46                 // Method fetchIndex:()Lrt4/Js5Index;
+        11: ifnonnull     15
+        14: return
+        15: aload_0
+        16: getfield      #9                  // Field prefetchQueue:Lrt4/LinkedList;
+        19: invokevirtual #23                 // Method rt4/LinkedList.head:()Lrt4/Node;
+        22: astore_1
+        23: aload_1
+        24: ifnull        125
+        27: aload_1
+        28: getfield      #24                 // Field rt4/Node.key:J
+        31: l2i
+        32: istore_2
+        33: iload_2
+        34: iflt          60
+        37: aload_0
+        38: getfield      #29                 // Field index:Lrt4/Js5Index;
+        41: getfield      #42                 // Field rt4/Js5Index.capacity:I
+        44: iload_2
+        45: if_icmple     60
+        48: aload_0
+        49: getfield      #29                 // Field index:Lrt4/Js5Index;
+        52: getfield      #49                 // Field rt4/Js5Index.groupSizes:[I
+        55: iload_2
+        56: iaload
+        57: ifne          67
+        60: aload_1
+        61: invokevirtual #48                 // Method rt4/Node.unlink:()V
+        64: goto          114
+        67: aload_0
+        68: getfield      #43                 // Field groupStatus:[B
+        71: iload_2
+        72: baload
+        73: ifne          83
+        76: aload_0
+        77: iconst_1
+        78: iload_2
+        79: invokespecial #47                 // Method fetchGroupInner:(II)Lrt4/Js5Request;
+        82: pop
+        83: aload_0
+        84: getfield      #43                 // Field groupStatus:[B
+        87: iload_2
+        88: baload
+        89: iconst_m1
+        90: if_icmpne     100
+        93: aload_0
+        94: iconst_2
+        95: iload_2
+        96: invokespecial #47                 // Method fetchGroupInner:(II)Lrt4/Js5Request;
+        99: pop
+       100: aload_0
+       101: getfield      #43                 // Field groupStatus:[B
+       104: iload_2
+       105: baload
+       106: iconst_1
+       107: if_icmpne     114
+       110: aload_1
+       111: invokevirtual #48                 // Method rt4/Node.unlink:()V
+       114: aload_0
+       115: getfield      #9                  // Field prefetchQueue:Lrt4/LinkedList;
+       118: invokevirtual #25                 // Method rt4/LinkedList.next:()Lrt4/Node;
+       121: astore_1
+       122: goto          23
+       125: return
+
+  public final int getIndexPercentageComplete();
+    Code:
+         0: aload_0
+         1: invokevirtual #46                 // Method fetchIndex:()Lrt4/Js5Index;
+         4: ifnonnull     26
+         7: aload_0
+         8: getfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+        11: ifnonnull     18
+        14: iconst_0
+        15: goto          25
+        18: aload_0
+        19: getfield      #22                 // Field indexRequest:Lrt4/Js5Request;
+        22: invokevirtual #62                 // Method rt4/Js5Request.getPercentageComplete:()I
+        25: ireturn
+        26: bipush        100
+        28: ireturn
+
+  public final byte[] fetchGroup(int);
+    Code:
+         0: aload_0
+         1: iconst_0
+         2: iload_1
+         3: invokespecial #47                 // Method fetchGroupInner:(II)Lrt4/Js5Request;
+         6: astore_2
+         7: aload_2
+         8: ifnonnull     13
+        11: aconst_null
+        12: areturn
+        13: aload_2
+        14: invokevirtual #33                 // Method rt4/Js5Request.getData:()[B
+        17: astore_3
+        18: aload_2
+        19: invokevirtual #57                 // Method rt4/Js5Request.unlink:()V
+        22: aload_3
+        23: areturn
+
+  static {};
+    Code:
+         0: new           #75                 // class java/util/zip/CRC32
+         3: dup
+         4: invokespecial #76                 // Method java/util/zip/CRC32."<init>":()V
+         7: putstatic     #65                 // Field crc32:Ljava/util/zip/CRC32;
+        10: return
+}
+Compiled from "Js5CacheQueue.java"
+public final class rt4.Js5CacheQueue implements java.lang.Runnable {
+  private final rt4.SecondaryLinkedList queue;
+
+  public int size;
+
+  private boolean stop;
+
+  private java.lang.Thread thread;
+
+  public rt4.Js5CacheQueue();
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: new           #2                  // class rt4/SecondaryLinkedList
+         8: dup
+         9: invokespecial #3                  // Method rt4/SecondaryLinkedList."<init>":()V
+        12: putfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        15: aload_0
+        16: iconst_0
+        17: putfield      #5                  // Field size:I
+        20: aload_0
+        21: iconst_0
+        22: putfield      #6                  // Field stop:Z
+        25: getstatic     #7                  // Field rt4/GameShell.signLink:Lrt4/SignLink;
+        28: iconst_5
+        29: aload_0
+        30: invokevirtual #8                  // Method rt4/SignLink.startThread:(ILjava/lang/Runnable;)Lrt4/PrivilegedRequest;
+        33: astore_1
+        34: aload_1
+        35: getfield      #9                  // Field rt4/PrivilegedRequest.status:I
+        38: ifne          50
+        41: ldc2_w        #10                 // long 10l
+        44: invokestatic  #12                 // Method rt4/ThreadUtils.sleep:(J)V
+        47: goto          34
+        50: aload_1
+        51: getfield      #9                  // Field rt4/PrivilegedRequest.status:I
+        54: iconst_2
+        55: if_icmpne     66
+        58: new           #13                 // class java/lang/RuntimeException
+        61: dup
+        62: invokespecial #14                 // Method java/lang/RuntimeException."<init>":()V
+        65: athrow
+        66: aload_0
+        67: aload_1
+        68: getfield      #15                 // Field rt4/PrivilegedRequest.result:Ljava/lang/Object;
+        71: checkcast     #16                 // class java/lang/Thread
+        74: putfield      #17                 // Field thread:Ljava/lang/Thread;
+        77: return
+
+  private void enqueue(rt4.Js5CacheRequest);
+    Code:
+         0: aload_0
+         1: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+         4: dup
+         5: astore_2
+         6: monitorenter
+         7: aload_0
+         8: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        11: aload_1
+        12: invokevirtual #18                 // Method rt4/SecondaryLinkedList.addTail:(Lrt4/SecondaryNode;)V
+        15: aload_0
+        16: dup
+        17: getfield      #5                  // Field size:I
+        20: iconst_1
+        21: iadd
+        22: putfield      #5                  // Field size:I
+        25: aload_0
+        26: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        29: invokevirtual #19                 // Method java/lang/Object.notifyAll:()V
+        32: aload_2
+        33: monitorexit
+        34: goto          42
+        37: astore_3
+        38: aload_2
+        39: monitorexit
+        40: aload_3
+        41: athrow
+        42: return
+      Exception table:
+         from    to  target type
+             7    34    37   any
+            37    40    37   any
+
+  public final void quit();
+    Code:
+         0: aload_0
+         1: iconst_1
+         2: putfield      #6                  // Field stop:Z
+         5: aload_0
+         6: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+         9: dup
+        10: astore_1
+        11: monitorenter
+        12: aload_0
+        13: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        16: invokevirtual #19                 // Method java/lang/Object.notifyAll:()V
+        19: aload_1
+        20: monitorexit
+        21: goto          29
+        24: astore_2
+        25: aload_1
+        26: monitorexit
+        27: aload_2
+        28: athrow
+        29: aload_0
+        30: getfield      #17                 // Field thread:Ljava/lang/Thread;
+        33: invokevirtual #20                 // Method java/lang/Thread.join:()V
+        36: goto          40
+        39: astore_1
+        40: aload_0
+        41: aconst_null
+        42: putfield      #17                 // Field thread:Ljava/lang/Thread;
+        45: return
+      Exception table:
+         from    to  target type
+            12    21    24   any
+            24    27    24   any
+            29    36    39   Class java/lang/InterruptedException
+
+  public final rt4.Js5CacheRequest write(rt4.Cache, byte[], int);
+    Code:
+         0: new           #22                 // class rt4/Js5CacheRequest
+         3: dup
+         4: invokespecial #23                 // Method rt4/Js5CacheRequest."<init>":()V
+         7: astore        4
+         9: aload         4
+        11: aload_2
+        12: putfield      #24                 // Field rt4/Js5CacheRequest.data:[B
+        15: aload         4
+        17: iconst_0
+        18: putfield      #25                 // Field rt4/Js5CacheRequest.urgent:Z
+        21: aload         4
+        23: iload_3
+        24: i2l
+        25: putfield      #26                 // Field rt4/Js5CacheRequest.secondaryKey:J
+        28: aload         4
+        30: aload_1
+        31: putfield      #27                 // Field rt4/Js5CacheRequest.cache:Lrt4/Cache;
+        34: aload         4
+        36: iconst_2
+        37: putfield      #28                 // Field rt4/Js5CacheRequest.type:I
+        40: aload_0
+        41: aload         4
+        43: invokespecial #29                 // Method enqueue:(Lrt4/Js5CacheRequest;)V
+        46: aload         4
+        48: areturn
+
+  public final rt4.Js5CacheRequest read(int, rt4.Cache);
+    Code:
+         0: new           #22                 // class rt4/Js5CacheRequest
+         3: dup
+         4: invokespecial #23                 // Method rt4/Js5CacheRequest."<init>":()V
+         7: astore_3
+         8: aload_3
+         9: aload_2
+        10: putfield      #27                 // Field rt4/Js5CacheRequest.cache:Lrt4/Cache;
+        13: aload_3
+        14: iconst_3
+        15: putfield      #28                 // Field rt4/Js5CacheRequest.type:I
+        18: aload_3
+        19: iconst_0
+        20: putfield      #25                 // Field rt4/Js5CacheRequest.urgent:Z
+        23: aload_3
+        24: iload_1
+        25: i2l
+        26: putfield      #26                 // Field rt4/Js5CacheRequest.secondaryKey:J
+        29: aload_0
+        30: aload_3
+        31: invokespecial #29                 // Method enqueue:(Lrt4/Js5CacheRequest;)V
+        34: aload_3
+        35: areturn
+
+  public final rt4.Js5CacheRequest readSynchronous(rt4.Cache, int);
+    Code:
+         0: new           #22                 // class rt4/Js5CacheRequest
+         3: dup
+         4: invokespecial #23                 // Method rt4/Js5CacheRequest."<init>":()V
+         7: astore_3
+         8: aload_3
+         9: iconst_1
+        10: putfield      #28                 // Field rt4/Js5CacheRequest.type:I
+        13: aload_0
+        14: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        17: dup
+        18: astore        4
+        20: monitorenter
+        21: aload_0
+        22: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        25: invokevirtual #30                 // Method rt4/SecondaryLinkedList.head:()Lrt4/SecondaryNode;
+        28: checkcast     #22                 // class rt4/Js5CacheRequest
+        31: astore        5
+        33: aload         5
+        35: ifnonnull     41
+        38: goto          104
+        41: aload         5
+        43: getfield      #26                 // Field rt4/Js5CacheRequest.secondaryKey:J
+        46: iload_2
+        47: i2l
+        48: lcmp
+        49: ifne          89
+        52: aload         5
+        54: getfield      #27                 // Field rt4/Js5CacheRequest.cache:Lrt4/Cache;
+        57: aload_1
+        58: if_acmpne     89
+        61: aload         5
+        63: getfield      #28                 // Field rt4/Js5CacheRequest.type:I
+        66: iconst_2
+        67: if_icmpne     89
+        70: aload_3
+        71: aload         5
+        73: getfield      #24                 // Field rt4/Js5CacheRequest.data:[B
+        76: putfield      #24                 // Field rt4/Js5CacheRequest.data:[B
+        79: aload_3
+        80: iconst_0
+        81: putfield      #31                 // Field rt4/Js5CacheRequest.incomplete:Z
+        84: aload_3
+        85: aload         4
+        87: monitorexit
+        88: areturn
+        89: aload_0
+        90: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        93: invokevirtual #32                 // Method rt4/SecondaryLinkedList.next:()Lrt4/SecondaryNode;
+        96: checkcast     #22                 // class rt4/Js5CacheRequest
+        99: astore        5
+       101: goto          33
+       104: aload         4
+       106: monitorexit
+       107: goto          118
+       110: astore        6
+       112: aload         4
+       114: monitorexit
+       115: aload         6
+       117: athrow
+       118: aload_3
+       119: aload_1
+       120: iload_2
+       121: invokevirtual #33                 // Method rt4/Cache.read:(I)[B
+       124: putfield      #24                 // Field rt4/Js5CacheRequest.data:[B
+       127: aload_3
+       128: iconst_0
+       129: putfield      #31                 // Field rt4/Js5CacheRequest.incomplete:Z
+       132: aload_3
+       133: iconst_1
+       134: putfield      #25                 // Field rt4/Js5CacheRequest.urgent:Z
+       137: aload_3
+       138: areturn
+      Exception table:
+         from    to  target type
+            21    88   110   any
+            89   107   110   any
+           110   115   110   any
+
+  public final void run();
+    Code:
+         0: aload_0
+         1: getfield      #6                  // Field stop:Z
+         4: ifne          141
+         7: aload_0
+         8: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        11: dup
+        12: astore_2
+        13: monitorenter
+        14: aload_0
+        15: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        18: invokevirtual #34                 // Method rt4/SecondaryLinkedList.removeHead:()Lrt4/SecondaryNode;
+        21: checkcast     #22                 // class rt4/Js5CacheRequest
+        24: astore_1
+        25: aload_1
+        26: ifnonnull     45
+        29: aload_0
+        30: getfield      #4                  // Field queue:Lrt4/SecondaryLinkedList;
+        33: invokevirtual #35                 // Method java/lang/Object.wait:()V
+        36: goto          40
+        39: astore_3
+        40: aload_2
+        41: monitorexit
+        42: goto          0
+        45: aload_0
+        46: dup
+        47: getfield      #5                  // Field size:I
+        50: iconst_1
+        51: isub
+        52: putfield      #5                  // Field size:I
+        55: aload_2
+        56: monitorexit
+        57: goto          67
+        60: astore        4
+        62: aload_2
+        63: monitorexit
+        64: aload         4
+        66: athrow
+        67: aload_1
+        68: getfield      #28                 // Field rt4/Js5CacheRequest.type:I
+        71: iconst_2
+        72: if_icmpne     100
+        75: aload_1
+        76: getfield      #27                 // Field rt4/Js5CacheRequest.cache:Lrt4/Cache;
+        79: aload_1
+        80: getfield      #26                 // Field rt4/Js5CacheRequest.secondaryKey:J
+        83: l2i
+        84: aload_1
+        85: getfield      #24                 // Field rt4/Js5CacheRequest.data:[B
+        88: arraylength
+        89: aload_1
+        90: getfield      #24                 // Field rt4/Js5CacheRequest.data:[B
+        93: invokevirtual #36                 // Method rt4/Cache.write:(II[B)Z
+        96: pop
+        97: goto          124
+       100: aload_1
+       101: getfield      #28                 // Field rt4/Js5CacheRequest.type:I
+       104: iconst_3
+       105: if_icmpne     124
+       108: aload_1
+       109: aload_1
+       110: getfield      #27                 // Field rt4/Js5CacheRequest.cache:Lrt4/Cache;
+       113: aload_1
+       114: getfield      #26                 // Field rt4/Js5CacheRequest.secondaryKey:J
+       117: l2i
+       118: invokevirtual #33                 // Method rt4/Cache.read:(I)[B
+       121: putfield      #24                 // Field rt4/Js5CacheRequest.data:[B
+       124: goto          133
+       127: astore_2
+       128: aconst_null
+       129: aload_2
+       130: invokestatic  #38                 // Method rt4/TracingException.report:(Ljava/lang/String;Ljava/lang/Throwable;)V
+       133: aload_1
+       134: iconst_0
+       135: putfield      #31                 // Field rt4/Js5CacheRequest.incomplete:Z
+       138: goto          0
+       141: return
+      Exception table:
+         from    to  target type
+            29    36    39   Class java/lang/InterruptedException
+            14    42    60   any
+            45    57    60   any
+            60    64    60   any
+            67   124   127   Class java/lang/Exception
+}
