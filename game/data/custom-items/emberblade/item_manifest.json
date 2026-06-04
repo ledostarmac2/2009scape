@@ -1,0 +1,28 @@
+{
+  "id": 14422,
+  "name": "Emberblade",
+  "server_config": "game/data/configs/item_configs.json",
+  "equip_slot": "weapon",
+  "wield_type": "one-handed sword",
+  "requirements": {
+    "attack": 1
+  },
+  "bonuses": {
+    "attack_stab": 115,
+    "attack_slash": 130,
+    "attack_crush": 66,
+    "strength": 102,
+    "prayer": 15
+  },
+  "source_assets": {
+    "model": "emberblade.obj",
+    "material": "emberblade.mtl",
+    "blend": "emberblade.blend",
+    "texture": "emberblade_texture_original.png",
+    "inventory_icon_reference": "inventory_icon_transparent.png",
+    "angled_reference": "angled_reference_transparent.png",
+    "reference_sheet": "reference_sheet_transparent.png",
+    "palette": "flat_color_texture_palette.png"
+  },
+  "cache_status": "Server item config is wired. Client-side inventory/equipment graphics still require packing this model into the item/model cache for id 14422."
+}

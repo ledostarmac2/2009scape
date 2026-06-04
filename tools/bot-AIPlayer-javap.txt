@@ -1,0 +1,1383 @@
+Compiled from "AIPlayer.java"
+public class core.game.bots.AIPlayer extends core.game.node.entity.player.Player {
+  private static int currentUID;
+
+  private static final java.util.List<java.lang.String> botNames;
+
+  private static final java.util.Map<java.lang.Integer, core.game.bots.AIPlayer> botMapping;
+
+  private static java.lang.String OSRScopyLine;
+
+  private final int uid;
+
+  private final core.game.world.map.Location startLocation;
+
+  private java.lang.String username;
+
+  private core.game.node.entity.player.Player controler;
+
+  public core.game.bots.AIPlayer(core.game.world.map.Location);
+    Code:
+         0: aload_0
+         1: invokestatic  #1                  // Method getRandomName:()Ljava/lang/String;
+         4: aload_1
+         5: aconst_null
+         6: invokespecial #2                  // Method "<init>":(Ljava/lang/String;Lcore/game/world/map/Location;Ljava/lang/String;)V
+         9: return
+
+  public core.game.bots.AIPlayer(java.lang.String, core.game.world.map.Location);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: invokestatic  #3                  // Method retrieveRandomName:(Ljava/lang/String;)Ljava/lang/String;
+         5: aload_2
+         6: aconst_null
+         7: invokespecial #2                  // Method "<init>":(Ljava/lang/String;Lcore/game/world/map/Location;Ljava/lang/String;)V
+        10: return
+
+  private core.game.bots.AIPlayer(java.lang.String, core.game.world.map.Location, java.lang.String);
+    Code:
+         0: aload_0
+         1: new           #4                  // class core/game/node/entity/player/info/PlayerDetails
+         4: dup
+         5: getstatic     #5                  // Field currentUID:I
+         8: iconst_1
+         9: iadd
+        10: aload_1
+        11: invokedynamic #6,  0              // InvokeDynamic #0:makeConcatWithConstants:(ILjava/lang/String;)Ljava/lang/String;
+        16: invokespecial #7                  // Method core/game/node/entity/player/info/PlayerDetails."<init>":(Ljava/lang/String;)V
+        19: invokespecial #8                  // Method core/game/node/entity/player/Player."<init>":(Lcore/game/node/entity/player/info/PlayerDetails;)V
+        22: aload_0
+        23: aload_0
+        24: aload_2
+        25: dup_x1
+        26: putfield      #9                  // Field startLocation:Lcore/game/world/map/Location;
+        29: invokespecial #10                 // Method core/game/node/entity/player/Player.setLocation:(Lcore/game/world/map/Location;)V
+        32: aload_0
+        33: iconst_1
+        34: putfield      #11                 // Field core/game/node/entity/player/Player.artificial:Z
+        37: aload_0
+        38: invokespecial #12                 // Method core/game/node/entity/player/Player.getDetails:()Lcore/game/node/entity/player/info/PlayerDetails;
+        41: invokestatic  #13                 // Method core/game/bots/ArtificialSession.getSingleton:()Lcore/game/bots/ArtificialSession;
+        44: invokevirtual #14                 // Method core/game/node/entity/player/info/PlayerDetails.setSession:(Lcore/net/IoSession;)V
+        47: invokestatic  #15                 // Method core/game/world/repository/Repository.getPlayers:()Lcore/game/world/repository/NodeList;
+        50: aload_0
+        51: invokevirtual #16                 // Method core/game/world/repository/NodeList.add:(Lcore/game/node/Node;)Z
+        54: pop
+        55: aload_0
+        56: aload_1
+        57: getstatic     #5                  // Field currentUID:I
+        60: iconst_1
+        61: iadd
+        62: invokedynamic #17,  0             // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;I)Ljava/lang/String;
+        67: invokestatic  #18                 // Method core/tools/StringUtils.formatDisplayName:(Ljava/lang/String;)Ljava/lang/String;
+        70: putfield      #19                 // Field username:Ljava/lang/String;
+        73: aload_0
+        74: getstatic     #5                  // Field currentUID:I
+        77: dup
+        78: iconst_1
+        79: iadd
+        80: putstatic     #5                  // Field currentUID:I
+        83: putfield      #20                 // Field uid:I
+        86: aload_0
+        87: invokevirtual #21                 // Method updateRandomValues:()V
+        90: aload_0
+        91: invokevirtual #22                 // Method init:()V
+        94: return
+
+  public void updateRandomValues();
+    Code:
+         0: aload_0
+         1: invokevirtual #23                 // Method getAppearance:()Lcore/game/node/entity/player/link/appearance/Appearance;
+         4: iconst_5
+         5: invokestatic  #24                 // Method core/tools/RandomFunction.random:(I)I
+         8: iconst_1
+         9: if_icmpne     18
+        12: getstatic     #25                 // Field core/game/node/entity/player/link/appearance/Gender.FEMALE:Lcore/game/node/entity/player/link/appearance/Gender;
+        15: goto          21
+        18: getstatic     #26                 // Field core/game/node/entity/player/link/appearance/Gender.MALE:Lcore/game/node/entity/player/link/appearance/Gender;
+        21: invokevirtual #27                 // Method core/game/node/entity/player/link/appearance/Appearance.setGender:(Lcore/game/node/entity/player/link/appearance/Gender;)V
+        24: iconst_0
+        25: bipush        10
+        27: invokestatic  #28                 // Method core/tools/RandomFunction.random:(II)I
+        30: istore_1
+        31: aload_0
+        32: iconst_1
+        33: invokestatic  #29                 // Method content/region/misc/tutisland/handlers/iface/CharacterDesign.randomize:(Lcore/game/node/entity/player/Player;Z)V
+        36: aload_0
+        37: invokestatic  #30                 // Method core/game/world/map/Direction.values:()[Lcore/game/world/map/Direction;
+        40: new           #31                 // class java/util/Random
+        43: dup
+        44: invokespecial #32                 // Method java/util/Random."<init>":()V
+        47: invokestatic  #30                 // Method core/game/world/map/Direction.values:()[Lcore/game/world/map/Direction;
+        50: arraylength
+        51: invokevirtual #33                 // Method java/util/Random.nextInt:(I)I
+        54: aaload
+        55: invokevirtual #34                 // Method setDirection:(Lcore/game/world/map/Direction;)V
+        58: aload_0
+        59: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+        62: invokevirtual #36                 // Method core/game/node/entity/skill/Skills.updateCombatLevel:()Z
+        65: pop
+        66: aload_0
+        67: invokevirtual #23                 // Method getAppearance:()Lcore/game/node/entity/player/link/appearance/Appearance;
+        70: invokevirtual #37                 // Method core/game/node/entity/player/link/appearance/Appearance.sync:()V
+        73: return
+
+  public void update();
+    Code:
+         0: return
+
+  private void setLevels();
+    Code:
+         0: iconst_1
+         1: aload_0
+         2: iconst_1
+         3: invokevirtual #38                 // Method parseOSRS:(I)I
+         6: bipush        99
+         8: invokestatic  #39                 // Method java/lang/Math.min:(II)I
+        11: invokestatic  #28                 // Method core/tools/RandomFunction.random:(II)I
+        14: istore_1
+        15: iconst_0
+        16: istore_2
+        17: iload_2
+        18: bipush        24
+        20: if_icmpge     41
+        23: aload_0
+        24: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+        27: iload_2
+        28: iload_1
+        29: invokestatic  #41                 // Method core/tools/RandomFunction.linearDecreaseRand:(I)I
+        32: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+        35: iinc          2, 1
+        38: goto          17
+        41: aload_0
+        42: iconst_1
+        43: invokevirtual #38                 // Method parseOSRS:(I)I
+        46: istore_2
+        47: bipush        10
+        49: iload_1
+        50: iload_2
+        51: iconst_4
+        52: imul
+        53: invokestatic  #39                 // Method java/lang/Math.min:(II)I
+        56: invokestatic  #28                 // Method core/tools/RandomFunction.random:(II)I
+        59: bipush        10
+        61: invokestatic  #43                 // Method java/lang/Math.max:(II)I
+        64: istore_3
+        65: iload_2
+        66: i2d
+        67: ldc2_w        #44                 // double 0.25d
+        70: iload_3
+        71: i2d
+        72: dmul
+        73: dsub
+        74: d2i
+        75: istore_2
+        76: iload_2
+        77: ifle          94
+        80: iload_1
+        81: iload_2
+        82: bipush        8
+        84: imul
+        85: invokestatic  #39                 // Method java/lang/Math.min:(II)I
+        88: invokestatic  #24                 // Method core/tools/RandomFunction.random:(I)I
+        91: goto          95
+        94: iconst_1
+        95: istore        4
+        97: iload_2
+        98: i2d
+        99: ldc2_w        #46                 // double 0.125d
+       102: iload         4
+       104: i2d
+       105: dmul
+       106: dsub
+       107: d2i
+       108: istore_2
+       109: iload_2
+       110: ifle          126
+       113: iload_1
+       114: iload_2
+       115: iconst_4
+       116: imul
+       117: invokestatic  #39                 // Method java/lang/Math.min:(II)I
+       120: invokestatic  #24                 // Method core/tools/RandomFunction.random:(I)I
+       123: goto          127
+       126: iconst_1
+       127: istore        5
+       129: iload_2
+       130: i2d
+       131: ldc2_w        #44                 // double 0.25d
+       134: iload         5
+       136: i2d
+       137: dmul
+       138: dsub
+       139: d2i
+       140: istore_2
+       141: iload_2
+       142: sipush        199
+       145: invokestatic  #39                 // Method java/lang/Math.min:(II)I
+       148: istore_2
+       149: iload_2
+       150: ifle          166
+       153: iload_1
+       154: iload_2
+       155: iconst_3
+       156: imul
+       157: invokestatic  #39                 // Method java/lang/Math.min:(II)I
+       160: invokestatic  #48                 // Method core/tools/RandomFunction.normalRandDist:(I)I
+       163: goto          167
+       166: iconst_1
+       167: istore        6
+       169: iload_2
+       170: ifle          182
+       173: iload_2
+       174: iconst_3
+       175: imul
+       176: iload         6
+       178: isub
+       179: goto          183
+       182: iconst_1
+       183: istore        7
+       185: aload_0
+       186: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+       189: iconst_3
+       190: iload_3
+       191: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+       194: aload_0
+       195: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+       198: iconst_5
+       199: iload         4
+       201: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+       204: aload_0
+       205: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+       208: iconst_1
+       209: iload         5
+       211: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+       214: aload_0
+       215: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+       218: iconst_0
+       219: iload         6
+       221: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+       224: aload_0
+       225: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+       228: iconst_2
+       229: iload         7
+       231: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+       234: aload_0
+       235: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+       238: iconst_4
+       239: iload_2
+       240: iconst_2
+       241: idiv
+       242: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+       245: aload_0
+       246: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+       249: bipush        6
+       251: iload_2
+       252: iconst_2
+       253: idiv
+       254: invokevirtual #42                 // Method core/game/node/entity/skill/Skills.setStaticLevel:(II)V
+       257: return
+
+  private void giveArmor();
+    Code:
+         0: aload_0
+         1: new           #49                 // class core/game/node/item/Item
+         4: dup
+         5: aload_0
+         6: iconst_2
+         7: invokevirtual #38                 // Method parseOSRS:(I)I
+        10: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+        13: iconst_0
+        14: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+        17: aload_0
+        18: new           #49                 // class core/game/node/item/Item
+        21: dup
+        22: aload_0
+        23: iconst_3
+        24: invokevirtual #38                 // Method parseOSRS:(I)I
+        27: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+        30: iconst_1
+        31: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+        34: aload_0
+        35: new           #49                 // class core/game/node/item/Item
+        38: dup
+        39: aload_0
+        40: iconst_4
+        41: invokevirtual #38                 // Method parseOSRS:(I)I
+        44: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+        47: iconst_2
+        48: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+        51: aload_0
+        52: new           #49                 // class core/game/node/item/Item
+        55: dup
+        56: aload_0
+        57: iconst_5
+        58: invokevirtual #38                 // Method parseOSRS:(I)I
+        61: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+        64: iconst_3
+        65: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+        68: aload_0
+        69: new           #49                 // class core/game/node/item/Item
+        72: dup
+        73: aload_0
+        74: bipush        6
+        76: invokevirtual #38                 // Method parseOSRS:(I)I
+        79: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+        82: iconst_4
+        83: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+        86: aload_0
+        87: new           #49                 // class core/game/node/item/Item
+        90: dup
+        91: aload_0
+        92: bipush        7
+        94: invokevirtual #38                 // Method parseOSRS:(I)I
+        97: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+       100: iconst_5
+       101: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+       104: aload_0
+       105: new           #49                 // class core/game/node/item/Item
+       108: dup
+       109: aload_0
+       110: bipush        9
+       112: invokevirtual #38                 // Method parseOSRS:(I)I
+       115: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+       118: bipush        7
+       120: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+       123: aload_0
+       124: new           #49                 // class core/game/node/item/Item
+       127: dup
+       128: aload_0
+       129: bipush        11
+       131: invokevirtual #38                 // Method parseOSRS:(I)I
+       134: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+       137: bipush        9
+       139: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+       142: aload_0
+       143: new           #49                 // class core/game/node/item/Item
+       146: dup
+       147: aload_0
+       148: bipush        12
+       150: invokevirtual #38                 // Method parseOSRS:(I)I
+       153: invokespecial #50                 // Method core/game/node/item/Item."<init>":(I)V
+       156: bipush        10
+       158: invokevirtual #52                 // Method equipIfExists:(Lcore/game/node/item/Item;I)V
+       161: return
+
+  private int parseOSRS(int);
+    Code:
+         0: getstatic     #53                 // Field OSRScopyLine:Ljava/lang/String;
+         3: ldc           #54                 // String :
+         5: invokevirtual #55                 // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+         8: iload_1
+         9: aaload
+        10: invokestatic  #56                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        13: ireturn
+
+  private void equipIfExists(core.game.node.item.Item, int);
+    Code:
+         0: aload_1
+         1: ifnull        16
+         4: aload_1
+         5: invokevirtual #57                 // Method core/game/node/item/Item.getName:()Ljava/lang/String;
+         8: ldc           #58                 // String null
+        10: invokevirtual #59                 // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+        13: ifeq          17
+        16: return
+        17: aload_1
+        18: invokevirtual #60                 // Method core/game/node/item/Item.getId:()I
+        21: ifeq          34
+        24: aload_0
+        25: invokevirtual #61                 // Method getEquipment:()Lcore/game/container/impl/EquipmentContainer;
+        28: aload_1
+        29: iload_2
+        30: invokevirtual #62                 // Method core/game/container/impl/EquipmentContainer.replace:(Lcore/game/node/item/Item;I)Lcore/game/node/item/Item;
+        33: pop
+        34: return
+
+  public static void loadNames(java.lang.String);
+    Code:
+         0: new           #63                 // class java/util/Scanner
+         3: dup
+         4: new           #64                 // class java/io/File
+         7: dup
+         8: getstatic     #65                 // Field core/ServerConstants.BOT_DATA_PATH:Ljava/lang/String;
+        11: aload_0
+        12: invokedynamic #66,  0             // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        17: invokespecial #67                 // Method java/io/File."<init>":(Ljava/lang/String;)V
+        20: invokespecial #68                 // Method java/util/Scanner."<init>":(Ljava/io/File;)V
+        23: astore_1
+        24: aload_1
+        25: invokevirtual #69                 // Method java/util/Scanner.hasNextLine:()Z
+        28: ifeq          47
+        31: getstatic     #70                 // Field botNames:Ljava/util/List;
+        34: aload_1
+        35: invokevirtual #71                 // Method java/util/Scanner.nextLine:()Ljava/lang/String;
+        38: invokeinterface #72,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+        43: pop
+        44: goto          24
+        47: goto          55
+        50: astore_1
+        51: aload_1
+        52: invokevirtual #74                 // Method java/lang/Exception.printStackTrace:()V
+        55: return
+      Exception table:
+         from    to  target type
+             0    47    50   Class java/lang/Exception
+
+  public static java.lang.String getRandomName();
+    Code:
+         0: getstatic     #70                 // Field botNames:Ljava/util/List;
+         3: invokeinterface #75,  1           // InterfaceMethod java/util/List.size:()I
+         8: invokestatic  #24                 // Method core/tools/RandomFunction.random:(I)I
+        11: istore_0
+        12: getstatic     #70                 // Field botNames:Ljava/util/List;
+        15: iload_0
+        16: invokeinterface #76,  2           // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+        21: checkcast     #77                 // class java/lang/String
+        24: astore_1
+        25: getstatic     #70                 // Field botNames:Ljava/util/List;
+        28: iload_0
+        29: invokeinterface #78,  2           // InterfaceMethod java/util/List.remove:(I)Ljava/lang/Object;
+        34: pop
+        35: aload_1
+        36: areturn
+
+  public static void updateRandomOSRScopyLine(java.lang.String);
+    Code:
+         0: new           #31                 // class java/util/Random
+         3: dup
+         4: invokespecial #32                 // Method java/util/Random."<init>":()V
+         7: astore_1
+         8: iconst_0
+         9: istore_2
+        10: new           #63                 // class java/util/Scanner
+        13: dup
+        14: new           #64                 // class java/io/File
+        17: dup
+        18: getstatic     #65                 // Field core/ServerConstants.BOT_DATA_PATH:Ljava/lang/String;
+        21: aload_0
+        22: invokedynamic #66,  0             // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        27: invokespecial #67                 // Method java/io/File."<init>":(Ljava/lang/String;)V
+        30: invokespecial #68                 // Method java/util/Scanner."<init>":(Ljava/io/File;)V
+        33: astore_3
+        34: aload_3
+        35: invokevirtual #79                 // Method java/util/Scanner.hasNext:()Z
+        38: ifeq          88
+        41: iinc          2, 1
+        44: aload_3
+        45: invokevirtual #71                 // Method java/util/Scanner.nextLine:()Ljava/lang/String;
+        48: astore        4
+        50: aload_1
+        51: iload_2
+        52: invokevirtual #33                 // Method java/util/Random.nextInt:(I)I
+        55: ifne          85
+        58: aload         4
+        60: invokevirtual #80                 // Method java/lang/String.length:()I
+        63: iconst_3
+        64: if_icmplt     34
+        67: aload         4
+        69: ldc           #81                 // String #
+        71: invokevirtual #82                 // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        74: ifeq          80
+        77: goto          34
+        80: aload         4
+        82: putstatic     #53                 // Field OSRScopyLine:Ljava/lang/String;
+        85: goto          34
+        88: goto          96
+        91: astore_3
+        92: aload_3
+        93: invokevirtual #84                 // Method java/io/FileNotFoundException.printStackTrace:()V
+        96: return
+      Exception table:
+         from    to  target type
+            10    88    91   Class java/io/FileNotFoundException
+
+  private static java.lang.String retrieveRandomName(java.lang.String);
+    Code:
+         0: aload_0
+         1: invokestatic  #85                 // Method updateRandomOSRScopyLine:(Ljava/lang/String;)V
+         4: getstatic     #53                 // Field OSRScopyLine:Ljava/lang/String;
+         7: ldc           #81                 // String #
+         9: invokevirtual #82                 // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        12: ifne          0
+        15: getstatic     #53                 // Field OSRScopyLine:Ljava/lang/String;
+        18: ldc           #86                 // String _
+        20: invokevirtual #87                 // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        23: ifne          0
+        26: getstatic     #53                 // Field OSRScopyLine:Ljava/lang/String;
+        29: ldc           #88                 // String
+        31: invokevirtual #87                 // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+        34: ifne          0
+        37: getstatic     #53                 // Field OSRScopyLine:Ljava/lang/String;
+        40: ldc           #54                 // String :
+        42: invokevirtual #55                 // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+        45: iconst_0
+        46: aaload
+        47: areturn
+
+  private static java.lang.String retrieveRandomName();
+    Code:
+         0: ldc           #89                 // String namesandarmor.txt
+         2: invokestatic  #3                  // Method retrieveRandomName:(Ljava/lang/String;)Ljava/lang/String;
+         5: areturn
+
+  public void init();
+    Code:
+         0: aload_0
+         1: invokevirtual #90                 // Method getProperties:()Lcore/game/node/entity/impl/Properties;
+         4: aload_0
+         5: getfield      #9                  // Field startLocation:Lcore/game/world/map/Location;
+         8: invokevirtual #91                 // Method core/game/node/entity/impl/Properties.setSpawnLocation:(Lcore/game/world/map/Location;)V
+        11: aload_0
+        12: invokevirtual #92                 // Method getInterfaceManager:()Lcore/game/node/entity/player/link/InterfaceManager;
+        15: invokevirtual #93                 // Method core/game/node/entity/player/link/InterfaceManager.openDefaultTabs:()V
+        18: aload_0
+        19: invokevirtual #94                 // Method getSession:()Lcore/net/IoSession;
+        22: aload_0
+        23: invokevirtual #95                 // Method core/net/IoSession.setObject:(Ljava/lang/Object;)V
+        26: getstatic     #96                 // Field botMapping:Ljava/util/Map;
+        29: aload_0
+        30: getfield      #20                 // Field uid:I
+        33: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        36: aload_0
+        37: invokeinterface #98,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        42: pop
+        43: aload_0
+        44: invokespecial #99                 // Method core/game/node/entity/player/Player.init:()V
+        47: aload_0
+        48: invokevirtual #100                // Method getSettings:()Lcore/game/node/entity/player/link/Settings;
+        51: iconst_1
+        52: invokevirtual #101                // Method core/game/node/entity/player/link/Settings.setRunToggled:(Z)V
+        55: aload_0
+        56: iconst_0
+        57: invokestatic  #29                 // Method content/region/misc/tutisland/handlers/iface/CharacterDesign.randomize:(Lcore/game/node/entity/player/Player;Z)V
+        60: aload_0
+        61: invokevirtual #102                // Method getPlayerFlags:()Lcore/game/world/update/flag/PlayerFlags;
+        64: aload_0
+        65: getfield      #103                // Field location:Lcore/game/world/map/Location;
+        68: invokevirtual #104                // Method core/game/world/update/flag/PlayerFlags.setLastSceneGraph:(Lcore/game/world/map/Location;)V
+        71: return
+
+  public void follow(core.game.node.entity.Entity);
+    Code:
+         0: aload_0
+         1: invokevirtual #105                // Method getPulseManager:()Lcore/game/node/entity/impl/PulseManager;
+         4: new           #106                // class core/game/bots/AIPlayer$1
+         7: dup
+         8: aload_0
+         9: aload_0
+        10: aload_1
+        11: getstatic     #107                // Field core/game/interaction/DestinationFlag.FOLLOW_ENTITY:Lcore/game/interaction/DestinationFlag;
+        14: aload_1
+        15: invokespecial #108                // Method core/game/bots/AIPlayer$1."<init>":(Lcore/game/bots/AIPlayer;Lcore/game/node/entity/Entity;Lcore/game/node/Node;Lcore/game/interaction/DestinationFlag;Lcore/game/node/entity/Entity;)V
+        18: getstatic     #109                // Field core/game/node/entity/impl/PulseType.STANDARD:Lcore/game/node/entity/impl/PulseType;
+        21: invokevirtual #110                // Method core/game/node/entity/impl/PulseManager.run:(Lcore/game/system/task/Pulse;Lcore/game/node/entity/impl/PulseType;)V
+        24: return
+
+  public void randomWalkAroundPoint(core.game.world.map.Location, int);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: iload_2
+         3: iload_2
+         4: iconst_m1
+         5: imul
+         6: invokestatic  #28                 // Method core/tools/RandomFunction.random:(II)I
+         9: iload_2
+        10: iload_2
+        11: iconst_m1
+        12: imul
+        13: invokestatic  #28                 // Method core/tools/RandomFunction.random:(II)I
+        16: iconst_0
+        17: invokevirtual #111                // Method core/game/world/map/Location.transform:(III)Lcore/game/world/map/Location;
+        20: iconst_1
+        21: getstatic     #112                // Field core/game/world/map/path/Pathfinder.SMART:Lcore/game/world/map/path/SmartPathfinder;
+        24: invokestatic  #113                // Method core/game/world/map/path/Pathfinder.find:(Lcore/game/node/entity/Entity;Lcore/game/node/Node;ZLcore/game/world/map/path/Pathfinder;)Lcore/game/world/map/path/Path;
+        27: aload_0
+        28: invokevirtual #114                // Method core/game/world/map/path/Path.walk:(Lcore/game/node/entity/Entity;)V
+        31: return
+
+  public void randomWalk(int, int);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+         5: iload_1
+         6: iload_1
+         7: iconst_m1
+         8: imul
+         9: invokestatic  #28                 // Method core/tools/RandomFunction.random:(II)I
+        12: iload_2
+        13: iload_2
+        14: iconst_m1
+        15: imul
+        16: invokestatic  #28                 // Method core/tools/RandomFunction.random:(II)I
+        19: iconst_0
+        20: invokevirtual #111                // Method core/game/world/map/Location.transform:(III)Lcore/game/world/map/Location;
+        23: iconst_0
+        24: getstatic     #112                // Field core/game/world/map/path/Pathfinder.SMART:Lcore/game/world/map/path/SmartPathfinder;
+        27: invokestatic  #113                // Method core/game/world/map/path/Pathfinder.find:(Lcore/game/node/entity/Entity;Lcore/game/node/Node;ZLcore/game/world/map/path/Pathfinder;)Lcore/game/world/map/path/Path;
+        30: aload_0
+        31: invokevirtual #114                // Method core/game/world/map/path/Path.walk:(Lcore/game/node/entity/Entity;)V
+        34: return
+
+  public void walkToPosSmart(int, int);
+    Code:
+         0: aload_0
+         1: new           #116                // class core/game/world/map/Location
+         4: dup
+         5: iload_1
+         6: iload_2
+         7: invokespecial #117                // Method core/game/world/map/Location."<init>":(II)V
+        10: invokevirtual #118                // Method walkToPosSmart:(Lcore/game/world/map/Location;)V
+        13: return
+
+  public void walkToPosSmart(core.game.world.map.Location);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: iconst_1
+         3: getstatic     #112                // Field core/game/world/map/path/Pathfinder.SMART:Lcore/game/world/map/path/SmartPathfinder;
+         6: invokestatic  #113                // Method core/game/world/map/path/Pathfinder.find:(Lcore/game/node/entity/Entity;Lcore/game/node/Node;ZLcore/game/world/map/path/Pathfinder;)Lcore/game/world/map/path/Path;
+         9: aload_0
+        10: invokevirtual #114                // Method core/game/world/map/path/Path.walk:(Lcore/game/node/entity/Entity;)V
+        13: return
+
+  public void walkPos(int, int);
+    Code:
+         0: aload_0
+         1: new           #116                // class core/game/world/map/Location
+         4: dup
+         5: iload_1
+         6: iload_2
+         7: invokespecial #117                // Method core/game/world/map/Location."<init>":(II)V
+        10: invokestatic  #119                // Method core/game/world/map/path/Pathfinder.find:(Lcore/game/node/entity/Entity;Lcore/game/node/Node;)Lcore/game/world/map/path/Path;
+        13: pop
+        14: return
+
+  public boolean checkVictimIsPlayer();
+    Code:
+         0: aload_0
+         1: invokevirtual #90                 // Method getProperties:()Lcore/game/node/entity/impl/Properties;
+         4: invokevirtual #120                // Method core/game/node/entity/impl/Properties.getCombatPulse:()Lcore/game/node/entity/combat/CombatPulse;
+         7: invokevirtual #121                // Method core/game/node/entity/combat/CombatPulse.getVictim:()Lcore/game/node/entity/Entity;
+        10: ifnull        31
+        13: aload_0
+        14: invokevirtual #90                 // Method getProperties:()Lcore/game/node/entity/impl/Properties;
+        17: invokevirtual #120                // Method core/game/node/entity/impl/Properties.getCombatPulse:()Lcore/game/node/entity/combat/CombatPulse;
+        20: invokevirtual #121                // Method core/game/node/entity/combat/CombatPulse.getVictim:()Lcore/game/node/entity/Entity;
+        23: invokevirtual #122                // Method core/game/node/entity/Entity.isPlayer:()Z
+        26: ifeq          31
+        29: iconst_1
+        30: ireturn
+        31: iconst_0
+        32: ireturn
+
+  public void tick();
+    Code:
+         0: aload_0
+         1: invokespecial #123                // Method core/game/node/entity/player/Player.tick:()V
+         4: aload_0
+         5: invokevirtual #124                // Method getSkullManager:()Lcore/game/node/entity/player/link/SkullManager;
+         8: invokevirtual #125                // Method core/game/node/entity/player/link/SkullManager.isWilderness:()Z
+        11: ifeq          25
+        14: aload_0
+        15: invokevirtual #124                // Method getSkullManager:()Lcore/game/node/entity/player/link/SkullManager;
+        18: aload_0
+        19: invokestatic  #126                // Method core/game/world/map/zone/impl/WildernessZone.getWilderness:(Lcore/game/node/entity/Entity;)I
+        22: invokevirtual #127                // Method core/game/node/entity/player/link/SkullManager.setLevel:(I)V
+        25: aload_0
+        26: invokevirtual #35                 // Method getSkills:()Lcore/game/node/entity/skill/Skills;
+        29: invokevirtual #128                // Method core/game/node/entity/skill/Skills.getLifepoints:()I
+        32: ifgt          35
+        35: return
+
+  public core.game.node.item.Item getItemById(int);
+    Code:
+         0: iconst_0
+         1: istore_2
+         2: iload_2
+         3: bipush        28
+         5: if_icmpge     37
+         8: aload_0
+         9: invokevirtual #129                // Method getInventory:()Lcore/game/container/Container;
+        12: iload_2
+        13: invokevirtual #130                // Method core/game/container/Container.get:(I)Lcore/game/node/item/Item;
+        16: astore_3
+        17: aload_3
+        18: ifnull        31
+        21: aload_3
+        22: invokevirtual #60                 // Method core/game/node/item/Item.getId:()I
+        25: iload_1
+        26: if_icmpne     31
+        29: aload_3
+        30: areturn
+        31: iinc          2, 1
+        34: goto          2
+        37: aconst_null
+        38: areturn
+
+  public void handleIncomingChat(core.net.packet.context.MessageContext);
+    Code:
+         0: return
+
+  private java.util.ArrayList<core.game.node.Node> getNodeInRange(int, int);
+    Code:
+         0: aload_0
+         1: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+         4: invokevirtual #131                // Method core/game/world/map/Location.getX:()I
+         7: istore_3
+         8: aload_0
+         9: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        12: invokevirtual #132                // Method core/game/world/map/Location.getY:()I
+        15: istore        4
+        17: new           #133                // class java/util/ArrayList
+        20: dup
+        21: invokespecial #134                // Method java/util/ArrayList."<init>":()V
+        24: astore        5
+        26: aload_0
+        27: iload_1
+        28: invokestatic  #135                // Method core/game/world/map/RegionManager.getLocalNpcs:(Lcore/game/node/entity/Entity;I)Ljava/util/List;
+        31: invokeinterface #136,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        36: astore        6
+        38: aload         6
+        40: invokeinterface #137,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        45: ifeq          80
+        48: aload         6
+        50: invokeinterface #138,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        55: checkcast     #139                // class core/game/node/entity/npc/NPC
+        58: astore        7
+        60: aload         7
+        62: invokevirtual #140                // Method core/game/node/entity/npc/NPC.getId:()I
+        65: iload_2
+        66: if_icmpne     77
+        69: aload         5
+        71: aload         7
+        73: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+        76: pop
+        77: goto          38
+        80: iconst_0
+        81: istore        6
+        83: iload         6
+        85: iload_1
+        86: if_icmpge     261
+        89: iconst_0
+        90: istore        7
+        92: iload         7
+        94: iload_1
+        95: iload         6
+        97: isub
+        98: if_icmpge     255
+       101: iconst_0
+       102: iload_3
+       103: iload         6
+       105: iadd
+       106: iload         4
+       108: iload         7
+       110: iadd
+       111: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       114: astore        8
+       116: aload         8
+       118: ifnull        138
+       121: aload         8
+       123: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       126: iload_2
+       127: if_icmpne     138
+       130: aload         5
+       132: aload         8
+       134: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       137: pop
+       138: iconst_0
+       139: iload_3
+       140: iload         6
+       142: iadd
+       143: iload         4
+       145: iload         7
+       147: isub
+       148: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       151: astore        9
+       153: aload         9
+       155: ifnull        175
+       158: aload         9
+       160: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       163: iload_2
+       164: if_icmpne     175
+       167: aload         5
+       169: aload         9
+       171: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       174: pop
+       175: iconst_0
+       176: iload_3
+       177: iload         6
+       179: isub
+       180: iload         4
+       182: iload         7
+       184: iadd
+       185: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       188: astore        10
+       190: aload         10
+       192: ifnull        212
+       195: aload         10
+       197: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       200: iload_2
+       201: if_icmpne     212
+       204: aload         5
+       206: aload         10
+       208: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       211: pop
+       212: iconst_0
+       213: iload_3
+       214: iload         6
+       216: isub
+       217: iload         4
+       219: iload         7
+       221: isub
+       222: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       225: astore        11
+       227: aload         11
+       229: ifnull        249
+       232: aload         11
+       234: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       237: iload_2
+       238: if_icmpne     249
+       241: aload         5
+       243: aload         11
+       245: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       248: pop
+       249: iinc          7, 1
+       252: goto          92
+       255: iinc          6, 1
+       258: goto          83
+       261: aload         5
+       263: areturn
+
+  private java.util.ArrayList<core.game.node.Node> getNodeInRange(int, java.util.List<java.lang.Integer>);
+    Code:
+         0: aload_0
+         1: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+         4: invokevirtual #131                // Method core/game/world/map/Location.getX:()I
+         7: istore_3
+         8: aload_0
+         9: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        12: invokevirtual #132                // Method core/game/world/map/Location.getY:()I
+        15: istore        4
+        17: new           #133                // class java/util/ArrayList
+        20: dup
+        21: invokespecial #134                // Method java/util/ArrayList."<init>":()V
+        24: astore        5
+        26: aload_0
+        27: iload_1
+        28: invokestatic  #135                // Method core/game/world/map/RegionManager.getLocalNpcs:(Lcore/game/node/entity/Entity;I)Ljava/util/List;
+        31: invokeinterface #136,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        36: astore        6
+        38: aload         6
+        40: invokeinterface #137,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        45: ifeq          88
+        48: aload         6
+        50: invokeinterface #138,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        55: checkcast     #139                // class core/game/node/entity/npc/NPC
+        58: astore        7
+        60: aload_2
+        61: aload         7
+        63: invokevirtual #140                // Method core/game/node/entity/npc/NPC.getId:()I
+        66: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        69: invokeinterface #144,  2          // InterfaceMethod java/util/List.contains:(Ljava/lang/Object;)Z
+        74: ifeq          85
+        77: aload         5
+        79: aload         7
+        81: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+        84: pop
+        85: goto          38
+        88: iconst_0
+        89: istore        6
+        91: iload         6
+        93: iload_1
+        94: if_icmpge     301
+        97: iconst_0
+        98: istore        7
+       100: iload         7
+       102: iload_1
+       103: iload         6
+       105: isub
+       106: if_icmpge     295
+       109: iconst_0
+       110: iload_3
+       111: iload         6
+       113: iadd
+       114: iload         4
+       116: iload         7
+       118: iadd
+       119: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       122: astore        8
+       124: aload         8
+       126: ifnull        154
+       129: aload_2
+       130: aload         8
+       132: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       135: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       138: invokeinterface #144,  2          // InterfaceMethod java/util/List.contains:(Ljava/lang/Object;)Z
+       143: ifeq          154
+       146: aload         5
+       148: aload         8
+       150: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       153: pop
+       154: iconst_0
+       155: iload_3
+       156: iload         6
+       158: iadd
+       159: iload         4
+       161: iload         7
+       163: isub
+       164: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       167: astore        9
+       169: aload         9
+       171: ifnull        199
+       174: aload_2
+       175: aload         9
+       177: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       180: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       183: invokeinterface #144,  2          // InterfaceMethod java/util/List.contains:(Ljava/lang/Object;)Z
+       188: ifeq          199
+       191: aload         5
+       193: aload         9
+       195: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       198: pop
+       199: iconst_0
+       200: iload_3
+       201: iload         6
+       203: isub
+       204: iload         4
+       206: iload         7
+       208: iadd
+       209: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       212: astore        10
+       214: aload         10
+       216: ifnull        244
+       219: aload_2
+       220: aload         10
+       222: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       225: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       228: invokeinterface #144,  2          // InterfaceMethod java/util/List.contains:(Ljava/lang/Object;)Z
+       233: ifeq          244
+       236: aload         5
+       238: aload         10
+       240: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       243: pop
+       244: iconst_0
+       245: iload_3
+       246: iload         6
+       248: isub
+       249: iload         4
+       251: iload         7
+       253: isub
+       254: invokestatic  #142                // Method core/game/world/map/RegionManager.getObject:(III)Lcore/game/node/scenery/Scenery;
+       257: astore        11
+       259: aload         11
+       261: ifnull        289
+       264: aload_2
+       265: aload         11
+       267: invokevirtual #143                // Method core/game/node/Node.getId:()I
+       270: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       273: invokeinterface #144,  2          // InterfaceMethod java/util/List.contains:(Ljava/lang/Object;)Z
+       278: ifeq          289
+       281: aload         5
+       283: aload         11
+       285: invokevirtual #141                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       288: pop
+       289: iinc          7, 1
+       292: goto          100
+       295: iinc          6, 1
+       298: goto          91
+       301: aload         5
+       303: areturn
+
+  public core.game.node.Node getClosestNodeWithEntryAndDirection(int, int, core.game.world.map.Direction);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: iload_2
+         3: invokevirtual #145                // Method getNodeInRange:(II)Ljava/util/ArrayList;
+         6: astore        4
+         8: aload         4
+        10: invokevirtual #146                // Method java/util/ArrayList.isEmpty:()Z
+        13: ifeq          18
+        16: aconst_null
+        17: areturn
+        18: aload_0
+        19: aload         4
+        21: aload_3
+        22: invokevirtual #147                // Method getClosestNodeinNodeListWithDirection:(Ljava/util/ArrayList;Lcore/game/world/map/Direction;)Lcore/game/node/Node;
+        25: astore        5
+        27: aload         5
+        29: areturn
+
+  public core.game.node.Node getClosestNodeWithEntry(int, int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: iload_2
+         3: invokevirtual #145                // Method getNodeInRange:(II)Ljava/util/ArrayList;
+         6: astore_3
+         7: aload_3
+         8: invokevirtual #146                // Method java/util/ArrayList.isEmpty:()Z
+        11: ifeq          16
+        14: aconst_null
+        15: areturn
+        16: aload_0
+        17: aload_3
+        18: invokevirtual #148                // Method getClosestNodeinNodeList:(Ljava/util/ArrayList;)Lcore/game/node/Node;
+        21: astore        4
+        23: aload         4
+        25: areturn
+
+  public core.game.node.Node getClosestNodeWithEntry(int, java.util.List<java.lang.Integer>);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: aload_2
+         3: invokevirtual #149                // Method getNodeInRange:(ILjava/util/List;)Ljava/util/ArrayList;
+         6: astore_3
+         7: aload_3
+         8: invokevirtual #146                // Method java/util/ArrayList.isEmpty:()Z
+        11: ifeq          16
+        14: aconst_null
+        15: areturn
+        16: aload_0
+        17: aload_3
+        18: invokevirtual #148                // Method getClosestNodeinNodeList:(Ljava/util/ArrayList;)Lcore/game/node/Node;
+        21: astore        4
+        23: aload         4
+        25: areturn
+
+  public core.game.node.Node getClosesCreature(int);
+    Code:
+         0: iload_1
+         1: iconst_1
+         2: iadd
+         3: istore_2
+         4: aconst_null
+         5: astore_3
+         6: aload_0
+         7: iload_1
+         8: invokestatic  #135                // Method core/game/world/map/RegionManager.getLocalNpcs:(Lcore/game/node/entity/Entity;I)Ljava/util/List;
+        11: invokeinterface #136,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        16: astore        4
+        18: aload         4
+        20: invokeinterface #137,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        25: ifeq          72
+        28: aload         4
+        30: invokeinterface #138,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        35: checkcast     #139                // class core/game/node/entity/npc/NPC
+        38: astore        5
+        40: aload         5
+        42: invokevirtual #150                // Method core/game/node/entity/npc/NPC.getLocation:()Lcore/game/world/map/Location;
+        45: aload_0
+        46: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        49: invokevirtual #151                // Method core/game/world/map/Location.getDistance:(Lcore/game/world/map/Location;)D
+        52: dstore        6
+        54: dload         6
+        56: iload_2
+        57: i2d
+        58: dcmpg
+        59: ifge          69
+        62: dload         6
+        64: d2i
+        65: istore_2
+        66: aload         5
+        68: astore_3
+        69: goto          18
+        72: aload_3
+        73: areturn
+
+  public core.game.node.Node getClosesCreature(int, int);
+    Code:
+         0: iload_1
+         1: iconst_1
+         2: iadd
+         3: istore_3
+         4: aconst_null
+         5: astore        4
+         7: aload_0
+         8: iload_1
+         9: invokestatic  #135                // Method core/game/world/map/RegionManager.getLocalNpcs:(Lcore/game/node/entity/Entity;I)Ljava/util/List;
+        12: invokeinterface #136,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        17: astore        5
+        19: aload         5
+        21: invokeinterface #137,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        26: ifeq          83
+        29: aload         5
+        31: invokeinterface #138,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        36: checkcast     #139                // class core/game/node/entity/npc/NPC
+        39: astore        6
+        41: aload         6
+        43: invokevirtual #150                // Method core/game/node/entity/npc/NPC.getLocation:()Lcore/game/world/map/Location;
+        46: aload_0
+        47: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        50: invokevirtual #151                // Method core/game/world/map/Location.getDistance:(Lcore/game/world/map/Location;)D
+        53: dstore        7
+        55: aload         6
+        57: invokevirtual #140                // Method core/game/node/entity/npc/NPC.getId:()I
+        60: iload_2
+        61: if_icmpne     80
+        64: dload         7
+        66: iload_3
+        67: i2d
+        68: dcmpg
+        69: ifge          80
+        72: dload         7
+        74: d2i
+        75: istore_3
+        76: aload         6
+        78: astore        4
+        80: goto          19
+        83: aload         4
+        85: areturn
+
+  public core.game.node.Node getClosesCreature(int, java.util.ArrayList<java.lang.Integer>);
+    Code:
+         0: iload_1
+         1: iconst_1
+         2: iadd
+         3: istore_3
+         4: aconst_null
+         5: astore        4
+         7: aload_0
+         8: iload_1
+         9: invokestatic  #135                // Method core/game/world/map/RegionManager.getLocalNpcs:(Lcore/game/node/entity/Entity;I)Ljava/util/List;
+        12: invokeinterface #136,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        17: astore        5
+        19: aload         5
+        21: invokeinterface #137,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        26: ifeq          89
+        29: aload         5
+        31: invokeinterface #138,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        36: checkcast     #139                // class core/game/node/entity/npc/NPC
+        39: astore        6
+        41: aload         6
+        43: invokevirtual #150                // Method core/game/node/entity/npc/NPC.getLocation:()Lcore/game/world/map/Location;
+        46: aload_0
+        47: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        50: invokevirtual #151                // Method core/game/world/map/Location.getDistance:(Lcore/game/world/map/Location;)D
+        53: dstore        7
+        55: aload_2
+        56: aload         6
+        58: invokevirtual #140                // Method core/game/node/entity/npc/NPC.getId:()I
+        61: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        64: invokevirtual #152                // Method java/util/ArrayList.contains:(Ljava/lang/Object;)Z
+        67: ifeq          86
+        70: dload         7
+        72: iload_3
+        73: i2d
+        74: dcmpg
+        75: ifge          86
+        78: dload         7
+        80: d2i
+        81: istore_3
+        82: aload         6
+        84: astore        4
+        86: goto          19
+        89: aload         4
+        91: areturn
+
+  private core.game.node.Node getClosestNodeinNodeListWithDirection(java.util.ArrayList<core.game.node.Node>, core.game.world.map.Direction);
+    Code:
+         0: aload_1
+         1: invokevirtual #146                // Method java/util/ArrayList.isEmpty:()Z
+         4: ifeq          9
+         7: aconst_null
+         8: areturn
+         9: dconst_0
+        10: dstore_3
+        11: aconst_null
+        12: astore        5
+        14: aload_1
+        15: invokevirtual #153                // Method java/util/ArrayList.iterator:()Ljava/util/Iterator;
+        18: astore        6
+        20: aload         6
+        22: invokeinterface #137,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        27: ifeq          87
+        30: aload         6
+        32: invokeinterface #138,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        37: checkcast     #154                // class core/game/node/Node
+        40: astore        7
+        42: aload_0
+        43: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        46: aload         7
+        48: invokevirtual #155                // Method core/game/node/Node.getLocation:()Lcore/game/world/map/Location;
+        51: invokevirtual #151                // Method core/game/world/map/Location.getDistance:(Lcore/game/world/map/Location;)D
+        54: dstore        8
+        56: aload         5
+        58: ifnull        68
+        61: dload         8
+        63: dload_3
+        64: dcmpg
+        65: ifge          84
+        68: aload         7
+        70: invokevirtual #156                // Method core/game/node/Node.getDirection:()Lcore/game/world/map/Direction;
+        73: aload_2
+        74: if_acmpne     84
+        77: dload         8
+        79: dstore_3
+        80: aload         7
+        82: astore        5
+        84: goto          20
+        87: aload         5
+        89: areturn
+
+  private core.game.node.Node getClosestNodeinNodeList(java.util.ArrayList<core.game.node.Node>);
+    Code:
+         0: aload_1
+         1: invokevirtual #146                // Method java/util/ArrayList.isEmpty:()Z
+         4: ifeq          9
+         7: aconst_null
+         8: areturn
+         9: dconst_0
+        10: dstore_2
+        11: aconst_null
+        12: astore        4
+        14: aload_1
+        15: invokevirtual #153                // Method java/util/ArrayList.iterator:()Ljava/util/Iterator;
+        18: astore        5
+        20: aload         5
+        22: invokeinterface #137,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        27: ifeq          78
+        30: aload         5
+        32: invokeinterface #138,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        37: checkcast     #154                // class core/game/node/Node
+        40: astore        6
+        42: aload_0
+        43: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        46: aload         6
+        48: invokevirtual #155                // Method core/game/node/Node.getLocation:()Lcore/game/world/map/Location;
+        51: invokevirtual #151                // Method core/game/world/map/Location.getDistance:(Lcore/game/world/map/Location;)D
+        54: dstore        7
+        56: aload         4
+        58: ifnull        68
+        61: dload         7
+        63: dload_2
+        64: dcmpg
+        65: ifge          75
+        68: dload         7
+        70: dstore_2
+        71: aload         6
+        73: astore        4
+        75: goto          20
+        78: aload         4
+        80: areturn
+
+  public void clear();
+    Code:
+         0: getstatic     #96                 // Field botMapping:Ljava/util/Map;
+         3: aload_0
+         4: getfield      #20                 // Field uid:I
+         7: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        10: invokeinterface #157,  2          // InterfaceMethod java/util/Map.remove:(Ljava/lang/Object;)Ljava/lang/Object;
+        15: pop
+        16: aload_0
+        17: invokespecial #158                // Method core/game/node/entity/player/Player.clear:()V
+        20: return
+
+  public void reset();
+    Code:
+         0: aload_0
+         1: invokevirtual #102                // Method getPlayerFlags:()Lcore/game/world/update/flag/PlayerFlags;
+         4: invokevirtual #159                // Method core/game/world/update/flag/PlayerFlags.isUpdateSceneGraph:()Z
+         7: ifeq          21
+        10: aload_0
+        11: invokevirtual #102                // Method getPlayerFlags:()Lcore/game/world/update/flag/PlayerFlags;
+        14: aload_0
+        15: invokevirtual #115                // Method getLocation:()Lcore/game/world/map/Location;
+        18: invokevirtual #104                // Method core/game/world/update/flag/PlayerFlags.setLastSceneGraph:(Lcore/game/world/map/Location;)V
+        21: aload_0
+        22: invokespecial #160                // Method core/game/node/entity/player/Player.reset:()V
+        25: return
+
+  public void finalizeDeath(core.game.node.entity.Entity);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: invokespecial #161                // Method core/game/node/entity/player/Player.finalizeDeath:(Lcore/game/node/entity/Entity;)V
+         5: aload_0
+         6: invokevirtual #162                // Method fullRestore:()V
+         9: return
+
+  public int getUid();
+    Code:
+         0: aload_0
+         1: getfield      #20                 // Field uid:I
+         4: ireturn
+
+  public static void deregister(int);
+    Code:
+         0: getstatic     #96                 // Field botMapping:Ljava/util/Map;
+         3: iload_0
+         4: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+         7: invokeinterface #163,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        12: checkcast     #164                // class core/game/bots/AIPlayer
+        15: astore_1
+        16: aload_1
+        17: ifnull        33
+        20: aload_1
+        21: invokevirtual #165                // Method clear:()V
+        24: invokestatic  #15                 // Method core/game/world/repository/Repository.getPlayers:()Lcore/game/world/repository/NodeList;
+        27: aload_1
+        28: invokevirtual #166                // Method core/game/world/repository/NodeList.remove:(Ljava/lang/Object;)Z
+        31: pop
+        32: return
+        33: return
+
+  public java.lang.String getUsername();
+    Code:
+         0: aload_0
+         1: getfield      #19                 // Field username:Ljava/lang/String;
+         4: areturn
+
+  public static core.game.bots.AIPlayer get(int);
+    Code:
+         0: getstatic     #96                 // Field botMapping:Ljava/util/Map;
+         3: iload_0
+         4: invokestatic  #97                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+         7: invokeinterface #163,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        12: checkcast     #164                // class core/game/bots/AIPlayer
+        15: areturn
+
+  public core.game.world.map.Location getStartLocation();
+    Code:
+         0: aload_0
+         1: getfield      #9                  // Field startLocation:Lcore/game/world/map/Location;
+         4: areturn
+
+  public core.game.node.entity.player.Player getControler();
+    Code:
+         0: aload_0
+         1: getfield      #167                // Field controler:Lcore/game/node/entity/player/Player;
+         4: areturn
+
+  public void setControler(core.game.node.entity.player.Player);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: putfield      #167                // Field controler:Lcore/game/node/entity/player/Player;
+         5: return
+
+  public void interact(core.game.node.Node);
+    Code:
+         0: return
+
+  static {};
+    Code:
+         0: iconst_1
+         1: putstatic     #5                  // Field currentUID:I
+         4: new           #133                // class java/util/ArrayList
+         7: dup
+         8: invokespecial #134                // Method java/util/ArrayList."<init>":()V
+        11: putstatic     #70                 // Field botNames:Ljava/util/List;
+        14: new           #168                // class java/util/HashMap
+        17: dup
+        18: invokespecial #169                // Method java/util/HashMap."<init>":()V
+        21: putstatic     #96                 // Field botMapping:Ljava/util/Map;
+        24: ldc           #170                // String botnames.txt
+        26: invokestatic  #171                // Method loadNames:(Ljava/lang/String;)V
+        29: return
+}

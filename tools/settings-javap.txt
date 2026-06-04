@@ -1,0 +1,981 @@
+Compiled from "Settings.java"
+public final class core.game.node.entity.player.link.Settings {
+  private final core.game.node.entity.player.Player player;
+
+  private double runEnergy;
+
+  private double weight;
+
+  private int brightness;
+
+  private int musicVolume;
+
+  private int soundEffectVolume;
+
+  private int areaSoundVolume;
+
+  private boolean singleMouseButton;
+
+  private boolean disableChatEffects;
+
+  private boolean splitPrivateChat;
+
+  private boolean acceptAid;
+
+  private boolean runToggled;
+
+  private int publicChatSetting;
+
+  private int privateChatSetting;
+
+  private int clanChatSetting;
+
+  private int tradeSetting;
+
+  private int assistSetting;
+
+  private boolean specialToggled;
+
+  private int specialEnergy;
+
+  private int attackStyleIndex;
+
+  public core.game.node.entity.player.link.Settings(core.game.node.entity.player.Player);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: ldc2_w        #2                  // double 100.0d
+         8: putfield      #4                  // Field runEnergy:D
+        11: aload_0
+        12: iconst_2
+        13: putfield      #5                  // Field brightness:I
+        16: aload_0
+        17: iconst_0
+        18: putfield      #6                  // Field publicChatSetting:I
+        21: aload_0
+        22: iconst_0
+        23: putfield      #7                  // Field privateChatSetting:I
+        26: aload_0
+        27: iconst_0
+        28: putfield      #8                  // Field clanChatSetting:I
+        31: aload_0
+        32: iconst_0
+        33: putfield      #9                  // Field tradeSetting:I
+        36: aload_0
+        37: iconst_0
+        38: putfield      #10                 // Field assistSetting:I
+        41: aload_0
+        42: bipush        100
+        44: putfield      #11                 // Field specialEnergy:I
+        47: aload_0
+        48: iconst_0
+        49: putfield      #12                 // Field attackStyleIndex:I
+        52: aload_0
+        53: aload_1
+        54: putfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        57: return
+
+  public void update();
+    Code:
+         0: aload_0
+         1: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         4: sipush        166
+         7: aload_0
+         8: getfield      #5                  // Field brightness:I
+        11: iconst_1
+        12: iadd
+        13: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        16: aload_0
+        17: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        20: sipush        168
+        23: aload_0
+        24: getfield      #15                 // Field musicVolume:I
+        27: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        30: aload_0
+        31: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        34: sipush        169
+        37: aload_0
+        38: getfield      #16                 // Field soundEffectVolume:I
+        41: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        44: aload_0
+        45: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        48: sipush        872
+        51: aload_0
+        52: getfield      #17                 // Field areaSoundVolume:I
+        55: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        58: aload_0
+        59: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        62: sipush        170
+        65: aload_0
+        66: getfield      #18                 // Field singleMouseButton:Z
+        69: ifeq          76
+        72: iconst_1
+        73: goto          77
+        76: iconst_0
+        77: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        80: aload_0
+        81: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        84: sipush        171
+        87: aload_0
+        88: getfield      #19                 // Field disableChatEffects:Z
+        91: ifeq          98
+        94: iconst_1
+        95: goto          99
+        98: iconst_0
+        99: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       102: aload_0
+       103: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       106: sipush        287
+       109: aload_0
+       110: getfield      #20                 // Field splitPrivateChat:Z
+       113: ifeq          120
+       116: iconst_1
+       117: goto          121
+       120: iconst_0
+       121: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       124: aload_0
+       125: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       128: sipush        427
+       131: aload_0
+       132: getfield      #21                 // Field acceptAid:Z
+       135: ifeq          142
+       138: iconst_1
+       139: goto          143
+       142: iconst_0
+       143: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       146: aload_0
+       147: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       150: sipush        172
+       153: aload_0
+       154: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       157: invokevirtual #22                 // Method core/game/node/entity/player/Player.getProperties:()Lcore/game/node/entity/impl/Properties;
+       160: invokevirtual #23                 // Method core/game/node/entity/impl/Properties.isRetaliating:()Z
+       163: ifne          170
+       166: iconst_1
+       167: goto          171
+       170: iconst_0
+       171: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       174: aload_0
+       175: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       178: sipush        173
+       181: aload_0
+       182: getfield      #24                 // Field runToggled:Z
+       185: ifeq          192
+       188: iconst_1
+       189: goto          193
+       192: iconst_0
+       193: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       196: aload_0
+       197: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       200: sipush        1054
+       203: aload_0
+       204: getfield      #8                  // Field clanChatSetting:I
+       207: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       210: aload_0
+       211: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       214: sipush        1055
+       217: aload_0
+       218: getfield      #10                 // Field assistSetting:I
+       221: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       224: aload_0
+       225: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       228: sipush        300
+       231: aload_0
+       232: getfield      #11                 // Field specialEnergy:I
+       235: bipush        10
+       237: imul
+       238: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       241: aload_0
+       242: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       245: bipush        43
+       247: aload_0
+       248: getfield      #12                 // Field attackStyleIndex:I
+       251: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+       254: aload_0
+       255: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       258: invokevirtual #25                 // Method core/game/node/entity/player/Player.getPacketDispatch:()Lcore/game/node/entity/player/link/PacketDispatch;
+       261: invokevirtual #26                 // Method core/game/node/entity/player/link/PacketDispatch.sendRunEnergy:()V
+       264: aload_0
+       265: invokevirtual #27                 // Method updateChatSettings:()V
+       268: return
+
+  public void toggleAttackStyleIndex(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #12                 // Field attackStyleIndex:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: bipush        43
+        11: aload_0
+        12: getfield      #12                 // Field attackStyleIndex:I
+        15: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        18: return
+
+  public void updateChatSettings();
+    Code:
+         0: aload_0
+         1: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         4: invokevirtual #28                 // Method core/game/node/entity/player/Player.getSession:()Lcore/net/IoSession;
+         7: new           #29                 // class core/net/packet/IoBuffer
+        10: dup
+        11: sipush        232
+        14: invokespecial #30                 // Method core/net/packet/IoBuffer."<init>":(I)V
+        17: aload_0
+        18: getfield      #6                  // Field publicChatSetting:I
+        21: invokevirtual #31                 // Method core/net/packet/IoBuffer.put:(I)Lcore/net/packet/IoBuffer;
+        24: aload_0
+        25: getfield      #7                  // Field privateChatSetting:I
+        28: invokevirtual #31                 // Method core/net/packet/IoBuffer.put:(I)Lcore/net/packet/IoBuffer;
+        31: aload_0
+        32: getfield      #9                  // Field tradeSetting:I
+        35: invokevirtual #31                 // Method core/net/packet/IoBuffer.put:(I)Lcore/net/packet/IoBuffer;
+        38: invokevirtual #32                 // Method core/net/IoSession.write:(Ljava/lang/Object;)V
+        41: return
+
+  public void updateChatSettings(int, int, int);
+    Code:
+         0: iconst_0
+         1: istore        4
+         3: aload_0
+         4: getfield      #6                  // Field publicChatSetting:I
+         7: iload_1
+         8: if_icmpeq     19
+        11: aload_0
+        12: iload_1
+        13: putfield      #6                  // Field publicChatSetting:I
+        16: iconst_1
+        17: istore        4
+        19: aload_0
+        20: getfield      #9                  // Field tradeSetting:I
+        23: iload_3
+        24: if_icmpeq     35
+        27: aload_0
+        28: iload_3
+        29: putfield      #9                  // Field tradeSetting:I
+        32: iconst_1
+        33: istore        4
+        35: iload         4
+        37: ifeq          44
+        40: aload_0
+        41: invokevirtual #27                 // Method updateChatSettings:()V
+        44: return
+
+  public void setChatSettings(int, int, int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #6                  // Field publicChatSetting:I
+         5: aload_0
+         6: iload_2
+         7: putfield      #7                  // Field privateChatSetting:I
+        10: aload_0
+        11: iload_3
+        12: putfield      #9                  // Field tradeSetting:I
+        15: return
+
+  public void parse(org.json.simple.JSONObject);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: ldc           #33                 // String brightness
+         4: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+         7: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+        10: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        13: putfield      #5                  // Field brightness:I
+        16: aload_0
+        17: aload_1
+        18: ldc           #37                 // String musicVolume
+        20: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        23: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+        26: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        29: putfield      #15                 // Field musicVolume:I
+        32: aload_0
+        33: aload_1
+        34: ldc           #38                 // String soundEffectVolume
+        36: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        39: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+        42: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        45: putfield      #16                 // Field soundEffectVolume:I
+        48: aload_0
+        49: aload_1
+        50: ldc           #39                 // String areaSoundVolume
+        52: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        55: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+        58: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        61: putfield      #17                 // Field areaSoundVolume:I
+        64: aload_0
+        65: aload_1
+        66: ldc           #40                 // String singleMouse
+        68: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        71: checkcast     #41                 // class java/lang/Boolean
+        74: invokevirtual #42                 // Method java/lang/Boolean.booleanValue:()Z
+        77: putfield      #18                 // Field singleMouseButton:Z
+        80: aload_0
+        81: aload_1
+        82: ldc           #43                 // String disableChatEffects
+        84: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        87: checkcast     #41                 // class java/lang/Boolean
+        90: invokevirtual #42                 // Method java/lang/Boolean.booleanValue:()Z
+        93: putfield      #19                 // Field disableChatEffects:Z
+        96: aload_0
+        97: aload_1
+        98: ldc           #44                 // String splitPrivate
+       100: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       103: checkcast     #41                 // class java/lang/Boolean
+       106: invokevirtual #42                 // Method java/lang/Boolean.booleanValue:()Z
+       109: putfield      #20                 // Field splitPrivateChat:Z
+       112: aload_0
+       113: aload_1
+       114: ldc           #45                 // String acceptAid
+       116: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       119: checkcast     #41                 // class java/lang/Boolean
+       122: invokevirtual #42                 // Method java/lang/Boolean.booleanValue:()Z
+       125: putfield      #21                 // Field acceptAid:Z
+       128: aload_0
+       129: aload_1
+       130: ldc           #46                 // String runToggled
+       132: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       135: checkcast     #41                 // class java/lang/Boolean
+       138: invokevirtual #42                 // Method java/lang/Boolean.booleanValue:()Z
+       141: putfield      #24                 // Field runToggled:Z
+       144: aload_0
+       145: aload_1
+       146: ldc           #47                 // String publicChatSetting
+       148: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       151: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       154: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       157: putfield      #6                  // Field publicChatSetting:I
+       160: aload_0
+       161: aload_1
+       162: ldc           #48                 // String privateChatSetting
+       164: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       167: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       170: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       173: putfield      #7                  // Field privateChatSetting:I
+       176: aload_0
+       177: aload_1
+       178: ldc           #49                 // String clanChatSetting
+       180: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       183: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       186: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       189: putfield      #8                  // Field clanChatSetting:I
+       192: aload_0
+       193: aload_1
+       194: ldc           #50                 // String tradeSetting
+       196: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       199: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       202: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       205: putfield      #9                  // Field tradeSetting:I
+       208: aload_0
+       209: aload_1
+       210: ldc           #51                 // String assistSetting
+       212: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       215: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       218: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       221: putfield      #10                 // Field assistSetting:I
+       224: aload_0
+       225: aload_1
+       226: ldc           #52                 // String runEnergy
+       228: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       231: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       234: invokestatic  #53                 // Method java/lang/Double.parseDouble:(Ljava/lang/String;)D
+       237: putfield      #4                  // Field runEnergy:D
+       240: aload_0
+       241: aload_1
+       242: ldc           #54                 // String specialEnergy
+       244: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       247: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       250: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       253: putfield      #11                 // Field specialEnergy:I
+       256: aload_0
+       257: aload_1
+       258: ldc           #55                 // String attackStyle
+       260: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       263: invokevirtual #35                 // Method java/lang/Object.toString:()Ljava/lang/String;
+       266: invokestatic  #36                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       269: putfield      #12                 // Field attackStyleIndex:I
+       272: aload_0
+       273: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       276: invokevirtual #22                 // Method core/game/node/entity/player/Player.getProperties:()Lcore/game/node/entity/impl/Properties;
+       279: aload_1
+       280: ldc           #56                 // String retaliation
+       282: invokevirtual #34                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       285: checkcast     #41                 // class java/lang/Boolean
+       288: invokevirtual #42                 // Method java/lang/Boolean.booleanValue:()Z
+       291: invokevirtual #57                 // Method core/game/node/entity/impl/Properties.setRetaliating:(Z)V
+       294: return
+
+  public void toggleSpecialBar();
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #58                 // Field specialToggled:Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: invokevirtual #59                 // Method setSpecialToggled:(Z)V
+        16: return
+
+  public void setSpecialToggled(boolean);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #58                 // Field specialToggled:Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: putfield      #58                 // Field specialToggled:Z
+        16: aload_0
+        17: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        20: sipush        301
+        23: aload_0
+        24: getfield      #58                 // Field specialToggled:Z
+        27: ifeq          34
+        30: iconst_1
+        31: goto          35
+        34: iconst_0
+        35: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        38: return
+
+  public boolean isSpecialToggled();
+    Code:
+         0: aload_0
+         1: getfield      #58                 // Field specialToggled:Z
+         4: ireturn
+
+  public boolean drainSpecial(int);
+    Code:
+         0: aload_0
+         1: getfield      #58                 // Field specialToggled:Z
+         4: ifne          9
+         7: iconst_0
+         8: ireturn
+         9: aload_0
+        10: iconst_0
+        11: invokevirtual #59                 // Method setSpecialToggled:(Z)V
+        14: iload_1
+        15: aload_0
+        16: getfield      #11                 // Field specialEnergy:I
+        19: if_icmple     36
+        22: aload_0
+        23: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        26: invokevirtual #25                 // Method core/game/node/entity/player/Player.getPacketDispatch:()Lcore/game/node/entity/player/link/PacketDispatch;
+        29: ldc           #60                 // String You do not have enough special attack energy left.
+        31: invokevirtual #61                 // Method core/game/node/entity/player/link/PacketDispatch.sendMessage:(Ljava/lang/String;)V
+        34: iconst_0
+        35: ireturn
+        36: aload_0
+        37: aload_0
+        38: getfield      #11                 // Field specialEnergy:I
+        41: iload_1
+        42: isub
+        43: invokevirtual #62                 // Method setSpecialEnergy:(I)V
+        46: iconst_1
+        47: ireturn
+
+  public void setSpecialEnergy(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #11                 // Field specialEnergy:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        300
+        12: aload_0
+        13: getfield      #11                 // Field specialEnergy:I
+        16: bipush        10
+        18: imul
+        19: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        22: return
+
+  public int getSpecialEnergy();
+    Code:
+         0: aload_0
+         1: getfield      #11                 // Field specialEnergy:I
+         4: ireturn
+
+  public void toggleRetaliating();
+    Code:
+         0: aload_0
+         1: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         4: invokevirtual #22                 // Method core/game/node/entity/player/Player.getProperties:()Lcore/game/node/entity/impl/Properties;
+         7: aload_0
+         8: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        11: invokevirtual #22                 // Method core/game/node/entity/player/Player.getProperties:()Lcore/game/node/entity/impl/Properties;
+        14: invokevirtual #23                 // Method core/game/node/entity/impl/Properties.isRetaliating:()Z
+        17: ifne          24
+        20: iconst_1
+        21: goto          25
+        24: iconst_0
+        25: invokevirtual #57                 // Method core/game/node/entity/impl/Properties.setRetaliating:(Z)V
+        28: aload_0
+        29: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        32: sipush        172
+        35: aload_0
+        36: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        39: invokevirtual #22                 // Method core/game/node/entity/player/Player.getProperties:()Lcore/game/node/entity/impl/Properties;
+        42: invokevirtual #23                 // Method core/game/node/entity/impl/Properties.isRetaliating:()Z
+        45: ifne          52
+        48: iconst_1
+        49: goto          53
+        52: iconst_0
+        53: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        56: return
+
+  public void toggleMouseButton();
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #18                 // Field singleMouseButton:Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: putfield      #18                 // Field singleMouseButton:Z
+        16: aload_0
+        17: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        20: sipush        170
+        23: aload_0
+        24: getfield      #18                 // Field singleMouseButton:Z
+        27: ifeq          34
+        30: iconst_1
+        31: goto          35
+        34: iconst_0
+        35: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        38: return
+
+  public void toggleChatEffects();
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #19                 // Field disableChatEffects:Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: putfield      #19                 // Field disableChatEffects:Z
+        16: aload_0
+        17: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        20: sipush        171
+        23: aload_0
+        24: getfield      #19                 // Field disableChatEffects:Z
+        27: ifeq          34
+        30: iconst_1
+        31: goto          35
+        34: iconst_0
+        35: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        38: return
+
+  public void toggleSplitPrivateChat();
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #20                 // Field splitPrivateChat:Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: putfield      #20                 // Field splitPrivateChat:Z
+        16: aload_0
+        17: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        20: sipush        287
+        23: aload_0
+        24: getfield      #20                 // Field splitPrivateChat:Z
+        27: ifeq          34
+        30: iconst_1
+        31: goto          35
+        34: iconst_0
+        35: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        38: return
+
+  public void toggleAcceptAid();
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #21                 // Field acceptAid:Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: putfield      #21                 // Field acceptAid:Z
+        16: aload_0
+        17: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        20: sipush        427
+        23: aload_0
+        24: getfield      #21                 // Field acceptAid:Z
+        27: ifeq          34
+        30: iconst_1
+        31: goto          35
+        34: iconst_0
+        35: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        38: return
+
+  public void toggleRun();
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #24                 // Field runToggled:Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: invokevirtual #63                 // Method setRunToggled:(Z)V
+        16: return
+
+  public void setRunToggled(boolean);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #24                 // Field runToggled:Z
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        173
+        12: aload_0
+        13: getfield      #24                 // Field runToggled:Z
+        16: ifeq          23
+        19: iconst_1
+        20: goto          24
+        23: iconst_0
+        24: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        27: return
+
+  public void updateRunEnergy(double);
+    Code:
+         0: aload_0
+         1: dup
+         2: getfield      #4                  // Field runEnergy:D
+         5: dload_1
+         6: dsub
+         7: putfield      #4                  // Field runEnergy:D
+        10: aload_0
+        11: getfield      #4                  // Field runEnergy:D
+        14: dconst_0
+        15: dcmpg
+        16: ifge          27
+        19: aload_0
+        20: dconst_0
+        21: putfield      #4                  // Field runEnergy:D
+        24: goto          45
+        27: aload_0
+        28: getfield      #4                  // Field runEnergy:D
+        31: ldc2_w        #2                  // double 100.0d
+        34: dcmpl
+        35: ifle          45
+        38: aload_0
+        39: ldc2_w        #2                  // double 100.0d
+        42: putfield      #4                  // Field runEnergy:D
+        45: aload_0
+        46: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        49: invokevirtual #25                 // Method core/game/node/entity/player/Player.getPacketDispatch:()Lcore/game/node/entity/player/link/PacketDispatch;
+        52: invokevirtual #26                 // Method core/game/node/entity/player/link/PacketDispatch.sendRunEnergy:()V
+        55: return
+
+  public void updateWeight();
+    Code:
+         0: aload_0
+         1: dconst_0
+         2: putfield      #64                 // Field weight:D
+         5: iconst_0
+         6: istore_1
+         7: iload_1
+         8: bipush        28
+        10: if_icmpge     74
+        13: aload_0
+        14: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        17: invokevirtual #65                 // Method core/game/node/entity/player/Player.getInventory:()Lcore/game/container/Container;
+        20: iload_1
+        21: invokevirtual #66                 // Method core/game/container/Container.get:(I)Lcore/game/node/item/Item;
+        24: astore_2
+        25: aload_2
+        26: ifnonnull     32
+        29: goto          68
+        32: aload_2
+        33: invokevirtual #67                 // Method core/game/node/item/Item.getDefinition:()Lcore/cache/def/impl/ItemDefinition;
+        36: ldc           #69                 // String weight
+        38: dconst_0
+        39: invokestatic  #70                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        42: invokevirtual #71                 // Method core/cache/def/impl/ItemDefinition.getConfiguration:(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+        45: checkcast     #72                 // class java/lang/Double
+        48: invokevirtual #73                 // Method java/lang/Double.doubleValue:()D
+        51: dstore_3
+        52: dload_3
+        53: dconst_0
+        54: dcmpl
+        55: ifle          68
+        58: aload_0
+        59: dup
+        60: getfield      #64                 // Field weight:D
+        63: dload_3
+        64: dadd
+        65: putfield      #64                 // Field weight:D
+        68: iinc          1, 1
+        71: goto          7
+        74: iconst_0
+        75: istore_1
+        76: iload_1
+        77: bipush        11
+        79: if_icmpge     135
+        82: aload_0
+        83: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+        86: invokevirtual #74                 // Method core/game/node/entity/player/Player.getEquipment:()Lcore/game/container/impl/EquipmentContainer;
+        89: iload_1
+        90: invokevirtual #75                 // Method core/game/container/impl/EquipmentContainer.get:(I)Lcore/game/node/item/Item;
+        93: astore_2
+        94: aload_2
+        95: ifnonnull     101
+        98: goto          129
+       101: aload_0
+       102: dup
+       103: getfield      #64                 // Field weight:D
+       106: aload_2
+       107: invokevirtual #67                 // Method core/game/node/item/Item.getDefinition:()Lcore/cache/def/impl/ItemDefinition;
+       110: ldc           #69                 // String weight
+       112: dconst_0
+       113: invokestatic  #70                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+       116: invokevirtual #71                 // Method core/cache/def/impl/ItemDefinition.getConfiguration:(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+       119: checkcast     #72                 // class java/lang/Double
+       122: invokevirtual #73                 // Method java/lang/Double.doubleValue:()D
+       125: dadd
+       126: putfield      #64                 // Field weight:D
+       129: iinc          1, 1
+       132: goto          76
+       135: aload_0
+       136: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+       139: invokevirtual #25                 // Method core/game/node/entity/player/Player.getPacketDispatch:()Lcore/game/node/entity/player/link/PacketDispatch;
+       142: aload_0
+       143: getfield      #64                 // Field weight:D
+       146: d2i
+       147: invokedynamic #76,  0             // InvokeDynamic #0:makeConcatWithConstants:(I)Ljava/lang/String;
+       152: sipush        667
+       155: bipush        32
+       157: invokevirtual #77                 // Method core/game/node/entity/player/link/PacketDispatch.sendString:(Ljava/lang/String;II)V
+       160: return
+
+  public double getWeight();
+    Code:
+         0: aload_0
+         1: getfield      #64                 // Field weight:D
+         4: dreturn
+
+  public int getBrightness();
+    Code:
+         0: aload_0
+         1: getfield      #5                  // Field brightness:I
+         4: ireturn
+
+  public void setBrightness(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #5                  // Field brightness:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        166
+        12: iload_1
+        13: iconst_1
+        14: iadd
+        15: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        18: return
+
+  public int getMusicVolume();
+    Code:
+         0: aload_0
+         1: getfield      #15                 // Field musicVolume:I
+         4: ireturn
+
+  public void setMusicVolume(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #15                 // Field musicVolume:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        168
+        12: iload_1
+        13: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        16: return
+
+  public int getSoundEffectVolume();
+    Code:
+         0: aload_0
+         1: getfield      #16                 // Field soundEffectVolume:I
+         4: ireturn
+
+  public void setSoundEffectVolume(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #16                 // Field soundEffectVolume:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        169
+        12: iload_1
+        13: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        16: return
+
+  public int getAreaSoundVolume();
+    Code:
+         0: aload_0
+         1: getfield      #17                 // Field areaSoundVolume:I
+         4: ireturn
+
+  public void setAreaSoundVolume(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #17                 // Field areaSoundVolume:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        872
+        12: iload_1
+        13: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        16: return
+
+  public boolean isSingleMouseButton();
+    Code:
+         0: aload_0
+         1: getfield      #18                 // Field singleMouseButton:Z
+         4: ireturn
+
+  public boolean isDisableChatEffects();
+    Code:
+         0: aload_0
+         1: getfield      #19                 // Field disableChatEffects:Z
+         4: ireturn
+
+  public boolean isSplitPrivateChat();
+    Code:
+         0: aload_0
+         1: getfield      #20                 // Field splitPrivateChat:Z
+         4: ireturn
+
+  public boolean isAcceptAid();
+    Code:
+         0: aload_0
+         1: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         4: invokevirtual #78                 // Method core/game/node/entity/player/Player.getIronmanManager:()Lcore/game/node/entity/player/link/IronmanManager;
+         7: invokevirtual #79                 // Method core/game/node/entity/player/link/IronmanManager.isIronman:()Z
+        10: ifeq          15
+        13: iconst_0
+        14: ireturn
+        15: aload_0
+        16: getfield      #21                 // Field acceptAid:Z
+        19: ireturn
+
+  public boolean isRunToggled();
+    Code:
+         0: aload_0
+         1: getfield      #24                 // Field runToggled:Z
+         4: ireturn
+
+  public int getPublicChatSetting();
+    Code:
+         0: aload_0
+         1: getfield      #6                  // Field publicChatSetting:I
+         4: ireturn
+
+  public void setPublicChatSetting(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #6                  // Field publicChatSetting:I
+         5: aload_0
+         6: invokevirtual #27                 // Method updateChatSettings:()V
+         9: return
+
+  public int getPrivateChatSetting();
+    Code:
+         0: aload_0
+         1: getfield      #7                  // Field privateChatSetting:I
+         4: ireturn
+
+  public void setPrivateChatSetting(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #7                  // Field privateChatSetting:I
+         5: aload_0
+         6: invokevirtual #27                 // Method updateChatSettings:()V
+         9: return
+
+  public int getClanChatSetting();
+    Code:
+         0: aload_0
+         1: getfield      #8                  // Field clanChatSetting:I
+         4: ireturn
+
+  public void setClanChatSetting(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #8                  // Field clanChatSetting:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        1054
+        12: iload_1
+        13: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        16: return
+
+  public int getTradeSetting();
+    Code:
+         0: aload_0
+         1: getfield      #9                  // Field tradeSetting:I
+         4: ireturn
+
+  public void setTradeSetting(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #9                  // Field tradeSetting:I
+         5: aload_0
+         6: invokevirtual #27                 // Method updateChatSettings:()V
+         9: return
+
+  public int getAssistSetting();
+    Code:
+         0: aload_0
+         1: getfield      #10                 // Field assistSetting:I
+         4: ireturn
+
+  public void setAssistSetting(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #10                 // Field assistSetting:I
+         5: aload_0
+         6: getfield      #13                 // Field player:Lcore/game/node/entity/player/Player;
+         9: sipush        1055
+        12: iload_1
+        13: invokestatic  #14                 // Method core/api/ContentAPIKt.setVarp:(Lcore/game/node/entity/player/Player;II)V
+        16: return
+
+  public double getRunEnergy();
+    Code:
+         0: aload_0
+         1: getfield      #4                  // Field runEnergy:D
+         4: dreturn
+
+  public void setRunEnergy(double);
+    Code:
+         0: aload_0
+         1: dload_1
+         2: putfield      #4                  // Field runEnergy:D
+         5: return
+
+  public int getAttackStyleIndex();
+    Code:
+         0: aload_0
+         1: getfield      #12                 // Field attackStyleIndex:I
+         4: ireturn
+
+  public void setAttackStyleIndex(int);
+    Code:
+         0: aload_0
+         1: iload_1
+         2: putfield      #12                 // Field attackStyleIndex:I
+         5: return
+}

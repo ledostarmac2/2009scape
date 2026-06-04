@@ -1,0 +1,18 @@
+{
+  "asset_name": "Ornate RuneScape-style one-handed sword",
+  "primary_model": "dawn_rs_1h_sword_lowpoly.obj",
+  "materials": "dawn_rs_1h_sword.mtl",
+  "reference_images": [
+    "reference_front_back_side_sheet.png",
+    "angled_reference.png",
+    "inventory_icon_direction_tilted.png"
+  ],
+  "equip_slot": "weapon",
+  "wield_type": "one-handed sword",
+  "inventory_icon_direction": "Tilted from lower-left to upper-right, like the supplied diagonal icon.",
+  "male_female_fit_notes": "Same grip placement for male and female player models. No gender-specific changes needed.",
+  "model_notes": "Updated OBJ rebuilt to match the newer concept art more closely: long tapered diamond-section blade, gold winged crossguard, central orange gem, leather grip, and faceted pommel. Mesh remains intentionally game-friendly and relatively low poly.",
+  "poly_count_triangles": 398,
+  "vertex_count": 243,
+  "origin_recommendation": "Place the weapon origin at the center of the grip near y=-0.75 for hand attachment in your toolchain."
+}

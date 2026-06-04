@@ -1,0 +1,20 @@
+Compiled from "Timer.kt"
+public final class core.game.world.ImmerseWorld$Companion$immerseAdventurer$$inlined$schedule$1 extends java.util.TimerTask {
+  public core.game.world.ImmerseWorld$Companion$immerseAdventurer$$inlined$schedule$1();
+    Code:
+         0: aload_0
+         1: invokespecial #13                 // Method java/util/TimerTask."<init>":()V
+         4: return
+
+  public void run();
+    Code:
+         0: aload_0
+         1: checkcast     #4                  // class java/util/TimerTask
+         4: astore_1
+         5: iconst_0
+         6: istore_2
+         7: getstatic     #22                 // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        10: invokevirtual #27                 // Method core/game/world/ImmerseWorld$Companion.spawn_adventurers:()V
+        13: nop
+        14: return
+}

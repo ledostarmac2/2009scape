@@ -1,0 +1,349 @@
+Compiled from "GameSettings.kt"
+public final class core.game.world.GameSettings$Companion {
+  private core.game.world.GameSettings$Companion();
+    Code:
+         0: aload_0
+         1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public final core.game.world.GameSettings parse(org.json.simple.JSONObject);
+    Code:
+         0: aload_1
+         1: ldc           #16                 // String data
+         3: invokestatic  #22                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+         6: getstatic     #28                 // Field core/ServerConstants.SERVER_NAME:Ljava/lang/String;
+         9: astore_2
+        10: aload_1
+        11: ldc           #30                 // String debug
+        13: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        16: dup
+        17: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+        19: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+        22: checkcast     #43                 // class java/lang/Boolean
+        25: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+        28: istore_3
+        29: aload_1
+        30: ldc           #49                 // String dev
+        32: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        35: dup
+        36: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+        38: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+        41: checkcast     #43                 // class java/lang/Boolean
+        44: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+        47: istore        4
+        49: aload_1
+        50: ldc           #51                 // String startGui
+        52: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        55: dup
+        56: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+        58: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+        61: checkcast     #43                 // class java/lang/Boolean
+        64: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+        67: istore        5
+        69: aload_1
+        70: ldc           #53                 // String worldID
+        72: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        75: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        78: invokestatic  #65                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        81: istore        6
+        83: aload_1
+        84: ldc           #67                 // String countryID
+        86: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        89: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        92: invokestatic  #65                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        95: istore        7
+        97: aload_1
+        98: ldc           #69                 // String activity
+       100: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       103: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       106: astore        8
+       108: aload_1
+       109: ldc           #71                 // String pvpWorld
+       111: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       114: dup
+       115: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       117: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       120: checkcast     #43                 // class java/lang/Boolean
+       123: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       126: istore        9
+       128: aload_1
+       129: ldc           #73                 // String msip
+       131: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       134: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       137: astore        10
+       139: aload_1
+       140: ldc           #75                 // String default_xp_rate
+       142: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       145: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       148: invokestatic  #81                 // Method java/lang/Double.parseDouble:(Ljava/lang/String;)D
+       151: dstore        11
+       153: aload_1
+       154: ldc           #83                 // String allow_slayer_reroll
+       156: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       159: dup
+       160: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       162: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       165: checkcast     #43                 // class java/lang/Boolean
+       168: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       171: istore        13
+       173: aload_1
+       174: ldc           #85                 // String enable_default_clan
+       176: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       179: dup
+       180: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       182: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       185: checkcast     #43                 // class java/lang/Boolean
+       188: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       191: istore        14
+       193: aload_1
+       194: ldc           #87                 // String enable_bots
+       196: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       199: dup
+       200: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       202: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       205: checkcast     #43                 // class java/lang/Boolean
+       208: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       211: istore        15
+       213: aload_1
+       214: ldc           #89                 // String autostock_ge
+       216: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       219: dup
+       220: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       222: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       225: checkcast     #43                 // class java/lang/Boolean
+       228: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       231: istore        16
+       233: aload_1
+       234: ldc           #91                 // String skillcape_perks
+       236: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       239: ifeq          263
+       242: aload_1
+       243: ldc           #91                 // String skillcape_perks
+       245: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       248: dup
+       249: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       251: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       254: checkcast     #43                 // class java/lang/Boolean
+       257: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       260: goto          264
+       263: iconst_0
+       264: istore        17
+       266: aload_1
+       267: ldc           #97                 // String increased_door_time
+       269: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       272: ifeq          296
+       275: aload_1
+       276: ldc           #97                 // String increased_door_time
+       278: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       281: dup
+       282: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       284: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       287: checkcast     #43                 // class java/lang/Boolean
+       290: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       293: goto          297
+       296: iconst_0
+       297: istore        18
+       299: aload_1
+       300: ldc           #99                 // String botting_enabled
+       302: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       305: ifeq          329
+       308: aload_1
+       309: ldc           #99                 // String botting_enabled
+       311: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       314: dup
+       315: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       317: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       320: checkcast     #43                 // class java/lang/Boolean
+       323: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       326: goto          330
+       329: iconst_0
+       330: istore        19
+       332: aload_1
+       333: ldc           #101                // String max_adv_bots
+       335: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       338: ifeq          356
+       341: aload_1
+       342: ldc           #101                // String max_adv_bots
+       344: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       347: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       350: invokestatic  #65                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       353: goto          358
+       356: bipush        100
+       358: istore        20
+       360: aload_1
+       361: ldc           #103                // String enable_doubling_money_scammers
+       363: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       366: ifeq          390
+       369: aload_1
+       370: ldc           #103                // String enable_doubling_money_scammers
+       372: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       375: dup
+       376: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       378: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       381: checkcast     #43                 // class java/lang/Boolean
+       384: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       387: goto          391
+       390: iconst_0
+       391: istore        21
+       393: aload_1
+       394: ldc           #105                // String wild_pvp_enabled
+       396: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       399: ifeq          423
+       402: aload_1
+       403: ldc           #105                // String wild_pvp_enabled
+       405: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       408: dup
+       409: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       411: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       414: checkcast     #43                 // class java/lang/Boolean
+       417: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       420: goto          424
+       423: iconst_1
+       424: istore        22
+       426: aload_1
+       427: ldc           #107                // String jad_practice_enabled
+       429: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       432: ifeq          456
+       435: aload_1
+       436: ldc           #107                // String jad_practice_enabled
+       438: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       441: dup
+       442: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       444: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       447: checkcast     #43                 // class java/lang/Boolean
+       450: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       453: goto          457
+       456: iconst_1
+       457: istore        23
+       459: aload_1
+       460: ldc           #109                // String ge_announcement_limit
+       462: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       465: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       468: invokestatic  #65                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       471: istore        24
+       473: aload_1
+       474: ldc           #111                // String smartpathfinder_bfs
+       476: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       479: ifeq          503
+       482: aload_1
+       483: ldc           #111                // String smartpathfinder_bfs
+       485: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       488: dup
+       489: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       491: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       494: checkcast     #43                 // class java/lang/Boolean
+       497: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       500: goto          504
+       503: iconst_0
+       504: istore        25
+       506: aload_1
+       507: ldc           #113                // String enable_castle_wars
+       509: invokevirtual #95                 // Method org/json/simple/JSONObject.containsKey:(Ljava/lang/Object;)Z
+       512: ifeq          536
+       515: aload_1
+       516: ldc           #113                // String enable_castle_wars
+       518: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       521: dup
+       522: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       524: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       527: checkcast     #43                 // class java/lang/Boolean
+       530: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       533: goto          537
+       536: iconst_0
+       537: istore        26
+       539: aload_1
+       540: ldc           #115                // String allow_token_purchase
+       542: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       545: dup
+       546: ldc           #38                 // String null cannot be cast to non-null type kotlin.Boolean
+       548: invokestatic  #41                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       551: checkcast     #43                 // class java/lang/Boolean
+       554: invokevirtual #47                 // Method java/lang/Boolean.booleanValue:()Z
+       557: istore        27
+       559: aload_1
+       560: ldc           #117                // String message_of_the_week_identifier
+       562: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       565: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       568: invokestatic  #65                 // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+       571: istore        28
+       573: aload_1
+       574: ldc           #119                // String message_of_the_week_text
+       576: invokevirtual #36                 // Method org/json/simple/JSONObject.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       579: invokestatic  #59                 // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       582: astore        29
+       584: new           #121                // class core/game/world/GameSettings
+       587: dup
+       588: aload_2
+       589: iload_3
+       590: iload         4
+       592: iload         5
+       594: iload         6
+       596: iload         7
+       598: aload         8
+       600: iconst_1
+       601: iload         9
+       603: iconst_0
+       604: iconst_0
+       605: aload         10
+       607: dload         11
+       609: iload         13
+       611: iload         14
+       613: iload         15
+       615: iload         16
+       617: iload         27
+       619: iload         17
+       621: iload         18
+       623: iload         19
+       625: iload         20
+       627: iload         21
+       629: iload         22
+       631: iload         23
+       633: iload         24
+       635: iload         25
+       637: iload         26
+       639: iload         28
+       641: aload         29
+       643: invokespecial #124                // Method core/game/world/GameSettings."<init>":(Ljava/lang/String;ZZZIILjava/lang/String;ZZZZLjava/lang/String;DZZZZZZZZIZZZIZZILjava/lang/String;)V
+       646: areturn
+
+  private final java.util.Properties getProperties(java.lang.String);
+    Code:
+         0: aconst_null
+         1: astore_2
+         2: new           #138                // class java/util/Properties
+         5: dup
+         6: invokespecial #139                // Method java/util/Properties."<init>":()V
+         9: astore_3
+        10: nop
+        11: new           #141                // class java/io/FileInputStream
+        14: dup
+        15: aload_1
+        16: invokespecial #144                // Method java/io/FileInputStream."<init>":(Ljava/lang/String;)V
+        19: astore_2
+        20: aload_3
+        21: aload_2
+        22: checkcast     #146                // class java/io/InputStream
+        25: invokevirtual #150                // Method java/util/Properties.load:(Ljava/io/InputStream;)V
+        28: goto          56
+        31: astore        4
+        33: ldc           #152                // String user.dir
+        35: invokestatic  #158                // Method java/lang/System.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+        38: aload_1
+        39: invokedynamic #170,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        44: getstatic     #174                // Field java/lang/System.out:Ljava/io/PrintStream;
+        47: swap
+        48: invokevirtual #180                // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        51: aload         4
+        53: invokevirtual #183                // Method java/io/IOException.printStackTrace:()V
+        56: aload_3
+        57: areturn
+      Exception table:
+         from    to  target type
+            10    28    31   Class java/io/IOException
+
+  public core.game.world.GameSettings$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    Code:
+         0: aload_0
+         1: invokespecial #192                // Method "<init>":()V
+         4: return
+}

@@ -1,0 +1,23 @@
+{
+  "items": [],
+  "summary": {
+    "assumptions": [
+      "Existing 2009Scape IDs are authoritative and must not be overwritten.",
+      "A same-name OSRS item with a different ID requires manual review before mapping.",
+      "Model IDs are treated as unsafe to reuse until the model-map file explicitly assigns them.",
+      "Definition-only candidates are items with no visible model fields in the OSRS source dump."
+    ],
+    "blocked": true,
+    "blocker": "No OSRS item definition dump was found. Place a normalized OSRS dump at C:\\Users\\btarabocchia\\2009scape\\2009scape\\data\\import\\osrs_items.json or pass --osrs-items.",
+    "categories": {},
+    "generated_at": "2026-06-04T18:39:00.594577+00:00",
+    "items_2009_count": 11981,
+    "items_2009_max_id": 14658,
+    "items_2009_path": "C:\\Users\\btarabocchia\\2009scape\\2009scape\\game\\data\\configs\\item_configs.json",
+    "mode": "dry_run",
+    "osrs_items_count": 0,
+    "osrs_source_path": "C:\\Users\\btarabocchia\\2009scape\\2009scape\\data\\import\\osrs_items.json",
+    "rows_count": 0,
+    "source_missing": true
+  }
+}

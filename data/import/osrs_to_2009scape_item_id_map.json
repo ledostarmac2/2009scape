@@ -1,0 +1,15 @@
+{
+  "items": [],
+  "schema": 1,
+  "statuses": [
+    "pending",
+    "definition_imported",
+    "model_imported",
+    "equipment_configured",
+    "tested_inventory",
+    "tested_ground",
+    "tested_equipped",
+    "blocked",
+    "skipped"
+  ]
+}

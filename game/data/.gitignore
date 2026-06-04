@@ -6,3 +6,8 @@ cache/
 # Logs and transient files
 logs/
 *.log
+
+# Timestamped backups made before edits (not worth syncing)
+*.bak*
+
+# custom-items/ is tracked — full emberblade assets (models/textures/cache) backed up per user request.

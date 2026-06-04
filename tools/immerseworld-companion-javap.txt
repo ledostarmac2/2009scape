@@ -1,0 +1,900 @@
+Compiled from "ImmerseWorld.kt"
+public final class core.game.world.ImmerseWorld$Companion {
+  private core.game.world.ImmerseWorld$Companion();
+    Code:
+         0: aload_0
+         1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public final core.game.bots.CombatBotAssembler getAssembler();
+    Code:
+         0: invokestatic  #18                 // Method core/game/world/ImmerseWorld.access$getAssembler$cp:()Lcore/game/bots/CombatBotAssembler;
+         3: areturn
+
+  public final void setAssembler(core.game.bots.CombatBotAssembler);
+    Code:
+         0: aload_1
+         1: ldc           #22                 // String <set-?>
+         3: invokestatic  #28                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+         6: aload_1
+         7: invokestatic  #31                 // Method core/game/world/ImmerseWorld.access$setAssembler$cp:(Lcore/game/bots/CombatBotAssembler;)V
+        10: return
+
+  public final core.game.bots.SkillingBotAssembler getSkillingBotAssembler();
+    Code:
+         0: invokestatic  #37                 // Method core/game/world/ImmerseWorld.access$getSkillingBotAssembler$cp:()Lcore/game/bots/SkillingBotAssembler;
+         3: areturn
+
+  public final void setSkillingBotAssembler(core.game.bots.SkillingBotAssembler);
+    Code:
+         0: aload_1
+         1: ldc           #22                 // String <set-?>
+         3: invokestatic  #28                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+         6: aload_1
+         7: invokestatic  #42                 // Method core/game/world/ImmerseWorld.access$setSkillingBotAssembler$cp:(Lcore/game/bots/SkillingBotAssembler;)V
+        10: return
+
+  private final core.game.world.map.Location randomizeLocationInRanges(core.game.world.map.Location, int, int, int, int);
+    Code:
+         0: aload_1
+         1: invokevirtual #51                 // Method core/game/world/map/Location.getX:()I
+         4: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+         7: iload_2
+         8: iload_3
+         9: invokevirtual #63                 // Method kotlin/random/Random$Default.nextInt:(II)I
+        12: iadd
+        13: istore        6
+        15: aload_1
+        16: invokevirtual #66                 // Method core/game/world/map/Location.getY:()I
+        19: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+        22: iload         4
+        24: iload         5
+        26: invokevirtual #63                 // Method kotlin/random/Random$Default.nextInt:(II)I
+        29: iadd
+        30: istore        7
+        32: new           #47                 // class core/game/world/map/Location
+        35: dup
+        36: iload         6
+        38: iload         7
+        40: iconst_0
+        41: invokespecial #69                 // Method core/game/world/map/Location."<init>":(III)V
+        44: areturn
+
+  public final void spawnBots();
+    Code:
+         0: invokestatic  #85                 // Method core/game/world/GameWorld.getSettings:()Lcore/game/world/GameSettings;
+         3: dup
+         4: invokestatic  #89                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+         7: invokevirtual #95                 // Method core/game/world/GameSettings.getEnable_bots:()Z
+        10: ifeq          26
+        13: invokestatic  #101                // Method java/util/concurrent/Executors.newSingleThreadExecutor:()Ljava/util/concurrent/ExecutorService;
+        16: invokedynamic #117,  0            // InvokeDynamic #0:run:()Ljava/lang/Runnable;
+        21: invokeinterface #123,  2          // InterfaceMethod java/util/concurrent/ExecutorService.execute:(Ljava/lang/Runnable;)V
+        26: return
+
+  public final void immerseAdventurer();
+    Code:
+         0: iconst_0
+         1: istore_1
+         2: invokestatic  #85                 // Method core/game/world/GameWorld.getSettings:()Lcore/game/world/GameSettings;
+         5: dup
+         6: ifnull        15
+         9: invokevirtual #127                // Method core/game/world/GameSettings.getMax_adv_bots:()I
+        12: goto          18
+        15: pop
+        16: bipush        50
+        18: istore_2
+        19: iload_1
+        20: iload_2
+        21: if_icmpgt     77
+        24: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+        27: sipush        20000
+        30: ldc           #128                // int 400000
+        32: invokevirtual #63                 // Method kotlin/random/Random$Default.nextInt:(II)I
+        35: i2l
+        36: lstore_3
+        37: new           #130                // class java/util/Timer
+        40: dup
+        41: invokespecial #131                // Method java/util/Timer."<init>":()V
+        44: astore        5
+        46: new           #133                // class core/game/world/ImmerseWorld$Companion$immerseAdventurer$$inlined$schedule$1
+        49: dup
+        50: invokespecial #134                // Method core/game/world/ImmerseWorld$Companion$immerseAdventurer$$inlined$schedule$1."<init>":()V
+        53: checkcast     #136                // class java/util/TimerTask
+        56: astore        6
+        58: aload         5
+        60: aload         6
+        62: lload_3
+        63: invokevirtual #140                // Method java/util/Timer.schedule:(Ljava/util/TimerTask;J)V
+        66: iload_1
+        67: iload_2
+        68: if_icmpeq     77
+        71: iinc          1, 1
+        74: goto          24
+        77: return
+
+  public final void spawn_adventurers();
+    Code:
+         0: sipush        3221
+         3: sipush        3219
+         6: iconst_0
+         7: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        10: astore_1
+        11: iconst_2
+        12: anewarray     #150                // class core/game/bots/CombatBotAssembler$Tier
+        15: astore_3
+        16: aload_3
+        17: iconst_0
+        18: getstatic     #154                // Field core/game/bots/CombatBotAssembler$Tier.LOW:Lcore/game/bots/CombatBotAssembler$Tier;
+        21: aastore
+        22: aload_3
+        23: iconst_1
+        24: getstatic     #157                // Field core/game/bots/CombatBotAssembler$Tier.MED:Lcore/game/bots/CombatBotAssembler$Tier;
+        27: aastore
+        28: aload_3
+        29: invokestatic  #163                // Method kotlin/collections/CollectionsKt.listOf:([Ljava/lang/Object;)Ljava/util/List;
+        32: astore_2
+        33: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+        36: invokevirtual #166                // Method kotlin/random/Random$Default.nextBoolean:()Z
+        39: ifeq          107
+        42: new           #168                // class core/game/bots/GeneralBotCreator
+        45: dup
+        46: new           #170                // class content/global/bots/Adventurer
+        49: dup
+        50: getstatic     #176                // Field core/game/node/entity/combat/CombatStyle.MELEE:Lcore/game/node/entity/combat/CombatStyle;
+        53: invokespecial #179                // Method content/global/bots/Adventurer."<init>":(Lcore/game/node/entity/combat/CombatStyle;)V
+        56: checkcast     #181                // class core/game/bots/Script
+        59: aload_0
+        60: invokevirtual #183                // Method getAssembler:()Lcore/game/bots/CombatBotAssembler;
+        63: aload_2
+        64: checkcast     #185                // class java/util/Collection
+        67: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+        70: checkcast     #53                 // class kotlin/random/Random
+        73: invokestatic  #188                // Method kotlin/collections/CollectionsKt.random:(Ljava/util/Collection;Lkotlin/random/Random;)Ljava/lang/Object;
+        76: checkcast     #150                // class core/game/bots/CombatBotAssembler$Tier
+        79: aload_0
+        80: aload_1
+        81: ldc           #190                // String lumbridge
+        83: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        86: aload_1
+        87: iconst_m1
+        88: iconst_1
+        89: iconst_m1
+        90: iconst_1
+        91: invokespecial #195                // Method randomizeLocationInRanges:(Lcore/game/world/map/Location;IIII)Lcore/game/world/map/Location;
+        94: invokevirtual #201                // Method core/game/bots/CombatBotAssembler.MeleeAdventurer:(Lcore/game/bots/CombatBotAssembler$Tier;Lcore/game/world/map/Location;)Lcore/game/bots/CombatBot;
+        97: checkcast     #203                // class core/game/bots/AIPlayer
+       100: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       103: pop
+       104: goto          169
+       107: new           #168                // class core/game/bots/GeneralBotCreator
+       110: dup
+       111: new           #170                // class content/global/bots/Adventurer
+       114: dup
+       115: getstatic     #209                // Field core/game/node/entity/combat/CombatStyle.RANGE:Lcore/game/node/entity/combat/CombatStyle;
+       118: invokespecial #179                // Method content/global/bots/Adventurer."<init>":(Lcore/game/node/entity/combat/CombatStyle;)V
+       121: checkcast     #181                // class core/game/bots/Script
+       124: aload_0
+       125: invokevirtual #183                // Method getAssembler:()Lcore/game/bots/CombatBotAssembler;
+       128: aload_2
+       129: checkcast     #185                // class java/util/Collection
+       132: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+       135: checkcast     #53                 // class kotlin/random/Random
+       138: invokestatic  #188                // Method kotlin/collections/CollectionsKt.random:(Ljava/util/Collection;Lkotlin/random/Random;)Ljava/lang/Object;
+       141: checkcast     #150                // class core/game/bots/CombatBotAssembler$Tier
+       144: aload_0
+       145: aload_1
+       146: ldc           #190                // String lumbridge
+       148: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       151: aload_1
+       152: iconst_m1
+       153: iconst_1
+       154: iconst_m1
+       155: iconst_1
+       156: invokespecial #195                // Method randomizeLocationInRanges:(Lcore/game/world/map/Location;IIII)Lcore/game/world/map/Location;
+       159: invokevirtual #212                // Method core/game/bots/CombatBotAssembler.RangeAdventurer:(Lcore/game/bots/CombatBotAssembler$Tier;Lcore/game/world/map/Location;)Lcore/game/bots/CombatBot;
+       162: checkcast     #203                // class core/game/bots/AIPlayer
+       165: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       168: pop
+       169: return
+
+  public final void immerseFishingGuild();
+    Code:
+         0: sipush        2604
+         3: sipush        3421
+         6: iconst_0
+         7: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        10: astore_1
+        11: iconst_0
+        12: istore_2
+        13: iload_2
+        14: iconst_5
+        15: if_icmpge     43
+        18: new           #168                // class core/game/bots/GeneralBotCreator
+        21: dup
+        22: new           #221                // class content/global/bots/SharkCatcher
+        25: dup
+        26: invokespecial #222                // Method content/global/bots/SharkCatcher."<init>":()V
+        29: checkcast     #181                // class core/game/bots/Script
+        32: aload_1
+        33: invokespecial #225                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/world/map/Location;)V
+        36: pop
+        37: iinc          2, 1
+        40: goto          13
+        43: return
+
+  public final void immerseSeersAndCatherby();
+    Code:
+         0: new           #168                // class core/game/bots/GeneralBotCreator
+         3: dup
+         4: new           #229                // class content/global/bots/SeersMagicTrees
+         7: dup
+         8: invokespecial #230                // Method content/global/bots/SeersMagicTrees."<init>":()V
+        11: checkcast     #181                // class core/game/bots/Script
+        14: aload_0
+        15: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+        18: getstatic     #238                // Field core/game/bots/SkillingBotAssembler$Wealth.AVERAGE:Lcore/game/bots/SkillingBotAssembler$Wealth;
+        21: sipush        2702
+        24: sipush        3397
+        27: iconst_0
+        28: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        31: dup
+        32: ldc           #240                // String create(2702, 3397, 0)
+        34: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        37: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        40: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        43: pop
+        44: new           #168                // class core/game/bots/GeneralBotCreator
+        47: dup
+        48: new           #248                // class content/global/bots/SeersFlax
+        51: dup
+        52: invokespecial #249                // Method content/global/bots/SeersFlax."<init>":()V
+        55: checkcast     #181                // class core/game/bots/Script
+        58: aload_0
+        59: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+        62: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+        65: sipush        2738
+        68: sipush        3444
+        71: iconst_0
+        72: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        75: dup
+        76: ldc           #254                // String create(2738, 3444, 0)
+        78: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        81: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        84: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        87: pop
+        88: new           #168                // class core/game/bots/GeneralBotCreator
+        91: dup
+        92: new           #256                // class content/global/bots/FletchingBankstander
+        95: dup
+        96: invokespecial #257                // Method content/global/bots/FletchingBankstander."<init>":()V
+        99: checkcast     #181                // class core/game/bots/Script
+       102: aload_0
+       103: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       106: getstatic     #238                // Field core/game/bots/SkillingBotAssembler$Wealth.AVERAGE:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       109: sipush        2722
+       112: sipush        3493
+       115: iconst_0
+       116: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       119: dup
+       120: ldc_w         #259                // String create(2722, 3493, 0)
+       123: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       126: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       129: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       132: pop
+       133: new           #168                // class core/game/bots/GeneralBotCreator
+       136: dup
+       137: new           #261                // class content/global/bots/GlassBlowingBankstander
+       140: dup
+       141: invokespecial #262                // Method content/global/bots/GlassBlowingBankstander."<init>":()V
+       144: checkcast     #181                // class core/game/bots/Script
+       147: aload_0
+       148: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       151: getstatic     #238                // Field core/game/bots/SkillingBotAssembler$Wealth.AVERAGE:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       154: sipush        2807
+       157: sipush        3441
+       160: iconst_0
+       161: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       164: dup
+       165: ldc_w         #264                // String create(2807, 3441, 0)
+       168: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       171: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       174: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       177: pop
+       178: new           #168                // class core/game/bots/GeneralBotCreator
+       181: dup
+       182: new           #266                // class content/global/bots/LobsterCatcher
+       185: dup
+       186: invokespecial #267                // Method content/global/bots/LobsterCatcher."<init>":()V
+       189: checkcast     #181                // class core/game/bots/Script
+       192: sipush        2805
+       195: sipush        3435
+       198: iconst_0
+       199: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       202: invokespecial #225                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/world/map/Location;)V
+       205: pop
+       206: return
+
+  public final void immerseLumbridgeDraynor();
+    Code:
+         0: new           #168                // class core/game/bots/GeneralBotCreator
+         3: dup
+         4: new           #270                // class content/global/bots/CowKiller
+         7: dup
+         8: invokespecial #271                // Method content/global/bots/CowKiller."<init>":()V
+        11: checkcast     #181                // class core/game/bots/Script
+        14: aload_0
+        15: invokevirtual #183                // Method getAssembler:()Lcore/game/bots/CombatBotAssembler;
+        18: getstatic     #276                // Field core/game/bots/CombatBotAssembler$Type.RANGE:Lcore/game/bots/CombatBotAssembler$Type;
+        21: getstatic     #157                // Field core/game/bots/CombatBotAssembler$Tier.MED:Lcore/game/bots/CombatBotAssembler$Tier;
+        24: sipush        3261
+        27: sipush        3269
+        30: iconst_0
+        31: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        34: dup
+        35: ldc_w         #278                // String create(3261, 3269, 0)
+        38: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        41: invokevirtual #281                // Method core/game/bots/CombatBotAssembler.produce:(Lcore/game/bots/CombatBotAssembler$Type;Lcore/game/bots/CombatBotAssembler$Tier;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        44: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        47: pop
+        48: new           #168                // class core/game/bots/GeneralBotCreator
+        51: dup
+        52: new           #270                // class content/global/bots/CowKiller
+        55: dup
+        56: invokespecial #271                // Method content/global/bots/CowKiller."<init>":()V
+        59: checkcast     #181                // class core/game/bots/Script
+        62: aload_0
+        63: invokevirtual #183                // Method getAssembler:()Lcore/game/bots/CombatBotAssembler;
+        66: getstatic     #283                // Field core/game/bots/CombatBotAssembler$Type.MELEE:Lcore/game/bots/CombatBotAssembler$Type;
+        69: getstatic     #154                // Field core/game/bots/CombatBotAssembler$Tier.LOW:Lcore/game/bots/CombatBotAssembler$Tier;
+        72: sipush        3261
+        75: sipush        3269
+        78: iconst_0
+        79: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        82: dup
+        83: ldc_w         #278                // String create(3261, 3269, 0)
+        86: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        89: invokevirtual #281                // Method core/game/bots/CombatBotAssembler.produce:(Lcore/game/bots/CombatBotAssembler$Type;Lcore/game/bots/CombatBotAssembler$Tier;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        92: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        95: pop
+        96: new           #168                // class core/game/bots/GeneralBotCreator
+        99: dup
+       100: new           #270                // class content/global/bots/CowKiller
+       103: dup
+       104: invokespecial #271                // Method content/global/bots/CowKiller."<init>":()V
+       107: checkcast     #181                // class core/game/bots/Script
+       110: aload_0
+       111: invokevirtual #183                // Method getAssembler:()Lcore/game/bots/CombatBotAssembler;
+       114: getstatic     #283                // Field core/game/bots/CombatBotAssembler$Type.MELEE:Lcore/game/bots/CombatBotAssembler$Type;
+       117: getstatic     #157                // Field core/game/bots/CombatBotAssembler$Tier.MED:Lcore/game/bots/CombatBotAssembler$Tier;
+       120: sipush        3257
+       123: sipush        3267
+       126: iconst_0
+       127: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       130: dup
+       131: ldc_w         #285                // String create(3257, 3267, 0)
+       134: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       137: invokevirtual #281                // Method core/game/bots/CombatBotAssembler.produce:(Lcore/game/bots/CombatBotAssembler$Type;Lcore/game/bots/CombatBotAssembler$Tier;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       140: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       143: pop
+       144: new           #168                // class core/game/bots/GeneralBotCreator
+       147: dup
+       148: new           #287                // class content/global/bots/ManThiever
+       151: dup
+       152: invokespecial #288                // Method content/global/bots/ManThiever."<init>":()V
+       155: checkcast     #181                // class core/game/bots/Script
+       158: aload_0
+       159: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       162: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       165: sipush        3235
+       168: sipush        3213
+       171: iconst_0
+       172: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       175: dup
+       176: ldc_w         #290                // String create(3235, 3213, 0)
+       179: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       182: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       185: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       188: pop
+       189: new           #168                // class core/game/bots/GeneralBotCreator
+       192: dup
+       193: new           #292                // class content/global/bots/FarmerThiever
+       196: dup
+       197: invokespecial #293                // Method content/global/bots/FarmerThiever."<init>":()V
+       200: checkcast     #181                // class core/game/bots/Script
+       203: aload_0
+       204: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       207: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       210: sipush        3094
+       213: sipush        3243
+       216: iconst_0
+       217: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       220: dup
+       221: ldc_w         #295                // String create(3094, 3243, 0)
+       224: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       227: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       230: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       233: pop
+       234: new           #168                // class core/game/bots/GeneralBotCreator
+       237: dup
+       238: new           #292                // class content/global/bots/FarmerThiever
+       241: dup
+       242: invokespecial #293                // Method content/global/bots/FarmerThiever."<init>":()V
+       245: checkcast     #181                // class core/game/bots/Script
+       248: aload_0
+       249: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       252: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       255: sipush        3094
+       258: sipush        3243
+       261: iconst_0
+       262: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       265: dup
+       266: ldc_w         #295                // String create(3094, 3243, 0)
+       269: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       272: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       275: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       278: pop
+       279: new           #168                // class core/game/bots/GeneralBotCreator
+       282: dup
+       283: new           #297                // class content/global/bots/DraynorWillows
+       286: dup
+       287: invokespecial #298                // Method content/global/bots/DraynorWillows."<init>":()V
+       290: checkcast     #181                // class core/game/bots/Script
+       293: aload_0
+       294: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       297: invokestatic  #302                // Method core/game/bots/SkillingBotAssembler$Wealth.values:()[Lcore/game/bots/SkillingBotAssembler$Wealth;
+       300: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+       303: checkcast     #53                 // class kotlin/random/Random
+       306: invokestatic  #307                // Method kotlin/collections/ArraysKt.random:([Ljava/lang/Object;Lkotlin/random/Random;)Ljava/lang/Object;
+       309: checkcast     #234                // class core/game/bots/SkillingBotAssembler$Wealth
+       312: sipush        3094
+       315: sipush        3245
+       318: iconst_0
+       319: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       322: dup
+       323: ldc_w         #309                // String create(3094, 3245, 0)
+       326: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       329: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       332: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       335: pop
+       336: new           #168                // class core/game/bots/GeneralBotCreator
+       339: dup
+       340: new           #297                // class content/global/bots/DraynorWillows
+       343: dup
+       344: invokespecial #298                // Method content/global/bots/DraynorWillows."<init>":()V
+       347: checkcast     #181                // class core/game/bots/Script
+       350: aload_0
+       351: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       354: invokestatic  #302                // Method core/game/bots/SkillingBotAssembler$Wealth.values:()[Lcore/game/bots/SkillingBotAssembler$Wealth;
+       357: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+       360: checkcast     #53                 // class kotlin/random/Random
+       363: invokestatic  #307                // Method kotlin/collections/ArraysKt.random:([Ljava/lang/Object;Lkotlin/random/Random;)Ljava/lang/Object;
+       366: checkcast     #234                // class core/game/bots/SkillingBotAssembler$Wealth
+       369: sipush        3094
+       372: sipush        3245
+       375: iconst_0
+       376: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       379: dup
+       380: ldc_w         #309                // String create(3094, 3245, 0)
+       383: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       386: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       389: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       392: pop
+       393: new           #168                // class core/game/bots/GeneralBotCreator
+       396: dup
+       397: new           #297                // class content/global/bots/DraynorWillows
+       400: dup
+       401: invokespecial #298                // Method content/global/bots/DraynorWillows."<init>":()V
+       404: checkcast     #181                // class core/game/bots/Script
+       407: aload_0
+       408: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       411: invokestatic  #302                // Method core/game/bots/SkillingBotAssembler$Wealth.values:()[Lcore/game/bots/SkillingBotAssembler$Wealth;
+       414: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+       417: checkcast     #53                 // class kotlin/random/Random
+       420: invokestatic  #307                // Method kotlin/collections/ArraysKt.random:([Ljava/lang/Object;Lkotlin/random/Random;)Ljava/lang/Object;
+       423: checkcast     #234                // class core/game/bots/SkillingBotAssembler$Wealth
+       426: sipush        3094
+       429: sipush        3245
+       432: iconst_0
+       433: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       436: dup
+       437: ldc_w         #309                // String create(3094, 3245, 0)
+       440: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       443: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       446: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       449: pop
+       450: new           #168                // class core/game/bots/GeneralBotCreator
+       453: dup
+       454: new           #311                // class content/global/bots/DraynorFisher
+       457: dup
+       458: invokespecial #312                // Method content/global/bots/DraynorFisher."<init>":()V
+       461: checkcast     #181                // class core/game/bots/Script
+       464: aload_0
+       465: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       468: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       471: sipush        3095
+       474: sipush        3246
+       477: iconst_0
+       478: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       481: dup
+       482: ldc_w         #314                // String create(3095, 3246, 0)
+       485: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       488: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       491: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       494: pop
+       495: new           #168                // class core/game/bots/GeneralBotCreator
+       498: dup
+       499: new           #311                // class content/global/bots/DraynorFisher
+       502: dup
+       503: invokespecial #312                // Method content/global/bots/DraynorFisher."<init>":()V
+       506: checkcast     #181                // class core/game/bots/Script
+       509: aload_0
+       510: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       513: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       516: sipush        3095
+       519: sipush        3246
+       522: iconst_0
+       523: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       526: dup
+       527: ldc_w         #314                // String create(3095, 3246, 0)
+       530: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       533: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       536: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       539: pop
+       540: new           #168                // class core/game/bots/GeneralBotCreator
+       543: dup
+       544: new           #311                // class content/global/bots/DraynorFisher
+       547: dup
+       548: invokespecial #312                // Method content/global/bots/DraynorFisher."<init>":()V
+       551: checkcast     #181                // class core/game/bots/Script
+       554: aload_0
+       555: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       558: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       561: sipush        3095
+       564: sipush        3246
+       567: iconst_0
+       568: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       571: dup
+       572: ldc_w         #314                // String create(3095, 3246, 0)
+       575: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       578: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       581: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       584: pop
+       585: return
+
+  public final void immerseVarrock();
+    Code:
+         0: new           #317                // class core/game/world/map/zone/ZoneBorders
+         3: dup
+         4: sipush        3184
+         7: sipush        3435
+        10: sipush        3187
+        13: sipush        3444
+        16: invokespecial #320                // Method core/game/world/map/zone/ZoneBorders."<init>":(IIII)V
+        19: astore_1
+        20: new           #168                // class core/game/bots/GeneralBotCreator
+        23: dup
+        24: new           #261                // class content/global/bots/GlassBlowingBankstander
+        27: dup
+        28: invokespecial #262                // Method content/global/bots/GlassBlowingBankstander."<init>":()V
+        31: checkcast     #181                // class core/game/bots/Script
+        34: aload_0
+        35: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+        38: getstatic     #323                // Field core/game/bots/SkillingBotAssembler$Wealth.RICH:Lcore/game/bots/SkillingBotAssembler$Wealth;
+        41: sipush        3189
+        44: sipush        3435
+        47: iconst_0
+        48: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        51: dup
+        52: ldc_w         #325                // String create(3189, 3435, 0)
+        55: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        58: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        61: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        64: pop
+        65: new           #168                // class core/game/bots/GeneralBotCreator
+        68: dup
+        69: new           #256                // class content/global/bots/FletchingBankstander
+        72: dup
+        73: invokespecial #257                // Method content/global/bots/FletchingBankstander."<init>":()V
+        76: checkcast     #181                // class core/game/bots/Script
+        79: aload_0
+        80: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+        83: getstatic     #238                // Field core/game/bots/SkillingBotAssembler$Wealth.AVERAGE:Lcore/game/bots/SkillingBotAssembler$Wealth;
+        86: sipush        3189
+        89: sipush        3439
+        92: iconst_0
+        93: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        96: dup
+        97: ldc_w         #327                // String create(3189, 3439, 0)
+       100: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       103: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       106: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       109: pop
+       110: new           #168                // class core/game/bots/GeneralBotCreator
+       113: dup
+       114: new           #329                // class content/global/bots/Idler
+       117: dup
+       118: invokespecial #330                // Method content/global/bots/Idler."<init>":()V
+       121: checkcast     #181                // class core/game/bots/Script
+       124: aload_0
+       125: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       128: getstatic     #323                // Field core/game/bots/SkillingBotAssembler$Wealth.RICH:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       131: aload_1
+       132: invokevirtual #334                // Method core/game/world/map/zone/ZoneBorders.getRandomLoc:()Lcore/game/world/map/Location;
+       135: dup
+       136: ldc_w         #336                // String WestBankIdlerBorders.randomLoc
+       139: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       142: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       145: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       148: pop
+       149: new           #168                // class core/game/bots/GeneralBotCreator
+       152: dup
+       153: new           #261                // class content/global/bots/GlassBlowingBankstander
+       156: dup
+       157: invokespecial #262                // Method content/global/bots/GlassBlowingBankstander."<init>":()V
+       160: checkcast     #181                // class core/game/bots/Script
+       163: aload_0
+       164: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       167: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       170: sipush        3256
+       173: sipush        3420
+       176: iconst_0
+       177: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       180: dup
+       181: ldc_w         #338                // String create(3256, 3420, 0)
+       184: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       187: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       190: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       193: pop
+       194: new           #168                // class core/game/bots/GeneralBotCreator
+       197: dup
+       198: new           #340                // class content/global/bots/VarrockEssenceMiner
+       201: dup
+       202: invokespecial #341                // Method content/global/bots/VarrockEssenceMiner."<init>":()V
+       205: checkcast     #181                // class core/game/bots/Script
+       208: aload_0
+       209: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       212: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       215: sipush        3253
+       218: sipush        3420
+       221: iconst_0
+       222: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       225: dup
+       226: ldc_w         #343                // String create(3253, 3420, 0)
+       229: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       232: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       235: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       238: pop
+       239: new           #168                // class core/game/bots/GeneralBotCreator
+       242: dup
+       243: new           #345                // class content/global/bots/VarrockSmither
+       246: dup
+       247: invokespecial #346                // Method content/global/bots/VarrockSmither."<init>":()V
+       250: checkcast     #181                // class core/game/bots/Script
+       253: aload_0
+       254: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       257: getstatic     #323                // Field core/game/bots/SkillingBotAssembler$Wealth.RICH:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       260: sipush        3189
+       263: sipush        3436
+       266: iconst_0
+       267: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       270: dup
+       271: ldc_w         #348                // String create(3189, 3436, 0)
+       274: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       277: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       280: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       283: pop
+       284: new           #168                // class core/game/bots/GeneralBotCreator
+       287: dup
+       288: new           #350                // class content/global/bots/NonBankingMiner
+       291: dup
+       292: invokespecial #351                // Method content/global/bots/NonBankingMiner."<init>":()V
+       295: checkcast     #181                // class core/game/bots/Script
+       298: aload_0
+       299: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+       302: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+       305: sipush        3182
+       308: sipush        3374
+       311: iconst_0
+       312: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+       315: dup
+       316: ldc_w         #353                // String create(3182, 3374, 0)
+       319: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       322: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+       325: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+       328: pop
+       329: return
+
+  public final void immerseWilderness();
+    Code:
+         0: sipush        3092
+         3: sipush        3493
+         6: iconst_0
+         7: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        10: astore_1
+        11: bipush        6
+        13: istore_2
+        14: iconst_0
+        15: istore_3
+        16: iload_3
+        17: iload_2
+        18: if_icmpge     81
+        21: iload_3
+        22: istore        4
+        24: iconst_0
+        25: istore        5
+        27: new           #168                // class core/game/bots/GeneralBotCreator
+        30: dup
+        31: new           #358                // class content/global/bots/GreenDragonKiller
+        34: dup
+        35: getstatic     #176                // Field core/game/node/entity/combat/CombatStyle.MELEE:Lcore/game/node/entity/combat/CombatStyle;
+        38: aconst_null
+        39: iconst_2
+        40: aconst_null
+        41: invokespecial #361                // Method content/global/bots/GreenDragonKiller."<init>":(Lcore/game/node/entity/combat/CombatStyle;Lcore/game/world/map/zone/ZoneBorders;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+        44: checkcast     #181                // class core/game/bots/Script
+        47: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        50: invokevirtual #183                // Method getAssembler:()Lcore/game/bots/CombatBotAssembler;
+        53: getstatic     #157                // Field core/game/bots/CombatBotAssembler$Tier.MED:Lcore/game/bots/CombatBotAssembler$Tier;
+        56: aload_1
+        57: ldc_w         #366                // String wilderness
+        60: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        63: aload_1
+        64: invokevirtual #369                // Method core/game/bots/CombatBotAssembler.assembleMeleeDragonBot:(Lcore/game/bots/CombatBotAssembler$Tier;Lcore/game/world/map/Location;)Lcore/game/bots/CombatBot;
+        67: checkcast     #203                // class core/game/bots/AIPlayer
+        70: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        73: pop
+        74: nop
+        75: iinc          3, 1
+        78: goto          16
+        81: return
+
+  public final void immerseFalador();
+    Code:
+         0: new           #168                // class core/game/bots/GeneralBotCreator
+         3: dup
+         4: new           #374                // class content/global/bots/CoalMiner
+         7: dup
+         8: invokespecial #375                // Method content/global/bots/CoalMiner."<init>":()V
+        11: checkcast     #181                // class core/game/bots/Script
+        14: aload_0
+        15: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+        18: getstatic     #252                // Field core/game/bots/SkillingBotAssembler$Wealth.POOR:Lcore/game/bots/SkillingBotAssembler$Wealth;
+        21: sipush        3037
+        24: sipush        9737
+        27: iconst_0
+        28: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        31: dup
+        32: ldc_w         #377                // String create(3037, 9737, 0)
+        35: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        38: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        41: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        44: pop
+        45: new           #168                // class core/game/bots/GeneralBotCreator
+        48: dup
+        49: new           #379                // class content/global/bots/CannonballSmelter
+        52: dup
+        53: invokespecial #380                // Method content/global/bots/CannonballSmelter."<init>":()V
+        56: checkcast     #181                // class core/game/bots/Script
+        59: aload_0
+        60: invokevirtual #232                // Method getSkillingBotAssembler:()Lcore/game/bots/SkillingBotAssembler;
+        63: getstatic     #238                // Field core/game/bots/SkillingBotAssembler$Wealth.AVERAGE:Lcore/game/bots/SkillingBotAssembler$Wealth;
+        66: sipush        3013
+        69: sipush        3356
+        72: iconst_0
+        73: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        76: dup
+        77: ldc_w         #382                // String create(3013, 3356, 0)
+        80: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        83: invokevirtual #246                // Method core/game/bots/SkillingBotAssembler.produce:(Lcore/game/bots/SkillingBotAssembler$Wealth;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        86: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        89: pop
+        90: return
+
+  public final void immerseSlayer();
+    Code:
+         0: new           #168                // class core/game/bots/GeneralBotCreator
+         3: dup
+         4: new           #385                // class content/global/bots/GenericSlayerBot
+         7: dup
+         8: invokespecial #386                // Method content/global/bots/GenericSlayerBot."<init>":()V
+        11: checkcast     #181                // class core/game/bots/Script
+        14: aload_0
+        15: invokevirtual #183                // Method getAssembler:()Lcore/game/bots/CombatBotAssembler;
+        18: getstatic     #283                // Field core/game/bots/CombatBotAssembler$Type.MELEE:Lcore/game/bots/CombatBotAssembler$Type;
+        21: getstatic     #389                // Field core/game/bots/CombatBotAssembler$Tier.HIGH:Lcore/game/bots/CombatBotAssembler$Tier;
+        24: sipush        2673
+        27: sipush        3635
+        30: iconst_0
+        31: invokestatic  #148                // Method core/game/world/map/Location.create:(III)Lcore/game/world/map/Location;
+        34: dup
+        35: ldc_w         #391                // String create(2673, 3635, 0)
+        38: invokestatic  #193                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        41: invokevirtual #281                // Method core/game/bots/CombatBotAssembler.produce:(Lcore/game/bots/CombatBotAssembler$Type;Lcore/game/bots/CombatBotAssembler$Tier;Lcore/game/world/map/Location;)Lcore/game/bots/AIPlayer;
+        44: invokespecial #206                // Method core/game/bots/GeneralBotCreator."<init>":(Lcore/game/bots/Script;Lcore/game/bots/AIPlayer;)V
+        47: pop
+        48: return
+
+  private final void immerseGE();
+    Code:
+         0: aload_0
+         1: iconst_0
+         2: invokevirtual #396                // Method spawnDoubleMoneyBot:(Z)V
+         5: return
+
+  public final void spawnDoubleMoneyBot(boolean);
+    Code:
+         0: invokestatic  #85                 // Method core/game/world/GameWorld.getSettings:()Lcore/game/world/GameSettings;
+         3: dup
+         4: ifnull        22
+         7: invokevirtual #399                // Method core/game/world/GameSettings.getEnable_doubling_money_scammers:()Z
+        10: iconst_1
+        11: if_icmpne     18
+        14: iconst_1
+        15: goto          24
+        18: iconst_0
+        19: goto          24
+        22: pop
+        23: iconst_0
+        24: ifne          28
+        27: return
+        28: new           #401                // class kotlin/ranges/IntRange
+        31: dup
+        32: sipush        10000
+        35: ldc_w         #402                // int 7200000
+        38: invokespecial #405                // Method kotlin/ranges/IntRange."<init>":(II)V
+        41: getstatic     #57                 // Field kotlin/random/Random.Default:Lkotlin/random/Random$Default;
+        44: checkcast     #53                 // class kotlin/random/Random
+        47: invokestatic  #410                // Method kotlin/ranges/RangesKt.random:(Lkotlin/ranges/IntRange;Lkotlin/random/Random;)I
+        50: i2l
+        51: lstore_2
+        52: new           #130                // class java/util/Timer
+        55: dup
+        56: invokespecial #131                // Method java/util/Timer."<init>":()V
+        59: astore        4
+        61: iload_1
+        62: ifeq          69
+        65: lload_2
+        66: goto          70
+        69: lconst_0
+        70: lstore        5
+        72: new           #412                // class core/game/world/ImmerseWorld$Companion$spawnDoubleMoneyBot$$inlined$schedule$1
+        75: dup
+        76: invokespecial #413                // Method core/game/world/ImmerseWorld$Companion$spawnDoubleMoneyBot$$inlined$schedule$1."<init>":()V
+        79: checkcast     #136                // class java/util/TimerTask
+        82: astore        7
+        84: aload         4
+        86: aload         7
+        88: lload         5
+        90: invokevirtual #140                // Method java/util/Timer.schedule:(Ljava/util/TimerTask;J)V
+        93: return
+
+  private static final void spawnBots$lambda$0();
+    Code:
+         0: invokestatic  #421                // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+         3: ldc_w         #423                // String BotSpawner
+         6: invokevirtual #427                // Method java/lang/Thread.setName:(Ljava/lang/String;)V
+         9: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        12: invokevirtual #429                // Method immerseSeersAndCatherby:()V
+        15: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        18: invokevirtual #431                // Method immerseLumbridgeDraynor:()V
+        21: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        24: invokevirtual #433                // Method immerseVarrock:()V
+        27: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        30: invokevirtual #435                // Method immerseWilderness:()V
+        33: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        36: invokevirtual #437                // Method immerseFishingGuild:()V
+        39: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        42: invokevirtual #439                // Method immerseAdventurer:()V
+        45: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        48: invokevirtual #441                // Method immerseFalador:()V
+        51: getstatic     #364                // Field core/game/world/ImmerseWorld.Companion:Lcore/game/world/ImmerseWorld$Companion;
+        54: invokespecial #443                // Method immerseGE:()V
+        57: return
+
+  public core.game.world.ImmerseWorld$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    Code:
+         0: aload_0
+         1: invokespecial #445                // Method "<init>":()V
+         4: return
+}
