@@ -483,6 +483,53 @@ python tools/osrs_item_importer.py validate
 
 After reviewing the diff, choose one simple modern OSRS item for Phase 5 prototype import.
 
+## Update Log
+
+### 2026-06-04 — pipeline validated + ID-collision bug fixed
+
+- Seeded `data/import/osrs_items.json` with 11 well-known post-2013 OSRS items
+  (clearly labeled as a pipeline-validation seed, **not** the authoritative dump).
+  `dry-run` and `validate` now run green against real data.
+- **Bug found and fixed in `tools/osrs_item_importer.py`:** the classifier assumed
+  *same item ID == same item*. Many post-2013 OSRS items have IDs inside 2009Scape's
+  repurposed 12000–14658 range (e.g. OSRS `13263` Abyssal bludgeon vs 2009Scape `13263`
+  Slayer helmet; OSRS `13576` Dragon warhammer vs 2009Scape `13576` Map of 2009Scape).
+  These were being classified `already_existing_same_id` and **silently dropped** —
+  losing exactly the items we want to import.
+- Fix: identity is now decided by **name match at the same id**. A same-id/different-name
+  case is a new `id_collision` category and is routed to a safe custom id (never reuses the
+  occupied id). Rows now also record `existing_2009_name` so collisions are auditable.
+- Result on the seed: 9 `osrs_only` + 2 `id_collision` → all 11 mapped to custom ids
+  14659–14669. No existing 2009Scape id is touched.
+
+### 2026-06-04 — Phase 2 source wired up + full real diff
+
+- **Source selected: osrsreboxed-db `items-complete.json`** (maintained osrsbox fork,
+  updated 2023), fetched via new tool **`tools/fetch_osrs_items.py`**.
+  - Reachability decided it: from this environment `prices.runescape.wiki` and
+    `static.runelite.net` are unreachable; OpenRS2 is reachable but a raw cache lacks combat
+    bonuses. osrsreboxed is reachable via GitHub raw and carries definitions **and** bonuses.
+  - Raw 50 MB source cached under `data/import/_sources/` (gitignored, re-downloadable).
+  - Limitation: no model IDs (fine — models are the Phase 7 blocker) and coverage caps ~2023;
+    the last ~2 years would need an OpenRS2 cache pass later.
+- **Full real diff (28,744 OSRS items vs 11,981 local):**
+  - `already_existing_same_id`: 7,536 · `same_name_different_id`: 5,111
+  - **`osrs_only`: 11,907 · `id_collision`: 4,190 → 16,097 import candidates** mapped to
+    custom IDs `14659..30749`.
+  - The id-collision fix rescued **4,190** items the original classifier would have dropped.
+  - Candidate composition: 3,031 equipment, 600 weapons, 2,118 noted variants, 6 placeholders,
+    ~13,975 "clean". Substantial noise (charge/degrade variants, cosmetics, notes) — a real
+    first import should target a curated subset, not all 16k.
+
+### Open decisions (need owner input)
+
+- **Scope the first real import:** pick a curated subset (e.g., meaningful post-2013 weapons/
+  equipment, excluding charge variants/cosmetics/notes) rather than all 16k candidates.
+- **Models remain the hard blocker (Phase 7):** definition import (stats/examine/bonuses/
+  equipment) is achievable; converting modern OSRS models into this 2009-era cache is not yet
+  proven and may be infeasible generically. Realistic near-term deliverable = definition import
+  with placeholder/substitute models.
+
 ## External References
 
 - OpenRS2 Archive: https://archive.openrs2.org/

@@ -133,8 +133,16 @@ def classify_item(
     stackable = boolish(field_any(osrs, "stackable", "isStackable"))
     noted = "note" in cname or boolish(field_any(osrs, "noted", "isNoted"))
 
-    if existing_id is not None:
+    existing_id_name = canonical_name(existing_id.get("name", "")) if existing_id else ""
+    if existing_id is not None and existing_id_name == cname:
+        # Same id AND same name -> genuinely the same item.
         category = "already_existing_same_id"
+    elif existing_id is not None:
+        # Same id but a DIFFERENT 2009Scape item already owns it. The OSRS item is
+        # still new; it must get a safe custom id. (Never assume id == identity:
+        # OSRS reuses ids that 2009Scape repurposed, e.g. OSRS 13263 Abyssal bludgeon
+        # vs 2009Scape 13263 Slayer helmet.)
+        category = "id_collision"
     elif existing_named:
         category = "same_name_different_id"
     else:
@@ -149,6 +157,7 @@ def classify_item(
         "name": name,
         "category": category,
         "existing_2009_id": int(existing_id["id"]) if existing_id else None,
+        "existing_2009_name": existing_id.get("name") if existing_id else None,
         "same_name_2009_ids": [int(i["id"]) for i in existing_named],
         "duplicate_name_in_osrs": osrs_name_counts[cname] > 1 if cname else False,
         "placeholder_or_null": is_null_or_placeholder(osrs),
@@ -222,6 +231,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         "name",
         "category",
         "existing_2009_id",
+        "existing_2009_name",
         "same_name_2009_ids",
         "duplicate_name_in_osrs",
         "placeholder_or_null",
@@ -255,7 +265,7 @@ def ensure_mapping_files(rows: list[dict[str, Any]]) -> None:
     known = {int(i["osrs_item_id"]) for i in item_map.get("items", []) if "osrs_item_id" in i}
     next_custom_id = max([14658] + [int(i.get("item_2009scape_id", 0) or 0) for i in item_map.get("items", [])]) + 1
     for row in rows:
-        if row["category"] != "osrs_only" or row["placeholder_or_null"] or row["osrs_id"] in known:
+        if row["category"] not in ("osrs_only", "id_collision") or row["placeholder_or_null"] or row["osrs_id"] in known:
             continue
         item_map.setdefault("items", []).append(
             {
