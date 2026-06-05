@@ -124,9 +124,15 @@ public class InspectItemModels {
             }
             System.out.println("    model " + modelId + " vertices=" + model.vertexCount + " triangles=" + model.triangleCount +
                     " bounds x=" + minX + ".." + maxX + " y=" + minY + ".." + maxY + " z=" + minZ + ".." + maxZ);
+            System.out.println("    priority=" + (model.priority & 0xFF) +
+                    " triangleInfo=" + (model.triangleInfo == null ? "null" : "present") +
+                    " trianglePriorities=" + (model.trianglePriorities == null ? "null" : "present") +
+                    " triangleAlpha=" + (model.triangleAlpha == null ? "null" : "present") +
+                    " triangleTextures=" + (model.triangleTextures == null ? "null" : "present"));
             if (model.vertexBones != null) {
                 System.out.print("    vertexBones=");
                 printDistribution(model.vertexBones);
+                printBoneBounds(model);
             }
             if (model.triangleBones != null) {
                 System.out.print("    triangleBones=");
@@ -155,6 +161,35 @@ public class InspectItemModels {
             }
         }
         System.out.println();
+    }
+
+    private static void printBoneBounds(RawModel model) {
+        int[] minX = new int[256], minY = new int[256], minZ = new int[256];
+        int[] maxX = new int[256], maxY = new int[256], maxZ = new int[256];
+        int[] counts = new int[256];
+        for (int i = 0; i < 256; i++) {
+            minX[i] = minY[i] = minZ[i] = Integer.MAX_VALUE;
+            maxX[i] = maxY[i] = maxZ[i] = Integer.MIN_VALUE;
+        }
+        for (int i = 0; i < model.vertexCount; i++) {
+            int bone = model.vertexBones[i];
+            if (bone < 0 || bone >= counts.length) {
+                continue;
+            }
+            counts[bone]++;
+            minX[bone] = Math.min(minX[bone], model.vertexX[i]);
+            maxX[bone] = Math.max(maxX[bone], model.vertexX[i]);
+            minY[bone] = Math.min(minY[bone], model.vertexY[i]);
+            maxY[bone] = Math.max(maxY[bone], model.vertexY[i]);
+            minZ[bone] = Math.min(minZ[bone], model.vertexZ[i]);
+            maxZ[bone] = Math.max(maxZ[bone], model.vertexZ[i]);
+        }
+        for (int bone = 0; bone < counts.length; bone++) {
+            if (counts[bone] > 0) {
+                System.out.println("    bone " + bone + " bounds x=" + minX[bone] + ".." + maxX[bone] +
+                        " y=" + minY[bone] + ".." + maxY[bone] + " z=" + minZ[bone] + ".." + maxZ[bone]);
+            }
+        }
     }
 
     private static int readUnsignedShort(byte[] bytes, int pos) {

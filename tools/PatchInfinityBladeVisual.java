@@ -292,16 +292,11 @@ public class PatchInfinityBladeVisual {
                 out.write(opcode);
                 writeShort(out, inventoryModelId);
                 i += 2;
-            } else if (opcode == 23 || opcode == 25) {
-                // Primary wield model (male/female): short model id + 1 wield-offset byte.
-                // The offset byte must be preserved, otherwise the rest of the definition
-                // desyncs by one byte (the offset gets re-read as a bogus opcode).
-                out.write(opcode);
-                writeShort(out, wornModelId);
-                out.write(template[i + 2]);
-                i += 3;
-            } else if (opcode == 24 || opcode == 26) {
-                // Secondary wield model (male/female): short model id only.
+            } else if (opcode == 23 || opcode == 24 || opcode == 25 || opcode == 26) {
+                // Wield models. In this rt4 revision ItemDefinition.decode reads each of
+                // 23/24/25/26 as a plain short (NO offset byte) - verified in the server's
+                // core.cache.def.impl.ItemDefinition. Consuming 3 bytes here desyncs the
+                // real decoder (null name + unreadable model), so consume exactly 2.
                 out.write(opcode);
                 writeShort(out, wornModelId);
                 i += 2;
