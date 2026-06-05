@@ -1,0 +1,20 @@
+﻿[2026-06-05T13:37:16] watching client PID 18076 for exit...
+[2026-06-05T13:47:09] client closed. waiting 15s for server to flush logout-save...
+[2026-06-05T13:47:24] server PID 17500 not the 2009scape server; leaving it alone.
+warning: in the working copy of 'configs/item_configs.json', LF will be replaced by CRLF the next time Git touches it
+[main f8f00ee] save 2026-06-05 13:47:26
+ 12 files changed, 83 insertions(+), 4 deletions(-)
+ create mode 100644 custom-items/infinity-blade/cache-backup-14666/main_file_cache.dat2
+ create mode 100644 custom-items/infinity-blade/cache-backup-14666/main_file_cache.idx19
+ create mode 100644 custom-items/infinity-blade/cache-backup-14666/main_file_cache.idx255
+ create mode 100644 custom-items/infinity-blade/cache-backup-14666/main_file_cache.idx7
+ create mode 100644 custom-items/infinity-blade/cache-backup/main_file_cache.dat2
+ create mode 100644 custom-items/infinity-blade/cache-backup/main_file_cache.idx19
+ create mode 100644 custom-items/infinity-blade/cache-backup/main_file_cache.idx255
+ create mode 100644 custom-items/infinity-blade/cache-backup/main_file_cache.idx7
+remote: warning: See https://gh.io/lfs for more information.        
+remote: warning: File d7514d6ece76b89957deecb2efff63d303cc9914 is 87.45 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/ledostarmac2/2009scape-save.git
+   86bd905..f8f00ee  main -> main
+[2026-06-05T13:47:53] === PUSH COMPLETE ===

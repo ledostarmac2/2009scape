@@ -1,11 +1,13 @@
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.awt.image.BufferedImage;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.GZIPOutputStream;
+import javax.imageio.ImageIO;
 import rt4.BufferedFile;
 import rt4.Buffer;
 import rt4.Cache;
@@ -16,11 +18,13 @@ import rt4.Js5Index;
 public class PatchEmberbladeVisual {
     private static final int ITEM_ARCHIVE = 19;
     private static final int MODEL_ARCHIVE = 7;
-    private static final int ITEM_ID = 14422;
-    private static final int INVENTORY_MODEL_ID = 14422;
-    private static final int WORN_MODEL_ID = 14423;
-    private static final int TEMPLATE_ITEM_ID = 1289;
-    private static final int MAX_TRIANGLES = 1800;
+    private static int itemId = 14422;
+    private static int inventoryModelId = 14422;
+    private static int wornModelId = 14423;
+    private static int templateItemId = 1289;
+    private static String itemName = "Emberblade";
+    private static final int MAX_INVENTORY_SOURCE_TRIANGLES = 700;
+    private static final int MAX_WORN_SOURCE_TRIANGLES = 300;
 
     private static final class V {
         final int x;
@@ -60,6 +64,26 @@ public class PatchEmberbladeVisual {
         }
     }
 
+    private static final class ObjUV {
+        final double u;
+        final double v;
+
+        ObjUV(double u, double v) {
+            this.u = u;
+            this.v = v;
+        }
+    }
+
+    private static final class ObjFace {
+        final int[] v;
+        final int[] uv;
+
+        ObjFace(int a, int b, int c, int au, int bu, int cu) {
+            this.v = new int[] { a, b, c };
+            this.uv = new int[] { au, bu, cu };
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         File cacheDir = new File(args[0]);
         Path backupDir = Path.of(args[1]);
@@ -74,9 +98,16 @@ public class PatchEmberbladeVisual {
 
         Path objPath = args.length >= 3 ? Path.of(args[2]) : Path.of("game/data/custom-items/emberblade/emberblade_model_1.obj");
         String mode = args.length >= 4 ? args[3].toLowerCase() : "all";
+        if (args.length >= 9) {
+            itemId = Integer.parseInt(args[4]);
+            inventoryModelId = Integer.parseInt(args[5]);
+            wornModelId = Integer.parseInt(args[6]);
+            templateItemId = Integer.parseInt(args[7]);
+            itemName = args[8];
+        }
         if (mode.equals("all") || mode.equals("model")) {
-            patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, INVENTORY_MODEL_ID, buildEmberbladeModel(objPath, true));
-            patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, WORN_MODEL_ID, buildEmberbladeModel(objPath, false));
+            patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, inventoryModelId, buildEmberbladeModel(objPath, true));
+            patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, wornModelId, buildEmberbladeModel(objPath, false));
         }
         if (mode.equals("all") || mode.equals("item")) {
             patchItemDefinition(cacheDir, data, master);
@@ -85,7 +116,7 @@ public class PatchEmberbladeVisual {
             throw new IllegalArgumentException("mode must be all, model, or item");
         }
 
-        System.out.println("Patched Emberblade cache mode=" + mode + " for item " + ITEM_ID);
+        System.out.println("Patched " + itemName + " cache mode=" + mode + " for item " + itemId);
     }
 
     private static void backup(File cacheDir, Path backupDir, String name) throws Exception {
@@ -96,14 +127,14 @@ public class PatchEmberbladeVisual {
     }
 
     private static void patchItemDefinition(File cacheDir, BufferedFile data, Cache master) throws Exception {
-        int group = ITEM_ID >>> 8;
-        int file = ITEM_ID & 255;
+        int group = itemId >>> 8;
+        int file = itemId & 255;
         byte[] packedIndex = master.read(ITEM_ARCHIVE);
         int archiveIndexVersion = readTrailingVersion(packedIndex);
         byte[] indexBytes = Js5Compression.uncompress(packedIndex);
         Js5Index index = new Js5Index(packedIndex, Buffer.crc32(packedIndex, packedIndex.length));
         byte[][] files = readGroupFiles(cacheDir, ITEM_ARCHIVE, group, index);
-        byte[] template = readItemDefinition(cacheDir, TEMPLATE_ITEM_ID);
+        byte[] template = readItemDefinition(cacheDir, templateItemId);
         files[file] = buildItemDefinition(template);
         writeMultiFileGroup(cacheDir, data, master, ITEM_ARCHIVE, group, files, index.groupVersions[group], indexBytes, archiveIndexVersion);
     }
@@ -237,15 +268,15 @@ public class PatchEmberbladeVisual {
             }
             if (opcode == 1) {
                 out.write(opcode);
-                writeShort(out, INVENTORY_MODEL_ID);
+                writeShort(out, inventoryModelId);
                 i += 2;
             } else if (opcode == 23 || opcode == 24 || opcode == 25 || opcode == 26) {
                 out.write(opcode);
-                writeShort(out, WORN_MODEL_ID);
+                writeShort(out, wornModelId);
                 i += 2;
             } else if (opcode == 2) {
                 out.write(opcode);
-                writeString(out, "Emberblade");
+                writeString(out, itemName);
                 while (i < template.length && template[i++] != 0) {
                 }
             } else if (opcode == 40 || opcode == 41) {
@@ -352,22 +383,32 @@ public class PatchEmberbladeVisual {
 
     private static byte[] encodeObjModel(Path objPath, boolean inventoryModel) throws Exception {
         List<ObjV> sourceVertices = new ArrayList<>();
-        List<int[]> sourceFaces = new ArrayList<>();
-        for (String raw : Files.readAllLines(objPath)) {
+        List<ObjUV> sourceUvs = new ArrayList<>();
+        List<ObjFace> sourceFaces = new ArrayList<>();
+        String mtlName = null;
+        List<String> objLines = Files.readAllLines(objPath);
+        for (String raw : objLines) {
             String line = raw.trim();
             if (line.startsWith("v ")) {
                 String[] parts = line.split("\\s+");
                 if (parts.length >= 4) {
                     sourceVertices.add(new ObjV(Double.parseDouble(parts[1]), Double.parseDouble(parts[2]), Double.parseDouble(parts[3])));
                 }
+            } else if (line.startsWith("vt ")) {
+                String[] parts = line.split("\\s+");
+                if (parts.length >= 3) {
+                    sourceUvs.add(new ObjUV(Double.parseDouble(parts[1]), Double.parseDouble(parts[2])));
+                }
+            } else if (line.startsWith("mtllib ")) {
+                mtlName = line.substring("mtllib ".length()).trim();
             } else if (line.startsWith("f ")) {
                 String[] parts = line.split("\\s+");
                 if (parts.length >= 4) {
-                    int first = parseObjIndex(parts[1], sourceVertices.size());
-                    int previous = parseObjIndex(parts[2], sourceVertices.size());
+                    int[] first = parseObjVertex(parts[1], sourceVertices.size(), sourceUvs.size());
+                    int[] previous = parseObjVertex(parts[2], sourceVertices.size(), sourceUvs.size());
                     for (int i = 3; i < parts.length; i++) {
-                        int next = parseObjIndex(parts[i], sourceVertices.size());
-                        sourceFaces.add(new int[] { first, previous, next });
+                        int[] next = parseObjVertex(parts[i], sourceVertices.size(), sourceUvs.size());
+                        sourceFaces.add(new ObjFace(first[0], previous[0], next[0], first[1], previous[1], next[1]));
                         previous = next;
                     }
                 }
@@ -377,11 +418,7 @@ public class PatchEmberbladeVisual {
             throw new IllegalArgumentException("OBJ did not contain vertices/faces: " + objPath);
         }
 
-        if (sourceFaces.size() > MAX_TRIANGLES) {
-            sourceFaces.sort(Comparator.<int[]>comparingDouble(face -> faceArea(sourceVertices, face)).reversed());
-            sourceFaces = new ArrayList<>(sourceFaces.subList(0, MAX_TRIANGLES));
-        }
-
+        int faceLimit = inventoryModel ? MAX_INVENTORY_SOURCE_TRIANGLES : MAX_WORN_SOURCE_TRIANGLES;
         double minX = Double.POSITIVE_INFINITY, minY = Double.POSITIVE_INFINITY, minZ = Double.POSITIVE_INFINITY;
         double maxX = Double.NEGATIVE_INFINITY, maxY = Double.NEGATIVE_INFINITY, maxZ = Double.NEGATIVE_INFINITY;
         for (ObjV vert : sourceVertices) {
@@ -389,25 +426,38 @@ public class PatchEmberbladeVisual {
             minY = Math.min(minY, vert.y); maxY = Math.max(maxY, vert.y);
             minZ = Math.min(minZ, vert.z); maxZ = Math.max(maxZ, vert.z);
         }
+        double height = Math.max(0.001, maxY - minY);
+
+        if (sourceFaces.size() > faceLimit) {
+            final double sourceMinY = minY;
+            final double sourceHeight = height;
+            sourceFaces.sort(Comparator.<ObjFace>comparingDouble(face -> faceImportance(sourceVertices, face, sourceMinY, sourceHeight)).reversed());
+            sourceFaces = new ArrayList<>(sourceFaces.subList(0, faceLimit));
+        }
+
         double centerX = (minX + maxX) / 2.0;
         double centerZ = (minZ + maxZ) / 2.0;
         double width = Math.max(0.001, maxX - minX);
         double depth = Math.max(0.001, maxZ - minZ);
-        double height = Math.max(0.001, maxY - minY);
 
         List<V> vertices = new ArrayList<>();
         for (ObjV vert : sourceVertices) {
             int x;
             int y;
             int z;
+            double yT = (vert.y - minY) / height;
+            double ringScale = isRingBand(yT) ? 1.28 : 1.0;
+            double ringDepthScale = isRingBand(yT) ? 1.7 : 1.0;
+            double sourceX = centerX + (vert.x - centerX) * ringScale;
+            double sourceZ = centerZ + (vert.z - centerZ) * ringDepthScale;
             if (inventoryModel) {
-                x = clampModelCoord((int) Math.round((vert.x - centerX) * (13.0 / width) + 1.5));
-                y = clampModelCoord((int) Math.round((vert.z - centerZ) * (5.0 / depth) - 2.5));
-                z = clampModelCoord((int) Math.round(33.0 - (vert.y - minY) * (78.0 / height)));
+                x = clampModelCoord((int) Math.round((sourceX - centerX) * (47.0 / width) - 10.5));
+                y = clampModelCoord((int) Math.round((sourceZ - centerZ) * (6.0 / depth) - 4.0));
+                z = clampModelCoord((int) Math.round(58.0 - (vert.y - minY) * (112.0 / height)));
             } else {
-                x = clampModelCoord((int) Math.round((vert.x - centerX) * (7.0 / width) - 31.5));
-                y = clampModelCoord((int) Math.round((vert.z - centerZ) * (24.0 / depth) - 87.0));
-                z = clampModelCoord((int) Math.round(22.0 - (vert.y - minY) * (113.0 / height)));
+                x = clampModelCoord((int) Math.round((sourceX - centerX) * (13.0 / width) - 31.5));
+                y = clampModelCoord((int) Math.round((sourceZ - centerZ) * (26.0 / depth) - 85.0));
+                z = clampModelCoord((int) Math.round(18.0 - (vert.y - minY) * (130.0 / height)));
             }
             vertices.add(new V(x, y, z));
         }
@@ -419,30 +469,139 @@ public class PatchEmberbladeVisual {
         int darkGuard = hsl(38, 78, 35);
         int grip = hsl(22, 50, 25);
         int ember = hsl(18, 86, 50);
+        BufferedImage texture = loadDiffuseTexture(objPath, mtlName);
         List<F> faces = new ArrayList<>();
         for (int i = 0; i < sourceFaces.size(); i++) {
-            int[] face = sourceFaces.get(i);
-            double averageY = (sourceVertices.get(face[0]).y + sourceVertices.get(face[1]).y + sourceVertices.get(face[2]).y) / 3.0;
-            double normalZ = faceNormalZ(sourceVertices, face);
-            int color;
-            if (averageY < minY + height * 0.24) {
-                color = i % 2 == 0 ? grip : darkGuard;
-            } else if (averageY < minY + height * 0.36) {
-                color = i % 3 == 0 ? ember : (i % 2 == 0 ? guard : darkGuard);
+            ObjFace face = sourceFaces.get(i);
+            double averageY = (sourceVertices.get(face.v[0]).y + sourceVertices.get(face.v[1]).y + sourceVertices.get(face.v[2]).y) / 3.0;
+            double yT = (averageY - minY) / height;
+            double normalZ = faceNormalZ(sourceVertices, face.v);
+            int color = texture == null ? -1 : sampleTextureColor(texture, sourceUvs, face);
+            if (color < 0) {
+                if (isRingBand(yT)) {
+                    color = i % 4 == 0 ? ember : (i % 2 == 0 ? guard : darkGuard);
+                } else if (averageY < minY + height * 0.24) {
+                    color = i % 2 == 0 ? grip : darkGuard;
+                } else if (averageY < minY + height * 0.36) {
+                    color = i % 3 == 0 ? ember : (i % 2 == 0 ? guard : darkGuard);
+                } else {
+                    color = i % 5 == 0 ? edge : (normalZ >= 0 ? blade : darkBlade);
+                }
             } else {
-                color = i % 5 == 0 ? edge : (normalZ >= 0 ? blade : darkBlade);
+                color = shadeColor(color, normalZ >= 0 ? 1.08 : 0.82);
             }
-            faces.add(new F(face[0], face[1], face[2], color));
+            faces.add(new F(face.v[0], face.v[1], face.v[2], color));
+            faces.add(new F(face.v[2], face.v[1], face.v[0], color));
         }
 
-        System.out.println("Loaded " + objPath + " as " + vertices.size() + " vertices / " + faces.size() + " triangles for " + (inventoryModel ? "inventory" : "worn") + " model");
+        System.out.println("Loaded " + objPath + " as " + vertices.size() + " vertices / " + faces.size() + " double-sided triangles for " + (inventoryModel ? "inventory" : "worn") + " model");
         return encodeOldModel(vertices, faces, !inventoryModel);
+    }
+
+    private static BufferedImage loadDiffuseTexture(Path objPath, String mtlName) {
+        if (mtlName == null || mtlName.isEmpty()) {
+            return null;
+        }
+        Path mtlPath = objPath.getParent() == null ? Path.of(mtlName) : objPath.getParent().resolve(mtlName);
+        if (!Files.exists(mtlPath)) {
+            return null;
+        }
+        try {
+            for (String raw : Files.readAllLines(mtlPath)) {
+                String line = raw.trim();
+                if (line.startsWith("map_Kd ")) {
+                    String textureName = line.substring("map_Kd ".length()).trim();
+                    Path texturePath = mtlPath.getParent() == null ? Path.of(textureName) : mtlPath.getParent().resolve(textureName);
+                    if (Files.exists(texturePath)) {
+                        BufferedImage image = ImageIO.read(texturePath.toFile());
+                        if (image != null) {
+                            System.out.println("Loaded diffuse texture " + texturePath);
+                        }
+                        return image;
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            System.out.println("Unable to load diffuse texture for " + objPath + ": " + ex.getMessage());
+        }
+        return null;
+    }
+
+    private static int sampleTextureColor(BufferedImage texture, List<ObjUV> uvs, ObjFace face) {
+        double r = 0;
+        double g = 0;
+        double b = 0;
+        int samples = 0;
+        for (int i = 0; i < 3; i++) {
+            int uvIndex = face.uv[i];
+            if (uvIndex < 0 || uvIndex >= uvs.size()) {
+                continue;
+            }
+            ObjUV uv = uvs.get(uvIndex);
+            int x = Math.max(0, Math.min(texture.getWidth() - 1, (int) Math.round(uv.u * (texture.getWidth() - 1))));
+            int y = Math.max(0, Math.min(texture.getHeight() - 1, (int) Math.round((1.0 - uv.v) * (texture.getHeight() - 1))));
+            int rgb = texture.getRGB(x, y);
+            r += (rgb >> 16) & 0xFF;
+            g += (rgb >> 8) & 0xFF;
+            b += rgb & 0xFF;
+            samples++;
+        }
+        if (samples == 0) {
+            return -1;
+        }
+        int rgb = ((int) Math.round(r / samples) << 16) | ((int) Math.round(g / samples) << 8) | (int) Math.round(b / samples);
+        return rgbToHsl(rgb);
+    }
+
+    private static int shadeColor(int color, double factor) {
+        int hue = (color >> 10) & 63;
+        int sat = (color >> 7) & 7;
+        int light = color & 127;
+        light = Math.max(0, Math.min(127, (int) Math.round(light * factor)));
+        return (hue << 10) | (sat << 7) | light;
+    }
+
+    private static int rgbToHsl(int rgb) {
+        double r = ((rgb >> 16) & 0xFF) / 255.0;
+        double g = ((rgb >> 8) & 0xFF) / 255.0;
+        double b = (rgb & 0xFF) / 255.0;
+        double max = Math.max(r, Math.max(g, b));
+        double min = Math.min(r, Math.min(g, b));
+        double h;
+        double s;
+        double l = (max + min) / 2.0;
+        if (max == min) {
+            h = 0;
+            s = 0;
+        } else {
+            double d = max - min;
+            s = l > 0.5 ? d / (2.0 - max - min) : d / (max + min);
+            if (max == r) {
+                h = (g - b) / d + (g < b ? 6.0 : 0.0);
+            } else if (max == g) {
+                h = (b - r) / d + 2.0;
+            } else {
+                h = (r - g) / d + 4.0;
+            }
+            h *= 60.0;
+        }
+        return hsl((int) Math.round(h), (int) Math.round(s * 100.0), (int) Math.round(l * 100.0));
     }
 
     private static int parseObjIndex(String token, int vertexCount) {
         String first = token.split("/")[0];
         int value = Integer.parseInt(first);
         return value < 0 ? vertexCount + value : value - 1;
+    }
+
+    private static int[] parseObjVertex(String token, int vertexCount, int uvCount) {
+        String[] parts = token.split("/");
+        int vertexIndex = parseObjIndex(parts[0], vertexCount);
+        int uvIndex = -1;
+        if (parts.length >= 2 && !parts[1].isEmpty()) {
+            uvIndex = parseObjIndex(parts[1], uvCount);
+        }
+        return new int[] { vertexIndex, uvIndex };
     }
 
     private static int clampModelCoord(int value) {
@@ -459,6 +618,26 @@ public class PatchEmberbladeVisual {
         double cy = uz * vx - ux * vz;
         double cz = ux * vy - uy * vx;
         return Math.sqrt(cx * cx + cy * cy + cz * cz) / 2.0;
+    }
+
+    private static double faceImportance(List<ObjV> vertices, ObjFace face, double minY, double height) {
+        double averageY = (vertices.get(face.v[0]).y + vertices.get(face.v[1]).y + vertices.get(face.v[2]).y) / 3.0;
+        double yT = (averageY - minY) / Math.max(0.001, height);
+        double weight;
+        if (isRingBand(yT)) {
+            weight = 4.0;
+        } else if (yT < 0.18) {
+            weight = 1.35;
+        } else if (yT < 0.5) {
+            weight = 1.65;
+        } else {
+            weight = 1.0;
+        }
+        return faceArea(vertices, face.v) * weight;
+    }
+
+    private static boolean isRingBand(double yT) {
+        return yT >= 0.13 && yT <= 0.37;
     }
 
     private static double faceNormalZ(List<ObjV> vertices, int[] face) {
@@ -525,8 +704,10 @@ public class PatchEmberbladeVisual {
         ByteArrayOutputStream yData = new ByteArrayOutputStream();
         ByteArrayOutputStream zData = new ByteArrayOutputStream();
         ByteArrayOutputStream vertexBones = new ByteArrayOutputStream();
+        boolean[] secondaryWeaponBones = skinnedForWeaponHand ? selectSecondaryWeaponBones(vertices) : null;
         int px = 0, py = 0, pz = 0;
-        for (V vert : vertices) {
+        for (int i = 0; i < vertices.size(); i++) {
+            V vert = vertices.get(i);
             int flags = 0;
             int dx = vert.x - px, dy = vert.y - py, dz = vert.z - pz;
             if (dx != 0) { flags |= 1; writeSmart(xData, dx); }
@@ -534,7 +715,7 @@ public class PatchEmberbladeVisual {
             if (dz != 0) { flags |= 4; writeSmart(zData, dz); }
             vertexFlags.write(flags);
             if (skinnedForWeaponHand) {
-                vertexBones.write(50);
+                vertexBones.write(secondaryWeaponBones[i] ? 200 : 50);
             }
             px = vert.x; py = vert.y; pz = vert.z;
         }
@@ -573,7 +754,7 @@ public class PatchEmberbladeVisual {
         writeShort(out, faces.size());
         out.write(0); // textured count
         out.write(0); // triangle info
-        out.write(0); // global priority
+        out.write(skinnedForWeaponHand ? 0 : 10); // equipped model should depth-sort behind NPCs/scenery
         out.write(0); // alpha
         out.write(skinnedForWeaponHand ? 1 : 0); // triangle bones
         out.write(skinnedForWeaponHand ? 1 : 0); // vertex bones
@@ -582,6 +763,33 @@ public class PatchEmberbladeVisual {
         writeShort(out, zData.size());
         writeShort(out, triangleIndices.size());
         return out.toByteArray();
+    }
+
+    private static boolean[] selectSecondaryWeaponBones(List<V> vertices) {
+        boolean[] selected = new boolean[vertices.size()];
+        int targetCount = Math.min(8, vertices.size());
+        for (int n = 0; n < targetCount; n++) {
+            int bestIndex = -1;
+            double bestScore = Double.POSITIVE_INFINITY;
+            for (int i = 0; i < vertices.size(); i++) {
+                if (selected[i]) {
+                    continue;
+                }
+                V vert = vertices.get(i);
+                double dx = vert.x + 31.5;
+                double dy = vert.y + 84.5;
+                double dz = vert.z + 1.0;
+                double score = dx * dx + dy * dy + dz * dz;
+                if (score < bestScore) {
+                    bestScore = score;
+                    bestIndex = i;
+                }
+            }
+            if (bestIndex >= 0) {
+                selected[bestIndex] = true;
+            }
+        }
+        return selected;
     }
 
     private static void writeSmart(ByteArrayOutputStream out, int value) {
