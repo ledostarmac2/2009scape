@@ -16636,6 +16636,54 @@
     "id": "1542"
   },
   {
+    "shop_price": "1",
+    "examine": "A key.",
+    "durability": null,
+    "name": "Key",
+    "archery_ticket_price": "0",
+    "id": "1543"
+  },
+  {
+    "shop_price": "1",
+    "examine": "A key.",
+    "durability": null,
+    "name": "Key",
+    "archery_ticket_price": "0",
+    "id": "1544"
+  },
+  {
+    "shop_price": "1",
+    "examine": "A key.",
+    "durability": null,
+    "name": "Key",
+    "archery_ticket_price": "0",
+    "id": "1545"
+  },
+  {
+    "shop_price": "1",
+    "examine": "A key.",
+    "durability": null,
+    "name": "Key",
+    "archery_ticket_price": "0",
+    "id": "1546"
+  },
+  {
+    "shop_price": "1",
+    "examine": "A key.",
+    "durability": null,
+    "name": "Key",
+    "archery_ticket_price": "0",
+    "id": "1547"
+  },
+  {
+    "shop_price": "1",
+    "examine": "A key.",
+    "durability": null,
+    "name": "Key",
+    "archery_ticket_price": "0",
+    "id": "1548"
+  },
+  {
     "destroy_message": "You can get another from Dr Harlow in the Blue Moon Inn of Varrock.",
     "examine": "A very pointy stick.",
     "durability": null,
@@ -129802,7 +129850,8 @@
     "defence_anim": "397",
     "equip_audio": "2248",
     "render_anim": "1",
-    "tradeable": "false",
+    "tradeable": "true",
+    "grand_exchange_price": "150000000",
     "destroy": "true",
     "destroy_message": "The Emberblade fades from your grasp.",
     "weight": "1.8",
@@ -132096,7 +132145,8 @@
     "defence_anim": "397",
     "equip_audio": "2248",
     "render_anim": "1",
-    "tradeable": "false",
+    "tradeable": "true",
+    "grand_exchange_price": "150000000",
     "destroy": "true",
     "destroy_message": "The Emberblade fades from your grasp.",
     "weight": "1.8",
@@ -132139,6 +132189,35 @@
     "archery_ticket_price": "0",
     "id": "14658",
     "equipment_slot": "0"
+  },
+  {
+    "examine": "A legendary blade from another world.",
+    "has_special": "true",
+    "attack_speed": "5",
+    "weapon_interface": "6",
+    "equipment_slot": "3",
+    "attack_anims": "390,390,381,390",
+    "stand_anim": "809",
+    "stand_turn_anim": "823",
+    "walk_anim": "1146",
+    "run_anim": "1210",
+    "turn180_anim": "820",
+    "turn90cw_anim": "821",
+    "turn90ccw_anim": "822",
+    "defence_anim": "397",
+    "equip_audio": "2248",
+    "render_anim": "1426",
+    "tradeable": "true",
+    "grand_exchange_price": "500000000",
+    "destroy": "true",
+    "destroy_message": "The Infinity Blade slips out of this world.",
+    "weight": "1.8",
+    "archery_ticket_price": "0",
+    "id": "14666",
+    "bonuses": "196,288,80,0,0,0,0,0,0,0,0,350,0,0,30",
+    "shop_price": "1",
+    "durability": null,
+    "name": "Infinity Blade"
   },
   {
     "examine": "Emperor of all he surveys.",

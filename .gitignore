@@ -8,3 +8,9 @@ game/data/logs/
 game/data/players/
 game/data/serverstore/
 game/plugins/plsto
+*.bak-*
+tools/stock-restore/
+tools/server-startup-v3*.log
+tools/server-startup-v3*.err.log
+game/data/custom-items/infinity-blade/cache-backup*/
+data/import/
