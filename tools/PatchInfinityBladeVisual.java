@@ -40,12 +40,20 @@ public class PatchInfinityBladeVisual {
     // over the character. 10 depth-sorts the blade with the player model correctly.
     private static final int WORN_RENDER_PRIORITY = 10;
     private static final int INVENTORY_RENDER_PRIORITY = 10;
-    // Inventory icon orientation only (RS 2D rotation, 0..2047 == 0..360 deg). Overriding
-    // these changes the icon camera angle WITHOUT touching the worn/in-hand model. yan2d is
-    // flipped ~180 deg from the Dragon longsword template so the blade points up-to-the-left
-    // like the reference render. Tune these two numbers to re-aim the icon.
-    private static final int ICON_XAN_2D = 400;  // pitch (item opcode 5)
-    private static final int ICON_YAN_2D = 1384; // yaw   (item opcode 6)
+    // RS icon rotation uses 0..2047 for a full turn; 1024 is a 180-degree flip.
+    private static final int ROTATION_HALF = 1024;
+    // Dragon longsword (1305) cameras with yaw flipped so hilt sits bottom-right and tip top-left.
+    private static final int ICON_ZOOM_SWORD = 1570;
+    private static final int ICON_XAN_SWORD = 400; // reverted to the "almost there" angle
+    private static final int ICON_YAN_SWORD = 360 + ROTATION_HALF;
+    // Rune defender (8850) cameras with the same diagonal flip for off-hand items.
+    private static final int ICON_ZOOM_SHIELD = 490;
+    private static final int ICON_XAN_SHIELD = 344;
+    private static final int ICON_YAN_SHIELD = 192 + ROTATION_HALF;
+    private static boolean flipLength = false;
+    private static boolean shieldFit = false;
+    private static boolean keepIconAngles = false;
+    private static boolean overrideIconAngles = true;
 
     private static final class V {
         final int x;
@@ -127,6 +135,20 @@ public class PatchInfinityBladeVisual {
             templateItemId = Integer.parseInt(args[7]);
             itemName = args[8];
         }
+        flipLength = false;
+        shieldFit = false;
+        keepIconAngles = false;
+        overrideIconAngles = true;
+        for (int a = 9; a < args.length; a++) {
+            String flag = args[a].toLowerCase();
+            if (flag.equals("flip-length")) {
+                flipLength = true;
+            } else if (flag.equals("shield-fit")) {
+                shieldFit = true;
+            } else if (flag.equals("keep-icon")) {
+                keepIconAngles = true;
+            }
+        }
         if (mode.equals("all") || mode.equals("model")) {
             patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, inventoryModelId, buildModel(objPath, true));
             patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, wornModelId, buildModel(objPath, false));
@@ -155,10 +177,199 @@ public class PatchInfinityBladeVisual {
         int archiveIndexVersion = readTrailingVersion(packedIndex);
         byte[] indexBytes = Js5Compression.uncompress(packedIndex);
         Js5Index index = new Js5Index(packedIndex, Buffer.crc32(packedIndex, packedIndex.length));
-        byte[][] files = readGroupFiles(cacheDir, ITEM_ARCHIVE, group, index);
+        int groupSize = index.groupSizes[group];
+        int[] fileIds = index.fileIds[group];
+        if (fileIds == null) {
+            fileIds = new int[groupSize];
+            for (int i = 0; i < groupSize; i++) {
+                fileIds[i] = i;
+            }
+        }
+
+        byte[][] files = new byte[groupSize][];
+        for (int i = 0; i < groupSize; i++) {
+            files[i] = readArchiveFile(cacheDir, ITEM_ARCHIVE, group, fileIds[i]);
+        }
+
+        int targetLogical = indexOfFileId(fileIds, file);
+        if (targetLogical < 0) {
+            int lastFileId = fileIds[groupSize - 1];
+            if (file <= lastFileId) {
+                throw new IllegalStateException("Item file " + file + " missing from group " + group + " index");
+            }
+            int newSize = groupSize + (file - lastFileId);
+            byte[][] expanded = new byte[newSize][];
+            int[] expandedIds = new int[newSize];
+            System.arraycopy(files, 0, expanded, 0, groupSize);
+            System.arraycopy(fileIds, 0, expandedIds, 0, groupSize);
+            for (int i = groupSize; i < newSize; i++) {
+                expandedIds[i] = expandedIds[i - 1] + 1;
+                expanded[i] = PLACEHOLDER_ITEM;
+            }
+            files = expanded;
+            fileIds = expandedIds;
+            groupSize = newSize;
+            targetLogical = indexOfFileId(fileIds, file);
+        }
+
         byte[] template = readItemDefinition(cacheDir, templateItemId);
-        files[file] = buildItemDefinition(template);
-        writeMultiFileGroup(cacheDir, data, master, ITEM_ARCHIVE, group, files, index.groupVersions[group], indexBytes, archiveIndexVersion);
+        files[targetLogical] = buildItemDefinition(template);
+
+        byte[] packedNoVersion = wrapUncompressed(packSingleChunk(files));
+        int newVersion = index.groupVersions[group] + 1;
+        byte[] packed = appendVersion(packedNoVersion, newVersion);
+        Cache archiveRw = new Cache(ITEM_ARCHIVE, data,
+                new BufferedFile(new FileOnDisk(new File(cacheDir, "main_file_cache.idx" + ITEM_ARCHIVE), "rw", Long.MAX_VALUE), 6000, 0),
+                1000000);
+        if (!archiveRw.write(group, packed.length, packed)) {
+            throw new IllegalStateException("Unable to write archive " + ITEM_ARCHIVE + " group " + group);
+        }
+        byte[] newIndexBytes = reserializeItemIndex(indexBytes, group, fileIds, newVersion,
+                Buffer.crc32(packedNoVersion, packedNoVersion.length));
+        byte[] repackedIndex = appendVersion(wrapGzip(newIndexBytes), archiveIndexVersion);
+        if (!master.write(ITEM_ARCHIVE, repackedIndex.length, repackedIndex)) {
+            throw new IllegalStateException("Unable to write archive index " + ITEM_ARCHIVE);
+        }
+    }
+
+    private static final byte[] PLACEHOLDER_ITEM = new byte[] { 0 };
+
+    private static byte[] readArchiveFile(File cacheDir, int archiveId, int group, int file) throws Exception {
+        byte[][] groupFiles = readGroupFiles(cacheDir, archiveId, group, readItemIndex(cacheDir, archiveId));
+        return groupFiles[file];
+    }
+
+    private static Js5Index readItemIndex(File cacheDir, int archiveId) throws Exception {
+        byte[] packedIndex = new Cache(255,
+                new BufferedFile(new FileOnDisk(new File(cacheDir, "main_file_cache.dat2"), "r", Long.MAX_VALUE), 5200, 0),
+                new BufferedFile(new FileOnDisk(new File(cacheDir, "main_file_cache.idx255"), "r", Long.MAX_VALUE), 6000, 0),
+                1000000).read(archiveId);
+        return new Js5Index(packedIndex, Buffer.crc32(packedIndex, packedIndex.length));
+    }
+
+    private static int indexOfFileId(int[] fileIds, int file) {
+        for (int i = 0; i < fileIds.length; i++) {
+            if (fileIds[i] == file) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private static int itemIndexReadPos;
+
+    private static byte[] reserializeItemIndex(byte[] raw, int targetGroup, int[] newFileIds, int newVersion, int newCrc) {
+        itemIndexReadPos = 0;
+        int protocol = readIndexU8(raw);
+        int indexVersion = 0;
+        if (protocol >= 6) {
+            indexVersion = readIndexU32(raw);
+        }
+        int flags = readIndexU8(raw);
+        boolean names = (flags & 1) != 0;
+        if (names) {
+            throw new IllegalStateException("index uses file names; not supported");
+        }
+        int groupCount = readIndexU16(raw);
+        int[] groupIds = new int[groupCount];
+        int accumulated = 0;
+        int targetIndex = -1;
+        for (int i = 0; i < groupCount; i++) {
+            accumulated += readIndexU16(raw);
+            groupIds[i] = accumulated;
+            if (accumulated == targetGroup) {
+                targetIndex = i;
+            }
+        }
+        if (targetIndex < 0) {
+            throw new IllegalStateException("group not in index: " + targetGroup);
+        }
+        int[] crcs = new int[groupCount];
+        for (int i = 0; i < groupCount; i++) {
+            crcs[i] = readIndexU32(raw);
+        }
+        int[] versions = new int[groupCount];
+        for (int i = 0; i < groupCount; i++) {
+            versions[i] = readIndexU32(raw);
+        }
+        int[] fileCounts = new int[groupCount];
+        for (int i = 0; i < groupCount; i++) {
+            fileCounts[i] = readIndexU16(raw);
+        }
+        int[][] allFileIds = new int[groupCount][];
+        for (int i = 0; i < groupCount; i++) {
+            allFileIds[i] = new int[fileCounts[i]];
+            int previous = 0;
+            for (int j = 0; j < fileCounts[i]; j++) {
+                previous += readIndexU16(raw);
+                allFileIds[i][j] = previous;
+            }
+        }
+        if (itemIndexReadPos != raw.length) {
+            throw new IllegalStateException("index parse mismatch " + itemIndexReadPos + "/" + raw.length);
+        }
+        crcs[targetIndex] = newCrc;
+        versions[targetIndex] = newVersion;
+        fileCounts[targetIndex] = newFileIds.length;
+        allFileIds[targetIndex] = newFileIds;
+
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        writeIndexU8(out, protocol);
+        if (protocol >= 6) {
+            writeIndexU32(out, indexVersion);
+        }
+        writeIndexU8(out, flags);
+        writeIndexU16(out, groupCount);
+        int previousGroup = 0;
+        for (int i = 0; i < groupCount; i++) {
+            writeIndexU16(out, groupIds[i] - previousGroup);
+            previousGroup = groupIds[i];
+        }
+        for (int i = 0; i < groupCount; i++) {
+            writeIndexU32(out, crcs[i]);
+        }
+        for (int i = 0; i < groupCount; i++) {
+            writeIndexU32(out, versions[i]);
+        }
+        for (int i = 0; i < groupCount; i++) {
+            writeIndexU16(out, fileCounts[i]);
+        }
+        for (int i = 0; i < groupCount; i++) {
+            int previous = 0;
+            for (int j = 0; j < fileCounts[i]; j++) {
+                writeIndexU16(out, allFileIds[i][j] - previous);
+                previous = allFileIds[i][j];
+            }
+        }
+        return out.toByteArray();
+    }
+
+    private static int readIndexU8(byte[] raw) {
+        return raw[itemIndexReadPos++] & 0xFF;
+    }
+
+    private static int readIndexU16(byte[] raw) {
+        return (readIndexU8(raw) << 8) | readIndexU8(raw);
+    }
+
+    private static int readIndexU32(byte[] raw) {
+        return (readIndexU8(raw) << 24) | (readIndexU8(raw) << 16) | (readIndexU8(raw) << 8) | readIndexU8(raw);
+    }
+
+    private static void writeIndexU8(ByteArrayOutputStream out, int value) {
+        out.write(value & 0xFF);
+    }
+
+    private static void writeIndexU16(ByteArrayOutputStream out, int value) {
+        out.write((value >>> 8) & 0xFF);
+        out.write(value & 0xFF);
+    }
+
+    private static void writeIndexU32(ByteArrayOutputStream out, int value) {
+        out.write((value >>> 24) & 0xFF);
+        out.write((value >>> 16) & 0xFF);
+        out.write((value >>> 8) & 0xFF);
+        out.write(value & 0xFF);
     }
 
     private static byte[] readItemDefinition(File cacheDir, int itemId) throws Exception {
@@ -229,6 +440,10 @@ public class PatchInfinityBladeVisual {
 
     private static int readInt(byte[] bytes, int pos) {
         return ((bytes[pos] & 0xFF) << 24) | ((bytes[pos + 1] & 0xFF) << 16) | ((bytes[pos + 2] & 0xFF) << 8) | (bytes[pos + 3] & 0xFF);
+    }
+
+    private static int readUnsignedShort(byte[] bytes, int pos) {
+        return ((bytes[pos] & 0xFF) << 8) | (bytes[pos + 1] & 0xFF);
     }
 
     private static void patchSingleFileGroup(File cacheDir, BufferedFile data, Cache master, int archiveId, int group, byte[] file) throws Exception {
@@ -305,15 +520,21 @@ public class PatchInfinityBladeVisual {
                 writeString(out, itemName);
                 while (i < template.length && template[i++] != 0) {
                 }
-            } else if (opcode == 5) {
-                // Inventory icon pitch (xan2d) - override so only the icon angle changes.
+            } else if (opcode == 4 && overrideIconAngles && !keepIconAngles) {
                 out.write(opcode);
-                writeShort(out, ICON_XAN_2D);
+                writeShort(out, shieldFit ? ICON_ZOOM_SHIELD : ICON_ZOOM_SWORD);
                 i += 2;
-            } else if (opcode == 6) {
-                // Inventory icon yaw (yan2d) - override so only the icon angle changes.
+            } else if (opcode == 5 && overrideIconAngles && !keepIconAngles) {
                 out.write(opcode);
-                writeShort(out, ICON_YAN_2D);
+                writeShort(out, shieldFit ? ICON_XAN_SHIELD : ICON_XAN_SWORD);
+                i += 2;
+            } else if (opcode == 6 && overrideIconAngles) {
+                out.write(opcode);
+                if (keepIconAngles) {
+                    writeShort(out, (readUnsignedShort(template, i) + ROTATION_HALF) & 2047);
+                } else {
+                    writeShort(out, shieldFit ? ICON_YAN_SHIELD : ICON_YAN_SWORD);
+                }
                 i += 2;
             } else if (opcode == 40 || opcode == 41) {
                 int count = template[i] & 0xFF;
@@ -333,13 +554,18 @@ public class PatchInfinityBladeVisual {
                 opcode == 11 || opcode == 12 || opcode == 16 || opcode == 65 || opcode == 90 ||
                 opcode == 91 || opcode == 92 || opcode == 93 || opcode == 95 || opcode == 96 ||
                 opcode == 97 || opcode == 98 || opcode == 110 || opcode == 111 || opcode == 112 ||
-                opcode == 115 || opcode == 121 || opcode == 122 || opcode == 125 || opcode == 126 ||
-                opcode == 127 || opcode == 128 || opcode == 129 || opcode == 130 || opcode == 132) {
+                opcode == 113 || opcode == 114 || opcode == 115 || opcode == 121 || opcode == 122 ||
+                opcode == 125 || opcode == 126 || opcode == 127 || opcode == 128 || opcode == 129 ||
+                opcode == 130 || opcode == 132) {
             switch (opcode) {
                 case 11:
                 case 16:
                 case 65:
                     len = 0;
+                    break;
+                case 113:
+                case 114:
+                    len = 1;
                     break;
                 case 12:
                     len = 4;
@@ -467,10 +693,24 @@ public class PatchInfinityBladeVisual {
             // OBJ Y is the blade's long axis; map it to model Z (vertical). Inventory and
             // worn use different scales/offsets so the icon frames like the Dragon longsword
             // and the wielded blade sits in the hand.
-            if (inventoryModel) {
+            if (inventoryModel && shieldFit) {
+                x = clampModelCoord((int) Math.round((vert.x - centerX) * (24.0 / width) + 1.0));
+                y = clampModelCoord((int) Math.round((vert.z - centerZ) * (8.0 / depth) - 4.0));
+                double blade = flipLength ? (vert.y - minY) : (maxY - vert.y);
+                z = clampModelCoord((int) Math.round(blade * (39.0 / height) - 28.0));
+            } else if (inventoryModel) {
                 x = clampModelCoord((int) Math.round((vert.x - centerX) * (47.0 / width) - 10.5));
                 y = clampModelCoord((int) Math.round((vert.z - centerZ) * (6.0 / depth) - 4.0));
-                z = clampModelCoord((int) Math.round(58.0 - (vert.y - minY) * (112.0 / height)));
+                if (flipLength) {
+                    z = clampModelCoord((int) Math.round((vert.y - minY) * (112.0 / height) - 58.0));
+                } else {
+                    z = clampModelCoord((int) Math.round(58.0 - (vert.y - minY) * (112.0 / height)));
+                }
+            } else if (shieldFit) {
+                x = clampModelCoord((int) Math.round((vert.x - centerX) * (29.0 / width) + 35.5));
+                y = clampModelCoord((int) Math.round((vert.z - centerZ) * (10.0 / depth) - 79.0));
+                double blade = flipLength ? (vert.y - minY) : (maxY - vert.y);
+                z = clampModelCoord((int) Math.round(blade * (36.0 / height) - 30.0));
             } else {
                 x = clampModelCoord((int) Math.round((vert.x - centerX) * (13.0 / width) - 31.5));
                 y = clampModelCoord((int) Math.round((vert.z - centerZ) * (26.0 / depth) - 85.0));
@@ -500,7 +740,7 @@ public class PatchInfinityBladeVisual {
         }
 
         System.out.println("Loaded " + objPath + " as " + vertices.size() + " vertices / " + faces.size() + " double-sided triangles for " + (inventoryModel ? "inventory" : "worn") + " model");
-        return encodeOldModel(vertices, faces, !inventoryModel);
+        return encodeOldModel(vertices, faces, !inventoryModel, !inventoryModel && shieldFit);
     }
 
     private static BufferedImage loadDiffuseTexture(Path objPath, String mtlName) {
@@ -634,13 +874,13 @@ public class PatchInfinityBladeVisual {
         return ux * vy - uy * vx;
     }
 
-    private static byte[] encodeOldModel(List<V> vertices, List<F> faces, boolean skinnedForWeaponHand) throws Exception {
+    private static byte[] encodeOldModel(List<V> vertices, List<F> faces, boolean skinned, boolean shieldSkin) throws Exception {
         ByteArrayOutputStream vertexFlags = new ByteArrayOutputStream();
         ByteArrayOutputStream xData = new ByteArrayOutputStream();
         ByteArrayOutputStream yData = new ByteArrayOutputStream();
         ByteArrayOutputStream zData = new ByteArrayOutputStream();
         ByteArrayOutputStream vertexBones = new ByteArrayOutputStream();
-        boolean[] secondaryWeaponBones = skinnedForWeaponHand ? selectSecondaryWeaponBones(vertices) : null;
+        boolean[] secondaryWeaponBones = skinned && !shieldSkin ? selectSecondaryWeaponBones(vertices) : null;
         int px = 0, py = 0, pz = 0;
         for (int i = 0; i < vertices.size(); i++) {
             V vert = vertices.get(i);
@@ -650,8 +890,8 @@ public class PatchInfinityBladeVisual {
             if (dy != 0) { flags |= 2; writeSmart(yData, dy); }
             if (dz != 0) { flags |= 4; writeSmart(zData, dz); }
             vertexFlags.write(flags);
-            if (skinnedForWeaponHand) {
-                vertexBones.write(secondaryWeaponBones[i] ? 200 : 50);
+            if (skinned) {
+                vertexBones.write(shieldSkin ? 161 : (secondaryWeaponBones[i] ? 200 : 50));
             }
             px = vert.x; py = vert.y; pz = vert.z;
         }
@@ -668,15 +908,15 @@ public class PatchInfinityBladeVisual {
             writeSmart(triangleIndices, face.c - face.b);
             last = face.c;
             writeShort(colors, face.color);
-            if (skinnedForWeaponHand) {
-                triangleBones.write(29);
+            if (skinned) {
+                triangleBones.write(shieldSkin ? 55 : 29);
             }
         }
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         out.write(vertexFlags.toByteArray());
         out.write(triangleTypes.toByteArray());
-        if (skinnedForWeaponHand) {
+        if (skinned) {
             out.write(triangleBones.toByteArray());
             out.write(vertexBones.toByteArray());
         }
@@ -692,10 +932,10 @@ public class PatchInfinityBladeVisual {
         out.write(0); // triangle info
         // Render priority: worn model uses the high-priority tier (> 10) so the blade is
         // drawn in front of the player model instead of being occluded behind it.
-        out.write(skinnedForWeaponHand ? WORN_RENDER_PRIORITY : INVENTORY_RENDER_PRIORITY);
+        out.write(skinned ? WORN_RENDER_PRIORITY : INVENTORY_RENDER_PRIORITY);
         out.write(0); // alpha
-        out.write(skinnedForWeaponHand ? 1 : 0); // triangle bones
-        out.write(skinnedForWeaponHand ? 1 : 0); // vertex bones
+        out.write(skinned ? 1 : 0); // triangle bones
+        out.write(skinned ? 1 : 0); // vertex bones
         writeShort(out, xData.size());
         writeShort(out, yData.size());
         writeShort(out, zData.size());

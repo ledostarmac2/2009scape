@@ -5,7 +5,7 @@ title Install Emberblade cache
 set ROOT=%~dp0
 set CACHE=%ROOT%game\data\cache
 set BACKUP=%ROOT%game\data\custom-items\emberblade\cache-backup
-set OBJ=%ROOT%game\data\custom-items\emberblade\emberblade_model_1.obj
+set OBJ=%ROOT%..\Custom Items\Emberblade\Model (1).obj
 set LOCAL=%USERPROFILE%\cache\runescape
 
 echo [emberblade] Stopping running Java processes...

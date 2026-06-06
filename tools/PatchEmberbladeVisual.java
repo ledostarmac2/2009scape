@@ -25,6 +25,10 @@ public class PatchEmberbladeVisual {
     private static String itemName = "Emberblade";
     private static final int MAX_INVENTORY_SOURCE_TRIANGLES = 700;
     private static final int MAX_WORN_SOURCE_TRIANGLES = 300;
+    private static final int ROTATION_HALF = 1024;
+    private static final int ICON_ZOOM_SWORD = 1570;
+    private static final int ICON_XAN_SWORD = 400; // reverted to the "almost there" angle
+    private static final int ICON_YAN_SWORD = 360 + ROTATION_HALF;
 
     private static final class V {
         final int x;
@@ -96,7 +100,7 @@ public class PatchEmberbladeVisual {
         BufferedFile data = new BufferedFile(new FileOnDisk(new File(cacheDir, "main_file_cache.dat2"), "rw", Long.MAX_VALUE), 5200, 0);
         Cache master = new Cache(255, data, new BufferedFile(new FileOnDisk(new File(cacheDir, "main_file_cache.idx255"), "rw", Long.MAX_VALUE), 6000, 0), 1000000);
 
-        Path objPath = args.length >= 3 ? Path.of(args[2]) : Path.of("game/data/custom-items/emberblade/emberblade_model_1.obj");
+        Path objPath = args.length >= 3 ? Path.of(args[2]) : Path.of("../Custom Items/Emberblade/Model (1).obj");
         String mode = args.length >= 4 ? args[3].toLowerCase() : "all";
         if (args.length >= 9) {
             itemId = Integer.parseInt(args[4]);
@@ -279,6 +283,18 @@ public class PatchEmberbladeVisual {
                 writeString(out, itemName);
                 while (i < template.length && template[i++] != 0) {
                 }
+            } else if (opcode == 4) {
+                out.write(opcode);
+                writeShort(out, ICON_ZOOM_SWORD);
+                i += 2;
+            } else if (opcode == 5) {
+                out.write(opcode);
+                writeShort(out, ICON_XAN_SWORD);
+                i += 2;
+            } else if (opcode == 6) {
+                out.write(opcode);
+                writeShort(out, ICON_YAN_SWORD);
+                i += 2;
             } else if (opcode == 40 || opcode == 41) {
                 int count = template[i] & 0xFF;
                 i += 1 + count * 4;
@@ -297,13 +313,18 @@ public class PatchEmberbladeVisual {
                 opcode == 11 || opcode == 12 || opcode == 16 || opcode == 65 || opcode == 90 ||
                 opcode == 91 || opcode == 92 || opcode == 93 || opcode == 95 || opcode == 96 ||
                 opcode == 97 || opcode == 98 || opcode == 110 || opcode == 111 || opcode == 112 ||
-                opcode == 115 || opcode == 121 || opcode == 122 || opcode == 125 || opcode == 126 ||
+                opcode == 113 || opcode == 114 || opcode == 115 || opcode == 121 || opcode == 122 ||
+                opcode == 125 || opcode == 126 ||
                 opcode == 127 || opcode == 128 || opcode == 129 || opcode == 130 || opcode == 132) {
             switch (opcode) {
                 case 11:
                 case 16:
                 case 65:
                     len = 0;
+                    break;
+                case 113:
+                case 114:
+                    len = 1;
                     break;
                 case 12:
                     len = 4;

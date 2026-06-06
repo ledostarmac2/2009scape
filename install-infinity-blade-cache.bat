@@ -5,7 +5,7 @@ title Install Infinity Blade cache
 set ROOT=%~dp0
 set CACHE=%ROOT%game\data\cache
 set BACKUP=%ROOT%game\data\custom-items\infinity-blade\cache-backup-14666
-set OBJ=%ROOT%..\Custom Items\Mobile - Infinity Blade 3 - Weapons - Infinity Blade (High Poly)\Infinity Blade Fancy.obj
+set OBJ=%ROOT%..\Custom Items\Infinity Blade\v2.obj
 set LOCAL=%USERPROFILE%\cache\runescape
 set JAVAC=C:\Users\btarabocchia\Java\temurin-17.0.19+10\bin\javac.exe
 

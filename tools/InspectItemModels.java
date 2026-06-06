@@ -59,9 +59,10 @@ public class InspectItemModels {
             }
             if (opcode == 1 || opcode == 4 || opcode == 5 || opcode == 6 || opcode == 7 || opcode == 8 ||
                     opcode == 23 || opcode == 24 || opcode == 25 || opcode == 26 || opcode == 90 ||
-                    opcode == 91 || opcode == 92 || opcode == 93 || opcode == 95 || opcode == 96 ||
-                    opcode == 97 || opcode == 98 || opcode == 110 || opcode == 111 || opcode == 112 ||
-                    opcode == 115 || opcode == 121 || opcode == 122) {
+                    opcode == 91 || opcode == 92 || opcode == 93 || opcode == 94 || opcode == 95 ||
+                    opcode == 96 || opcode == 97 || opcode == 98 || opcode == 110 || opcode == 111 ||
+                    opcode == 112 || opcode == 121 || opcode == 122 || opcode == 139 || opcode == 140 ||
+                    opcode == 148 || opcode == 149) {
                 int value = readUnsignedShort(item, pos);
                 System.out.println("  opcode " + opcode + " = " + value);
                 if (opcode == 1 || opcode == 23 || opcode == 24 || opcode == 25 || opcode == 26) {
@@ -73,8 +74,11 @@ public class InspectItemModels {
                 while (pos < item.length && item[pos++] != 0) {
                 }
                 System.out.println("  opcode " + opcode + " = " + new String(item, start, pos - start - 1));
-            } else if (opcode == 11 || opcode == 16 || opcode == 65) {
+            } else if (opcode == 11 || opcode == 15 || opcode == 16 || opcode == 65) {
                 System.out.println("  opcode " + opcode);
+            } else if (opcode == 13 || opcode == 14 || opcode == 27 || opcode == 113 || opcode == 114 || opcode == 115) {
+                int value = item[pos++] & 0xFF;
+                System.out.println("  opcode " + opcode + " = " + value);
             } else if (opcode == 12) {
                 System.out.println("  opcode 12 = " + readInt(item, pos));
                 pos += 4;
@@ -86,6 +90,13 @@ public class InspectItemModels {
                 int count = item[pos++] & 0xFF;
                 System.out.println("  opcode 42 count=" + count);
                 pos += count;
+            } else if (opcode == 125 || opcode == 126 || opcode == 127 || opcode == 128 || opcode == 129 || opcode == 130) {
+                System.out.println("  opcode " + opcode + " offset bytes");
+                pos += 3;
+            } else if (opcode == 132) {
+                int count = item[pos++] & 0xFF;
+                System.out.println("  opcode 132 count=" + count);
+                pos += count * 2;
             } else if (opcode >= 100 && opcode < 110) {
                 pos += 4;
             } else if (opcode == 249) {

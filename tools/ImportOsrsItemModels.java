@@ -4,7 +4,9 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.zip.GZIPOutputStream;
 import net.runelite.cache.definitions.ModelDefinition;
 import net.runelite.cache.definitions.loaders.ModelLoader;
@@ -15,6 +17,7 @@ import rt4.Cache;
 import rt4.FileOnDisk;
 import rt4.Js5Compression;
 import rt4.Js5Index;
+import rt4.RawModel;
 
 public class ImportOsrsItemModels {
     private static final int ITEM_ARCHIVE = 19;
@@ -28,21 +31,24 @@ public class ImportOsrsItemModels {
             int male1,
             int female0,
             int female1,
+            int maleHead,
+            int femaleHead,
             int zoom2d,
             int xan2d,
             int yan2d,
             int zan2d,
             int xOffset2d,
-            int yOffset2d) {}
+            int yOffset2d,
+            boolean tradeable) {}
 
     private static final ImportItem[] ITEMS = {
-            new ImportItem(14659, "Twisted bow", 32799, 32674, -1, 39561, -1, 1200, 508, 124, 0, 7, 2),
-            new ImportItem(14660, "Abyssal dagger", 29598, 29425, -1, 42619, -1, 760, 472, 1276, 0, -5, 3),
-            new ImportItem(14661, "Ghrazi rapier", 35739, 35374, -1, 35369, -1, 1570, 400, 360, 0, 0, -5),
-            new ImportItem(14662, "Scythe of vitur", 35742, 35371, -1, 32906, -1, 2160, 584, 12, 0, -1, 2),
-            new ImportItem(14663, "Ancestral hat", 32794, 32655, -1, 32663, -1, 980, 208, 220, 0, 0, -18),
-            new ImportItem(14664, "Ancestral robe top", 32790, 32657, 32658, 32664, 32665, 1870, 376, 176, 0, 0, -3),
-            new ImportItem(14665, "Ancestral robe bottom", 32787, 32653, -1, 32662, -1, 1690, 408, 2024, 0, 5, 7),
+            new ImportItem(14659, "Ferocious gloves", 36141, 36325, -1, 36335, -1, -1, -1, 917, 420, 1082, 0, 0, -1, false),
+            new ImportItem(14660, "Neitiznot faceguard", 38897, 38857, -1, 38858, -1, 38873, 38873, 984, 126, 129, 0, -1, 1, false),
+            new ImportItem(14661, "Primordial boots", 29397, 29250, -1, 29255, -1, -1, -1, 976, 147, 279, 0, 5, -5, true),
+            new ImportItem(14662, "Scythe of vitur", 35742, 35371, -1, 32906, -1, -1, -1, 2160, 584, 12, 0, -1, 2, true),
+            new ImportItem(14663, "Ancestral hat", 32794, 32655, -1, 32663, -1, -1, -1, 980, 208, 220, 0, 0, -18, true),
+            new ImportItem(14664, "Ancestral robe top", 32790, 32657, 32658, 32664, 32665, -1, -1, 1870, 376, 176, 0, 0, -3, true),
+            new ImportItem(14665, "Ancestral robe bottom", 32787, 32653, -1, 32662, -1, -1, -1, 1690, 408, 2024, 0, 5, 7, true),
     };
 
     private record V(int x, int y, int z, int bone) {}
@@ -56,6 +62,10 @@ public class ImportOsrsItemModels {
         Path backupDir = Path.of(args[1]);
         Path modelDir = Path.of(args[2]);
         Path objOut = Path.of(args[3]);
+        Set<Integer> onlyItems = new HashSet<>();
+        for (int i = 4; i < args.length; i++) {
+            onlyItems.add(Integer.parseInt(args[i]));
+        }
         Files.createDirectories(backupDir);
         Files.createDirectories(objOut);
         backup(cacheDir, backupDir, "main_file_cache.dat2");
@@ -68,14 +78,19 @@ public class ImportOsrsItemModels {
 
         List<Integer> patchedModels = new ArrayList<>();
         for (ImportItem item : ITEMS) {
-            for (int modelId : new int[] { item.ground, item.male0, item.male1, item.female0, item.female1 }) {
+            if (!onlyItems.isEmpty() && !onlyItems.contains(item.itemId)) {
+                continue;
+            }
+            for (int modelId : new int[] { item.ground, item.male0, item.male1, item.female0, item.female1, item.maleHead, item.femaleHead }) {
                 if (modelId < 0 || patchedModels.contains(modelId)) {
                     continue;
                 }
                 ModelDefinition model = loadOsrsModel(modelDir.resolve(modelId + ".container"), modelId);
                 exportObj(model, objOut.resolve(modelId + ".obj"), objOut.resolve(modelId + ".mtl"));
-                boolean worn = modelId == item.male0 || modelId == item.male1 || modelId == item.female0 || modelId == item.female1;
-                patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, modelId, encodeOldModel(model, item, worn));
+                boolean worn = modelId == item.male0 || modelId == item.male1 || modelId == item.female0 || modelId == item.female1 ||
+                        modelId == item.maleHead || modelId == item.femaleHead;
+                patchSingleFileGroup(cacheDir, data, master, MODEL_ARCHIVE, modelId,
+                        encodeOldModel(model, item, worn, loadRigReference(cacheDir, item, modelId)));
                 patchedModels.add(modelId);
                 System.out.println("Patched model " + modelId + " vertices=" + model.vertexCount + " faces=" + model.faceCount
                         + " worn=" + worn + " vskin=" + (model.packedVertexGroups != null));
@@ -123,7 +138,7 @@ public class ImportOsrsItemModels {
         }
     }
 
-    private static byte[] encodeOldModel(ModelDefinition model, ImportItem item, boolean worn) throws Exception {
+    private static byte[] encodeOldModel(ModelDefinition model, ImportItem item, boolean worn, RefRig rig) throws Exception {
         List<V> vertices = new ArrayList<>();
         Bounds bounds = Bounds.of(model);
         for (int i = 0; i < model.vertexCount; i++) {
@@ -142,7 +157,7 @@ public class ImportOsrsItemModels {
             // Use the real OSRS per-vertex skin (vskin) labels when present. OSRS inherited the
             // RS2 transform-group numbering, so these should line up with the 2009 player skeleton.
             // If a model has no vskin we emit -1 (static, but solid) -- never a hardcoded guess.
-            int bone = model.packedVertexGroups != null ? model.packedVertexGroups[i] : -1;
+            int bone = model.packedVertexGroups != null ? model.packedVertexGroups[i] : rig == null ? -1 : rig.nearestBone(x, y, z, bounds);
             vertices.add(new V(x, y, z, bone));
         }
         List<F> faces = new ArrayList<>();
@@ -160,8 +175,91 @@ public class ImportOsrsItemModels {
         return encodeOldModel(vertices, faces);
     }
 
+    private record RefRig(int[] x, int[] y, int[] z, int[] bone, Bounds bounds) {
+        int nearestBone(int vx, int vy, int vz, Bounds source) {
+            double nx = (vx - source.minX) / source.width();
+            double ny = (vy - source.minY) / source.height();
+            double nz = (vz - source.minZ) / source.depth();
+            double best = Double.MAX_VALUE;
+            int bestBone = -1;
+            for (int i = 0; i < x.length; i++) {
+                double rx = (x[i] - bounds.minX) / bounds.width();
+                double ry = (y[i] - bounds.minY) / bounds.height();
+                double rz = (z[i] - bounds.minZ) / bounds.depth();
+                double dx = nx - rx;
+                double dy = ny - ry;
+                double dz = nz - rz;
+                double dist = dx * dx + dy * dy + dz * dz;
+                if (dist < best) {
+                    best = dist;
+                    bestBone = bone[i];
+                }
+            }
+            return bestBone;
+        }
+    }
+
+    private static RefRig loadRigReference(File cacheDir, ImportItem item, int modelId) throws Exception {
+        int referenceId = rigReferenceModel(item, modelId);
+        if (referenceId < 0) {
+            return null;
+        }
+        BufferedFile data = new BufferedFile(new FileOnDisk(new File(cacheDir, "main_file_cache.dat2"), "r", Long.MAX_VALUE), 5200, 0);
+        Cache models = new Cache(MODEL_ARCHIVE, data, new BufferedFile(new FileOnDisk(new File(cacheDir, "main_file_cache.idx" + MODEL_ARCHIVE), "r", Long.MAX_VALUE), 6000, 0), 1000000);
+        byte[] packed = models.read(referenceId);
+        if (packed == null) {
+            throw new IllegalStateException("Missing rig reference model " + referenceId);
+        }
+        RawModel reference = new RawModel(Js5Compression.uncompress(stripVersion(packed)));
+        if (reference.vertexBones == null) {
+            throw new IllegalStateException("Rig reference model has no vertex bones: " + referenceId);
+        }
+        int[] x = new int[reference.vertexCount];
+        int[] y = new int[reference.vertexCount];
+        int[] z = new int[reference.vertexCount];
+        int[] bone = new int[reference.vertexCount];
+        for (int i = 0; i < reference.vertexCount; i++) {
+            x[i] = reference.vertexX[i];
+            y[i] = reference.vertexY[i];
+            z[i] = reference.vertexZ[i];
+            bone[i] = reference.vertexBones[i] & 0xFF;
+        }
+        return new RefRig(x, y, z, bone, Bounds.of(reference));
+    }
+
+    private static int rigReferenceModel(ImportItem item, int modelId) {
+        if (item.itemId == 14659) {
+            if (modelId == item.male0) return 13307;   // Barrows gloves male
+            if (modelId == item.female0) return 13319; // Barrows gloves female
+        } else if (item.itemId == 14660) {
+            if (modelId == item.male0) return 21873;   // Helm of neitiznot male
+            if (modelId == item.female0) return 21906; // Helm of neitiznot female
+            if (modelId == item.maleHead) return 39516;
+            if (modelId == item.femaleHead) return 38751;
+        } else if (item.itemId == 14661) {
+            if (modelId == item.male0) return 27738;   // Dragon boots male
+            if (modelId == item.female0) return 27754; // Dragon boots female
+        }
+        return -1;
+    }
+
     private record Bounds(int minX, int maxX, int minY, int maxY, int minZ, int maxZ) {
         static Bounds of(ModelDefinition model) {
+            int minX = Integer.MAX_VALUE, maxX = Integer.MIN_VALUE;
+            int minY = Integer.MAX_VALUE, maxY = Integer.MIN_VALUE;
+            int minZ = Integer.MAX_VALUE, maxZ = Integer.MIN_VALUE;
+            for (int i = 0; i < model.vertexCount; i++) {
+                minX = Math.min(minX, model.vertexX[i]);
+                maxX = Math.max(maxX, model.vertexX[i]);
+                minY = Math.min(minY, model.vertexY[i]);
+                maxY = Math.max(maxY, model.vertexY[i]);
+                minZ = Math.min(minZ, model.vertexZ[i]);
+                maxZ = Math.max(maxZ, model.vertexZ[i]);
+            }
+            return new Bounds(minX, maxX, minY, maxY, minZ, maxZ);
+        }
+
+        static Bounds of(RawModel model) {
             int minX = Integer.MAX_VALUE, maxX = Integer.MIN_VALUE;
             int minY = Integer.MAX_VALUE, maxY = Integer.MIN_VALUE;
             int minZ = Integer.MAX_VALUE, maxZ = Integer.MIN_VALUE;
@@ -228,8 +326,12 @@ public class ImportOsrsItemModels {
     }
 
     private static byte[] rewriteItemDefinition(byte[] def, ImportItem item) throws Exception {
+        if (def == null) {
+            def = new byte[] { 0 };
+        }
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        boolean seen1 = false, seen4 = false, seen5 = false, seen6 = false, seen7 = false, seen8 = false, seen23 = false, seen24 = false, seen25 = false, seen26 = false, seen95 = false;
+        boolean seen1 = false, seen2 = false, seen4 = false, seen5 = false, seen6 = false, seen7 = false, seen8 = false;
+        boolean seen23 = false, seen24 = false, seen25 = false, seen26 = false, seen36 = false, seen65 = false, seen90 = false, seen91 = false, seen95 = false;
         int i = 0;
         while (i < def.length) {
             int opcode = def[i++] & 0xFF;
@@ -238,6 +340,8 @@ public class ImportOsrsItemModels {
             }
             if (opcode == 1) {
                 out.write(opcode); writeShort(out, item.ground); i += 2; seen1 = true;
+            } else if (opcode == 2) {
+                out.write(opcode); writeString(out, item.name); while (def[i++] != 0) {} seen2 = true;
             } else if (opcode == 4) {
                 out.write(opcode); writeShort(out, item.zoom2d); i += 2; seen4 = true;
             } else if (opcode == 5) {
@@ -249,17 +353,28 @@ public class ImportOsrsItemModels {
             } else if (opcode == 8) {
                 out.write(opcode); writeShort(out, item.yOffset2d); i += 2; seen8 = true;
             } else if (opcode == 23) {
-                if (shouldWriteWornModels(item)) { out.write(opcode); writeShort(out, item.male0); out.write(0); }
-                i += wornModelOpcodeLength(def, i); seen23 = true;
+                if (shouldWriteWornModels(item)) { out.write(opcode); writeShort(out, item.male0); }
+                i += 2; seen23 = true;
             } else if (opcode == 24) {
                 if (shouldWriteWornModels(item) && item.male1 >= 0) { out.write(opcode); writeShort(out, item.male1); }
                 i += 2; seen24 = true;
             } else if (opcode == 25) {
-                if (shouldWriteWornModels(item)) { out.write(opcode); writeShort(out, item.female0); out.write(0); }
-                i += wornModelOpcodeLength(def, i); seen25 = true;
+                if (shouldWriteWornModels(item)) { out.write(opcode); writeShort(out, item.female0); }
+                i += 2; seen25 = true;
             } else if (opcode == 26) {
                 if (shouldWriteWornModels(item) && item.female1 >= 0) { out.write(opcode); writeShort(out, item.female1); }
                 i += 2; seen26 = true;
+            } else if (opcode == 36) {
+                out.write(opcode); writeString(out, "Wear"); while (def[i++] != 0) {} seen36 = true;
+            } else if (opcode == 65) {
+                if (item.tradeable) { out.write(opcode); }
+                seen65 = true;
+            } else if (opcode == 90) {
+                if (item.maleHead >= 0) { out.write(opcode); writeShort(out, item.maleHead); }
+                i += 2; seen90 = true;
+            } else if (opcode == 91) {
+                if (item.femaleHead >= 0) { out.write(opcode); writeShort(out, item.femaleHead); }
+                i += 2; seen91 = true;
             } else if (opcode == 95) {
                 if (item.zan2d != 0) { out.write(opcode); writeShort(out, item.zan2d); }
                 i += 2; seen95 = true;
@@ -274,24 +389,29 @@ public class ImportOsrsItemModels {
             }
         }
         if (!seen1) { out.write(1); writeShort(out, item.ground); }
+        if (!seen2) { out.write(2); writeString(out, item.name); }
         if (!seen4) { out.write(4); writeShort(out, item.zoom2d); }
         if (!seen5) { out.write(5); writeShort(out, item.xan2d); }
         if (!seen6) { out.write(6); writeShort(out, item.yan2d); }
         if (!seen7) { out.write(7); writeShort(out, item.xOffset2d); }
         if (!seen8) { out.write(8); writeShort(out, item.yOffset2d); }
+        if (shouldWriteWornModels(item) && !seen36) { out.write(36); writeString(out, "Wear"); }
+        if (item.tradeable && !seen65) { out.write(65); }
         if (item.zan2d != 0 && !seen95) { out.write(95); writeShort(out, item.zan2d); }
-        if (shouldWriteWornModels(item) && item.male0 >= 0 && !seen23) { out.write(23); writeShort(out, item.male0); out.write(0); }
+        if (shouldWriteWornModels(item) && item.male0 >= 0 && !seen23) { out.write(23); writeShort(out, item.male0); }
         if (shouldWriteWornModels(item) && item.male1 >= 0 && !seen24) { out.write(24); writeShort(out, item.male1); }
-        if (shouldWriteWornModels(item) && item.female0 >= 0 && !seen25) { out.write(25); writeShort(out, item.female0); out.write(0); }
+        if (shouldWriteWornModels(item) && item.female0 >= 0 && !seen25) { out.write(25); writeShort(out, item.female0); }
         if (shouldWriteWornModels(item) && item.female1 >= 0 && !seen26) { out.write(26); writeShort(out, item.female1); }
+        if (item.maleHead >= 0 && !seen90) { out.write(90); writeShort(out, item.maleHead); }
+        if (item.femaleHead >= 0 && !seen91) { out.write(91); writeShort(out, item.femaleHead); }
         out.write(0);
         return out.toByteArray();
     }
 
     private static boolean shouldWriteWornModels(ImportItem item) {
-        // All seven imported items now write worn models (weapons 14659-14662 + ancestral
-        // armor 14663-14665). Armor rigs via the real OSRS vskin labels read in encodeOldModel.
-        return item.itemId >= 14659 && item.itemId <= 14665;
+        // Equipment rigs via the real OSRS vskin labels read in encodeOldModel. These
+        // one-slot items share the same skeleton group labels as their 2009 references.
+        return item.male0 >= 0 || item.female0 >= 0;
     }
 
     private static int wornModelOpcodeLength(byte[] def, int payloadStart) {
@@ -598,6 +718,13 @@ public class ImportOsrsItemModels {
     private static void writeShort(ByteArrayOutputStream out, int value) {
         out.write((value >>> 8) & 0xFF);
         out.write(value & 0xFF);
+    }
+
+    private static void writeString(ByteArrayOutputStream out, String value) {
+        for (int i = 0; i < value.length(); i++) {
+            out.write(value.charAt(i) & 0xFF);
+        }
+        out.write(0);
     }
 
     private static void writeInt(ByteArrayOutputStream out, int value) {
