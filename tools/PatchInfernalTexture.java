@@ -36,26 +36,21 @@ public final class PatchInfernalTexture {
         File osrsCache = args.length > 1 ? new File(args[1]) : null;
 
         byte[] nativeTex = read2009Texture(cacheDir, TARGET_TEXTURE_ID);
-        if (nativeTex != null && is2009TextureOp(nativeTex)) {
-            System.out.println("preserving native 2009 TextureOp slot " + TARGET_TEXTURE_ID
-                    + " (" + nativeTex.length + " bytes; OSRS rev233 bytes are incompatible)");
-        } else {
-            byte[] textureBytes = readOsrsTexture(osrsCache, SOURCE_TEXTURE_ID);
-            if (textureBytes == null) {
-                textureBytes = nativeTex;
-            }
-            if (textureBytes == null) {
-                throw new IllegalStateException("Missing infernal lava texture " + SOURCE_TEXTURE_ID
-                        + " in OSRS cache and game cache");
-            }
-            if (!is2009TextureOp(textureBytes)) {
-                throw new IllegalStateException("OSRS texture " + SOURCE_TEXTURE_ID + " is rev233 ("
-                        + textureBytes.length + " bytes) and cannot be copied raw into archive-9; "
-                        + "need a native 2009 TextureOp definition in slot " + TARGET_TEXTURE_ID);
-            }
+        byte[] textureBytes = nativeTex != null && is2009TextureOp(nativeTex)
+                ? nativeTex
+                : infernalTextureOpFallback();
+        if (nativeTex != null && !is2009TextureOp(nativeTex)) {
+            System.out.println("replacing incompatible slot " + TARGET_TEXTURE_ID + " ("
+                    + nativeTex.length + " bytes OSRS rev233) with native 2009 TextureOp ("
+                    + textureBytes.length + " bytes)");
             patchTextureGroup(cacheDir, TARGET_TEXTURE_ID, textureBytes);
-            System.out.println("texture " + SOURCE_TEXTURE_ID + " written to slot " + TARGET_TEXTURE_ID
+        } else if (nativeTex == null) {
+            patchTextureGroup(cacheDir, TARGET_TEXTURE_ID, textureBytes);
+            System.out.println("installed infernal TextureOp into slot " + TARGET_TEXTURE_ID
                     + " (" + textureBytes.length + " bytes)");
+        } else {
+            System.out.println("preserving native 2009 TextureOp slot " + TARGET_TEXTURE_ID
+                    + " (" + nativeTex.length + " bytes)");
         }
 
         patchTextureConfig(cacheDir);
@@ -190,6 +185,19 @@ public final class PatchInfernalTexture {
         }
         int opCount = raw[0] & 0xFF;
         return opCount >= 1 && opCount <= 8;
+    }
+
+    /**
+     * Captured native 2009 TextureOp for infernal lava (archive-9 group 59, 44 bytes).
+     * Procedural pipeline with no archive-8 sprite dependencies; matches OSRS infernal UVs.
+     */
+    private static byte[] infernalTextureOpFallback() {
+        return new byte[] {
+                0x03, 0x00, 0x00, 0x01, 0x00, 0x01, 0x03, 0x01, 0x00, 0x02, 0x08, 0x01, 0x01, 0x00, 0x00, 0x04,
+                0x00, 0x00, 0x0f, (byte) 0xff, 0x05, (byte) 0xfa, 0x0f, (byte) 0xff, 0x0a, (byte) 0xd4, 0x0c,
+                (byte) 0xed, 0x10, 0x00, 0x06, (byte) 0xb5, 0x01, 0x02, 0x00, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00,
+                0x00, 0x22, 0x00
+        };
     }
 
     private static BufferedFile openData(File cacheDir, String mode) throws Exception {
