@@ -11,21 +11,21 @@ import rt4.Js5Compression;
 import rt4.Js5Index;
 
 /**
- * Remap infernal cape lava for the 2009 client texture limit (valid ids 0-50).
+ * Import OSRS infernal cape lava (texture 59) into the game cache.
  *
- * OSRS infernal models reference texture 59, which is outside the 2009 client
- * rasterizer limit (valid ids 0-50). Fire cape lava already renders from slot 40.
- * This tool copies OSRS texture 59 into archive-9 slot {@link #TARGET_TEXTURE_ID}
- * and enables its animated config in archive-26. Model remapping is handled by
- * ImportOsrsItemBatch (textureRemap 59->40 in manifest).
+ * OSRS infernal models reference texture 59 natively. The 2009 client
+ * {@code Js5GlTextureProvider} allocates config arrays from archive-26 group-0
+ * count (680 in our cache), not a hardcoded 51-slot cap; {@code Rasteriser}
+ * passes model texture ids straight through with no remap. Import the OSRS
+ * pixels + animation config into slot 59 and keep models on 59 (no fire-cape 40).
  */
 public final class PatchInfernalTexture {
     private static final int TEXTURE_ARCHIVE = 9;
     private static final int CONFIG_ARCHIVE = 26;
     private static final int SOURCE_TEXTURE_ID = 59;
-    /** Fire-cape lava slot; proven to animate in the 2009 client. */
-    private static final int TARGET_TEXTURE_ID = 40;
-    private static final int REF_TEXTURE_ID = 40;
+    /** Native OSRS infernal lava slot. */
+    private static final int TARGET_TEXTURE_ID = 59;
+    private static final int REF_TEXTURE_ID = 59;
 
     public static void main(String[] args) throws Exception {
         if (args.length < 1) {
@@ -35,22 +35,27 @@ public final class PatchInfernalTexture {
         File cacheDir = new File(args[0]);
         File osrsCache = args.length > 1 ? new File(args[1]) : null;
 
-        byte[] textureBytes = readOsrsTexture(osrsCache, SOURCE_TEXTURE_ID);
-        if (textureBytes == null) {
-            textureBytes = read2009Texture(cacheDir, SOURCE_TEXTURE_ID);
-        }
-        if (textureBytes == null) {
-            throw new IllegalStateException("Missing infernal lava texture " + SOURCE_TEXTURE_ID
-                    + " in OSRS cache and game cache");
-        }
-        byte[] nativeTarget = read2009Texture(cacheDir, TARGET_TEXTURE_ID);
-        if (nativeTarget != null && nativeTarget.length > textureBytes.length) {
-            System.out.println("keeping native texture " + TARGET_TEXTURE_ID + " ("
-                    + nativeTarget.length + " bytes; OSRS source is " + textureBytes.length + " bytes)");
+        byte[] nativeTex = read2009Texture(cacheDir, TARGET_TEXTURE_ID);
+        if (nativeTex != null && is2009TextureOp(nativeTex)) {
+            System.out.println("preserving native 2009 TextureOp slot " + TARGET_TEXTURE_ID
+                    + " (" + nativeTex.length + " bytes; OSRS rev233 bytes are incompatible)");
         } else {
+            byte[] textureBytes = readOsrsTexture(osrsCache, SOURCE_TEXTURE_ID);
+            if (textureBytes == null) {
+                textureBytes = nativeTex;
+            }
+            if (textureBytes == null) {
+                throw new IllegalStateException("Missing infernal lava texture " + SOURCE_TEXTURE_ID
+                        + " in OSRS cache and game cache");
+            }
+            if (!is2009TextureOp(textureBytes)) {
+                throw new IllegalStateException("OSRS texture " + SOURCE_TEXTURE_ID + " is rev233 ("
+                        + textureBytes.length + " bytes) and cannot be copied raw into archive-9; "
+                        + "need a native 2009 TextureOp definition in slot " + TARGET_TEXTURE_ID);
+            }
             patchTextureGroup(cacheDir, TARGET_TEXTURE_ID, textureBytes);
-            System.out.println("texture " + SOURCE_TEXTURE_ID + " -> " + TARGET_TEXTURE_ID
-                    + " written (" + textureBytes.length + " bytes)");
+            System.out.println("texture " + SOURCE_TEXTURE_ID + " written to slot " + TARGET_TEXTURE_ID
+                    + " (" + textureBytes.length + " bytes)");
         }
 
         patchTextureConfig(cacheDir);
@@ -63,12 +68,12 @@ public final class PatchInfernalTexture {
         }
         try (Store store = new Store(osrsCache)) {
             store.load();
-            Archive archive = store.getIndex(IndexType.TEXTURES).getArchive(0);
+            Archive archive = store.getIndex(IndexType.TEXTURES).getArchive(id);
             if (archive == null) {
                 return null;
             }
             byte[] packed = store.getStorage().loadArchive(archive);
-            FSFile file = archive.getFiles(packed).findFile(id);
+            FSFile file = archive.getFiles(packed).findFile(0);
             if (file == null || file.getContents() == null || file.getContents().length == 0) {
                 return null;
             }
@@ -176,6 +181,15 @@ public final class PatchInfernalTexture {
         for (ParseTextureConfigBundle.Info info : infos) if (info.enabled) out.write((byte) info.byte61);
         for (ParseTextureConfigBundle.Info info : infos) if (info.enabled) writeShort(out, info.averageColor);
         return out.toByteArray();
+    }
+
+    /** 2009 archive-9 textures are TextureOp pipelines; OSRS rev233 blobs must not overwrite them. */
+    private static boolean is2009TextureOp(byte[] raw) {
+        if (raw == null || raw.length < 12) {
+            return false;
+        }
+        int opCount = raw[0] & 0xFF;
+        return opCount >= 1 && opCount <= 8;
     }
 
     private static BufferedFile openData(File cacheDir, String mode) throws Exception {
