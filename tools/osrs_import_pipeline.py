@@ -157,8 +157,9 @@ def step_compile():
          os.path.join(TOOLS, "ImportOsrsItemModels.java"),
          os.path.join(TOOLS, "PatchItemIconCameras.java"),
          os.path.join(TOOLS, "ParseTextureConfigBundle.java"),
-         os.path.join(TOOLS, "PatchInfernalTexture.java"),
          os.path.join(TOOLS, "RenderClientItemIconSheet.java")])
+    run([os.path.join(JDK, "javac.exe"), "-cp", runelite_cp() + ";" + CLIENT_JAR + ";" + TOOLS, "-d", TOOLS,
+         os.path.join(TOOLS, "PatchInfernalTexture.java")])
 
 
 def step_extract_defs(items):
@@ -279,12 +280,17 @@ def step_plan(items, defs, osrsbox):
 
 
 def step_recolor(items):
-    recolors = {}
+    overlays = {}
     for item in items:
+        entry = {}
         if item.get("recolor"):
-            recolors[str(item["newId"])] = {str(k): v for k, v in item["recolor"].items()}
+            entry["recolor"] = {str(k): v for k, v in item["recolor"].items()}
+        if item.get("textureRemap"):
+            entry["textureRemap"] = {str(k): v for k, v in item["textureRemap"].items()}
+        if entry:
+            overlays[str(item["newId"])] = entry
     with open(RECOLOR, "w", encoding="utf-8") as f:
-        json.dump(recolors, f, indent=2)
+        json.dump(overlays, f, indent=2)
         f.write("\n")
 
 
@@ -400,11 +406,12 @@ def step_server_configs(items, defs, osrsbox):
 
 
 def step_patch_infernal_texture(items):
-    """Archive-26 texture config: infernal cape lava needs animated=true on texture 59."""
+    """Import OSRS infernal lava into texture slot 50 and enable animation (client limit is ids 0-50)."""
     if not any(i.get("newId") == 14734 or i.get("osrsId") == 21295 for i in items):
         return
-    log("patching infernal cape texture 59 animation in archive 26")
-    run([os.path.join(JDK, "java.exe"), "-cp", base_cp(), "PatchInfernalTexture", GAME_CACHE])
+    log("importing infernal lava texture 59 -> slot 50 for 2009 client")
+    run([os.path.join(JDK, "java.exe"), "-cp", runelite_cp() + ";" + CLIENT_JAR + ";" + TOOLS,
+         "PatchInfernalTexture", GAME_CACHE, OSRS_CACHE])
 
 
 def step_verify(items):
