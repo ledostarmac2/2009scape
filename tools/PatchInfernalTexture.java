@@ -25,7 +25,12 @@ public final class PatchInfernalTexture {
     private static final int SOURCE_TEXTURE_ID = 59;
     /** Native OSRS infernal lava slot. */
     private static final int TARGET_TEXTURE_ID = 59;
-    private static final int REF_TEXTURE_ID = 59;
+    private static final int REF_TEXTURE_ID = 40;
+    /** Procedural infernal lava references archive-8 sprite group 768 (stub sheet). */
+    private static final int INFERNAL_SPRITE_ID = 768;
+    /** OSRS infernal lava animation (rev233 TextureDefinition). */
+    private static final int INFERNAL_ANIM_SPEED = 3;
+    private static final int INFERNAL_ANIM_DIRECTION = 1;
 
     public static void main(String[] args) throws Exception {
         if (args.length < 1) {
@@ -53,8 +58,52 @@ public final class PatchInfernalTexture {
                     + " (" + nativeTex.length + " bytes)");
         }
 
+        patchInfernalSprite(cacheDir, osrsCache);
         patchTextureConfig(cacheDir);
         System.out.println("texture config slot " + TARGET_TEXTURE_ID + " animated for infernal lava");
+    }
+
+    private static void patchInfernalSprite(File cacheDir, File osrsCache) throws Exception {
+        byte[] sprite = readOsrsSprite(osrsCache, INFERNAL_SPRITE_ID);
+        if (sprite == null) {
+            System.out.println("sprite " + INFERNAL_SPRITE_ID + " unavailable; keeping existing archive-8 group");
+            return;
+        }
+        patchTextureGroup(cacheDir, INFERNAL_SPRITE_ID, sprite, 8);
+        System.out.println("installed infernal sprite " + INFERNAL_SPRITE_ID + " (" + sprite.length + " bytes)");
+    }
+
+    private static byte[] readOsrsSprite(File osrsCache, int id) throws Exception {
+        if (osrsCache == null || !osrsCache.isDirectory()) {
+            return null;
+        }
+        BufferedFile data = openData(osrsCache, "r");
+        Cache sprites = openArchive(osrsCache, data, 8, "r");
+        byte[] packed = sprites.read(id);
+        if (packed == null) {
+            return null;
+        }
+        return Js5Compression.uncompress(stripVersion(packed));
+    }
+
+    private static void patchTextureGroup(File cacheDir, int groupId, byte[] raw, int archiveId) throws Exception {
+        BufferedFile data = openData(cacheDir, "rw");
+        Cache master = openArchive(cacheDir, data, 255, "rw");
+        Cache archive = openArchive(cacheDir, data, archiveId, "rw");
+
+        byte[] packedIndex = master.read(archiveId);
+        int archiveIndexVersion = readTrailingVersion(packedIndex);
+        byte[] indexBytes = Js5Compression.uncompress(packedIndex);
+        Js5Index index = new Js5Index(packedIndex, Buffer.crc32(packedIndex, packedIndex.length));
+
+        int version = 1;
+        for (int g = 0; g < index.size; g++) {
+            if (index.groupIds[g] == groupId) {
+                version = index.groupVersions[g];
+                break;
+            }
+        }
+        patchSingleFileGroup(cacheDir, data, master, archiveId, groupId, raw, indexBytes, index, archiveIndexVersion, version);
     }
 
     private static byte[] readOsrsTexture(File osrsCache, int id) throws Exception {
@@ -93,23 +142,7 @@ public final class PatchInfernalTexture {
     }
 
     private static void patchTextureGroup(File cacheDir, int groupId, byte[] raw) throws Exception {
-        BufferedFile data = openData(cacheDir, "rw");
-        Cache master = openArchive(cacheDir, data, 255, "rw");
-        Cache textures = openArchive(cacheDir, data, TEXTURE_ARCHIVE, "rw");
-
-        byte[] packedIndex = master.read(TEXTURE_ARCHIVE);
-        int archiveIndexVersion = readTrailingVersion(packedIndex);
-        byte[] indexBytes = Js5Compression.uncompress(packedIndex);
-        Js5Index index = new Js5Index(packedIndex, Buffer.crc32(packedIndex, packedIndex.length));
-
-        int version = 1;
-        for (int g = 0; g < index.size; g++) {
-            if (index.groupIds[g] == groupId) {
-                version = index.groupVersions[g];
-                break;
-            }
-        }
-        patchSingleFileGroup(cacheDir, data, master, TEXTURE_ARCHIVE, groupId, raw, indexBytes, index, archiveIndexVersion, version);
+        patchTextureGroup(cacheDir, groupId, raw, TEXTURE_ARCHIVE);
     }
 
     private static void patchTextureConfig(File cacheDir) throws Exception {
@@ -146,14 +179,12 @@ public final class PatchInfernalTexture {
         target.opaque = source != null && source.enabled ? source.opaque : ref.opaque;
         target.lowDetail = source != null && source.enabled ? source.lowDetail : ref.lowDetail;
         target.flag93 = source != null && source.enabled ? source.flag93 : ref.flag93;
-        target.speed = source != null && source.enabled ? source.speed : ref.speed;
-        target.direction = source != null && source.enabled ? source.direction : ref.direction;
-        target.materialType = source != null && source.enabled ? source.materialType : ref.materialType;
-        target.byte61 = source != null && source.enabled ? source.byte61 : ref.byte61;
-        if (source != null && source.enabled && source.averageColor != 0) {
-            target.averageColor = source.averageColor;
-        } else if (target.averageColor == 0 || target.averageColor == 108) {
-            target.averageColor = ref.averageColor;
+        target.speed = INFERNAL_ANIM_SPEED;
+        target.direction = INFERNAL_ANIM_DIRECTION;
+        target.materialType = ref.materialType;
+        target.byte61 = ref.byte61;
+        if (target.averageColor == 0 || target.averageColor == 108) {
+            target.averageColor = ref.averageColor != 0 ? ref.averageColor : 6089;
         }
 
         byte[] patched = encodeBundle(infos);
