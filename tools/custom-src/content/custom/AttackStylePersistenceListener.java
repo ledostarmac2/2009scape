@@ -16,17 +16,21 @@ import core.game.world.GameWorld;
 @Initializable
 public final class AttackStylePersistenceListener implements LoginListener {
     private static final String SAVED_ATTACK_STYLE_ATTR = "attack-style:saved-index";
+    private static final int RESTORE_DELAY_TICKS = 5;
+    private static final int RESTORE_ATTEMPTS = 3;
 
     @Override
     public void login(Player player) {
         int savedIndex = player.getSettings().getAttackStyleIndex();
         player.setAttribute(SAVED_ATTACK_STYLE_ATTR, savedIndex);
 
-        GameWorld.getPulser().submit(new Pulse(2) {
+        GameWorld.getPulser().submit(new Pulse(RESTORE_DELAY_TICKS) {
+            private int attempts = 0;
+
             @Override
             public boolean pulse() {
                 restoreAttackStyle(player);
-                return true;
+                return ++attempts >= RESTORE_ATTEMPTS;
             }
         });
     }
@@ -40,7 +44,6 @@ public final class AttackStylePersistenceListener implements LoginListener {
         int savedIndex = ((Number) saved).intValue();
         WeaponInterface weaponInterface = player.getExtension(WeaponInterface.class);
         if (weaponInterface == null) {
-            player.removeAttribute(SAVED_ATTACK_STYLE_ATTR);
             return;
         }
 
@@ -50,19 +53,17 @@ public final class AttackStylePersistenceListener implements LoginListener {
             iface = weaponInterface.getWeaponInterface();
         }
         if (iface == null) {
-            player.removeAttribute(SAVED_ATTACK_STYLE_ATTR);
             return;
         }
 
-        int maxIndex = iface.getAttackStyles().length - 1;
+        WeaponInterface.AttackStyle[] styles = iface.getAttackStyles();
+        int maxIndex = styles.length - 1;
         int clampedIndex = Math.max(0, Math.min(savedIndex, maxIndex));
+        WeaponInterface.AttackStyle targetStyle = styles[clampedIndex];
 
         Settings settings = player.getSettings();
-        if (settings.getAttackStyleIndex() != clampedIndex) {
-            settings.toggleAttackStyleIndex(clampedIndex);
-            weaponInterface.updateInterface();
-        }
-
-        player.removeAttribute(SAVED_ATTACK_STYLE_ATTR);
+        settings.toggleAttackStyleIndex(clampedIndex);
+        player.getProperties().setAttackStyle(targetStyle);
+        weaponInterface.updateInterface();
     }
 }
