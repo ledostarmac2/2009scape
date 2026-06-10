@@ -4,9 +4,12 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import java.util.zip.GZIPOutputStream;
 import net.runelite.cache.definitions.ModelDefinition;
 import net.runelite.cache.definitions.loaders.ModelLoader;
@@ -62,6 +65,7 @@ public class ImportOsrsItemBatch {
         Path backupDir = Path.of(args[1]);
         Path modelDir = Path.of(args[2]);
         List<PlanItem> items = readPlan(Path.of(args[3]));
+        Map<Integer, Map<Integer, Integer>> recolors = loadRecolors(Path.of(args[3]).getParent().resolve("recolor.json"));
         boolean rs3Source = modelDir.toString().replace('\\', '/').contains("rs3-model-groups");
 
         Files.createDirectories(backupDir);
@@ -81,13 +85,14 @@ public class ImportOsrsItemBatch {
         IndexData modelIndex = IndexData.parse(Js5Compression.uncompress(packedModelIndex));
         Map<Integer, byte[]> encodedModels = new LinkedHashMap<>();
         for (PlanItem item : items) {
-            collectGroundModel(encodedModels, modelDir, cacheDir, item, rs3Source);
-            collectModel(encodedModels, modelDir, cacheDir, item, item.male0, true, item.priority, item.rigM0, rs3Source);
-            collectModel(encodedModels, modelDir, cacheDir, item, item.male1, true, item.priority, item.rigM0, rs3Source);
-            collectModel(encodedModels, modelDir, cacheDir, item, item.female0, true, item.priority, item.rigF0, rs3Source);
-            collectModel(encodedModels, modelDir, cacheDir, item, item.female1, true, item.priority, item.rigF0, rs3Source);
-            collectModel(encodedModels, modelDir, cacheDir, item, item.maleHead, true, item.headPriority, item.rigMHead, rs3Source);
-            collectModel(encodedModels, modelDir, cacheDir, item, item.femaleHead, true, item.headPriority, item.rigFHead, rs3Source);
+            Map<Integer, Integer> recolor = recolors.get(item.itemId);
+            collectGroundModel(encodedModels, modelDir, cacheDir, item, recolor, rs3Source);
+            collectModel(encodedModels, modelDir, cacheDir, item, item.male0, true, item.priority, item.rigM0, recolor, rs3Source);
+            collectModel(encodedModels, modelDir, cacheDir, item, item.male1, true, item.priority, item.rigM0, recolor, rs3Source);
+            collectModel(encodedModels, modelDir, cacheDir, item, item.female0, true, item.priority, item.rigF0, recolor, rs3Source);
+            collectModel(encodedModels, modelDir, cacheDir, item, item.female1, true, item.priority, item.rigF0, recolor, rs3Source);
+            collectModel(encodedModels, modelDir, cacheDir, item, item.maleHead, true, item.headPriority, item.rigMHead, recolor, rs3Source);
+            collectModel(encodedModels, modelDir, cacheDir, item, item.femaleHead, true, item.headPriority, item.rigFHead, recolor, rs3Source);
         }
         for (Map.Entry<Integer, byte[]> entry : encodedModels.entrySet()) {
             int group = entry.getKey();
@@ -190,13 +195,37 @@ public class ImportOsrsItemBatch {
 
     // ---------------------------------------------------------------- models
 
+    private static Map<Integer, Map<Integer, Integer>> loadRecolors(Path recolorFile) throws Exception {
+        Map<Integer, Map<Integer, Integer>> out = new HashMap<>();
+        if (!Files.exists(recolorFile)) {
+            return out;
+        }
+        String json = Files.readString(recolorFile, StandardCharsets.UTF_8).trim();
+        if (json.isEmpty() || json.equals("{}")) {
+            return out;
+        }
+        Map<String, Map<String, Integer>> raw = new Gson().fromJson(json,
+                new TypeToken<Map<String, Map<String, Integer>>>() {}.getType());
+        if (raw == null) {
+            return out;
+        }
+        for (Map.Entry<String, Map<String, Integer>> entry : raw.entrySet()) {
+            Map<Integer, Integer> map = new HashMap<>();
+            for (Map.Entry<String, Integer> color : entry.getValue().entrySet()) {
+                map.put(Integer.parseInt(color.getKey()), color.getValue());
+            }
+            out.put(Integer.parseInt(entry.getKey()), map);
+        }
+        return out;
+    }
+
     private static void collectGroundModel(Map<Integer, byte[]> out, Path modelDir, File cacheDir, PlanItem item,
-                                           boolean rs3Source) throws Exception {
+                                           Map<Integer, Integer> recolor, boolean rs3Source) throws Exception {
         if (item.ground < 0 || out.containsKey(item.ground)) {
             return;
         }
         try {
-            collectModel(out, modelDir, cacheDir, item, item.ground, false, 0, -1, rs3Source);
+            collectModel(out, modelDir, cacheDir, item, item.ground, false, 0, -1, recolor, rs3Source);
         } catch (IllegalStateException ex) {
             if (item.male0 < 0 || item.male0 == item.ground) {
                 throw ex;
@@ -204,12 +233,13 @@ public class ImportOsrsItemBatch {
             System.out.println("ground model " + item.ground + " unusable for item " + item.itemId
                     + " (" + ex.getMessage() + "); using worn model " + item.male0 + " for inventory");
             ModelDefinition source = loadOsrsModel(modelDir.resolve(item.male0 + ".container"), item.male0);
-            out.put(item.ground, encodeOldModel(source, false, 0, null, 0, -1, true, rs3Source));
+            out.put(item.ground, encodeOldModel(source, false, 0, null, 0, -1, true, recolor, rs3Source));
         }
     }
 
     private static void collectModel(Map<Integer, byte[]> out, Path modelDir, File cacheDir, PlanItem item,
-                                     int modelId, boolean worn, int priority, int rigRef, boolean rs3Source)
+                                     int modelId, boolean worn, int priority, int rigRef,
+                                     Map<Integer, Integer> recolor, boolean rs3Source)
             throws Exception {
         if (modelId < 0 || out.containsKey(modelId)) return;
         Path container = modelDir.resolve(modelId + ".container");
@@ -221,7 +251,7 @@ public class ImportOsrsItemBatch {
         RefRig rig = (worn && rigRef >= 0) ? loadRigReference(cacheDir, rigRef) : null;
         boolean useNativeVskin = !rs3Source && model.packedVertexGroups != null;
         out.put(modelId, encodeOldModel(model, worn, priority, rig, worn ? item.wornDy : 0,
-                worn ? item.facePriority : -1, !useNativeVskin, rs3Source));
+                worn ? item.facePriority : -1, !useNativeVskin, recolor, rs3Source));
         System.out.println("model " + modelId + " encoded for item " + item.itemId
                 + " worn=" + worn + " vskin=" + useNativeVskin
                 + (rig != null ? " rigRef=" + rigRef : "")
@@ -251,7 +281,8 @@ public class ImportOsrsItemBatch {
     }
 
     private static byte[] encodeOldModel(ModelDefinition model, boolean worn, int priority, RefRig rig, int wornDy,
-                                         int facePriority, boolean rigVertices, boolean rs3Source) throws Exception {
+                                         int facePriority, boolean rigVertices, Map<Integer, Integer> recolor,
+                                         boolean rs3Source) throws Exception {
         int[] vx = model.vertexX;
         int[] vy = model.vertexY;
         int[] vz = model.vertexZ;
@@ -312,7 +343,7 @@ public class ImportOsrsItemBatch {
                     }
                 }
             }
-            faces.add(new F(a, b, c, materialColor(model, i), facePrio));
+            faces.add(new F(a, b, c, materialColor(model, i, recolor), facePrio));
         }
         if (faces.isEmpty()) {
             throw new IllegalStateException("No valid faces after decode for model " + model.id);
@@ -442,14 +473,33 @@ public class ImportOsrsItemBatch {
         double depth() { return Math.max(1.0, maxZ - minZ); }
     }
 
-    private static int materialColor(ModelDefinition model, int face) {
+    private static int materialColor(ModelDefinition model, int face, Map<Integer, Integer> recolor) {
         if (model.faceColors != null) {
             int color = model.faceColors[face] & 0xFFFF;
+            if (recolor != null) {
+                Integer mapped = recolor.get(color);
+                if (mapped != null) {
+                    return mapped;
+                }
+            }
             if (color != 127) return color;
         }
         if (model.faceTextures != null && model.faceTextures[face] >= 0) {
             int texture = model.faceTextures[face] & 0xFFFF;
-            return hsl((texture * 37) % 360, 38, 52);
+            int approx = hsl((texture * 37) % 360, 38, 52);
+            if (recolor != null) {
+                Integer mapped = recolor.get(127);
+                if (mapped != null) {
+                    return mapped;
+                }
+            }
+            return approx;
+        }
+        if (recolor != null) {
+            Integer mapped = recolor.get(127);
+            if (mapped != null) {
+                return mapped;
+            }
         }
         return hsl(35, 20, 58);
     }
@@ -579,7 +629,8 @@ public class ImportOsrsItemBatch {
     private static byte[] rewriteItemDefinition(byte[] def, PlanItem item, Cache itemArchive,
                                                 IndexData itemIndex) throws Exception {
         // Weapons with a configTemplate inherit animation / interface opcodes from the native
-        // template item (render_anim etc.) but never its model ids — those always come from plan.
+        // template item (render_anim etc.) but never its model ids or recolors — those always
+        // come from the plan / OSRS extraction.
         byte[] source = def;
         if (item.configTemplate >= 0) {
             byte[] template = readItemDefinition(itemArchive, itemIndex, item.configTemplate);

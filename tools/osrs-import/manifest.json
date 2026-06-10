@@ -14,6 +14,7 @@
     "skipWorn": "Optional bool. Force inventory-only import (auto-true when OSRS has no worn models, e.g. rings).",
     "requirements": "Optional. Server requirements string like '{0,75}-{1,75}' (skill ids: 0 atk, 1 def, 2 str, 3 hp, 4 range, 5 pray, 6 magic). Defaults to the OSRS requirements when gating is enabled.",
     "gated": "Optional bool, default false. When false the item is imported WITHOUT level requirements (try-on mode). Flip to true and re-run the pipeline to apply OSRS requirements.",
+    "recolor": "Optional map of OSRS HSL face-color ids to substitute during model import, e.g. {\"924\": 5056, \"127\": 5056}. Use when OSRS relies on animated textures that flatten to a wrong solid colour in the 2009 client.",
     "legacyGeometry": "Optional bool. Use ImportOsrsItemModels bespoke worn-model geometry (14659-14661 cuff flare, rig-center dy, faceguard neck align). Icon cameras come from OSRS extraction (identity import).",
     "iconZoom / iconXan / iconYan / iconZan / iconXoff / iconYoff": "Optional. Override OSRS icon camera only after RenderClientItemIconSheet contact-sheet tuning (rare; identity import + OSRS cameras are usually pixel-perfect)."
   },
@@ -212,11 +213,10 @@
     {
       "newId": 14734,
       "osrsId": 21295,
-      "configTemplate": 6570,
       "rigRefMale": 9638,
       "rigRefFemale": 9640,
-      "gated": true,
-      "requirements": "{0,75}-{1,75}-{2,75}-{3,75}-{4,75}-{6,75}"
+      "gated": false,
+      "recolor": {"924": 5056, "127": 5056, "20": 5066, "24": 5066, "28": 5066}
     }
   ]
 }

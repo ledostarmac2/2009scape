@@ -129,9 +129,7 @@ public final class PatchCustomWeaponSkillGuides {
                 new Row(75, 14697, "Members: Guardian boots", " (with 75 Strength)",
                         "Members now have the Defence level required to wear ", "Guardian boots",
                         ". (They also need level 75 Strength.)"),
-                new Row(75, 14734, "Members: Infernal cape", " (with 75 Attack, 75 Strength, 75 Ranged, 75 Magic and 75 Hitpoints)",
-                        "Members now have the Defence level required to wear ", "Infernal cape",
-                        ". (They also need level 75 Attack, 75 Strength, 75 Ranged, 75 Magic and 75 Hitpoints.)")
+                simpleWearDefence(1, 14734, "Members: Infernal cape", "Infernal cape")
         });
         patch(cacheDir, 978, 11, new Row[] {
                 new Row(70, 14547, "Members: Ledostar's Sting", " (with 70 Attack and 70 Prayer)",

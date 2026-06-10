@@ -32,6 +32,7 @@ TOOLS = os.path.join(ROOT, "tools")
 IMPORT_DIR = os.path.join(TOOLS, "osrs-import")
 MANIFEST = os.path.join(IMPORT_DIR, "manifest.json")
 PLAN = os.path.join(IMPORT_DIR, "plan.txt")
+RECOLOR = os.path.join(IMPORT_DIR, "recolor.json")
 EXTRACTED = os.path.join(IMPORT_DIR, "extracted.json")
 PREVIEWS = os.path.join(IMPORT_DIR, "previews")
 OBJ_OUT = os.path.join(IMPORT_DIR, "obj")
@@ -275,6 +276,16 @@ def step_plan(items, defs, osrsbox):
         f.write("\n".join(rows) + "\n")
 
 
+def step_recolor(items):
+    recolors = {}
+    for item in items:
+        if item.get("recolor"):
+            recolors[str(item["newId"])] = {str(k): v for k, v in item["recolor"].items()}
+    with open(RECOLOR, "w", encoding="utf-8") as f:
+        json.dump(recolors, f, indent=2)
+        f.write("\n")
+
+
 def step_import(items):
     batch_items = [i for i in items if not i.get("legacyGeometry")]
     legacy_items = [i for i in items if i.get("legacyGeometry")]
@@ -440,6 +451,7 @@ def main():
     defs = step_extract_defs(items)
     step_extract_models(items, defs)
     step_plan(items, defs, osrsbox)
+    step_recolor(items)
     step_import(items)
     step_server_configs(items, defs, osrsbox)
     step_verify(items)
