@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Remove RS3 items (14720-14733) from ledostar bank/inventory/equipment."""
+"""Remove RS3 items (14720-14733) from ledostar bank/inventory/equipment.
+
+NEVER modify core_data.location — preserve the player's last login position.
+"""
 import json
 import os
 
@@ -30,6 +33,8 @@ def main():
         player = json.load(f)
     total = 0
     core = player.get("core_data", player)
+    # NEVER modify core_data.location — bank scripts must not teleport the player.
+    saved_location = core.get("location")
     for key in ("inventory", "equipment"):
         if key in core:
             core[key], n = strip_container(core[key])
@@ -39,6 +44,7 @@ def main():
         core["bank"], n = strip_container(core["bank"])
         total += n
         print(f"bank: removed {n}")
+    core["location"] = saved_location
     with open(PLAYER, "w", encoding="utf-8") as f:
         json.dump(player, f, separators=(",", ":"))
     print(f"total removed: {total}")

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Server-side finalization for OSRS imported items (14659-14661, 14676-14705, 14734)."""
+"""Server-side finalization for OSRS imported items (14659-14661, 14676-14705, 14734).
+
+Does not touch player saves. NEVER modify core_data.location in any script.
+"""
 import json
 import os
 
@@ -49,12 +52,16 @@ FINAL = {
 def main():
     with open(MANIFEST, encoding="utf-8") as f:
         manifest = json.load(f)
+    gated = 0
     for item in manifest["items"]:
+        if item.get("gated") is False:
+            continue
         item["gated"] = True
+        gated += 1
     with open(MANIFEST, "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2)
         f.write("\n")
-    print("manifest: set gated=true on all items")
+    print(f"manifest: set gated=true on {gated} items (skipped gated:false entries)")
 
     with open(ITEM_CONFIGS, encoding="utf-8") as f:
         configs = json.load(f)

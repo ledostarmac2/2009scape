@@ -10,6 +10,8 @@
 #
 #  Docs: docs\osrs-item-import.md
 #  Flags: -NoLaunch (skip relaunch)  -Only 14676,14677 (re-import subset)
+#
+#  Player saves: scripts must NEVER modify core_data.location in ledostar.json.
 # =============================================================================
 param(
     [switch]$NoLaunch,

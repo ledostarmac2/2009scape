@@ -138,3 +138,6 @@ Deep-dive fixes (cuff flares, per-item geometry surgery) live in
   expressed in `requirements` — only skill levels.
 - **Korasi's sword** (RS3 id 19784) is not in the OSRS cache; use the RS3 import
   pipeline instead of this manifest.
+- **Player saves** (`game/data/players/`) are runtime state. Import/bank scripts
+  must **never** modify `core_data.location` — leave the player where they last
+  logged in.
