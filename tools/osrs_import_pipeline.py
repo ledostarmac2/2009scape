@@ -159,6 +159,7 @@ def step_compile():
          os.path.join(TOOLS, "ParseTextureConfigBundle.java"),
          os.path.join(TOOLS, "RenderClientItemIconSheet.java")])
     run([os.path.join(JDK, "javac.exe"), "-cp", runelite_cp() + ";" + CLIENT_JAR + ";" + TOOLS, "-d", TOOLS,
+         os.path.join(TOOLS, "PatchInfernalCape.java"),
          os.path.join(TOOLS, "PatchInfernalTexture.java")])
 
 
@@ -409,9 +410,9 @@ def step_patch_infernal_texture(items):
     """Import OSRS infernal lava into native texture slot 59 with full animation."""
     if not any(i.get("newId") == 14734 or i.get("osrsId") == 21295 for i in items):
         return
-    log("importing OSRS infernal lava texture 59 (native slot, no fire-cape remap)")
+    log("importing OSRS infernal lava texture 59 (sprite-sheet like fire cape 40)")
     run([os.path.join(JDK, "java.exe"), "-cp", runelite_cp() + ";" + CLIENT_JAR + ";" + TOOLS,
-         "PatchInfernalTexture", GAME_CACHE, OSRS_CACHE])
+         "PatchInfernalCape", GAME_CACHE, OSRS_CACHE])
 
 
 def step_verify(items):
