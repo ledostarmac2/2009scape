@@ -156,6 +156,8 @@ def step_compile():
          os.path.join(TOOLS, "ImportOsrsItemBatch.java"),
          os.path.join(TOOLS, "ImportOsrsItemModels.java"),
          os.path.join(TOOLS, "PatchItemIconCameras.java"),
+         os.path.join(TOOLS, "ParseTextureConfigBundle.java"),
+         os.path.join(TOOLS, "PatchInfernalTexture.java"),
          os.path.join(TOOLS, "RenderClientItemIconSheet.java")])
 
 
@@ -397,6 +399,14 @@ def step_server_configs(items, defs, osrsbox):
         json.dump(configs, f, indent=2)
 
 
+def step_patch_infernal_texture(items):
+    """Archive-26 texture config: infernal cape lava needs animated=true on texture 59."""
+    if not any(i.get("newId") == 14734 or i.get("osrsId") == 21295 for i in items):
+        return
+    log("patching infernal cape texture 59 animation in archive 26")
+    run([os.path.join(JDK, "java.exe"), "-cp", base_cp(), "PatchInfernalTexture", GAME_CACHE])
+
+
 def step_verify(items):
     log("verifying imported items decode from the patched cache")
     out = run([os.path.join(JDK, "java.exe"), "-cp", base_cp(), "InspectItemModels",
@@ -453,6 +463,7 @@ def main():
     step_plan(items, defs, osrsbox)
     step_recolor(items)
     step_import(items)
+    step_patch_infernal_texture(items)
     step_server_configs(items, defs, osrsbox)
     step_verify(items)
     if not args.no_previews:
