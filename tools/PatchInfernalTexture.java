@@ -13,17 +13,19 @@ import rt4.Js5Index;
 /**
  * Remap infernal cape lava for the 2009 client texture limit (valid ids 0-50).
  *
- * OSRS infernal models reference texture 59, which glitches in the 2009 rasterizer.
- * This tool imports OSRS texture 59 into archive-9 slot {@link #TARGET_TEXTURE_ID},
- * copies its animated config into archive-26, and leaves model remapping to
- * ImportOsrsItemBatch (textureRemap 59->50 in manifest/recolor.json).
+ * OSRS infernal models reference texture 59, which is outside the 2009 client
+ * rasterizer limit (valid ids 0-50). Fire cape lava already renders from slot 40.
+ * This tool copies OSRS texture 59 into archive-9 slot {@link #TARGET_TEXTURE_ID}
+ * and enables its animated config in archive-26. Model remapping is handled by
+ * ImportOsrsItemBatch (textureRemap 59->40 in manifest).
  */
 public final class PatchInfernalTexture {
     private static final int TEXTURE_ARCHIVE = 9;
     private static final int CONFIG_ARCHIVE = 26;
     private static final int SOURCE_TEXTURE_ID = 59;
-    private static final int TARGET_TEXTURE_ID = 50;
-    private static final int REF_TEXTURE_ID = 40; // fire cape lava
+    /** Fire-cape lava slot; proven to animate in the 2009 client. */
+    private static final int TARGET_TEXTURE_ID = 40;
+    private static final int REF_TEXTURE_ID = 40;
 
     public static void main(String[] args) throws Exception {
         if (args.length < 1) {
@@ -41,9 +43,15 @@ public final class PatchInfernalTexture {
             throw new IllegalStateException("Missing infernal lava texture " + SOURCE_TEXTURE_ID
                     + " in OSRS cache and game cache");
         }
-        patchTextureGroup(cacheDir, TARGET_TEXTURE_ID, textureBytes);
-        System.out.println("texture " + SOURCE_TEXTURE_ID + " -> " + TARGET_TEXTURE_ID
-                + " written (" + textureBytes.length + " bytes)");
+        byte[] nativeTarget = read2009Texture(cacheDir, TARGET_TEXTURE_ID);
+        if (nativeTarget != null && nativeTarget.length > textureBytes.length) {
+            System.out.println("keeping native texture " + TARGET_TEXTURE_ID + " ("
+                    + nativeTarget.length + " bytes; OSRS source is " + textureBytes.length + " bytes)");
+        } else {
+            patchTextureGroup(cacheDir, TARGET_TEXTURE_ID, textureBytes);
+            System.out.println("texture " + SOURCE_TEXTURE_ID + " -> " + TARGET_TEXTURE_ID
+                    + " written (" + textureBytes.length + " bytes)");
+        }
 
         patchTextureConfig(cacheDir);
         System.out.println("texture config slot " + TARGET_TEXTURE_ID + " animated for infernal lava");
