@@ -12,6 +12,7 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PLAYER = os.path.join(ROOT, "game", "data", "players", "ledostar.json")
 REMOVE_IDS = {str(i) for i in range(14720, 14735)}
+OSRS_KEEP_IDS = {str(i) for i in range(14659, 14706)}
 
 
 def strip_container(items):
@@ -24,7 +25,9 @@ def strip_container(items):
             kept.append(it)
             continue
         iid = str(it.get("id", it.get("itemId", "")))
-        if iid in REMOVE_IDS:
+        if iid in OSRS_KEEP_IDS:
+            kept.append(it)
+        elif iid in REMOVE_IDS:
             removed += 1
         else:
             kept.append(it)

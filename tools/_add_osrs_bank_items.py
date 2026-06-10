@@ -8,7 +8,8 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PLAYER = os.path.join(ROOT, "game", "data", "players", "ledostar.json")
-ITEMS = list(range(14659, 14662)) + list(range(14676, 14706)) + [14734]
+# Polished OSRS manifest ids only (33 items). Never add WIP infernal 14734 or RS3 14720+.
+ITEMS = list(range(14659, 14662)) + list(range(14676, 14706))
 
 with open(PLAYER, encoding="utf-8") as f:
     data = json.load(f)
