@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Add one of each OSRS/RS3-imported item to player bank."""
 import json
+import os
 
-PLAYER = r"C:\Users\btarabocchia\2009scape\2009scape\game\data\players\ledostar.json"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PLAYER = os.path.join(ROOT, "game", "data", "players", "ledostar.json")
 ITEMS = list(range(14659, 14662)) + list(range(14676, 14706)) + [14734]
 
 with open(PLAYER, encoding="utf-8") as f:
@@ -20,11 +22,8 @@ for item_id in ITEMS:
     bank.append({"amount": "1", "charge": "1000", "slot": str(max_slot), "id": sid})
     added.append(item_id)
 
-data["core_data"]["location"] = "3164,3487,0"
-
 with open(PLAYER, "w", encoding="utf-8") as f:
     json.dump(data, f, separators=(",", ":"))
 
 print(f"Added {len(added)} bank items: {added}")
 print(f"Skipped (already present): {[i for i in ITEMS if str(i) in existing_ids]}")
-print("Location set to 3164,3487,0")
