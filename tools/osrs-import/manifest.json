@@ -215,7 +215,7 @@
       "newId": 14734,
       "osrsId": 21295,
       "_status": "WIP",
-      "_comment": "Infernal cape — texture 59 animated lava freezes client; PatchInfernalCape.java incomplete. Bundled with RS3 14720-14733 in docs/wip-infernal-rs3.md",
+      "_comment": "Infernal cape WIP — startup hang fixed (procedural texture 59); worn lava visuals need OSRS sprite-sheet polish. See docs/FABLE5_INFERNAL_RS3_PROMPT.md",
       "rigRefMale": 9638,
       "rigRefFemale": 9640,
       "gated": false,

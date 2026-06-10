@@ -1,202 +1,142 @@
-# Fable 5.0 handoff: Infernal cape + RS3 item polish
+# Fable 5.0 handoff: Infernal cape (14734) + RS3 batch (14720–14733)
 
-**Copy everything below this line into a new Fable 5.0 agent session.**
+Use this prompt when handing the WIP bundle to a Fable 5.0 agent. The parent session **fixed the client startup hang** (texture loader stuck at "Loading textures — 0%") but infernal lava visuals and RS3 polish remain incomplete.
 
 ---
 
-## Project context
+## Copy-paste prompt for Fable 5.0
 
-You are working on **2009scape**, a RuneScape 2009-era private server revival with a custom item import pipeline that brings OSRS and RS3 items into the legacy 2009 client cache.
+```
+You are working in C:\Users\btarabocchia\2009scape\2009scape (2009scape private server).
 
-| | |
+GOAL: Finish the WIP item bundle without breaking client startup.
+
+## Context (read first)
+- docs/wip-infernal-rs3.md — bundle status, blockers, success criteria
+- docs/osrs-item-import.md — OSRS pipeline (14659–14705 shipped; 14734 WIP)
+- docs/rs3-item-import.md — RS3 pipeline (14720–14733 WIP)
+- tools/PatchInfernalCape.java — CURRENT infernal lava fix (procedural TextureOp, no sprite 768)
+- tools/osrs-import/manifest.json — infernal 14734 entry (_status: WIP)
+- tools/rs3-import/manifest.json — RS3 14720–14733 entries (_status: WIP)
+
+## What is DONE (do not regress)
+- OSRS items 14659–14705: polished, gated, player-ready
+- Client loads past "Loading textures" to login (texture 59 no longer hangs loader)
+- Procedural TextureOp in archive 9 group 59 + fire-cape animation driver on archive 26 slot 59
+- WIP items stripped from ledostar bank/inventory/equipment (tools/_strip_rs3_from_ledostar.py)
+- ledostar core_data.location must NEVER be modified by bank/import scripts
+
+## PRIORITY 1 — Infernal cape (14734) worn lava
+Problem: Infernal cape models reference texture slot 59 for animated lava. Previous commits installed
+a fire-cape-clone TextureOpSprite pipeline + archive-8 sprite 768 (OSRS sprite 318 import). That broke
+the startup texture loader (hang at 0%) and still froze the client when worn.
+
+Current safe baseline (PatchInfernalCape.java):
+- 44-byte procedural TextureOp in archive 9 group 59 (NO archive-8 sprite reference)
+- Archive 26 config slot 59: animated=true, speed/dir copied from fire cape 40, avgColor=3875
+- TestTextureProvider confirms id 59 loads (16384 pixels, available=true)
+
+Your task:
+1. Make infernal cape lava look like OSRS infernal (animated orange lava), NOT flat fire-cape recolor
+2. Must NOT hang client at startup OR when equipping/viewing 14734
+3. Working reference: fire cape texture 40 — 23-byte TextureOpSprite + archive-8 sprite 485 (128×128 rt4 sheet)
+4. If re-introducing sprite sheets, use rt4-encoded format (see fire cape 485), NOT raw OSRS format 0 bytes
+5. Sprite 768 is reserved for infernal lava; do NOT clobber native sprite 318
+6. Run: TestTextureProvider game/data/cache 40 59 after every cache change
+7. Mirror cache: copy game/data/cache/main_file_cache.* → %USERPROFILE%\cache\runescape
+8. Re-test: launch client, pass "Loading textures", equip ::item 14734, verify no freeze
+
+Key tools:
+  javac/java from C:\Users\btarabocchia\Java\temurin-26.0.1+8\bin
+  java -cp "tools;game/client.jar" PatchInfernalCape game/data/cache
+  java -cp "tools;game/client.jar" TestTextureProvider game/data/cache 40 59
+  python tools/osrs_import_pipeline.py run --only 14734
+
+## PRIORITY 2 — RS3 items 14720–14733
+Imported via python tools/rs3_import_pipeline.py run. In cache + item_configs.json but unpolished.
+
+Per-item QA needed:
+- Inventory icon (tools/rs3-import/previews/)
+- Worn model from multiple camera angles (nearest-bone rig vs wornTemplate)
+- Combat wiring for weapons (configTemplate, attackSpeed, server handlers)
+- Optional gating: "gated": true in manifest after polish
+
+Items:
+  14720–14724 Chaotic weapons (cache 554)
+  14725 Zaryte bow (839)
+  14726–14728 Dominion gloves (286)
+  14729 Royal crossbow (302)
+  14730–14732 Drygore weapons (554)
+  14733 Korasi sword (554)
+
+## PRIORITY 3 — Player save policy
+Only re-add WIP items to ledostar AFTER both bundles pass in-game QA.
+Strip script: python tools/_strip_rs3_from_ledostar.py (never touches location)
+
+## PRIORITY 4 — Launch verification
+1. taskkill /F /IM java.exe
+2. Mirror cache to %USERPROFILE%\cache\runescape
+3. launch.bat from repo root (server 43595, then client)
+4. Confirm: past "Loading textures", login OK, no error_game_js5crc
+
+## Constraints
+- Do NOT remove infernal 14734 or RS3 14720–14733 from manifests/configs — keep as WIP
+- Do NOT modify ledostar location
+- Do NOT break shipped OSRS 14659–14705
+- Commit with clear messages; push to origin/master when user requests
+```
+
+---
+
+## Root cause: startup texture hang (fixed in parent session)
+
+| Symptom | Cause |
 |---|---|
-| **Repo path** | `C:\Users\btarabocchia\2009scape\2009scape` |
-| **Player account** | `ledostar` (`game/data/players/ledostar.json`) |
-| **Server port** | 43595 |
-| **JRE** | `jre/bin/java.exe` in repo root |
-| **Game dir** | `game/` (server.jar, client.jar, `data/cache/`) |
+| Client stuck at **"Loading textures — 0%"** | `Js5GlTextureProvider` preloads every enabled texture at startup |
+| Hang / freeze | Archive 9 group 59 had a **TextureOpSprite pipeline** referencing archive-8 **sprite 768** with malformed data (raw OSRS import or incomplete stub, 156b packed vs fire-cape 485 at 6987b) |
+| Config mismatch | Archive 26 slot 59 was `animated=false speed=0 dir=0 avgColor=108` instead of fire-cape driver |
+| `error_game_js5crc` in logs | Server cache patched but client `%USERPROFILE%\cache\runescape` stale — mirror after every cache edit |
 
-### Import pipelines
+**Fix applied:** `PatchInfernalCape.java` installs a **44-byte procedural TextureOp** (no sprite dependency) and copies fire-cape animation driver (speed=0, dir=255) to config slot 59.
 
-| Pipeline | Manifest | Runner | Docs |
-|---|---|---|---|
-| **OSRS** | `tools/osrs-import/manifest.json` | `powershell -ExecutionPolicy Bypass -File import-osrs-items.ps1` | `docs/osrs-item-import.md` |
-| **RS3** | `tools/rs3-import/manifest.json` | `python tools/rs3_import_pipeline.py run` | `docs/rs3-item-import.md` |
-
-Both pipelines compile Java tools in `tools/`, patch `game/data/cache/`, merge `game/data/configs/item_configs.json`, verify decode round-trip, render icon previews, and mirror cache files to `%USERPROFILE%\cache\runescape` (client reads from there).
-
-**WIP bundle doc:** `docs/wip-infernal-rs3.md`
+**Verification (parent session):**
+```
+TestTextureProvider game/data/cache 40 59
+  id 40: available=true pixels=16384
+  id 59: available=true pixels=16384 avgColor=3875
+```
 
 ---
 
-## What is DONE (do not break)
+## File map
 
-### OSRS polished batch: ids 14659–14705
-
-Complete, gated, in ledostar bank. Includes ferocious gloves (14659), regen bracelet (14660), infernal max cape precursor items, imbued heart, avernic treads, scythe of vitur, twisted bow, etc. through soulreaper axe (14705).
-
-- Manifest: `tools/osrs-import/manifest.json` (entries 14659–14705)
-- These items passed icon QA, worn-model QA, and level gating
-- **Do not remove these from ledostar bank**
-
----
-
-## What is WIP (your task)
-
-### Bundle A: RS3 items 14720–14733
-
-Imported to cache and configs but **unpolished**. Stripped from ledostar bank/inventory.
-
-| newId | Item | RS3 id | Cache |
-|---|---|---|---|
-| 14720 | Chaotic rapier | 18349 | 554 |
-| 14721 | Chaotic longsword | 18351 | 554 |
-| 14722 | Chaotic maul | 18353 | 554 |
-| 14723 | Chaotic crossbow | 18357 | 554 |
-| 14724 | Chaotic staff | 18359 | 554 |
-| 14725 | Zaryte bow | 20171 | 839 |
-| 14726 | Goliath gloves | 28444 | 286 |
-| 14727 | Swift gloves | 28445 | 286 |
-| 14728 | Spellcaster gloves | 28446 | 286 |
-| 14729 | Royal crossbow | 24338 | 302 |
-| 14730 | Drygore rapier | 26579 | 554 |
-| 14731 | Drygore longsword | 26580 | 554 |
-| 14732 | Drygore mace | 26582 | 554 |
-| 14733 | Korasi's sword | 19784 | 554 |
-
-**Known issues:**
-- RS3 worn models use a different skeleton; importer nearest-bone rigs against native refs
-- Several items use `wornTemplate` to borrow native worn geometry — may still look wrong
-- RS3 icon cameras (`xan2d/yan2d`) often crash or mis-render; pipeline normalizes angles but per-item `iconZoom/iconXan/iconYan/iconZan/iconXoff/iconYoff` overrides in manifest may still need tuning after contact-sheet QA
-- Ranged/magic weapons need server wiring to actually fire
-- Stats from `data/import/rs3_items_stats.json` (not osrsreboxed)
-
-**Key files:**
-- `tools/rs3_import_pipeline.py`
-- `tools/ExtractRs3ItemDefs.java`
-- `tools/ExtractRs3Models.java`
-- `tools/ImportOsrsItemBatch.java` (shared cache writer)
-- `tools/rs3-import/manifest.json`
-
-### Bundle B: Infernal cape 14734
-
-| | |
+| Path | Purpose |
 |---|---|
-| **newId** | 14734 |
-| **OSRS id** | 21295 |
-| **Status** | Imported but **client freezes** when equipped/viewed |
-
-**Known issues — texture 59:**
-
-- Infernal cape models reference **texture slot 59** (animated OSRS lava)
-- **Fire cape (texture 40)** works: 23-byte `TextureOpSprite` pipeline + archive-8 sprite 485 (128×128 sheet), animation speed=0 dir=255
-- **Infernal (texture 59)** should replicate that pattern with OSRS rev233 **sprite 318** (128×128 animated lava) installed at game sprite **768**
-- Current patches freeze the client — likely `TextureOp` bytecode or sprite sheet encoding mismatch with 2009 client expectations
-- `PatchInfernalCape.java` documents failed approaches: OSRS speed/dir (1/1), raw OSRS sprite bytes (format 0), sprite 768 stub without full pipeline clone
-
-**Forum insight (brkownz, Zion):** The 2009 client texture system was not designed for OSRS rev233 procedural textures. Slot 59 must be **re-encoded** to native 2009 `TextureOpSprite` layout (like fire cape 40), not copied verbatim from OSRS.
-
-**Key files:**
-- `tools/PatchInfernalCape.java` — primary fix attempt (clone fire-cape TextureOp, patch sprite 768 from OSRS 318)
-- `tools/PatchInfernalTexture.java` — alternate path (OSRS pixels + animation config into slot 59)
-- `tools/osrs_import_pipeline.py` — calls infernal texture patch after batch import (search for "infernal lava texture 59")
-- `tools/osrs-import/manifest.json` — entry 14734 with `rigRefMale/Female` 9638/9640 (fire cape), recolor map
+| `tools/PatchInfernalCape.java` | Procedural infernal lava patch (startup-safe) |
+| `tools/PatchInfernalTexture.java` | Deprecated wrapper → PatchInfernalCape |
+| `tools/ParseTextureConfigBundle.java` | Decode/encode archive 26 texture config bundle |
+| `tools/TestTextureProvider.java` | Verify texture ids load without hang |
+| `tools/CheckSpriteGroups.java` | Inspect archive-8 sprite groups (485, 768, 318) |
+| `tools/osrs_import_pipeline.py` | Full OSRS import; calls PatchInfernalCape for 14734 |
+| `tools/rs3_import_pipeline.py` | Full RS3 import for 14720–14733 |
+| `tools/_strip_rs3_from_ledostar.py` | Remove WIP ids from player save |
+| `game/data/cache/main_file_cache.*` | Patched server cache (texture 59 fixed) |
+| `game/data/configs/item_configs.json` | Server item definitions |
+| `docs/wip-infernal-rs3.md` | Bundle status doc |
 
 ---
 
 ## Success criteria
 
-1. **Infernal cape 14734:** Animated lava on texture 59 renders when worn; **zero client freeze**; visually distinct from flat fire-cape recolor
-2. **RS3 14720–14733:** Each item passes inventory icon QA (`tools/rs3-import/previews/`) and worn-model QA from multiple camera angles; optionally flip `"gated": true` and re-run pipeline
-3. Re-add polished items to ledostar bank only after in-game QA (use `tools/_add_osrs_bank_items.py` pattern or manual bank edit — **never modify `core_data.location`**)
-4. Update `docs/wip-infernal-rs3.md` and manifest `_status` fields from WIP to complete when done
+1. **Startup:** Client reaches login; no hang at "Loading textures"
+2. **Infernal worn:** Texture 59 animated lava renders correctly on 14734; no freeze
+3. **RS3 batch:** Each 14720–14733 passes icon + worn QA; weapons fire in combat
+4. **Player:** Re-add to ledostar bank only after QA; location unchanged
+5. **Cache sync:** Always mirror to `%USERPROFILE%\cache\runescape` after cache edits
 
 ---
 
-## Commands
+## JDK note
 
-### OSRS pipeline (infernal cape)
-
-```powershell
-cd C:\Users\btarabocchia\2009scape\2009scape
-
-# Full import + relaunch (stops game, patches cache, mirrors, starts server:43595 + client)
-powershell -ExecutionPolicy Bypass -File import-osrs-items.ps1
-
-# Infernal only, no relaunch
-python tools/osrs_import_pipeline.py run --only 14734 --no-mirror
-```
-
-### RS3 pipeline
-
-```powershell
-cd C:\Users\btarabocchia\2009scape\2009scape
-
-# Full RS3 batch
-python tools/rs3_import_pipeline.py run
-
-# Single item
-python tools/rs3_import_pipeline.py run --only 14720
-```
-
-### Manual infernal texture patch (after cache edit)
-
-```powershell
-cd C:\Users\btarabocchia\2009scape\2009scape\tools
-# Compile tools first (pipeline does this automatically)
-java -cp ".;lib/*" PatchInfernalCape ..\game\data\cache ..\data\import\openrs2-osrs-2565-disk\cache
-```
-
-### Strip WIP items from ledostar (if re-adding for test then reverting)
-
-```powershell
-python tools/_strip_rs3_from_ledostar.py
-```
-
----
-
-## Relaunch procedure
-
-The import scripts handle this automatically. Manual sequence:
-
-1. **Stop** any running `jre/bin/java.exe` processes from this repo
-2. **Run pipeline** (patches `game/data/cache/`)
-3. **Mirror cache** to client dir (pipeline step 8/9):
-   - Copies `main_file_cache.dat` + `main_file_cache.idx0`–`idx5` → `%USERPROFILE%\cache\runescape`
-   - **Client will not see new models without this mirror**
-4. **Start server first** on port 43595:
-   ```powershell
-   cd game
-   ..\jre\bin\java.exe -Dsun.net.useExclusiveBind=false -Xmx2G -Xms2G -jar server.jar
-   ```
-5. **Start client** after server is listening:
-   ```powershell
-   ..\jre\bin\java.exe -Xmx1G -Xms1G -jar client.jar
-   ```
-6. Log in as ledostar, test with `::item 14734` or `::item 14720`
-
-**Do not relaunch unnecessarily** when only editing player save JSON.
-
----
-
-## Constraints
-
-- **Never modify `core_data.location`** in ledostar.json
-- **Do not touch OSRS polished items 14659–14705** in bank unless explicitly asked
-- Player saves (`game/data/players/`) are gitignored — force-add if committing: `git add -f game/data/players/ledostar.json`
-- Cache backups live in `game/osrs-import-backups/` (gitignored)
-- `data/import/` caches are gitignored (downloaded from OpenRS2 on first run)
-
----
-
-## Suggested investigation order
-
-1. Read `tools/PatchInfernalCape.java` and compare texture 40 vs 59 bytecode side-by-side
-2. Verify sprite 768 is rt4-encoded (not raw OSRS format 0) and matches fire-cape sprite 485 structure
-3. Test infernal equip with client logging; confirm freeze happens at texture bind not model decode
-4. Once infernal works, iterate RS3 items one at a time with `--only` and preview PNGs
-5. Document fixes in `docs/wip-infernal-rs3.md`, clear WIP markers in manifests
-
----
-
-**End of handoff prompt. Paste into Fable 5.0 and begin with infernal cape texture 59 investigation.**
+Compile/run cache tools with **Temurin 26** (`C:\Users\btarabocchia\Java\temurin-26.0.1+8\bin`).
+Bundled `jre\` is Java 11 and cannot load classes compiled for Java 26.

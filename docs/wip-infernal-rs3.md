@@ -8,7 +8,7 @@
 |---|---|---|
 | **14659–14705** | OSRS (`tools/osrs-import/manifest.json`) | **Polished and shipped** — ferocious gloves through soulreaper axe, gated, bank-ready |
 | **14720–14733** | RS3 (`tools/rs3-import/manifest.json`) | **WIP** — imported to cache/configs; worn models and icon cameras need QA |
-| **14734** | OSRS infernal cape (`tools/osrs-import/manifest.json`) | **WIP** — texture 59 lava animation **freezes the client** |
+| **14734** | OSRS infernal cape (`tools/osrs-import/manifest.json`) | **WIP** — startup hang **fixed** (procedural texture 59); worn lava visuals still need OSRS-quality polish |
 
 Next free id after this bundle: **14735** (both manifests agree).
 
@@ -17,7 +17,9 @@ Next free id after this bundle: **14735** (both manifests agree).
 ## Infernal cape (14734) — known blocker
 
 - **OSRS id:** 21295 → **2009scape id:** 14734
-- **Problem:** Equipping or viewing the infernal cape triggers a **client freeze** tied to **texture slot 59** (animated lava).
+- **Startup hang (fixed):** Previous `TextureOpSprite` + sprite **768** pipeline hung the client at **"Loading textures — 0%"** because `Js5GlTextureProvider` preloads all enabled textures and the malformed sprite 768 / wrong config slot 59 (`animated=false`) stalled the loader.
+- **Current safe baseline:** `PatchInfernalCape.java` installs a **44-byte procedural TextureOp** in archive 9 group 59 (no archive-8 dependency) and copies fire-cape animation driver to archive 26 slot 59. `TestTextureProvider` confirms ids 40 and 59 load (16384 pixels each).
+- **Remaining work:** Worn infernal lava should match OSRS infernal (animated orange sheet), not procedural placeholder. Re-introduce sprite sheets only with **rt4-encoded** format like fire-cape sprite 485.
 - **Working reference:** Fire cape uses **texture 40** with a 23-byte `TextureOpSprite` pipeline + archive-8 sprite 485 (128×128 sheet). Animation driver: speed=0, dir=255.
 - **Infernal target:** OSRS rev233 **sprite 318** (128×128 animated lava sheet), installed at game sprite **768** (avoids clobbering native sprite 318). Texture **59** should mirror the fire-cape `TextureOp` pattern but swap the sprite group id.
 - **Failed approaches documented in code:**
@@ -25,8 +27,8 @@ Next free id after this bundle: **14735** (both manifests agree).
   - Importing raw OSRS sprite bytes (format 0) instead of rt4-encoded sheets
   - Using sprite 768 as a stub without the full fire-cape pipeline clone
 - **Key tools:**
-  - `tools/PatchInfernalCape.java` — atomic fix: clone fire-cape TextureOp, patch sprite 768 from OSRS 318
-  - `tools/PatchInfernalTexture.java` — alternate import path (OSRS pixels + animation config into slot 59)
+  - `tools/PatchInfernalCape.java` — current fix: procedural TextureOp + animated config (startup-safe)
+  - `tools/PatchInfernalTexture.java` — deprecated wrapper → PatchInfernalCape
   - Invoked from `tools/osrs_import_pipeline.py` after batch import
 
 ### Forum / community insight (texture 59 vs client limits)

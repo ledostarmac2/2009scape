@@ -16,7 +16,7 @@
     "gated": "Optional bool, default false. When false, no level requirements.",
     "iconZoom / iconXan / iconYan / iconZan / iconXoff / iconYoff": "Optional. Override RS3 icon camera after RenderClientItemIconSheet contact-sheet tuning (RS3 raw angles often render wrong in the 2009 client)."
   },
-  "_nextFreeId": 14734,
+  "_nextFreeId": 14735,
   "_wipBundle": "14720-14733 RS3 items unpolished — worn models, icon cameras, combat wiring. Bundled with infernal 14734 in docs/wip-infernal-rs3.md",
   "items": [
     { "newId": 14720, "rs3Id": 18349, "rs3CacheId": 554, "_status": "WIP", "_comment": "Chaotic rapier — worn/icon QA pending", "configTemplate": 1305, "wornTemplate": 1305, "attackSpeed": 4, "gated": false },
