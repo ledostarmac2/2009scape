@@ -7,10 +7,70 @@ game/data/eco/grandexchange.db
 game/data/logs/
 game/data/players/
 game/data/serverstore/
+game/data/chat-history/
 game/plugins/plsto
 *.bak-*
+
 tools/stock-restore/
 tools/server-startup-v3*.log
 tools/server-startup-v3*.err.log
-game/data/custom-items/infinity-blade/cache-backup*/
 data/import/
+
+# OSRS/RS3 import backup caches (keep game/data/cache/ tracked)
+game/osrs-import-backups/
+game/osrs-equipment-import-backups/
+game-test/osrs-import-backups/
+game/_bank-buttons-backup-*/
+game/data/_safety-backup-*/
+game/data/custom-items/**/cache-backup*/
+
+# Local server/client build output and decompiled class mirrors
+game/content/
+game/core/
+game/rt4/
+game/plugin-build/
+game/plugin-src/
+rt4/
+
+# Import pipeline scratch output (manifest/plan/extracted.json stay tracked)
+tools/osrs-import/obj/
+tools/osrs-import/previews/
+tools/osrs-import/plan-batch.txt
+tools/rs3-import/extracted.json
+tools/rs3-import/plan.txt
+tools/rs3-import/def-overrides.json
+tools/rs3-import/previews/
+tools/rs3-import/pipeline-run.log
+tools/objout/
+tools/sprite-out/
+tools/osrs-sprite-out/
+tools/val-out/
+tools/weapon-icon-verify/
+tools/runelite-patch/
+tools/_runelite_patch/
+tools/lib/
+tools/net/
+tools/__pycache__/
+
+# Compiled tool classes not checked in (tracked .class files remain)
+tools/*.class
+tools/*$*.class
+
+# Server/client session and import logs
+game/client-import*.log
+game/client-launch-test.log
+game/server-import*.log
+game/server-restart.*
+game/server-session.err
+tools/srv-*.log
+tools/srv-*.err.log
+tools/srv-*.out.log
+
+# Sprite/model preview PNGs in tools/
+tools/*.png
+
+# game-test runtime data (nested repo; parent only tracks the gitlink)
+game-test/data/custom-items/**/cache-backup*/
+game-test/data/players/
+game-test/data/playerstats/
+game-test/data/eco/
