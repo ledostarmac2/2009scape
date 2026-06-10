@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Server-side finalization for OSRS imported items (14659-14661, 14676-14705)."""
+"""Server-side finalization for OSRS imported items (14659-14661, 14676-14705, 14734)."""
 import json
 import os
 
@@ -42,6 +42,7 @@ FINAL = {
     "14703": {"requirements": "{0,60}-{14,61}", "tradeable": "true", "grand_exchange_price": "4500000", "shop_price": "4500000", "ge_buy_limit": "10"},
     "14704": {"requirements": "{0,75}-{6,75}", "tradeable": "true", "grand_exchange_price": "4000000", "shop_price": "4000000", "ge_buy_limit": "10"},
     "14705": {"requirements": "{0,75}-{6,75}", "tradeable": "true", "grand_exchange_price": "15000000", "shop_price": "15000000", "ge_buy_limit": "10"},
+    "14734": {"requirements": "{0,75}-{1,75}-{2,75}-{3,75}-{4,75}-{6,75}", "tradeable": "false"},
 }
 
 

@@ -128,7 +128,10 @@ public final class PatchCustomWeaponSkillGuides {
                         ". (They also need level 75 Magic.)"),
                 new Row(75, 14697, "Members: Guardian boots", " (with 75 Strength)",
                         "Members now have the Defence level required to wear ", "Guardian boots",
-                        ". (They also need level 75 Strength.)")
+                        ". (They also need level 75 Strength.)"),
+                new Row(75, 14734, "Members: Infernal cape", " (with 75 Attack, 75 Strength, 75 Ranged, 75 Magic and 75 Hitpoints)",
+                        "Members now have the Defence level required to wear ", "Infernal cape",
+                        ". (They also need level 75 Attack, 75 Strength, 75 Ranged, 75 Magic and 75 Hitpoints.)")
         });
         patch(cacheDir, 978, 11, new Row[] {
                 new Row(70, 14547, "Members: Ledostar's Sting", " (with 70 Attack and 70 Prayer)",
@@ -142,7 +145,9 @@ public final class PatchCustomWeaponSkillGuides {
                         ". (They also need level 60 Attack.)")
         });
         patch(cacheDir, 978, 2, new Row[] {
-                simpleWearDefence(70, 14660, "Members: Neitiznot faceguard", "Neitiznot faceguard")
+                simpleWearDefence(70, 14660, "Members: Neitiznot faceguard", "Neitiznot faceguard"),
+                new Row(1, 14698, "Members: Basilisk jaw", null,
+                        "Members can now use ", "Basilisk jaws", " when creating Neitiznot faceguards.")
         });
         patch(cacheDir, 978, 12, new Row[] {
                 new Row(80, 14659, "Members: Ferocious gloves", " (with 80 Attack)",
@@ -154,7 +159,9 @@ public final class PatchCustomWeaponSkillGuides {
                 simpleMagicWear(50, 14693, "Members: Tome of fire", "Tome of fire"),
                 simpleMagicWear(75, 14699, "Members: Imbued saradomin cape", "Imbued saradomin cape"),
                 simpleMagicWear(75, 14700, "Members: Imbued guthix cape", "Imbued guthix cape"),
-                simpleMagicWear(75, 14701, "Members: Imbued zamorak cape", "Imbued zamorak cape")
+                simpleMagicWear(75, 14701, "Members: Imbued zamorak cape", "Imbued zamorak cape"),
+                new Row(1, 14684, "Members: Brimstone ring", null,
+                        "Members can now wear ", "Brimstone rings", ".")
         });
         patch(cacheDir, 1004, 1, new Row[] {
                 new Row(70, 14546, "Members: Ledostar's Edge", " (with 91 Attack)",
@@ -164,9 +171,15 @@ public final class PatchCustomWeaponSkillGuides {
                         "Members now have the Prayer level required to wield ", "Ledostar's Sting",
                         ". (They also need level 70 Attack and level 70 Defence.)"),
                 simplePrayerWear(75, 14676, "Members: Amulet of torture", "Amulet of torture"),
+                simplePrayerWear(75, 14677, "Members: Amulet of torture (or)", "Amulet of torture (or)"),
                 simplePrayerWear(75, 14678, "Members: Necklace of anguish", "Necklace of anguish"),
+                simplePrayerWear(75, 14679, "Members: Necklace of anguish (or)", "Necklace of anguish (or)"),
                 simplePrayerWear(75, 14680, "Members: Tormented bracelet", "Tormented bracelet"),
-                simplePrayerWear(75, 14682, "Members: Ring of suffering", "Ring of suffering")
+                simplePrayerWear(75, 14681, "Members: Tormented bracelet (or)", "Tormented bracelet (or)"),
+                simplePrayerWear(75, 14682, "Members: Ring of suffering", "Ring of suffering"),
+                simplePrayerWear(75, 14683, "Members: Ring of suffering (i)", "Ring of suffering (i)"),
+                new Row(1, 14685, "Members: Lightbearer", null,
+                        "Members can now wear ", "Lightbearers", ".")
         });
     }
 

@@ -17,7 +17,7 @@
     "legacyGeometry": "Optional bool. Use ImportOsrsItemModels bespoke worn-model geometry (14659-14661 cuff flare, rig-center dy, faceguard neck align). Icon cameras come from OSRS extraction (identity import).",
     "iconZoom / iconXan / iconYan / iconZan / iconXoff / iconYoff": "Optional. Override OSRS icon camera only after RenderClientItemIconSheet contact-sheet tuning (rare; identity import + OSRS cameras are usually pixel-perfect)."
   },
-  "_nextFreeId": 14706,
+  "_nextFreeId": 14735,
   "items": [
     {
       "newId": 14659,
@@ -208,6 +208,15 @@
       "configTemplate": 1305,
       "attackSpeed": 4,
       "gated": true
+    },
+    {
+      "newId": 14734,
+      "osrsId": 21295,
+      "configTemplate": 6570,
+      "rigRefMale": 9638,
+      "rigRefFemale": 9640,
+      "gated": true,
+      "requirements": "{0,75}-{1,75}-{2,75}-{3,75}-{4,75}-{6,75}"
     }
   ]
 }

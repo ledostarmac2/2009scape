@@ -3,7 +3,7 @@
 import json
 
 PLAYER = r"C:\Users\btarabocchia\2009scape\2009scape\game\data\players\ledostar.json"
-ITEMS = list(range(14676, 14706)) + list(range(14720, 14734))
+ITEMS = list(range(14659, 14662)) + list(range(14676, 14706)) + [14734]
 
 with open(PLAYER, encoding="utf-8") as f:
     data = json.load(f)
