@@ -2,6 +2,7 @@ package content.custom;
 
 import core.api.LoginListener;
 import core.game.node.entity.combat.equipment.WeaponInterface;
+import core.plugin.Initializable;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.Settings;
 import core.game.system.task.Pulse;
@@ -12,6 +13,7 @@ import core.game.world.GameWorld;
  * Login re-equips worn items, which triggers WeaponInterface.ensureStyleIndex()
  * and can remap the style to defensive even when settings.attackStyle is correct.
  */
+@Initializable
 public final class AttackStylePersistenceListener implements LoginListener {
     private static final String SAVED_ATTACK_STYLE_ATTR = "attack-style:saved-index";
 
