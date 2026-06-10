@@ -1,0 +1,36 @@
+{
+  "_README": "THE ONLY FILE YOU EDIT to import RS3 items. Add an entry to 'items', then run: python tools/rs3_import_pipeline.py run. Full docs: docs/rs3-item-import.md",
+  "_fields": {
+    "newId": "REQUIRED. New 2009scape item id. Next free id: see _nextFreeId below.",
+    "rs3Id": "REQUIRED. The RS3 item id (from the RS3 wiki infobox).",
+    "rs3CacheId": "REQUIRED. OpenRS2 cache id (https://archive.openrs2.org/caches/runescape/{id}/disk.zip).",
+    "name": "Optional. Defaults to the RS3 cache name.",
+    "examine": "Optional.",
+    "configTemplate": "Optional. Native 2009 item whose server combat/anims are cloned. REQUIRED for weapons.",
+    "attackSpeed": "Optional. Weapon attack speed in ticks.",
+    "wornPriority": "Optional. Worn render priority override.",
+    "rigRefMale / rigRefFemale": "Optional. Nearest-bone rig reference models.",
+    "wornDy": "Optional. Vertical worn-model offset (+down).",
+    "skipWorn": "Optional bool. Inventory-only import.",
+    "wornTemplate": "Optional native 2009 item id. Borrow its worn models (opcodes 23/25) while keeping the RS3 inventory model. Use when RS3 worn geometry cannot be converted.",
+    "gated": "Optional bool, default false. When false, no level requirements.",
+    "iconZoom / iconXan / iconYan / iconZan / iconXoff / iconYoff": "Optional. Override RS3 icon camera after RenderClientItemIconSheet contact-sheet tuning (RS3 raw angles often render wrong in the 2009 client)."
+  },
+  "_nextFreeId": 14734,
+  "items": [
+    { "newId": 14720, "rs3Id": 18349, "rs3CacheId": 554, "configTemplate": 1305, "wornTemplate": 1305, "attackSpeed": 4, "gated": false },
+    { "newId": 14721, "rs3Id": 18351, "rs3CacheId": 554, "configTemplate": 3204, "attackSpeed": 6, "gated": false, "iconZoom": 1447, "iconXan": 512, "iconYan": 0, "iconZan": 0, "iconXoff": 5, "iconYoff": 3 },
+    { "newId": 14722, "rs3Id": 18353, "rs3CacheId": 554, "configTemplate": 1305, "wornTemplate": 1305, "attackSpeed": 5, "gated": false },
+    { "newId": 14723, "rs3Id": 18357, "rs3CacheId": 554, "configTemplate": 9185, "attackSpeed": 6, "gated": false },
+    { "newId": 14724, "rs3Id": 18359, "rs3CacheId": 554, "configTemplate": 4675, "wornTemplate": 4675, "attackSpeed": 5, "gated": false },
+    { "newId": 14725, "rs3Id": 20171, "rs3CacheId": 839, "configTemplate": 861, "attackSpeed": 5, "gated": false, "iconZoom": 1703, "iconXan": 508, "iconYan": 124, "iconZan": 0, "iconXoff": 0, "iconYoff": -13 },
+    { "newId": 14726, "rs3Id": 28444, "rs3CacheId": 286, "name": "Goliath gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
+    { "newId": 14727, "rs3Id": 28445, "rs3CacheId": 286, "name": "Swift gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
+    { "newId": 14728, "rs3Id": 28446, "rs3CacheId": 286, "name": "Spellcaster gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
+    { "newId": 14729, "rs3Id": 24338, "rs3CacheId": 302, "configTemplate": 9185, "attackSpeed": 6, "gated": false, "iconZoom": 926, "iconXan": 432, "iconYan": 258, "iconZan": 0, "iconXoff": 1, "iconYoff": 29 },
+    { "newId": 14730, "rs3Id": 26579, "rs3CacheId": 554, "configTemplate": 1305, "inventoryModel": 17320, "attackSpeed": 4, "gated": false, "iconZoom": 1447, "iconXan": 1522, "iconYan": 1710, "iconZan": 1158, "iconXoff": 9, "iconYoff": -7 },
+    { "newId": 14731, "rs3Id": 26580, "rs3CacheId": 554, "configTemplate": 1305, "attackSpeed": 5, "gated": false, "iconZoom": 1579, "iconXan": 1603, "iconYan": 1805, "iconZan": 916, "iconXoff": 3, "iconYoff": 0 },
+    { "newId": 14732, "rs3Id": 26582, "rs3CacheId": 554, "configTemplate": 1347, "attackSpeed": 5, "gated": false, "iconZoom": 1447, "iconXan": 512, "iconYan": 0, "iconZan": 0, "iconXoff": -1, "iconYoff": -47 },
+    { "newId": 14733, "rs3Id": 19784, "rs3CacheId": 554, "configTemplate": 1305, "attackSpeed": 5, "gated": false, "iconZoom": 1744, "iconXan": 512, "iconYan": 124, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 }
+  ]
+}

@@ -42,6 +42,7 @@ public class ImportOsrsItemModels {
             boolean tradeable) {}
 
     private static final ImportItem[] ITEMS = {
+            // Cameras dumped from the real OSRS cache (DumpOsrsItemCameras, openrs2 rev 2565).
             new ImportItem(14659, "Ferocious gloves", 36141, 36325, -1, 36335, -1, -1, -1, 917, 420, 1082, 0, 0, -1, false),
             new ImportItem(14660, "Neitiznot faceguard", 38897, 38857, -1, 38858, -1, 38873, 38873, 984, 126, 129, 0, -1, 1, false),
             new ImportItem(14661, "Primordial boots", 29397, 29250, -1, 29255, -1, -1, -1, 976, 147, 279, 0, 5, -5, true),
@@ -52,7 +53,7 @@ public class ImportOsrsItemModels {
     };
 
     private record V(int x, int y, int z, int bone) {}
-    private record F(int a, int b, int c, int color, int bone) {}
+    private record F(int a, int b, int c, int color, int bone, int priority) {}
 
     public static void main(String[] args) throws Exception {
         if (args.length < 4) {
@@ -63,7 +64,9 @@ public class ImportOsrsItemModels {
         Path modelDir = Path.of(args[2]);
         Path objOut = Path.of(args[3]);
         Set<Integer> onlyItems = new HashSet<>();
+        boolean defOnly = false;
         for (int i = 4; i < args.length; i++) {
+            if (args[i].equalsIgnoreCase("def-only")) { defOnly = true; continue; }
             onlyItems.add(Integer.parseInt(args[i]));
         }
         Files.createDirectories(backupDir);
@@ -81,7 +84,7 @@ public class ImportOsrsItemModels {
             if (!onlyItems.isEmpty() && !onlyItems.contains(item.itemId)) {
                 continue;
             }
-            for (int modelId : new int[] { item.ground, item.male0, item.male1, item.female0, item.female1, item.maleHead, item.femaleHead }) {
+            if (!defOnly) for (int modelId : new int[] { item.ground, item.male0, item.male1, item.female0, item.female1, item.maleHead, item.femaleHead }) {
                 if (modelId < 0 || patchedModels.contains(modelId)) {
                     continue;
                 }
@@ -141,23 +144,96 @@ public class ImportOsrsItemModels {
     private static byte[] encodeOldModel(ModelDefinition model, ImportItem item, boolean worn, RefRig rig) throws Exception {
         List<V> vertices = new ArrayList<>();
         Bounds bounds = Bounds.of(model);
+        // Re-center imported worn gloves onto the 2009 reference position. OSRS hand geometry
+        // sits higher up the arm than the 2009 skeleton, which floated the gloves above the hands
+        // and dragged the held weapon/offhand down. Match the reference model's bounds center.
+        int dx = 0, dy = 0, dz = 0;
+        boolean glovesSpreadX = worn && rig != null && item.itemId == 14659;
+        if (glovesSpreadX) {
+            // Gloves: keep the perfect height (lift 5). X is spread onto the reference (wrist)
+            // width below, because the OSRS hands sit too narrow so the gloves missed the wrists.
+            dy = (rig.bounds().minY + rig.bounds().maxY - bounds.minY - bounds.maxY) / 2 - 5;
+        } else if (worn && rig != null && item.itemId == 14660 && (model.id == item.male0 || model.id == item.female0)) {
+            // Faceguard helm: lower the base to meet the neck (align bottom edge to reference helm).
+            dy = rig.bounds().maxY - bounds.maxY;
+        }
+        // Cuff clearance (gloves): the OSRS cuff is slimmer than the 2009 forearm, so the arm
+        // surface sits flush with / inside the cuff and painter-sorts unstably at the wrist.
+        // The 2009 arm tube reaches well below the reference glove's top edge, so the flare
+        // must cover the upper half of the glove: full strength (+25%) from the cuff top down
+        // past the wrist line, then taper to nothing before the hand so there is no seam.
+        // Render priority stays at the Barrows reference value (10) so draw order against the
+        // body and other items is untouched.
+        double cuffFull = 0, cuffEnd = 0, cuffCxL = 0, cuffCzL = 0, cuffCxR = 0, cuffCzR = 0;
+        boolean cuffFlare = glovesSpreadX;
+        if (cuffFlare) {
+            cuffFull = rig.bounds().minY + 6;   // full flare from glove top to here
+            cuffEnd = rig.bounds().minY + 14;   // flare fades to zero by here
+            double gcx = (bounds.minX + bounds.maxX) / 2.0;
+            double sxL = 0, szL = 0, sxR = 0, szR = 0;
+            int nL = 0, nR = 0;
+            for (int i = 0; i < model.vertexCount; i++) {
+                if (model.vertexY[i] + dy <= cuffEnd) {
+                    double vx = gcx + (model.vertexX[i] - gcx) * 1.08;
+                    if (model.vertexX[i] < gcx) { sxL += vx; szL += model.vertexZ[i]; nL++; }
+                    else { sxR += vx; szR += model.vertexZ[i]; nR++; }
+                }
+            }
+            cuffFlare = nL > 0 && nR > 0;
+            if (cuffFlare) {
+                cuffCxL = sxL / nL; cuffCzL = szL / nL;
+                cuffCxR = sxR / nR; cuffCzR = szR / nR;
+            }
+        }
         for (int i = 0; i < model.vertexCount; i++) {
             int x;
             int y;
             int z;
+            int bx; // pre-translation position for nearest-bone lookup (must match `bounds` space)
+            int by;
+            int bz;
             if (worn) {
+                bx = clamp(model.vertexX[i]);
+                by = clamp(model.vertexY[i]);
+                bz = clamp(model.vertexZ[i]);
+                if (glovesSpreadX) {
+                    // spread X outward just a smidge (~8%) about the centre to reach the wrists.
+                    double gcx = (bounds.minX + bounds.maxX) / 2.0;
+                    double vx = gcx + (model.vertexX[i] - gcx) * 1.08;
+                    double vz = model.vertexZ[i];
+                    double vy = model.vertexY[i] + dy;
+                    if (cuffFlare && vy <= cuffEnd) {
+                        double t = vy <= cuffFull ? 1.0 : (cuffEnd - vy) / Math.max(1.0, cuffEnd - cuffFull);
+                        double s = 1.0 + 0.25 * t;
+                        double cx = model.vertexX[i] < gcx ? cuffCxL : cuffCxR;
+                        double cz = model.vertexX[i] < gcx ? cuffCzL : cuffCzR;
+                        vx = cx + (vx - cx) * s;
+                        vz = cz + (vz - cz) * s;
+                    }
+                    x = clamp((int) Math.round(vx));
+                    z = clamp((int) Math.round(vz));
+                } else {
+                    x = clamp(model.vertexX[i] + dx);
+                    z = clamp(model.vertexZ[i] + dz);
+                }
+                y = clamp(model.vertexY[i] + dy);
+            } else {
+                // Inventory/ground model: keep the native OSRS geometry untouched. The 2009
+                // icon renderer shares the RS2 sprite math with OSRS, so the original OSRS
+                // zoom2d/xan2d/yan2d camera values only line up if the model is neither
+                // scaled nor re-oriented. The old axis swap (OSRS Y-up -> icon Z) laid the
+                // models on their backs, which no camera angle could undo.
                 x = clamp(model.vertexX[i]);
                 y = clamp(model.vertexY[i]);
                 z = clamp(model.vertexZ[i]);
-            } else {
-                x = clamp((int) Math.round((model.vertexX[i] - bounds.centerX()) * (46.0 / bounds.width())));
-                y = clamp((int) Math.round((model.vertexZ[i] - bounds.centerZ()) * (18.0 / bounds.depth())));
-                z = clamp((int) Math.round(38.0 - (model.vertexY[i] - bounds.minY) * (76.0 / bounds.height())));
+                bx = x;
+                by = y;
+                bz = z;
             }
             // Use the real OSRS per-vertex skin (vskin) labels when present. OSRS inherited the
             // RS2 transform-group numbering, so these should line up with the 2009 player skeleton.
             // If a model has no vskin we emit -1 (static, but solid) -- never a hardcoded guess.
-            int bone = model.packedVertexGroups != null ? model.packedVertexGroups[i] : rig == null ? -1 : rig.nearestBone(x, y, z, bounds);
+            int bone = model.packedVertexGroups != null ? model.packedVertexGroups[i] : rig == null ? -1 : rig.nearestBone(bx, by, bz, bounds);
             vertices.add(new V(x, y, z, bone));
         }
         List<F> faces = new ArrayList<>();
@@ -170,9 +246,20 @@ public class ImportOsrsItemModels {
             // Triangle skins (tskin) are intentionally omitted here: the old code mis-read
             // packedTransparencyVertexGroups (face alpha groups) as skeleton skins. Worn
             // deformation is driven by the per-vertex skins (vskin) written below.
-            faces.add(new F(model.faceIndices1[i], model.faceIndices2[i], model.faceIndices3[i], color, -1));
+            faces.add(new F(model.faceIndices1[i], model.faceIndices2[i], model.faceIndices3[i], color, -1, -1));
         }
-        return encodeOldModel(vertices, faces);
+        int priority = worn ? referencePriority(item, model.id) : 0;
+        return encodeOldModel(vertices, faces, priority);
+    }
+
+    /** Global render priority to match the 2009 reference equipment (read from their models). */
+    private static int referencePriority(ImportItem item, int modelId) {
+        if (item.itemId == 14659) return 10;                                      // Ferocious gloves: same as the 2009 Barrows gloves reference (cuff faces get 11 per-face)
+        if (item.itemId == 14660) {
+            if (modelId == item.maleHead || modelId == item.femaleHead) return 4; // head covering
+            return 7;                                                             // helm body
+        }
+        return 0;                                                                 // boots / default
     }
 
     private record RefRig(int[] x, int[] y, int[] z, int[] bone, Bounds bounds) {
@@ -183,6 +270,9 @@ public class ImportOsrsItemModels {
             double best = Double.MAX_VALUE;
             int bestBone = -1;
             for (int i = 0; i < x.length; i++) {
+                // Never inherit the root bone (0): worn equipment vertices on the root stay put
+                // while the limb animates, producing a jagged jut (the boots' stray red flap).
+                if (bone[i] == 0) continue;
                 double rx = (x[i] - bounds.minX) / bounds.width();
                 double ry = (y[i] - bounds.minY) / bounds.height();
                 double rz = (z[i] - bounds.minZ) / bounds.depth();
@@ -280,6 +370,10 @@ public class ImportOsrsItemModels {
 
         double centerZ() {
             return (minZ + maxZ) / 2.0;
+        }
+
+        double centerY() {
+            return (minY + maxY) / 2.0;
         }
 
         double width() {
@@ -516,9 +610,10 @@ public class ImportOsrsItemModels {
         }
     }
 
-    private static byte[] encodeOldModel(List<V> vertices, List<F> faces) throws Exception {
+    private static byte[] encodeOldModel(List<V> vertices, List<F> faces, int priority) throws Exception {
         boolean hasVertexBones = vertices.stream().anyMatch(vertex -> vertex.bone >= 0);
         boolean hasTriangleBones = faces.stream().anyMatch(face -> face.bone >= 0);
+        boolean hasFacePriorities = faces.stream().anyMatch(face -> face.priority >= 0);
         ByteArrayOutputStream vertexFlags = new ByteArrayOutputStream();
         ByteArrayOutputStream xData = new ByteArrayOutputStream();
         ByteArrayOutputStream yData = new ByteArrayOutputStream();
@@ -538,12 +633,16 @@ public class ImportOsrsItemModels {
             px = vert.x; py = vert.y; pz = vert.z;
         }
         ByteArrayOutputStream triangleTypes = new ByteArrayOutputStream();
+        ByteArrayOutputStream trianglePriorities = new ByteArrayOutputStream();
         ByteArrayOutputStream triangleIndices = new ByteArrayOutputStream();
         ByteArrayOutputStream colors = new ByteArrayOutputStream();
         ByteArrayOutputStream triangleBones = new ByteArrayOutputStream();
         int last = 0;
         for (F face : faces) {
             triangleTypes.write(1);
+            if (hasFacePriorities) {
+                trianglePriorities.write(face.priority >= 0 ? face.priority : priority);
+            }
             writeSmart(triangleIndices, face.a - last);
             writeSmart(triangleIndices, face.b - face.a);
             writeSmart(triangleIndices, face.c - face.b);
@@ -556,6 +655,11 @@ public class ImportOsrsItemModels {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         out.write(vertexFlags.toByteArray());
         out.write(triangleTypes.toByteArray());
+        if (hasFacePriorities) {
+            // Old-format layout: per-face priorities sit between the face types and the
+            // tskins/vskins blocks (see rt4.RawModel.decodeOld), flagged by priority=255.
+            out.write(trianglePriorities.toByteArray());
+        }
         if (hasTriangleBones) {
             out.write(triangleBones.toByteArray());
         }
@@ -569,10 +673,10 @@ public class ImportOsrsItemModels {
         out.write(zData.toByteArray());
         writeShort(out, vertices.size());
         writeShort(out, faces.size());
-        out.write(0);
-        out.write(0);
-        out.write(0);
-        out.write(0);
+        out.write(0);              // textured face count
+        out.write(0);              // use face render types
+        out.write(hasFacePriorities ? 255 : priority); // 255 = per-face priority array present
+        out.write(0);              // use face alpha
         out.write(hasTriangleBones ? 1 : 0);
         out.write(hasVertexBones ? 1 : 0);
         writeShort(out, xData.size());

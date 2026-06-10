@@ -140,6 +140,14 @@ public class InspectItemModels {
                     " trianglePriorities=" + (model.trianglePriorities == null ? "null" : "present") +
                     " triangleAlpha=" + (model.triangleAlpha == null ? "null" : "present") +
                     " triangleTextures=" + (model.triangleTextures == null ? "null" : "present"));
+            if (model.trianglePriorities != null) {
+                int[] prio = new int[model.trianglePriorities.length];
+                for (int i = 0; i < prio.length; i++) {
+                    prio[i] = model.trianglePriorities[i] & 0xFF;
+                }
+                System.out.print("    trianglePriorityDist=");
+                printDistribution(prio);
+            }
             if (model.vertexBones != null) {
                 System.out.print("    vertexBones=");
                 printDistribution(model.vertexBones);

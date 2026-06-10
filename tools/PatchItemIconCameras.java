@@ -10,23 +10,35 @@ import rt4.FileOnDisk;
 import rt4.Js5Compression;
 import rt4.Js5Index;
 
+/**
+ * Manual icon-camera patcher for post-contact-sheet tuning only.
+ *
+ * The import pipeline writes authentic OSRS zoom2d/xan2d/yan2d/zan2d cameras via
+ * ImportOsrsItemModels / ImportOsrsItemBatch (identity inventory models). Run this
+ * tool only after RenderClientItemIconSheet contact sheets confirm a different angle.
+ *
+ * Usage: PatchItemIconCameras &lt;cacheDir&gt; &lt;itemId&gt; &lt;zoom&gt; &lt;xan&gt; &lt;yan&gt; &lt;zan&gt; [&lt;xOffset&gt; [&lt;yOffset&gt;]]
+ *    or: PatchItemIconCameras &lt;cacheDir&gt;   (no args = no-op)
+ */
 public final class PatchItemIconCameras {
     private static final int ITEM_ARCHIVE = 19;
     private static final int KEEP_OFFSET = Integer.MIN_VALUE;
 
     public static void main(String[] args) throws Exception {
         File cacheDir = new File(args.length == 0 ? "game/data/cache" : args[0]);
-        int[][] patches = {
-                {14422, 1570, 400, 768, 128, KEEP_OFFSET, KEEP_OFFSET},
-                {14545, 1570, 400, 768, 128, KEEP_OFFSET, KEEP_OFFSET},
-                {14546, 1570, 400, 768, 128, KEEP_OFFSET, KEEP_OFFSET},
-                {14656, 1570, 400, 768, 128, KEEP_OFFSET, KEEP_OFFSET},
-                {14666, 1570, 400, 768, 128, KEEP_OFFSET, KEEP_OFFSET},
-                {14547, 650, 344, 1152, 704, 0, -20}
-        };
-        for (int[] patch : patches) {
-            patchItem(cacheDir, patch[0], patch[1], patch[2], patch[3], patch[4], patch[5], patch[6]);
+        if (args.length < 7) {
+            System.out.println("No patches (pipeline writes OSRS cameras automatically).");
+            System.out.println("To tune after contact sheets: PatchItemIconCameras <cacheDir> <itemId> <zoom> <xan> <yan> <zan> [xOffset] [yOffset]");
+            return;
         }
+        int itemId = Integer.parseInt(args[1]);
+        int zoom = Integer.parseInt(args[2]);
+        int xan = Integer.parseInt(args[3]);
+        int yan = Integer.parseInt(args[4]);
+        int zan = Integer.parseInt(args[5]);
+        int xOffset = args.length >= 8 ? Integer.parseInt(args[6]) : KEEP_OFFSET;
+        int yOffset = args.length >= 9 ? Integer.parseInt(args[7]) : KEEP_OFFSET;
+        patchItem(cacheDir, itemId, zoom, xan, yan, zan, xOffset, yOffset);
     }
 
     private static void patchItem(File cacheDir, int itemId, int zoom, int xan, int yan, int zan, int xOffset, int yOffset) throws Exception {

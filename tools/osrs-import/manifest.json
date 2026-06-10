@@ -1,0 +1,213 @@
+{
+  "_README": "THE ONLY FILE YOU EDIT to import OSRS items. Add an entry to 'items', then run import-osrs-items.ps1 from the repo root. Full docs: docs/osrs-item-import.md",
+  "_fields": {
+    "newId": "REQUIRED. New 2009scape item id. Next free id: see _nextFreeId below; keep ids contiguous.",
+    "osrsId": "REQUIRED. The OSRS item id (look up on the OSRS wiki infobox or data/import/osrs_items.json).",
+    "name": "Optional. Defaults to the OSRS name.",
+    "examine": "Optional. Defaults to the OSRS examine text.",
+    "configTemplate": "Optional. A native 2009 item id whose server config combat fields (anims, weapon_interface, audios) are cloned. REQUIRED for weapons. Suggested: stab spear 11379, sword 1305, warhammer 1347, crossbow 9185, bow 861, defender 8850.",
+    "attackSpeed": "Optional. Weapon attack speed in ticks (overrides template).",
+    "wornPriority": "Optional. Global render priority for worn models. Defaults by slot: weapon/shield/hands 10, head 7, neck 4, cape/feet/body/legs 0.",
+    "rigRefMale / rigRefFemale": "Optional. 2009 model ids used for nearest-bone rigging when the OSRS model has no vskins. Defaults by slot (see docs).",
+    "wornDy": "Optional. Vertical offset (+down) applied to worn model vertices. Use for fine alignment. Weapon/shield slots default to +11 (ferocious gloves rig-center delta).",
+    "facePriority": "Optional. Uniform per-face render priority override for worn models. Capes inherit fire-cape rig ref per-face priorities automatically.",
+    "skipWorn": "Optional bool. Force inventory-only import (auto-true when OSRS has no worn models, e.g. rings).",
+    "requirements": "Optional. Server requirements string like '{0,75}-{1,75}' (skill ids: 0 atk, 1 def, 2 str, 3 hp, 4 range, 5 pray, 6 magic). Defaults to the OSRS requirements when gating is enabled.",
+    "gated": "Optional bool, default false. When false the item is imported WITHOUT level requirements (try-on mode). Flip to true and re-run the pipeline to apply OSRS requirements.",
+    "legacyGeometry": "Optional bool. Use ImportOsrsItemModels bespoke worn-model geometry (14659-14661 cuff flare, rig-center dy, faceguard neck align). Icon cameras come from OSRS extraction (identity import).",
+    "iconZoom / iconXan / iconYan / iconZan / iconXoff / iconYoff": "Optional. Override OSRS icon camera only after RenderClientItemIconSheet contact-sheet tuning (rare; identity import + OSRS cameras are usually pixel-perfect)."
+  },
+  "_nextFreeId": 14706,
+  "items": [
+    {
+      "newId": 14659,
+      "osrsId": 22981,
+      "gated": true,
+      "legacyGeometry": true
+    },
+    {
+      "newId": 14660,
+      "osrsId": 24271,
+      "gated": true,
+      "legacyGeometry": true
+    },
+    {
+      "newId": 14661,
+      "osrsId": 13239,
+      "gated": true,
+      "legacyGeometry": true
+    },
+    {
+      "newId": 14676,
+      "osrsId": 19553,
+      "gated": true
+    },
+    {
+      "newId": 14677,
+      "osrsId": 20366,
+      "gated": true
+    },
+    {
+      "newId": 14678,
+      "osrsId": 19547,
+      "gated": true
+    },
+    {
+      "newId": 14679,
+      "osrsId": 22249,
+      "gated": true
+    },
+    {
+      "newId": 14680,
+      "osrsId": 19544,
+      "gated": true
+    },
+    {
+      "newId": 14681,
+      "osrsId": 23444,
+      "gated": true
+    },
+    {
+      "newId": 14682,
+      "osrsId": 19550,
+      "gated": true
+    },
+    {
+      "newId": 14683,
+      "osrsId": 19710,
+      "gated": true
+    },
+    {
+      "newId": 14684,
+      "osrsId": 22975,
+      "gated": true
+    },
+    {
+      "newId": 14685,
+      "osrsId": 25975,
+      "gated": true
+    },
+    {
+      "newId": 14686,
+      "osrsId": 22322,
+      "configTemplate": 8850,
+      "gated": true
+    },
+    {
+      "newId": 14687,
+      "osrsId": 22978,
+      "configTemplate": 11379,
+      "attackSpeed": 4,
+      "gated": true
+    },
+    {
+      "newId": 14688,
+      "osrsId": 11889,
+      "configTemplate": 11379,
+      "attackSpeed": 4,
+      "gated": true
+    },
+    {
+      "newId": 14689,
+      "osrsId": 26219,
+      "configTemplate": 1305,
+      "attackSpeed": 5,
+      "requirements": "{0,82}",
+      "gated": true
+    },
+    {
+      "newId": 14690,
+      "osrsId": 13576,
+      "configTemplate": 1347,
+      "attackSpeed": 6,
+      "gated": true
+    },
+    {
+      "newId": 14691,
+      "osrsId": 11785,
+      "configTemplate": 9185,
+      "attackSpeed": 6,
+      "gated": true
+    },
+    {
+      "newId": 14692,
+      "osrsId": 12926,
+      "configTemplate": 861,
+      "attackSpeed": 3,
+      "gated": true
+    },
+    {
+      "newId": 14693,
+      "osrsId": 20714,
+      "gated": true
+    },
+    {
+      "newId": 14694,
+      "osrsId": 12002,
+      "gated": true
+    },
+    {
+      "newId": 14695,
+      "osrsId": 13237,
+      "gated": true
+    },
+    {
+      "newId": 14696,
+      "osrsId": 13235,
+      "gated": true
+    },
+    {
+      "newId": 14697,
+      "osrsId": 21733,
+      "gated": true
+    },
+    {
+      "newId": 14698,
+      "osrsId": 24268,
+      "skipWorn": true,
+      "gated": true
+    },
+    {
+      "newId": 14699,
+      "osrsId": 21791,
+      "gated": true
+    },
+    {
+      "newId": 14700,
+      "osrsId": 21793,
+      "gated": true
+    },
+    {
+      "newId": 14701,
+      "osrsId": 21795,
+      "gated": true
+    },
+    {
+      "newId": 14702,
+      "osrsId": 12954,
+      "configTemplate": 8850,
+      "gated": true
+    },
+    {
+      "newId": 14703,
+      "osrsId": 11920,
+      "configTemplate": 1275,
+      "attackSpeed": 5,
+      "gated": true
+    },
+    {
+      "newId": 14704,
+      "osrsId": 22296,
+      "configTemplate": 4170,
+      "attackSpeed": 4,
+      "gated": true
+    },
+    {
+      "newId": 14705,
+      "osrsId": 27690,
+      "configTemplate": 1305,
+      "attackSpeed": 4,
+      "gated": true
+    }
+  ]
+}

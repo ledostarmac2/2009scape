@@ -95,12 +95,66 @@ public final class PatchCustomWeaponSkillGuides {
                 new Row(70, 14547, "Members: Ledostar's Sting", " (with 70 Defence and 70 Prayer)",
                         "Members now have the Attack level required to wield ", "Ledostar's Sting",
                         ". (They also need level 70 Defence and level 70 Prayer.)"),
-                simple(99, 14666, "Members: Infinity Blade", "Infinity Blade")
+                simple(99, 14666, "Members: Infinity Blade", "Infinity Blade"),
+                simple(78, 14687, "Members: Dragon hunter lance", "Dragon hunter lance"),
+                simple(70, 14688, "Members: Zamorakian hasta", "Zamorakian hasta"),
+                simple(82, 14689, "Members: Osmumten's fang", "Osmumten's fang"),
+                new Row(60, 14690, "Members: Dragon warhammer", " (with 60 Strength)",
+                        "Members now have the Attack level required to wield ", "Dragon warhammer",
+                        ". (They also need level 60 Strength.)"),
+                new Row(60, 14703, "Members: Dragon pickaxe", " (with 61 Mining)",
+                        "Members now have the Attack level required to wield ", "Dragon pickaxe",
+                        ". (They also need level 61 Mining.)"),
+                new Row(75, 14704, "Members: Staff of light", " (with 75 Magic)",
+                        "Members now have the Attack level required to wield ", "Staff of light",
+                        ". (They also need level 75 Magic.)"),
+                new Row(75, 14705, "Members: Voidwaker", " (with 75 Magic)",
+                        "Members now have the Attack level required to wield ", "Voidwaker",
+                        ". (They also need level 75 Magic.)"),
+                new Row(70, 14691, "Members: Armadyl crossbow", null,
+                        "Members now have the Ranged level required to wield ", "Armadyl crossbow", "."),
+                new Row(75, 14692, "Members: Toxic blowpipe", null,
+                        "Members now have the Ranged level required to wield ", "Toxic blowpipe", ".")
+        });
+        patch(cacheDir, 978, 10, new Row[] {
+                new Row(75, 14661, "Members: Primordial boots", " (with 75 Attack and 75 Strength)",
+                        "Members now have the Defence level required to wear ", "Primordial boots",
+                        ". (They also need level 75 Attack and level 75 Strength.)"),
+                new Row(75, 14695, "Members: Pegasian boots", " (with 75 Ranged)",
+                        "Members now have the Defence level required to wear ", "Pegasian boots",
+                        ". (They also need level 75 Ranged.)"),
+                new Row(75, 14696, "Members: Eternal boots", " (with 75 Magic)",
+                        "Members now have the Defence level required to wear ", "Eternal boots",
+                        ". (They also need level 75 Magic.)"),
+                new Row(75, 14697, "Members: Guardian boots", " (with 75 Strength)",
+                        "Members now have the Defence level required to wear ", "Guardian boots",
+                        ". (They also need level 75 Strength.)")
         });
         patch(cacheDir, 978, 11, new Row[] {
                 new Row(70, 14547, "Members: Ledostar's Sting", " (with 70 Attack and 70 Prayer)",
                         "Members now have the Defence level required to wield ", "Ledostar's Sting",
-                        ". (They also need level 70 Attack and level 70 Prayer.)")
+                        ". (They also need level 70 Attack and level 70 Prayer.)"),
+                new Row(70, 14686, "Members: Avernic defender", " (with 70 Attack)",
+                        "Members now have the Defence level required to wield ", "Avernic defender",
+                        ". (They also need level 70 Attack.)"),
+                new Row(60, 14702, "Members: Dragon defender", " (with 60 Attack)",
+                        "Members now have the Defence level required to wield ", "Dragon defender",
+                        ". (They also need level 60 Attack.)")
+        });
+        patch(cacheDir, 978, 2, new Row[] {
+                simpleWearDefence(70, 14660, "Members: Neitiznot faceguard", "Neitiznot faceguard")
+        });
+        patch(cacheDir, 978, 12, new Row[] {
+                new Row(80, 14659, "Members: Ferocious gloves", " (with 80 Attack)",
+                        "Members now have the Defence level required to wear ", "Ferocious gloves",
+                        ". (They also need level 80 Attack.)")
+        });
+        patch(cacheDir, 996, 8, new Row[] {
+                simpleMagicWear(70, 14694, "Members: Occult necklace", "Occult necklace"),
+                simpleMagicWear(50, 14693, "Members: Tome of fire", "Tome of fire"),
+                simpleMagicWear(75, 14699, "Members: Imbued saradomin cape", "Imbued saradomin cape"),
+                simpleMagicWear(75, 14700, "Members: Imbued guthix cape", "Imbued guthix cape"),
+                simpleMagicWear(75, 14701, "Members: Imbued zamorak cape", "Imbued zamorak cape")
         });
         patch(cacheDir, 1004, 1, new Row[] {
                 new Row(70, 14546, "Members: Ledostar's Edge", " (with 91 Attack)",
@@ -108,13 +162,32 @@ public final class PatchCustomWeaponSkillGuides {
                         ". (They also need level 91 Attack.)"),
                 new Row(70, 14547, "Members: Ledostar's Sting", " (with 70 Attack and 70 Defence)",
                         "Members now have the Prayer level required to wield ", "Ledostar's Sting",
-                        ". (They also need level 70 Attack and level 70 Defence.)")
+                        ". (They also need level 70 Attack and level 70 Defence.)"),
+                simplePrayerWear(75, 14676, "Members: Amulet of torture", "Amulet of torture"),
+                simplePrayerWear(75, 14678, "Members: Necklace of anguish", "Necklace of anguish"),
+                simplePrayerWear(75, 14680, "Members: Tormented bracelet", "Tormented bracelet"),
+                simplePrayerWear(75, 14682, "Members: Ring of suffering", "Ring of suffering")
         });
     }
 
     private static Row simple(int level, int itemId, String title, String itemText) {
         return new Row(level, itemId, title, null,
                 "Members now have the Attack level required to wield ", itemText, ".");
+    }
+
+    private static Row simpleWearDefence(int level, int itemId, String title, String itemText) {
+        return new Row(level, itemId, title, null,
+                "Members now have the Defence level required to wear ", itemText, ".");
+    }
+
+    private static Row simpleMagicWear(int level, int itemId, String title, String itemText) {
+        return new Row(level, itemId, title, null,
+                "Members now have the Magic level required to wear ", itemText, ".");
+    }
+
+    private static Row simplePrayerWear(int level, int itemId, String title, String itemText) {
+        return new Row(level, itemId, title, null,
+                "Members now have the Prayer level required to wear ", itemText, ".");
     }
 
     private static void patch(File cacheDir, int group, int categoryKey, Row[] rows) throws Exception {
