@@ -17,20 +17,21 @@
     "iconZoom / iconXan / iconYan / iconZan / iconXoff / iconYoff": "Optional. Override RS3 icon camera after RenderClientItemIconSheet contact-sheet tuning (RS3 raw angles often render wrong in the 2009 client)."
   },
   "_nextFreeId": 14734,
+  "_wipBundle": "14720-14733 RS3 items unpolished — worn models, icon cameras, combat wiring. Bundled with infernal 14734 in docs/wip-infernal-rs3.md",
   "items": [
-    { "newId": 14720, "rs3Id": 18349, "rs3CacheId": 554, "configTemplate": 1305, "wornTemplate": 1305, "attackSpeed": 4, "gated": false },
-    { "newId": 14721, "rs3Id": 18351, "rs3CacheId": 554, "configTemplate": 3204, "attackSpeed": 6, "gated": false, "iconZoom": 1447, "iconXan": 512, "iconYan": 0, "iconZan": 0, "iconXoff": 5, "iconYoff": 3 },
-    { "newId": 14722, "rs3Id": 18353, "rs3CacheId": 554, "configTemplate": 1305, "wornTemplate": 1305, "attackSpeed": 5, "gated": false },
-    { "newId": 14723, "rs3Id": 18357, "rs3CacheId": 554, "configTemplate": 9185, "attackSpeed": 6, "gated": false },
-    { "newId": 14724, "rs3Id": 18359, "rs3CacheId": 554, "configTemplate": 4675, "wornTemplate": 4675, "attackSpeed": 5, "gated": false },
-    { "newId": 14725, "rs3Id": 20171, "rs3CacheId": 839, "configTemplate": 861, "attackSpeed": 5, "gated": false, "iconZoom": 1703, "iconXan": 508, "iconYan": 124, "iconZan": 0, "iconXoff": 0, "iconYoff": -13 },
-    { "newId": 14726, "rs3Id": 28444, "rs3CacheId": 286, "name": "Goliath gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
-    { "newId": 14727, "rs3Id": 28445, "rs3CacheId": 286, "name": "Swift gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
-    { "newId": 14728, "rs3Id": 28446, "rs3CacheId": 286, "name": "Spellcaster gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
-    { "newId": 14729, "rs3Id": 24338, "rs3CacheId": 302, "configTemplate": 9185, "attackSpeed": 6, "gated": false, "iconZoom": 926, "iconXan": 432, "iconYan": 258, "iconZan": 0, "iconXoff": 1, "iconYoff": 29 },
-    { "newId": 14730, "rs3Id": 26579, "rs3CacheId": 554, "configTemplate": 1305, "inventoryModel": 17320, "attackSpeed": 4, "gated": false, "iconZoom": 1447, "iconXan": 1522, "iconYan": 1710, "iconZan": 1158, "iconXoff": 9, "iconYoff": -7 },
-    { "newId": 14731, "rs3Id": 26580, "rs3CacheId": 554, "configTemplate": 1305, "attackSpeed": 5, "gated": false, "iconZoom": 1579, "iconXan": 1603, "iconYan": 1805, "iconZan": 916, "iconXoff": 3, "iconYoff": 0 },
-    { "newId": 14732, "rs3Id": 26582, "rs3CacheId": 554, "configTemplate": 1347, "attackSpeed": 5, "gated": false, "iconZoom": 1447, "iconXan": 512, "iconYan": 0, "iconZan": 0, "iconXoff": -1, "iconYoff": -47 },
-    { "newId": 14733, "rs3Id": 19784, "rs3CacheId": 554, "configTemplate": 1305, "attackSpeed": 5, "gated": false, "iconZoom": 1744, "iconXan": 512, "iconYan": 124, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 }
+    { "newId": 14720, "rs3Id": 18349, "rs3CacheId": 554, "_status": "WIP", "_comment": "Chaotic rapier — worn/icon QA pending", "configTemplate": 1305, "wornTemplate": 1305, "attackSpeed": 4, "gated": false },
+    { "newId": 14721, "rs3Id": 18351, "rs3CacheId": 554, "_status": "WIP", "_comment": "Chaotic longsword — worn/icon QA pending", "configTemplate": 3204, "attackSpeed": 6, "gated": false, "iconZoom": 1447, "iconXan": 512, "iconYan": 0, "iconZan": 0, "iconXoff": 5, "iconYoff": 3 },
+    { "newId": 14722, "rs3Id": 18353, "rs3CacheId": 554, "_status": "WIP", "_comment": "Chaotic maul — worn/icon QA pending", "configTemplate": 1305, "wornTemplate": 1305, "attackSpeed": 5, "gated": false },
+    { "newId": 14723, "rs3Id": 18357, "rs3CacheId": 554, "_status": "WIP", "_comment": "Chaotic crossbow — worn/icon QA pending", "configTemplate": 9185, "attackSpeed": 6, "gated": false },
+    { "newId": 14724, "rs3Id": 18359, "rs3CacheId": 554, "_status": "WIP", "_comment": "Chaotic staff — worn/icon QA pending", "configTemplate": 4675, "wornTemplate": 4675, "attackSpeed": 5, "gated": false },
+    { "newId": 14725, "rs3Id": 20171, "rs3CacheId": 839, "_status": "WIP", "_comment": "Zaryte bow — worn/icon QA pending", "configTemplate": 861, "attackSpeed": 5, "gated": false, "iconZoom": 1703, "iconXan": 508, "iconYan": 124, "iconZan": 0, "iconXoff": 0, "iconYoff": -13 },
+    { "newId": 14726, "rs3Id": 28444, "rs3CacheId": 286, "_status": "WIP", "_comment": "Goliath gloves — worn/icon QA pending", "name": "Goliath gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
+    { "newId": 14727, "rs3Id": 28445, "rs3CacheId": 286, "_status": "WIP", "_comment": "Swift gloves — worn/icon QA pending", "name": "Swift gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
+    { "newId": 14728, "rs3Id": 28446, "rs3CacheId": 286, "_status": "WIP", "_comment": "Spellcaster gloves — worn/icon QA pending", "name": "Spellcaster gloves", "gated": false, "iconZoom": 917, "iconXan": 32, "iconYan": 768, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 },
+    { "newId": 14729, "rs3Id": 24338, "rs3CacheId": 302, "_status": "WIP", "_comment": "Royal crossbow — worn/icon QA pending", "configTemplate": 9185, "attackSpeed": 6, "gated": false, "iconZoom": 926, "iconXan": 432, "iconYan": 258, "iconZan": 0, "iconXoff": 1, "iconYoff": 29 },
+    { "newId": 14730, "rs3Id": 26579, "rs3CacheId": 554, "_status": "WIP", "_comment": "Drygore rapier — worn/icon QA pending", "configTemplate": 1305, "inventoryModel": 17320, "attackSpeed": 4, "gated": false, "iconZoom": 1447, "iconXan": 1522, "iconYan": 1710, "iconZan": 1158, "iconXoff": 9, "iconYoff": -7 },
+    { "newId": 14731, "rs3Id": 26580, "rs3CacheId": 554, "_status": "WIP", "_comment": "Drygore longsword — worn/icon QA pending", "configTemplate": 1305, "attackSpeed": 5, "gated": false, "iconZoom": 1579, "iconXan": 1603, "iconYan": 1805, "iconZan": 916, "iconXoff": 3, "iconYoff": 0 },
+    { "newId": 14732, "rs3Id": 26582, "rs3CacheId": 554, "_status": "WIP", "_comment": "Drygore mace — worn/icon QA pending", "configTemplate": 1347, "attackSpeed": 5, "gated": false, "iconZoom": 1447, "iconXan": 512, "iconYan": 0, "iconZan": 0, "iconXoff": -1, "iconYoff": -47 },
+    { "newId": 14733, "rs3Id": 19784, "rs3CacheId": 554, "_status": "WIP", "_comment": "Korasi sword — worn/icon QA pending", "configTemplate": 1305, "attackSpeed": 5, "gated": false, "iconZoom": 1744, "iconXan": 512, "iconYan": 124, "iconZan": 0, "iconXoff": 0, "iconYoff": 0 }
   ]
 }

@@ -19,6 +19,7 @@
     "iconZoom / iconXan / iconYan / iconZan / iconXoff / iconYoff": "Optional. Override OSRS icon camera only after RenderClientItemIconSheet contact-sheet tuning (rare; identity import + OSRS cameras are usually pixel-perfect)."
   },
   "_nextFreeId": 14735,
+  "_wipBundle": "14734 infernal cape — texture 59 client freeze; see docs/wip-infernal-rs3.md. Polished OSRS batch ends at 14705.",
   "items": [
     {
       "newId": 14659,
@@ -213,6 +214,8 @@
     {
       "newId": 14734,
       "osrsId": 21295,
+      "_status": "WIP",
+      "_comment": "Infernal cape — texture 59 animated lava freezes client; PatchInfernalCape.java incomplete. Bundled with RS3 14720-14733 in docs/wip-infernal-rs3.md",
       "rigRefMale": 9638,
       "rigRefFemale": 9640,
       "gated": false,

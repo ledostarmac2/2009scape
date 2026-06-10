@@ -1,5 +1,9 @@
 # RS3 → 2009scape item import pipeline
 
+> **WIP bundle (14720–14733):** Items are imported to cache and configs but marked
+> unpolished. Stripped from player bank until worn-model and icon QA pass.
+> Bundled with infernal cape 14734 — see **`docs/wip-infernal-rs3.md`**.
+
 Imports RS3-only items (not present in the OSRS cache) into 2009scape using the same
 cache writer as the OSRS pipeline.
 

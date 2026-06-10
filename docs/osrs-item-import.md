@@ -1,5 +1,9 @@
 # OSRS → 2009scape item import pipeline
 
+> **Polished batch:** ids **14659–14705** are complete and in player bank.
+> **WIP:** infernal cape **14734** (texture 59 client freeze) — bundled with RS3
+> 14720–14733 in **`docs/wip-infernal-rs3.md`**. Next free id: **14735**.
+
 Bring any OSRS item into 2009scape with **one manifest entry and one command**.
 Everything learned the hard way (icon cameras, model orientation, rigging,
 z-fighting, cache index surgery) is baked into the tooling — you should never

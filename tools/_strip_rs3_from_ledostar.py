@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Remove RS3 items (14720-14733) from ledostar bank/inventory/equipment.
+"""Remove WIP items from ledostar bank/inventory/equipment.
+
+Strips RS3 batch 14720-14733 and infernal cape 14734. Does NOT touch polished
+OSRS items 14659-14705.
 
 NEVER modify core_data.location — preserve the player's last login position.
 """
@@ -8,7 +11,7 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PLAYER = os.path.join(ROOT, "game", "data", "players", "ledostar.json")
-REMOVE_IDS = {str(i) for i in range(14720, 14734)}
+REMOVE_IDS = {str(i) for i in range(14720, 14735)}
 
 
 def strip_container(items):
