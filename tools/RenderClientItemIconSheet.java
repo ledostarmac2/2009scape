@@ -18,8 +18,10 @@ import rt4.Js5ResourceProvider;
 import rt4.ObjType;
 import rt4.ObjTypeList;
 import rt4.Rasteriser;
+import rt4.Js5GlTextureProvider;
 import rt4.SoftwareSprite;
 import rt4.Sprite;
+import rt4.TextureProvider;
 
 public final class RenderClientItemIconSheet {
     private static final class DiskProvider extends Js5ResourceProvider {
@@ -88,7 +90,12 @@ public final class RenderClientItemIconSheet {
 
         Js5 items = new Js5(new DiskProvider(cacheDir, 19), false, false);
         Js5 models = new Js5(new DiskProvider(cacheDir, 7), false, false);
+        Js5 textures = new Js5(new DiskProvider(cacheDir, 9), false, false);
+        Js5 textureConfigs = new Js5(new DiskProvider(cacheDir, 26), false, false);
+        Js5 sprites = new Js5(new DiskProvider(cacheDir, 8), false, false);
         ObjTypeList.init(items, null, models);
+        TextureProvider textureProvider = new Js5GlTextureProvider(textures, textureConfigs, sprites, 20, true);
+        Rasteriser.unpackTextures(textureProvider);
         Rasteriser.setBrightness(0.8F);
 
         List<Camera> cameras = new ArrayList<>();

@@ -55,7 +55,7 @@ public class ImportOsrsItemBatch {
             boolean equippable, int facePriority, int configTemplate) {}
 
     private record V(int x, int y, int z, int bone) {}
-    private record F(int a, int b, int c, int color, int priority) {}
+    private record F(int a, int b, int c, int color, int priority, int textureId, int textureCoord) {}
 
     public static void main(String[] args) throws Exception {
         if (args.length != 4) {
@@ -343,12 +343,23 @@ public class ImportOsrsItemBatch {
                     }
                 }
             }
-            faces.add(new F(a, b, c, materialColor(model, i, recolor), facePrio));
+            int color;
+            int textureId = -1;
+            int textureCoord = -1;
+            if (model.faceTextures != null && model.faceTextures[i] >= 0) {
+                textureId = model.faceTextures[i] & 0xFFFF;
+                textureCoord = model.textureCoords != null && model.textureCoords[i] >= 0
+                        ? model.textureCoords[i] & 0xFF : 0;
+                color = textureId;
+            } else {
+                color = materialColor(model, i, recolor);
+            }
+            faces.add(new F(a, b, c, color, facePrio, textureId, textureCoord));
         }
         if (faces.isEmpty()) {
             throw new IllegalStateException("No valid faces after decode for model " + model.id);
         }
-        return encodeOldModel(vertices, faces, worn ? priority : 0);
+        return encodeOldModel(vertices, faces, worn ? priority : 0, model);
     }
 
     private static boolean faceVertexValid(int a, int b, int c, int vertexCount) {
@@ -564,9 +575,12 @@ public class ImportOsrsItemBatch {
         return signed;
     }
 
-    private static byte[] encodeOldModel(List<V> vertices, List<F> faces, int priority) throws Exception {
+    private static byte[] encodeOldModel(List<V> vertices, List<F> faces, int priority,
+                                         ModelDefinition textureSource) throws Exception {
         boolean hasVertexBones = vertices.stream().anyMatch(v -> v.bone >= 0);
         boolean hasFacePriorities = faces.stream().anyMatch(face -> face.priority >= 0);
+        boolean isTextured = faces.stream().anyMatch(face -> face.textureId >= 0);
+        int textureCount = textureSource != null ? textureSource.numTextureFaces : 0;
         ByteArrayOutputStream vertexFlags = new ByteArrayOutputStream();
         ByteArrayOutputStream xData = new ByteArrayOutputStream();
         ByteArrayOutputStream yData = new ByteArrayOutputStream();
@@ -585,6 +599,7 @@ public class ImportOsrsItemBatch {
         }
         ByteArrayOutputStream triangleTypes = new ByteArrayOutputStream();
         ByteArrayOutputStream trianglePriorities = new ByteArrayOutputStream();
+        ByteArrayOutputStream faceTextureFlags = new ByteArrayOutputStream();
         ByteArrayOutputStream triangleIndices = new ByteArrayOutputStream();
         ByteArrayOutputStream colors = new ByteArrayOutputStream();
         int last = 0;
@@ -593,29 +608,42 @@ public class ImportOsrsItemBatch {
             if (hasFacePriorities) {
                 trianglePriorities.write(face.priority >= 0 ? face.priority : priority);
             }
+            if (isTextured) {
+                faceTextureFlags.write(face.textureId >= 0 ? (2 | (face.textureCoord << 2)) : 0);
+            }
             writeSmart(triangleIndices, face.a - last);
             writeSmart(triangleIndices, face.b - face.a);
             writeSmart(triangleIndices, face.c - face.b);
             last = face.c;
             writeShort(colors, face.color);
         }
+        ByteArrayOutputStream textureIndices = new ByteArrayOutputStream();
+        if (textureCount > 0 && textureSource != null && textureSource.texIndices1 != null) {
+            for (int t = 0; t < textureCount; t++) {
+                writeShort(textureIndices, textureSource.texIndices1[t]);
+                writeShort(textureIndices, textureSource.texIndices2[t]);
+                writeShort(textureIndices, textureSource.texIndices3[t]);
+            }
+        }
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         out.write(vertexFlags.toByteArray());
         out.write(triangleTypes.toByteArray());
         if (hasFacePriorities) out.write(trianglePriorities.toByteArray());
+        if (isTextured) out.write(faceTextureFlags.toByteArray());
         if (hasVertexBones) out.write(vertexBones.toByteArray());
         out.write(triangleIndices.toByteArray());
         out.write(colors.toByteArray());
+        if (textureCount > 0) out.write(textureIndices.toByteArray());
         out.write(xData.toByteArray());
         out.write(yData.toByteArray());
         out.write(zData.toByteArray());
         writeShort(out, vertices.size());
         writeShort(out, faces.size());
-        out.write(0);              // textured face count
-        out.write(0);              // use face render types
+        out.write(textureCount);
+        out.write(isTextured ? 1 : 0);
         out.write(hasFacePriorities ? 255 : priority);
         out.write(0);              // use face alpha
-        out.write(0);              // use triangle bones
+        out.write(0);              // use packed transparency vertex groups
         out.write(hasVertexBones ? 1 : 0);
         writeShort(out, xData.size());
         writeShort(out, yData.size());
